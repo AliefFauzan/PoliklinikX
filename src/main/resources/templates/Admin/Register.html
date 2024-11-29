@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="../../static/Pelanggan/Register.css" />
+    <style>
+      /* Seamless button styling for login and register */
+      .seamless-button {
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      .seamless-button:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <script>
+      // JavaScript to inject seamless links for Login and Register
+      document.addEventListener("DOMContentLoaded", () => {
+        // Login button injection
+        const loginText = document.querySelector(".text-wrapper-5"); // Target the "Login here!" text
+        if (loginText) {
+          const loginButton = document.createElement("button");
+          loginButton.textContent = loginText.textContent; // Preserve the existing text
+          loginButton.className = "seamless-button"; // Apply seamless styling
+          loginButton.onclick = () => {
+            window.location.href = "login.html"; // Redirect to login page
+          };
+          loginText.textContent = ""; // Clear the existing text
+          loginText.appendChild(loginButton); // Replace it with the button
+        }
+
+        // Register button injection
+        const registerButtonWrapper = document.querySelector(".text-wrapper-10"); // Target the "Register" text
+        if (registerButtonWrapper) {
+          const registerButton = document.createElement("button");
+          registerButton.textContent = registerButtonWrapper.textContent; // Preserve the existing text
+          registerButton.className = "seamless-button"; // Apply seamless styling
+          registerButton.onclick = () => {
+            window.location.href = "SesudahLoginAdmin.html"; // Redirect to SetelahLoginUser.html
+          };
+          registerButtonWrapper.textContent = ""; // Clear the existing text
+          registerButtonWrapper.appendChild(registerButton); // Replace it with the button
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="sign-up">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="text-wrapper">POLIKLINIK X</div>
+          <div class="group">
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group">
+                <div class="rectangle"></div>
+                <div class="div"></div>
+              </div>
+            </div>
+          </div>
+          <div class="overlap-2">
+            <div class="group-2">
+              <div class="group-wrapper">
+                <div class="div-wrapper">
+                  <div class="text-wrapper-2">Sign Up to name</div>
+                </div>
+              </div>
+              <div class="group-3">
+                <img class="phone-call" src="img/phone-call-1.svg" />
+                <div class="text-wrapper-3">022-82558000</div>
+              </div>
+            </div>
+            <img
+              class="img"
+              src="img/a1b4dbfbcd8dadbb4dcc87f8f26aa038-removebg-preview-1.png"
+            />
+          </div>
+          <div class="group-4">
+            <div class="group-5">
+              <div class="text-wrapper-4">Sign up</div>
+              <div class="group-6">
+                <p class="p">If you already have an account register</p>
+                <p class="you-can-login-here">
+                  <span class="span">You can&nbsp;&nbsp; </span>
+                  <span class="text-wrapper-5">Login here !</span>
+                </p>
+              </div>
+            </div>
+            <div class="group-7">
+              <div class="text-wrapper-6">Email</div>
+              <div class="text-wrapper-7">Enter your email address</div>
+              <div class="rectangle-2"></div>
+              <img class="message" src="img/message-1.svg" />
+            </div>
+            <div class="group-8">
+              <div class="text-wrapper-8">Confrim Password</div>
+              <div class="rectangle-3"></div>
+              <div class="group-9">
+                <div class="text-wrapper-9">Confrim your Password</div>
+                <img class="padlock" src="img/padlock-1-2.svg" />
+              </div>
+              <img class="invisible" src="img/image.svg" />
+            </div>
+            <div class="group-10">
+              <div class="text-wrapper-8">Password</div>
+              <div class="rectangle-3"></div>
+              <div class="group-11">
+                <div class="text-wrapper-9">Enter your Password</div>
+                <img class="padlock-2" src="img/padlock-1.svg" />
+              </div>
+              <img class="invisible" src="img/invisible-1.svg" />
+            </div>
+            <div class="group-12">
+              <div class="group-13">
+                <div class="overlap-group-2">
+                  <div class="text-wrapper-10">Register</div>
+                </div>
+              </div>
+            </div>
+            <div class="group-14">
+              <div class="overlap-3">
+                <div class="group-15">
+                  <div class="text-wrapper-6">Username</div>
+                  <div class="text-wrapper-7">Enter your User name</div>
+                  <div class="rectangle-4"></div>
+                </div>
+                <img class="user" src="img/user-1.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
