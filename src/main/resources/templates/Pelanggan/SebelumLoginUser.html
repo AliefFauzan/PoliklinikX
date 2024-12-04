@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    
+    <link rel="stylesheet" href="../../static/Pelanggan/SebelumLoginUser.css" />
+    <style>
+      /* Seamless button styling */
+      .seamless-button {
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 0;
+      }
+      .seamless-button:hover {
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      // JavaScript to inject buttons seamlessly
+      document.addEventListener("DOMContentLoaded", () => {
+        const navItems = [
+        { selector: ".text-wrapper-4", url: "SebelumLoginUser.html" }, // Beranda
+        { selector: ".text-wrapper-5", url: "Login.html" }, // Layanan
+        { selector: ".text-wrapper-6", url: "Login.html" }, // Informasi
+        { selector: ".text-wrapper-7", url: "Login.html" }, // Jadwal Dokter
+        { selector: ".text-wrapper-8", url: "Login.html" }, // Janji Temu
+        { selector: ".text-wrapper-9", url: "Register.html" }, // FAQ
+        { selector: ".text-wrapper-10", url: "Login.html" }, // janji temu
+        { selector: ".text-wrapper-11", url: "Login.html" }, // faq
+        ];
+
+        navItems.forEach(({ selector, url }) => {
+          const element = document.querySelector(selector);
+          if (element) {
+            const button = document.createElement("button");
+            button.textContent = element.textContent; // Keep the same text
+            button.className = "seamless-button"; // Apply seamless styling
+            button.onclick = () => {
+              window.location.href = url;
+            };
+            element.textContent = ""; // Clear the existing text
+            element.appendChild(button); // Replace with button
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="home-sebelum-login">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <img
+            class="mount-elizabeth"
+            src="img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-1.png"
+          />
+          <div class="rectangle"></div>
+          <div class="group">
+            <div class="div"></div>
+            <div class="rectangle-2"></div>
+            <div class="rectangle-3"></div>
+          </div>
+          <div class="text-wrapper">POLIKLINIK X</div>
+          <div class="rectangle-4"></div>
+          <img class="ic-sharp-call" src="img/ic-sharp-call-2.svg" />
+          <div class="text-wrapper-2">Call Center : 081234567890</div>
+          <img class="img" src="img/ic-sharp-call.svg" />
+          <p class="p">Customer Call Center : 022-82558000</p>
+          <div class="text-wrapper-3">Follow us :</div>
+          <img class="vector" src="img/vector-4.svg" />
+          <img class="vector-2" src="img/vector-2.svg" />
+          <img class="prime-twitter" src="img/prime-twitter.svg" />
+          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
+          <div class="group-wrapper">
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group">
+                <div class="rectangle-5"></div>
+                <div class="rectangle-6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rectangle-7"></div>
+          <div class="rectangle-8"></div>
+          <div class="rectangle-9"></div>
+          <div class="search-bar">
+            <div class="content">
+              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
+              <div class="placeholder-label">Search</div>
+            </div>
+          </div>
+          <div class="ellipse"></div>
+          <div class="vector-wrapper"><img class="vector-3" src="img/image.svg" /></div>
+          <img class="mask-group" src="img/mask-group.png" />
+          <div class="ellipse-2"></div>
+          <img class="vector-4" src="img/vector-3.svg" />
+          <div class="text-wrapper-4">Beranda</div>
+          <div class="text-wrapper-5">Jadwal Dokter</div>
+          <div class="text-wrapper-6">Layanan</div>
+          <div class="text-wrapper-7">Informasi</div>
+          <div class="text-wrapper-8">LOGIN</div>
+          <div class="text-wrapper-9">Register</div>
+          <div class="text-wrapper-10">Janji Temu</div>
+          <div class="text-wrapper-11">FAQ</div>
+          <img class="line" src="img/line-1.svg" />
+          <div class="ellipse-3"></div>
+          <div class="text-wrapper-12">Pilih Dokter</div>
+          <img class="vector-5" src="img/vector.svg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

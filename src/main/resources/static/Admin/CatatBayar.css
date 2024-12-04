@@ -1,0 +1,1031 @@
+:root {
+    --white: rgba(252, 254, 254, 1);
+    --primary: rgba(31, 43, 108, 1);
+    --label-colorslc-l-secondary: rgba(60, 60, 67, 0.6);
+    --gray-700: rgba(52, 64, 84, 1);
+    --accent: rgba(191, 210, 248, 1);
+    --secondary: rgba(21, 158, 236, 1);
+    --system-materialssm-l-thick: rgba(250, 250, 250, 0.93);
+    --default-size-body-font-family: "SF Pro Text", Helvetica;
+    --default-size-body-font-weight: 400;
+    --default-size-body-font-size: 17px;
+    --default-size-body-letter-spacing: -0.40799999237060547px;
+    --default-size-body-line-height: 22px;
+    --default-size-body-font-style: normal;
+    --datefilter-nonleapyearmonth28: initial;
+    --datefilter-leapyearmonth29: initial;
+    --datefilter-month30: initial;
+    --datefilter-month31: initial;
+    --DD-list-ddheader: initial;
+    --DD-list-ddlist: none;
+  }
+  
+
+.pencatatan {
+    background-color: #fcfefe;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .pencatatan .div {
+    background-color: var(--white);
+    overflow: hidden;
+    width: 1440px;
+    height: 1443px;
+    position: relative;
+  }
+  
+  .pencatatan .overlap {
+    position: absolute;
+    width: 1445px;
+    height: 474px;
+    top: 0;
+    left: 0;
+  }
+  
+  .pencatatan .sub-head {
+    position: absolute;
+    width: 1440px;
+    height: 314px;
+    top: 160px;
+    left: 5px;
+  }
+  
+  .pencatatan .overlap-group {
+    position: relative;
+    height: 314px;
+  }
+  
+  .pencatatan .rectangle {
+    position: absolute;
+    width: 1435px;
+    height: 314px;
+    top: 0;
+    left: 0;
+  }
+  
+  .pencatatan .rectangle-2 {
+    position: absolute;
+    width: 1440px;
+    height: 314px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff80;
+  }
+  
+  .pencatatan .group {
+    position: absolute;
+    width: 1440px;
+    height: 314px;
+    top: 0;
+    left: 0;
+  }
+  
+  .pencatatan .frame {
+    position: absolute;
+    width: 1440px;
+    height: 314px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .pencatatan .ellipse {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    top: 122px;
+    left: 1312px;
+    background-color: var(--accent);
+    border-radius: 128px;
+    opacity: 0.5;
+  }
+  
+  .pencatatan .ellipse-2 {
+    position: absolute;
+    width: 239px;
+    height: 239px;
+    top: -119px;
+    left: -119px;
+    background-color: var(--secondary);
+    border-radius: 119.5px;
+    opacity: 0.3;
+  }
+  
+  .pencatatan .group-2 {
+    position: absolute;
+    width: 1440px;
+    height: 10px;
+    top: 304px;
+    left: 0;
+  }
+  
+  .pencatatan .rectangle-3 {
+    position: absolute;
+    width: 883px;
+    height: 10px;
+    top: 0;
+    left: 322px;
+    background-color: var(--primary);
+  }
+  
+  .pencatatan .rectangle-4 {
+    position: absolute;
+    width: 235px;
+    height: 10px;
+    top: 0;
+    left: 1205px;
+    background-color: var(--secondary);
+  }
+  
+  .pencatatan .rectangle-5 {
+    position: absolute;
+    width: 322px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: var(--accent);
+  }
+  
+  .pencatatan .group-3 {
+    position: absolute;
+    width: 557px;
+    height: 84px;
+    top: 95px;
+    left: 197px;
+  }
+  
+  .pencatatan .about-us {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--primary);
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .pencatatan .home-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--primary);
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 25.2px;
+    white-space: nowrap;
+  }
+  
+  .pencatatan .rectangle-6 {
+    position: absolute;
+    width: 1445px;
+    height: 236px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(228.02, 245.01, 255, 0) 0%,
+      rgb(228.02, 245.01, 255) 100%
+    );
+  }
+  
+  .pencatatan .group-4 {
+    position: absolute;
+    width: 51px;
+    height: 26px;
+    top: 41px;
+    left: 31px;
+  }
+  
+  .pencatatan .rectangle-7 {
+    position: absolute;
+    width: 51px;
+    height: 6px;
+    top: 0;
+    left: 0;
+    background-color: #02337c;
+  }
+  
+  .pencatatan .rectangle-8 {
+    position: absolute;
+    width: 51px;
+    height: 6px;
+    top: 10px;
+    left: 0;
+    background-color: #02337c;
+  }
+  
+  .pencatatan .rectangle-9 {
+    position: absolute;
+    width: 51px;
+    height: 6px;
+    top: 20px;
+    left: 0;
+    background-color: #02337c;
+  }
+  
+  .pencatatan .text-wrapper {
+    position: absolute;
+    top: 46px;
+    left: 249px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #02337c;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.50px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  
+  .pencatatan .group-wrapper {
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    top: 16px;
+    left: 127px;
+    background-color: #02337c;
+    border-radius: 38.5px;
+    box-shadow: inset 0px 4px 4px #00000040;
+  }
+  
+  .pencatatan .overlap-group-wrapper {
+    position: relative;
+    width: 51px;
+    height: 51px;
+    top: 13px;
+    left: 13px;
+  }
+  
+  .pencatatan .overlap-group-2 {
+    position: relative;
+    height: 51px;
+  }
+  
+  .pencatatan .rectangle-10 {
+    position: absolute;
+    width: 60px;
+    height: 12px;
+    top: 20px;
+    left: -5px;
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+  }
+  
+  .pencatatan .rectangle-11 {
+    position: absolute;
+    width: 60px;
+    height: 12px;
+    top: 20px;
+    left: -5px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+  }
+  
+  .pencatatan .search-bar {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 34px;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 41px;
+    left: 1019px;
+  }
+  
+  .pencatatan .content {
+    display: flex;
+    height: 36px;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    margin-bottom: -2.00px;
+    background-color: var(--system-materialssm-l-thick);
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+  
+  .pencatatan .magnifyingglass {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin-top: -4.00px;
+    margin-bottom: -4.00px;
+  }
+  
+  .pencatatan .magnifyingglass-2 {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: -1px;
+    left: 0;
+    font-family: "SF Pro Display-Medium", Helvetica;
+    font-weight: 500;
+    color: var(--label-colorslc-l-secondary);
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 50px;
+    white-space: nowrap;
+  }
+  
+  .pencatatan .placeholder-label {
+    position: relative;
+    flex: 1;
+    margin-top: -2.00px;
+    font-family: var(--default-size-body-font-family);
+    font-weight: var(--default-size-body-font-weight);
+    color: var(--label-colorslc-l-secondary);
+    font-size: var(--default-size-body-font-size);
+    letter-spacing: var(--default-size-body-letter-spacing);
+    line-height: var(--default-size-body-line-height);
+    font-style: var(--default-size-body-font-style);
+  }
+  
+  .pencatatan .overlap-wrapper {
+    position: absolute;
+    width: 121px;
+    height: 29px;
+    top: 44px;
+    left: 560px;
+  }
+  
+  .pencatatan .div-wrapper {
+    position: relative;
+    width: 119px;
+    height: 29px;
+    background-color: #d9d9d9b2;
+    border-radius: 36px;
+  }
+  
+  .pencatatan .text-wrapper-2 {
+    position: absolute;
+    width: 115px;
+    top: 2px;
+    left: 1px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #02337c;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.50px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  
+  .pencatatan .img {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 28px;
+    left: 1344px;
+    object-fit: cover;
+  }
+  
+  .pencatatan .group-5 {
+    position: absolute;
+    width: 74px;
+    height: 37px;
+    top: 1010px;
+    left: 1177px;
+  }
+  
+  .pencatatan .overlap-2 {
+    position: absolute;
+    width: 1099px;
+    height: 82px;
+    top: 1246px;
+    left: 151px;
+    background-color: #1f2b6c;
+    border-radius: 69.96px;
+    border: 0.47px solid;
+    border-color: #daeeff;
+  }
+  
+  .pencatatan .text-wrapper-3 {
+    position: absolute;
+    width: 152px;
+    top: 18px;
+    left: 506px;
+    -webkit-text-stroke: 1px #ffffff;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 26.2px;
+    letter-spacing: 0;
+    line-height: 39.3px;
+  }
+  
+  .pencatatan .text-wrapper-4 {
+    position: absolute;
+    width: 466px;
+    top: 557px;
+    left: 151px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--gray-700);
+    font-size: 23.2px;
+    letter-spacing: 0;
+    line-height: 34.8px;
+  }
+  
+  .pencatatan .overlap-3 {
+    position: absolute;
+    width: 1094px;
+    height: 62px;
+    top: 609px;
+    left: 151px;
+  }
+  
+  .pencatatan .rectangle-12 {
+    position: absolute;
+    width: 1094px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 6.07px;
+    border: 0.3px solid;
+    border-color: #000000;
+  }
+  
+  .pencatatan .p {
+    position: absolute;
+    width: 907px;
+    top: 8px;
+    left: 31px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: #bbbbbb;
+    font-size: 13.2px;
+    letter-spacing: 0;
+    line-height: 19.8px;
+  }
+  
+  .pencatatan .text-wrapper-5 {
+    position: absolute;
+    width: 374px;
+    top: 671px;
+    left: 151px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--gray-700);
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: 34.5px;
+  }
+  
+  .pencatatan .overlap-4 {
+    position: absolute;
+    width: 1094px;
+    height: 61px;
+    top: 726px;
+    left: 151px;
+  }
+  
+  .pencatatan .text-wrapper-6 {
+    position: absolute;
+    width: 907px;
+    top: 7px;
+    left: 15px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 19.2px;
+    letter-spacing: 0;
+    line-height: 28.8px;
+  }
+  
+  .pencatatan .text-wrapper-7 {
+    position: absolute;
+    width: 287px;
+    top: 790px;
+    left: 151px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--gray-700);
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: 34.5px;
+  }
+  
+  .pencatatan .text-wrapper-8 {
+    position: absolute;
+    width: 287px;
+    top: 913px;
+    left: 151px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--gray-700);
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: 34.5px;
+  }
+  
+  .pencatatan .text-wrapper-9 {
+    position: absolute;
+    width: 287px;
+    top: 1038px;
+    left: 151px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--gray-700);
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: 34.5px;
+  }
+  
+  .pencatatan .overlap-5 {
+    position: absolute;
+    width: 1094px;
+    height: 62px;
+    top: 845px;
+    left: 151px;
+  }
+  
+  .pencatatan .rectangle-13 {
+    position: absolute;
+    width: 1094px;
+    height: 46px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 6.07px;
+    border: 0.3px solid;
+    border-color: #000000;
+  }
+  
+  .pencatatan .text-wrapper-10 {
+    position: absolute;
+    width: 907px;
+    top: 8px;
+    left: 32px;
+    font-family: "Mulish-Regular", Helvetica;
+    font-weight: 400;
+    color: #bbbbbb;
+    font-size: 13.2px;
+    letter-spacing: 0;
+    line-height: 19.8px;
+  }
+  
+  .pencatatan .overlap-6 {
+    position: absolute;
+    width: 328px;
+    height: 108px;
+    top: 1097px;
+    left: 156px;
+  }
+  
+  .pencatatan .rectangle-14 {
+    position: absolute;
+    width: 328px;
+    height: 101px;
+    top: 3px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 6.07px;
+    border: 0.3px solid;
+    border-color: #000000;
+  }
+  
+  .pencatatan .gopay-logo {
+    position: absolute;
+    width: 252px;
+    height: 108px;
+    top: 0;
+    left: 38px;
+    object-fit: cover;
+  }
+  
+  .pencatatan .FIGMA-OVO-wrapper {
+    position: absolute;
+    width: 329px;
+    height: 101px;
+    top: 1100px;
+    left: 540px;
+    background-color: #ffffff;
+    border-radius: 6.07px;
+    border: 0.3px solid;
+    border-color: #000000;
+  }
+  
+  .pencatatan .FIGMA-OVO {
+    position: absolute;
+    width: 258px;
+    height: 77px;
+    top: 12px;
+    left: 37px;
+    object-fit: cover;
+  }
+  
+  .pencatatan .FIGMA-cc-wrapper {
+    position: absolute;
+    width: 327px;
+    height: 101px;
+    top: 1097px;
+    left: 926px;
+    background-color: #ffffff;
+    border-radius: 6.07px;
+    border: 0.3px solid;
+    border-color: #000000;
+  }
+  
+  .pencatatan .FIGMA-cc {
+    position: absolute;
+    width: 172px;
+    height: 89px;
+    top: 6px;
+    left: 78px;
+    object-fit: cover;
+  }
+  
+  .pencatatan .overlap-7 {
+    position: absolute;
+    width: 1440px;
+    height: 38px;
+    top: 1405px;
+    left: 0;
+    background-color: #ddf1f0;
+  }
+  
+  .pencatatan .text-wrapper-11 {
+    position: absolute;
+    width: 105px;
+    top: 11px;
+    left: 1173px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.50px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  
+  .pencatatan .vector {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    top: 13px;
+    left: 1328px;
+  }
+  
+  .pencatatan .vector-2 {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    top: 13px;
+    left: 1293px;
+  }
+  
+  .pencatatan .prime-twitter {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    top: 13px;
+    left: 1363px;
+  }
+  
+  .pencatatan .mdi-linkedin {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    top: 13px;
+    left: 1392px;
+  }
+  
+  .pencatatan .DD-date {
+    position: absolute;
+    width: 137px;
+    height: 40px;
+    top: 968px;
+    left: 468px;
+  }
+  
+  .pencatatan .DD-list {
+    display: var(--DD-list-ddlist, inline-flex);
+    flex-direction: column;
+    height: 390px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #c2c2c2;
+    overflow-y: scroll;
+  }
+  
+  .pencatatan .option {
+    display: flex;
+    width: 117px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .frame-2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 0px 3px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .pencatatan .text-wrapper-12 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Istok Web-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .pencatatan .frame-wrapper {
+    display: var(--datefilter-nonleapyearmonth28, flex);
+    width: 117px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .option-2 {
+    display: var(--datefilter-leapyearmonth29, flex);
+    width: 117px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .option-3 {
+    display: var(--datefilter-month30, flex);
+    width: 117px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .option-4 {
+    display: var(--datefilter-month31, flex);
+    width: 117px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .DD-header {
+    display: var(--DD-list-ddheader, flex);
+    width: 137px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    border: 1px solid;
+    border-color: #c2c2c2;
+  }
+  
+  .pencatatan .DD-header-label {
+    display: inline-flex;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .pencatatan .text-wrapper-13 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Roboto Condensed-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .pencatatan .chevron {
+    position: relative;
+    width: 15px;
+    height: 15px;
+  }
+  
+  .pencatatan .open {
+    position: absolute;
+    width: 13px;
+    height: 11px;
+    top: 0;
+    left: 1px;
+  }
+  
+  .pencatatan .close {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -2139px;
+    left: -15723px;
+  }
+  
+  .pencatatan .DD-month {
+    position: absolute;
+    width: 160px;
+    height: 41px;
+    top: 968px;
+    left: 298px;
+  }
+  
+  .pencatatan .DD-list-2 {
+    width: 160px;
+    top: 42px;
+    overflow-y: scroll;
+    display: var(--DD-list-ddlist, flex);
+    flex-direction: column;
+    height: 390px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #c2c2c2;
+  }
+  
+  .pencatatan .option-5 {
+    display: flex;
+    width: 140px;
+    align-items: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .DD-header-2 {
+    display: var(--DD-list-ddheader, flex);
+    width: 160px;
+    height: 41px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    border: 1px solid;
+    border-color: #c2c2c2;
+  }
+  
+  .pencatatan .close-2 {
+    left: -15553px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -2139px;
+  }
+  
+  .pencatatan .DD-year {
+    position: absolute;
+    width: 137px;
+    height: 40px;
+    top: 968px;
+    left: 151px;
+  }
+  
+  .pencatatan .DD-list-3 {
+    width: 137px;
+    top: 41px;
+    display: var(--DD-list-ddlist, flex);
+    flex-direction: column;
+    height: 390px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #c2c2c2;
+  }
+  
+  .pencatatan .option-6 {
+    display: flex;
+    width: 117px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: -10.00px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(
+        to bottom,
+        rgb(102, 102, 102),
+        rgb(204, 204, 204)
+      )
+      1;
+  }
+  
+  .pencatatan .close-3 {
+    left: -15406px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -2139px;
+  }
+  
