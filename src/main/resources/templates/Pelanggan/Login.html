@@ -1,132 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="../../static/Pelanggan/Login.css" />
-    <style>
-      /* Seamless button styling for login and register */
-      .seamless-button {
-        background: none;
-        border: none;
-        color: inherit;
-        font: inherit;
-        text-decoration: none;
-        cursor: pointer;
-        padding: 0;
-      }
-      .seamless-button:hover {
-        text-decoration: underline;
-      }
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Register button injection
-        const registerText = document.querySelector(".text-wrapper-5"); // Target the "Register here!" text
-        if (registerText) {
-          const registerButton = document.createElement("button");
-          registerButton.textContent = registerText.textContent; // Preserve the existing text
-          registerButton.className = "seamless-button"; // Apply seamless styling
-          registerButton.onclick = () => {
-            window.location.href = "register.html"; // Redirect to the register page
-          };
-          registerText.textContent = ""; // Clear the existing text
-          registerText.appendChild(registerButton); // Replace it with the button
-        }
-
-        // Login button injection
-        const loginButtonWrapper = document.querySelector(".text-wrapper-12"); // Target the "Login" text
-        if (loginButtonWrapper) {
-          const loginButton = document.createElement("button");
-          loginButton.textContent = loginButtonWrapper.textContent; // Preserve the existing text
-          loginButton.className = "seamless-button"; // Apply seamless styling
-          loginButton.onclick = () => {
-            window.location.href = "SetelahLoginUser.html"; // Redirect to SetelahLoginUser.html
-          };
-          loginButtonWrapper.textContent = ""; // Clear the existing text
-          loginButtonWrapper.appendChild(loginButton); // Replace it with the button
-        }
-      });
-    </script>
-  </head>
-  <body>
-    <div class="LOGIN">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <div class="text-wrapper">POLIKLINIK X</div>
-          <div class="group">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle"></div>
-                <div class="div"></div>
-              </div>
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../static/Pelanggan/Login.css" />
+</head>
+<body>
+  <div class="login">
+    <div class="rectangle-21"></div>
+    <div class="poliklinik-x">POLIKLINIK X</div>
+    <div class="ellipse-1"></div>
+    <div class="group-2">
+      <div class="rectangle-15"></div>
+      <div class="rectangle-16"></div>
+    </div>
+    <div class="rectangle-7"></div>
+    <div class="group-31">
+      <div class="group-1">
+        <div class="sign-in-to-name">Sign in to name</div>
+      </div>
+    </div>
+    <div class="group-32">
+      <div class="phone-call-1">
+        <img class="group" th:src="@{${groupIconUrl}}" alt="Phone Icon" />
+      </div>
+      <div class="_022-82558000">022-82558000</div>
+    </div>
+    <div class="group-41">
+      <div class="group-34">
+        <div class="sign-in">Sign in</div>
+        <div class="group-22">
+          <div class="if-you-don-t-have-an-account-register">
+            If you don’t have an account register
           </div>
-          <div class="overlap-2">
-            <div class="group-2">
-              <div class="group-wrapper">
-                <div class="div-wrapper">
-                  <div class="text-wrapper-2">Sign in to name</div>
-                </div>
-              </div>
-              <div class="group-3">
-                <img class="phone-call" src="img/phone-call-1.svg" />
-                <div class="text-wrapper-3">022-82558000</div>
-              </div>
-            </div>
-            <img
-              class="img"
-              src="img/a1b4dbfbcd8dadbb4dcc87f8f26aa038-removebg-preview-1.png"
-            />
-          </div>
-          <div class="group-4">
-            <div class="group-5">
-              <div class="group-6">
-                <div class="text-wrapper-4">Sign in</div>
-                <div class="group-7">
-                  <p class="p">If you don’t have an account register</p>
-                  <p class="you-can-register">
-                    <span class="span">You can&nbsp;&nbsp; </span>
-                    <span class="text-wrapper-5">Register here !</span>
-                  </p>
-                </div>
-              </div>
-              <div class="group-8">
-                <div class="group-9">
-                  <div class="group-10">
-                    <div class="text-wrapper-6">Email</div>
-                    <div class="text-wrapper-7">Enter your email address</div>
-                    <div class="rectangle-2"></div>
-                    <img class="message" src="img/message-1.svg" />
-                  </div>
-                  <div class="group-11">
-                    <div class="text-wrapper-8">Password</div>
-                    <div class="rectangle-3"></div>
-                    <div class="group-12">
-                      <div class="text-wrapper-9">Enter your Password</div>
-                      <img class="padlock" src="img/padlock-1.svg" />
-                    </div>
-                    <img class="invisible" src="img/invisible-1.svg" />
-                  </div>
-                </div>
-                <div class="group-13">
-                  <div class="rectangle-4"></div>
-                  <div class="text-wrapper-10">Remember me</div>
-                  <div class="text-wrapper-11">Forgot Password ?</div>
-                </div>
-                <div class="group-14">
-                  <div class="group-15">
-                    <div class="overlap-group-2">
-                      <div class="text-wrapper-12">Login</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="you-can-register-here">
+            <span>
+              <span class="you-can-register-here-span">You can</span>
+              <span class="you-can-register-here-span2">Register here !</span>
+            </span>
           </div>
         </div>
       </div>
+      <div class="group-40">
+        <div class="group-38">
+          <form th:action="@{/login}" method="post">
+            <div class="group-37">
+              <div class="email">Email</div>
+              <input type="email" class="rectangle-8" th:field="*{email}" placeholder="Enter your email address" required />
+              <div class="message-1">
+                <img class="group2" th:src="@{${emailIconUrl}}" alt="Email Icon" />
+              </div>
+            </div>
+            <div class="group-36">
+              <div class="password">Password</div>
+              <input type="password" class="rectangle-9" th:field="*{password}" placeholder="Enter your Password" required />
+              <div class="group-35">
+                <div class="padlock-1">
+                  <img class="group3" th:src="@{${padlockIconUrl}}" alt="Padlock Icon" />
+                  <img class="group4" th:src="@{${eyeIconUrl}}" alt="Eye Icon" />
+                </div>
+              </div>
+            </div>
+            <div class="invisible-1">
+              <img class="group5" th:src="@{${invisibleIconUrl}}" alt="Invisible Icon" />
+            </div>
+            <div class="group-24">
+              <div class="rectangle-5"></div>
+              <div class="rememebr-me">
+                <input type="checkbox" th:field="*{rememberMe}" /> Remember me
+              </div>
+              <div class="forgot-password">
+                <a href="/forgot-password">Forgot Password ?</a>
+              </div>
+            </div>
+            <div class="group-39">
+              <div class="group-45">
+                <div class="rectangle-10"></div>
+                <button type="submit" class="login2">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-  </body>
+    <img
+      class="a-1-b-4-dbfbcd-8-dadbb-4-dcc-87-f-8-f-26-aa-038-removebg-preview-1"
+      th:src="@{${loginImageUrl}}" alt="Login Image" />
+  </div>
+  
+</body>
 </html>
-

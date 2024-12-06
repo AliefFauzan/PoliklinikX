@@ -9,7 +9,7 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(18)
 	}
 }
 
@@ -31,6 +31,10 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation ("org.springframework.boot:spring-boot-starter-test")
+    testImplementation ("org.mockito:mockito-core")
+	implementation ("com.h2database:h2:2.2.222")
+    testImplementation ("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<Test> {
