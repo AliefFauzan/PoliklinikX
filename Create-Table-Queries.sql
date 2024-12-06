@@ -19,14 +19,14 @@ CREATE TABLE Perawat (
 );
 
 CREATE TABLE Administrasi (
-    noRekamMedis SERIAL PRIMARY KEY,
+    idPegawai SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     nama VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Dokter (
-    noRekamMedis SERIAL PRIMARY KEY,
+    idPegawai SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     nama VARCHAR(100) NOT NULL,
