@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Pelanggan/PembayaranBerhasil.css" />
+    <link rel="stylesheet" th:href="@{/globals.css}" />
+    <link rel="stylesheet" th:href="@{/styleguide.css}" />
+    <link rel="stylesheet" th:href="@{/static/Pelanggan/PembayaranBerhasil.css}" />
   </head>
   <body>
     <div class="pembayaran-berhasil">
@@ -30,17 +30,19 @@
           <div class="rectangle-9"></div>
           <div class="search-bar">
             <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
+              <div class="magnifyingglass">
+                <div class="magnifyingglass-2">􀊫</div>
+              </div>
               <div class="placeholder-label">Search</div>
             </div>
           </div>
           <div class="text-wrapper-2">Beranda</div>
           <div class="text-wrapper-3">Layanan</div>
           <div class="text-wrapper-4">Informasi</div>
-          <img class="ellipse" src="img/ellipse.png" />
+          <img class="ellipse" th:src="@{/img/Ellipse.png}" />
           <div class="sub-head">
             <div class="overlap-group-2">
-              <img class="FIGMA-payment" src="img/FIGMA-payment-hospital.png" />
+              <img class="FIGMA-payment" th:src="@{/img/FIGMA-payment-hospital.png}" />
               <div class="div-wrapper">
                 <div class="overlap-group-2">
                   <div class="frame">
@@ -63,14 +65,16 @@
         </div>
         <div class="overlap-2">
           <div class="text-wrapper-5">Follow us :</div>
-          <img class="vector" src="img/image.svg" />
-          <img class="img" src="img/vector.svg" />
-          <img class="prime-twitter" src="img/prime-twitter.svg" />
-          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
+          <img class="vector" th:src="@{/img/image.svg}" />
+          <img class="img" th:src="@{/img/vector.svg}" />
+          <img class="prime-twitter" th:src="@{/img/prime-twitter.svg}" />
+          <img class="mdi-linkedin" th:src="@{/img/mdi-linkedin.svg}" />
         </div>
         <div class="text-wrapper-6">TERIMA KASIH</div>
         <div class="overlap-wrapper">
-          <div class="overlap-3"><div class="text-wrapper-7">Riwayat Transaksi</div></div>
+          <div class="overlap-3">
+            <div class="text-wrapper-7">Riwayat Transaksi</div>
+          </div>
         </div>
       </div>
     </div>

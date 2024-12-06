@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Pelanggan/Pembayaran.css" />
+    <link rel="stylesheet" th:href="@{/globals.css}" />
+    <link rel="stylesheet" th:href="@{/styleguide.css}" />
+    <link rel="stylesheet" th:href="@{/static/Pelanggan/Pembayaran.css}" />
   </head>
   <body>
     <div class="pembayaran">
@@ -30,17 +30,19 @@
           <div class="rectangle-9"></div>
           <div class="search-bar">
             <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
+              <div class="magnifyingglass">
+                <div class="magnifyingglass-2">􀊫</div>
+              </div>
               <div class="placeholder-label">Search</div>
             </div>
           </div>
           <div class="text-wrapper-2">Beranda</div>
           <div class="text-wrapper-3">Layanan</div>
           <div class="text-wrapper-4">Informasi</div>
-          <img class="ellipse" src="img/ellipse.png" />
+          <img class="ellipse" th:src="@{/img/ellipse.png}" />
           <div class="sub-head">
             <div class="overlap-group-2">
-              <img class="FIGMA-payment" src="img/FIGMA-payment-hospital.png" />
+              <img class="FIGMA-payment" th:src="@{/img/FIGMA-payment-hospital.png}" />
               <div class="div-wrapper">
                 <div class="overlap-group-2">
                   <div class="frame">
@@ -63,26 +65,32 @@
         </div>
         <div class="overlap-2">
           <div class="text-wrapper-5">Follow us :</div>
-          <img class="vector" src="img/vector.svg" />
-          <img class="img" src="img/image.svg" />
-          <img class="prime-twitter" src="img/prime-twitter.svg" />
-          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
+          <img class="vector" th:src="@{/img/vector.svg}" />
+          <img class="img" th:src="@{/img/image.svg}" />
+          <img class="prime-twitter" th:src="@{/img/prime-twitter.svg}" />
+          <img class="mdi-linkedin" th:src="@{/img/mdi-linkedin.svg}" />
         </div>
         <div class="overlap-3">
           <div class="text-wrapper-6">Pilih metode pembayaran</div>
           <div class="rectangle-13"></div>
-          <img class="gopay-logo" src="img/gopay-logo-brandlogos-net-gph3u-1.png" />
+          <img class="gopay-logo" th:src="@{/img/gopay-logo-brandlogos-net-gph3u-1.png}" />
         </div>
         <div class="overlap-4">
           <div class="text-wrapper-6">Total Pembayaran:</div>
           <div class="rectangle-14"></div>
-          <div class="text-wrapper-7">Rp ,-</div>
+          <div class="text-wrapper-7" th:text="'Rp ' + ${totalPembayaran} + ',-'">Rp ,-</div>
         </div>
-        <div class="FIGMA-OVO-wrapper"><img class="FIGMA-OVO" src="img/FIGMA-OVO-1.png" /></div>
-        <div class="FIGMA-cc-wrapper"><img class="FIGMA-cc" src="img/FIGMA-cc-1.png" /></div>
+        <div class="FIGMA-OVO-wrapper">
+          <img class="FIGMA-OVO" th:src="@{/img/FIGMA-OVO-1.png}" />
+        </div>
+        <div class="FIGMA-cc-wrapper">
+          <img class="FIGMA-cc" th:src="@{/img/FIGMA-cc-1.png}" />
+        </div>
         <div class="overlap-5">
           <div class="rectangle-15"></div>
-          <div class="text-wrapper-8">BAYAR</div>
+          <div class="text-wrapper-8">
+            <button th:onclick="|window.location.href='@{/bayar}'|">BAYAR</button>
+          </div>
         </div>
       </div>
     </div>

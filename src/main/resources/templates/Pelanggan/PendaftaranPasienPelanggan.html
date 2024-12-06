@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
@@ -9,7 +9,9 @@
   <body>
     <div class="pendaftaran-pasien">
       <div class="div">
-        <div class="overlap"><div class="text-wrapper">SUBMIT</div></div>
+        <div class="overlap">
+          <div class="text-wrapper" th:text="${submitText}">SUBMIT</div>
+        </div>
         <div class="overlap-group">
           <div class="rectangle"></div>
           <div class="group">
@@ -17,7 +19,7 @@
             <div class="rectangle-3"></div>
             <div class="rectangle-4"></div>
           </div>
-          <div class="text-wrapper-2">POLIKLINIK X</div>
+          <div class="text-wrapper-2" th:text="${poliklinikName}">POLIKLINIK X</div>
           <div class="group-wrapper">
             <div class="overlap-group-wrapper">
               <div class="overlap-group-2">
@@ -27,13 +29,15 @@
             </div>
           </div>
           <img class="ellipse" src="img/ellipse.png" />
-          <div class="text-wrapper-3">Beranda</div>
-          <div class="text-wrapper-4">Layanan</div>
-          <div class="text-wrapper-5">Informasi</div>
+          <div class="text-wrapper-3" th:text="${homeText}">Beranda</div>
+          <div class="text-wrapper-4" th:text="${serviceText}">Layanan</div>
+          <div class="text-wrapper-5" th:text="${infoText}">Informasi</div>
           <div class="search-bar">
             <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
-              <div class="placeholder-label">Search</div>
+              <div class="magnifyingglass">
+                <div class="magnifyingglass-2">􀊫</div>
+              </div>
+              <div class="placeholder-label" th:text="${searchText}">Search</div>
             </div>
           </div>
           <div class="sub-head">
@@ -54,14 +58,14 @@
                 </div>
               </div>
               <div class="group-3">
-                <div class="about-us">Pendaftaran Pasien</div>
-                <div class="home-about">Beranda / Daftar Pasien</div>
+                <div class="about-us" th:text="${aboutUsText}">Pendaftaran Pasien</div>
+                <div class="home-about" th:text="${breadcrumbText}">Beranda / Daftar Pasien</div>
               </div>
             </div>
           </div>
         </div>
         <div class="overlap-2">
-          <div class="text-wrapper-6">Follow us :</div>
+          <div class="text-wrapper-6" th:text="${followUsText}">Follow us :</div>
           <img class="vector" src="img/vector.svg" />
           <img class="vector-2" src="img/image.svg" />
           <img class="prime-twitter" src="img/prime-twitter.svg" />
