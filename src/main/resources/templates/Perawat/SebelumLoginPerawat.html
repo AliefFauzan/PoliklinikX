@@ -34,11 +34,6 @@
       alt="Gambar Rumah Sakit"
     />
     
-    <!-- Elemen Kotak -->
-    <div class="rectangle-2"></div>
-    <div class="rectangle-3"></div>
-    <div class="rectangle-4"></div>
-    
     <!-- Nama Poliklinik -->
     <div class="poliklinik-x" th:text="'POLIKLINIK X'"></div>
     
@@ -72,22 +67,41 @@
       </form>
     </div>
 
-    <div class="register">Register</div>
-    <div class="line-1"></div>
-    <div class="login">LOGIN</div>
+    <div class="login" style="cursor: pointer; color: inherit;" onclick="navigateToLogin()">Login</div>
+    <script>
+      function navigateToLogin() {
+        window.location.href = "http://localhost:8080/Login";
+      }
+    </script>
     
     <!-- Navigasi -->
     <div class="rectangle-20"></div>
     <div class="rectangle-17"></div>
     <div class="beranda" th:text="'Beranda'"></div>
-    <div class="ellipse-2"></div>
-    <div class="catat-informasi-pasien" th:text="'Catat Informasi Pasien'"></div>
-    <div class="data-pasien" th:text="'Data Pasien'"></div>
-    <div class="ellipse-8"></div>
     
-    <!-- Ikon -->
-    <img class="open-book" th:src="@{/Perawat/img/open-book0.png}" alt="Ikon Buku" />
-    <img class="hand-with-pen" th:src="@{/Perawat/img/hand-with-pen0.png}" alt="Ikon Pena" />
+    
+    <div class="ellipse-2" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()"></div>
+    <div class="catat-informasi-pasien" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()">
+      Catat Informasi Pasien
+    </div>
+    <img class="hand-with-pen" th:src="@{/Perawat/img/hand-with-pen0.png}" alt="Ikon Pena" style="cursor: pointer;" onclick="navigateToInformasiPasien()" />
+    <script>
+      function navigateToInformasiPasien() {
+        window.location.href = "http://localhost:8080/Login";
+      }
+    </script>
+
+    <div class="catat-rekam-medis" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()">
+      Catat Rekam Medis
+    </div>
+    <div class="ellipse-8" style="cursor: pointer;" onclick="navigateToRekamMedis()">
+    </div>
+    <img class="open-book" th:src="@{/Perawat/img/open-book0.png}" alt="Ikon Buku" style="cursor: pointer;" onclick="navigateToRekamMedis()" />
+    <script>
+      function navigateToRekamMedis() {
+        window.location.href = "http://localhost:8080/Login";
+      }
+    </script>
   </div>
 </body>
 </html>

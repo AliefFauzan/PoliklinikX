@@ -20,30 +20,7 @@
   position: absolute;
   inset: 0;
 }
-.rectangle-2 {
-  background: #03337c;
-  width: 50.78px;
-  height: 6.03px;
-  position: absolute;
-  left: 33px;
-  top: 41px;
-}
-.rectangle-3 {
-  background: #03337c;
-  width: 50.78px;
-  height: 6.03px;
-  position: absolute;
-  left: 33px;
-  top: 51.33px;
-}
-.rectangle-4 {
-  background: #03337c;
-  width: 50.78px;
-  height: 6.03px;
-  position: absolute;
-  left: 33px;
-  top: 60.8px;
-}
+
 .poliklinik-x {
   color: #03337c;
   text-align: center;
@@ -148,22 +125,7 @@
   transform-origin: 0 0;
   transform: rotate(45deg) scale(1, 1);
 }
-.search-bar {
-  padding: 10px;
-  gap: 10px;
-  align-items: center;
-  justify-content: right;
-  flex-shrink: 0;
-  width: 479px;
-  height: 36px; /* Pastikan ada tinggi untuk search bar */
-  position: absolute; /* Ubah menjadi absolute */
-  top: 40px; /* Jarak dari atas */
-  right: 400px; /* Jarak dari kanan */
-  overflow: hidden;
-  background: white; /* Tambahkan background jika perlu */
-  border-radius: 8px; /* Opsional: sudut membulat */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: efek bayangan */
-}
+
 .content {
   background: var(--system-materials-sm-l-thick, rgba(250, 250, 250, 0.93));
   border-radius: 10px;
@@ -229,7 +191,7 @@
   height: 236px;
   position: relative;
   left: -5px;
-  top: 1290px;
+  top: 1250px;
 }
 .group-48 {
   position: absolute;
@@ -283,7 +245,7 @@
   left: 1950px;
   top: 1525px;
 }
-.data-pasien {
+.catat-rekam-medis {
   color: #03337c;
   text-align: center;
   font-family: "Inter-Bold", sans-serif;
@@ -292,7 +254,7 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 790px;
+  left: 750px;
   top: 1525px;
 }
 .group-222 {
@@ -338,54 +300,18 @@
   height: 32px; /* Tinggi ikon */
   cursor: pointer;
 }
-.register {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 2500px;
-  top: 61px;
-  width: 87px;
-  height: 28px;
-}
-
-.line-1 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #03337c;
-  border-width: 1px 0 0 0;
-  width: 100px;
-  height: 10px;
-  position: absolute;
-  left: 2500px;
-  top: 57px;
-}
 
 .login {
   color: #03337c;
   text-align: center;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
+  font-size: 40px;
   line-height: 24px;
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
   left: 2500px;
-  top: 25px;
+  top: 40px;
   width: 65px;
   height: 29px;
-}
-.material-symbols-search,
-.material-symbols-search * {
-  box-sizing: border-box;
-}
-.material-symbols-search {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  overflow: visible;
 }
