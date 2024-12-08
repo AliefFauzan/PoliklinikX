@@ -1,418 +1,319 @@
-:root {
-    --label-colorslc-l-secondary: rgba(60, 60, 67, 0.6);
-    --system-materialssm-l-thick: rgba(250, 250, 250, 0.93);
-    --default-size-body-font-family: "SF Pro Text", Helvetica;
-    --default-size-body-font-weight: 400;
-    --default-size-body-font-size: 17px;
-    --default-size-body-letter-spacing: -0.40799999237060547px;
-    --default-size-body-line-height: 22px;
-    --default-size-body-font-style: normal;
-  }
-  
-
+.beranda-perawat,
+.beranda-perawat * {
+  box-sizing: border-box;
+}
 .beranda-perawat {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .beranda-perawat .overlap-wrapper {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 1440px;
-    height: 1024px;
-  }
-  
-  .beranda-perawat .overlap {
-    position: relative;
-    width: 1445px;
-    height: 1024px;
-    left: -5px;
-  }
-  
-  .beranda-perawat .mount-elizabeth {
-    position: absolute;
-    width: 1440px;
-    height: 962px;
-    top: 0;
-    left: 5px;
-    object-fit: cover;
-  }
-  
-  .beranda-perawat .group {
-    position: absolute;
-    width: 51px;
-    height: 26px;
-    top: 41px;
-    left: 38px;
-  }
-  
-  .beranda-perawat .rectangle {
-    position: absolute;
-    width: 51px;
-    height: 6px;
-    top: 0;
-    left: 0;
-    background-color: #02337c;
-  }
-  
-  .beranda-perawat .div {
-    position: absolute;
-    width: 51px;
-    height: 6px;
-    top: 10px;
-    left: 0;
-    background-color: #02337c;
-  }
-  
-  .beranda-perawat .rectangle-2 {
-    position: absolute;
-    width: 51px;
-    height: 6px;
-    top: 20px;
-    left: 0;
-    background-color: #02337c;
-  }
-  
-  .beranda-perawat .text-wrapper {
-    position: absolute;
-    top: 46px;
-    left: 256px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .rectangle-3 {
-    position: absolute;
-    width: 1440px;
-    height: 62px;
-    top: 962px;
-    left: 5px;
-    background-color: #ddf1f0;
-  }
-  
-  .beranda-perawat .ic-sharp-call {
-    position: absolute;
-    width: 24px;
-    height: 23px;
-    top: 982px;
-    left: 33px;
-  }
-  
-  .beranda-perawat .text-wrapper-2 {
-    position: absolute;
-    width: 280px;
-    top: 981px;
-    left: 69px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .img {
-    position: absolute;
-    width: 24px;
-    height: 23px;
-    top: 982px;
-    left: 380px;
-  }
-  
-  .beranda-perawat .p {
-    position: absolute;
-    width: 382px;
-    top: 981px;
-    left: 416px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .text-wrapper-3 {
-    position: absolute;
-    width: 105px;
-    top: 981px;
-    left: 1178px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .vector {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 984px;
-    left: 1333px;
-  }
-  
-  .beranda-perawat .vector-2 {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 984px;
-    left: 1298px;
-  }
-  
-  .beranda-perawat .prime-twitter {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 984px;
-    left: 1368px;
-  }
-  
-  .beranda-perawat .mdi-linkedin {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 984px;
-    left: 1397px;
-  }
-  
-  .beranda-perawat .group-wrapper {
-    position: absolute;
-    width: 77px;
-    height: 77px;
-    top: 16px;
-    left: 134px;
-    background-color: #02337c;
-    border-radius: 38.5px;
-    box-shadow: inset 0px 4px 4px #00000040;
-  }
-  
-  .beranda-perawat .overlap-group-wrapper {
-    position: relative;
-    width: 51px;
-    height: 51px;
-    top: 13px;
-    left: 13px;
-  }
-  
-  .beranda-perawat .overlap-group {
-    position: relative;
-    height: 51px;
-  }
-  
-  .beranda-perawat .rectangle-4 {
-    position: absolute;
-    width: 60px;
-    height: 12px;
-    top: 20px;
-    left: -5px;
-    background-color: #ffffff;
-    transform: rotate(-45deg);
-  }
-  
-  .beranda-perawat .rectangle-5 {
-    position: absolute;
-    width: 60px;
-    height: 12px;
-    top: 20px;
-    left: -5px;
-    background-color: #ffffff;
-    transform: rotate(45deg);
-  }
-  
-  .beranda-perawat .search-bar {
-    display: flex;
-    flex-direction: column;
-    width: 290px;
-    height: 34px;
-    align-items: flex-start;
-    gap: 10px;
-    position: absolute;
-    top: 41px;
-    left: 1026px;
-  }
-  
-  .beranda-perawat .content {
-    display: flex;
-    height: 36px;
-    align-items: center;
-    padding: 8px;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
-    margin-bottom: -2.00px;
-    background-color: var(--system-materialssm-l-thick);
-    border-radius: 10px;
-    opacity: 0.8;
-  }
-  
-  .beranda-perawat .magnifyingglass {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    margin-top: -4.00px;
-    margin-bottom: -4.00px;
-  }
-  
-  .beranda-perawat .magnifyingglass-2 {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    top: -1px;
-    left: 0;
-    font-family: "SF Pro Display-Medium", Helvetica;
-    font-weight: 500;
-    color: var(--label-colorslc-l-secondary);
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 50px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .placeholder-label {
-    position: relative;
-    flex: 1;
-    margin-top: -2.00px;
-    font-family: var(--default-size-body-font-family);
-    font-weight: var(--default-size-body-font-weight);
-    color: var(--label-colorslc-l-secondary);
-    font-size: var(--default-size-body-font-size);
-    letter-spacing: var(--default-size-body-letter-spacing);
-    line-height: var(--default-size-body-line-height);
-    font-style: var(--default-size-body-font-style);
-  }
-  
-  .beranda-perawat .rectangle-6 {
-    position: absolute;
-    width: 1445px;
-    height: 236px;
-    top: 779px;
-    left: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(228.02, 245.01, 255, 0) 0%,
-      rgb(228.02, 245.01, 255) 100%
-    );
-  }
-  
-  .beranda-perawat .ellipse {
-    position: absolute;
-    width: 70px;
-    height: 68px;
-    top: 24px;
-    left: 1349px;
-    object-fit: cover;
-  }
-  
-  .beranda-perawat .div-wrapper {
-    position: absolute;
-    width: 121px;
-    height: 29px;
-    top: 44px;
-    left: 567px;
-  }
-  
-  .beranda-perawat .overlap-2 {
-    position: relative;
-    width: 119px;
-    height: 29px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .beranda-perawat .text-wrapper-4 {
-    position: absolute;
-    width: 115px;
-    top: 2px;
-    left: 1px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .group-2 {
-    position: absolute;
-    width: 96px;
-    height: 96px;
-    top: 814px;
-    left: 964px;
-    background-color: #02337c;
-    border-radius: 48px;
-  }
-  
-  .beranda-perawat .text-wrapper-5 {
-    position: absolute;
-    top: 924px;
-    left: 897px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .text-wrapper-6 {
-    position: absolute;
-    top: 904px;
-    left: 366px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .beranda-perawat .group-3 {
-    position: absolute;
-    width: 96px;
-    height: 96px;
-    top: 794px;
-    left: 380px;
-    background-color: #02337c;
-    border-radius: 48px;
-  }
-  
-  .beranda-perawat .open-book {
-    position: absolute;
-    width: 68px;
-    height: 75px;
-    top: 803px;
-    left: 395px;
-  }
-  
-  .beranda-perawat .hand-with-pen {
-    position: absolute;
-    width: 71px;
-    height: 75px;
-    top: 824px;
-    left: 976px;
-  }
-  
+  background: #ffffff;
+  height: 1640px;
+  position: relative;
+  overflow: hidden;
+}
+.mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -5px;
+  top: 0px;
+  object-fit: cover;
+}
+.group-1 {
+  position: absolute;
+  inset: 0;
+}
+
+.poliklinik-x {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 40px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 251px;
+  top: 47px;
+}
+.rectangle-14 {
+  background: #ddf1f0;
+  width: 100%;
+  height: 62px;
+  position: absolute;
+  left: 0px;
+  top: 1575px;
+}
+.ic-sharp-call {
+  width: 24px;
+  height: 23px;
+  position: absolute;
+  left: 28px;
+  top: 1590px;
+  overflow: visible;
+}
+.call-center-081234567890 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: absolute;
+  left: 64px;
+  top: 1590px;
+  width: 280px;
+  height: 23px;
+}
+.ic-sharp-call2 {
+  width: 24px;
+  height: 23px;
+  position: absolute;
+  left: 375px;
+  top: 1590px;
+  overflow: visible;
+}
+.customer-call-center-022-82558000 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: absolute;
+  left: 411px;
+  top: 1590px;
+  width: 382px;
+  height: 23px;
+}
+
+.group-3 {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-1 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  left: 129px;
+  top: 16px;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.group-2 {
+  width: 50.84px;
+  height: 50.84px;
+  position: static;
+}
+.rectangle-15 {
+  background: #ffffff;
+  width: 60.37px;
+  height: 11.53px;
+  position: absolute;
+  left: 141.94px;
+  top: 71.62px;
+  transform-origin: 0 0;
+  transform: rotate(-45deg) scale(1, 1);
+}
+.rectangle-16 {
+  background: #ffffff;
+  width: 60.37px;
+  height: 11.53px;
+  position: absolute;
+  left: 150.09px;
+  top: 28.94px;
+  transform-origin: 0 0;
+  transform: rotate(45deg) scale(1, 1);
+}
+
+.content {
+  background: var(--system-materials-sm-l-thick, rgba(250, 250, 250, 0.93));
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 36px;
+  position: relative;
+}
+.magnifyingglass {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.magnifyingglass2 {
+  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
+  text-align: center;
+  font-family: "SfProDisplay-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 500;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder-label {
+  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
+  text-align: left;
+  font-family: var(
+    --default-size-body-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--default-size-body-font-size, 17px);
+  line-height: var(--default-size-body-line-height, 22px);
+  letter-spacing: var(--default-size-body-letter-spacing, -0.41px);
+  font-weight: var(--default-size-body-font-weight, 400);
+  position: relative;
+  flex: 1;
+}
+.rectangle-20 {
+  background: linear-gradient(
+    0deg,
+    rgba(228, 245, 255, 0) 0%,
+    rgba(228, 245, 255, 1) 100%
+  );
+  width: 100%;
+  height: 236px;
+  position: relative;
+  left: -5px;
+  top: 1250px;
+}
+.group-48 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-17 {
+  background: rgba(217, 217, 217, 0.7);
+  border-radius: 36px;
+  width: 119px;
+  height: 29px;
+  position: absolute;
+  left: 562px;
+  top: 44px;
+}
+.beranda {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 563px;
+  top: 46px;
+  width: 115px;
+  height: 19px;
+}
+.group-46 {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-2 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  left: 2000px;
+  top: 1400px;
+}
+.catat-informasi-pasien {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 1950px;
+  top: 1525px;
+}
+.catat-rekam-medis {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 750px;
+  top: 1525px;
+}
+.group-222 {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-8 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  left: 800px;
+  top: 1400px;
+}
+.open-book {
+  width: 68px;
+  height: 75px;
+  position: absolute;
+  left: 815px;
+  top: 1410px;
+  object-fit: cover;
+}
+.hand-with-pen {
+  width: 71px;
+  height: 75px;
+  position: absolute;
+  left: 2010px;
+  top: 1410px;
+  object-fit: cover;
+}
+.social-container {
+  position: fixed;
+  left: 2500px;
+  top: 1590px;
+  display: flex;
+  gap: 10px;    /* Jarak antar ikon */
+  z-index: 100; /* Agar berada di atas elemen lain jika perlu */
+}
+
+.social-container img {
+  width: 32px;  /* Ukuran ikon */
+  height: 32px; /* Tinggi ikon */
+  cursor: pointer;
+}
+
+.ellipse,
+.ellipse * {
+  box-sizing: border-box;
+}
+.ellipse {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 70px;
+  height: 68px;
+  position: relative;
+  object-fit: cover;
+  left: 2500px;
+  top: -10px;
+}
