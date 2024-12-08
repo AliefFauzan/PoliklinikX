@@ -39,7 +39,7 @@ public class PelangganController {
     }
 
     // Map to the Register page
-    @GetMapping("/register")
+    @GetMapping("/registerPelanggan")
     public String registerPage() {
         return "Pelanggan/Register";
     }
