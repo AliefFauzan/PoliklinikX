@@ -26,7 +26,7 @@ public class MainController {
         return "SebelumLoginUSer";
     }
 
-    @GetMapping("/register")
+    @GetMapping("/registerMain")
     public String Register (Model model) {
         return "Register";
     }
