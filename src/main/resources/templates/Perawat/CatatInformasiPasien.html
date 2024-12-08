@@ -1,130 +1,1156 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Perawat/CatatInformasiPasien.css" />
-  </head>
-  <body>
-    <div class="mencatat-informasi">
-      <div class="div">
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <div class="group">
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-            <div class="rectangle-5"></div>
-          </div>
-          <div class="text-wrapper">POLIKLINIK X</div>
-          <div class="group-wrapper">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle-6"></div>
-                <div class="rectangle-7"></div>
-              </div>
-            </div>
-          </div>
-          <img class="ellipse" src="img/ellipse.png" />
-          <div class="text-wrapper-2">Beranda</div>
-          <div class="search-bar">
-            <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
-              <div class="placeholder-label">Search</div>
-            </div>
-          </div>
-          <div class="sub-head">
-            <div class="overlap-group-2">
-              <img class="img" src="img/rectangle-3.png" />
-              <div class="rectangle-8"></div>
-              <div class="div-wrapper">
-                <div class="overlap-group-2">
-                  <div class="frame">
-                    <div class="ellipse-2"></div>
-                    <div class="ellipse-3"></div>
-                  </div>
-                  <div class="group-2">
-                    <div class="rectangle-9"></div>
-                    <div class="rectangle-10"></div>
-                    <div class="rectangle-11"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="group-3">
-                <div class="about-us">Catat Informasi Pasien</div>
-                <p class="home-about">Beranda / Catat Diagnosa Pasien</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-2"><div class="text-wrapper-3">SUBMIT</div></div>
-        <div class="text-wrapper-4">Nomor rekam medis</div>
-        <div class="overlap-3">
-          <div class="rectangle-12"></div>
-          <div class="text-wrapper-5">Masukkan nomor rekam medis</div>
-        </div>
-        <div class="text-wrapper-6">Keluhan yang dirasakan pasien</div>
-        <div class="overlap-4"><div class="text-wrapper-7">Masukan diagnosa pasien</div></div>
-        <div class="text-wrapper-8">Gol. Darah pasien</div>
-        <div class="text-wrapper-9">Berat badan</div>
-        <div class="overlap-5">
-          <div class="rectangle-13"></div>
-          <p class="text-wrapper-10">Masukan berat badan pasien (kg)</p>
-        </div>
-        <div class="text-wrapper-11">Nama dokter yang dikunjungi</div>
-        <div class="overlap-6">
-          <div class="rectangle-12"></div>
-          <p class="p">Masukan nama dokter yang ingin dikunjngi</p>
-        </div>
-        <div class="text-wrapper-12">Jadwal dokter yang dikunjungi</div>
-        <div class="overlap-7">
-          <div class="rectangle-12"></div>
-          <p class="p">Masukan jadwal yang anda pilih</p>
-        </div>
-        <div class="text-wrapper-13">Suhu</div>
-        <div class="overlap-8">
-          <div class="rectangle-13"></div>
-          <div class="text-wrapper-10">Masukan suhu pasien (°C)</div>
-        </div>
-        <div class="text-wrapper-14">Tekanan Darah</div>
-        <div class="overlap-9">
-          <div class="rectangle-13"></div>
-          <div class="text-wrapper-10">Masukan tekanan darah pasien</div>
-        </div>
-        <div class="text-wrapper-15">Tinggi badan</div>
-        <div class="overlap-10">
-          <div class="rectangle-13"></div>
-          <div class="text-wrapper-10">Masukan tinggi pasien (cm)</div>
-        </div>
-        <div class="text-wrapper-16">A+</div>
-        <div class="rectangle-14"></div>
-        <div class="text-wrapper-17">O+</div>
-        <div class="overlap-11">
-          <div class="rectangle-15"></div>
-          <div class="text-wrapper-18">AB+</div>
-        </div>
-        <div class="rectangle-16"></div>
-        <div class="text-wrapper-19">B+</div>
-        <div class="rectangle-17"></div>
-        <div class="text-wrapper-20">A-</div>
-        <div class="rectangle-18"></div>
-        <div class="text-wrapper-21">O-</div>
-        <div class="overlap-12">
-          <div class="rectangle-15"></div>
-          <div class="text-wrapper-18">AB-</div>
-        </div>
-        <div class="rectangle-19"></div>
-        <div class="text-wrapper-22">B-</div>
-        <div class="rectangle-20"></div>
-        <div class="overlap-13">
-          <div class="text-wrapper-23">Follow us :</div>
-          <img class="vector" src="img/vector.svg" />
-          <img class="vector-2" src="img/image.svg" />
-          <img class="prime-twitter" src="img/prime-twitter.svg" />
-          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
-        </div>
-      </div>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Perawat/CatatInformasiPasien/vars.css">
+  <link rel="stylesheet" href="Perawat/CatatInformasiPasien/style.css">
+  <style>
+    a,
+    button,
+    input,
+    select,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      background: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .mencatat-informasi-pasien,
+    .mencatat-informasi-pasien * {
+      box-sizing: border-box;
+    }
+
+    .mencatat-informasi-pasien {
+      background: #ffffff;
+      height: 1475.21px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rectangle-15 {
+      background: #e4f5ff;
+      width: 1440.5px;
+      height: 122.04px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .rectangle-109 {
+      background: rgba(217, 217, 217, 0.7);
+      border-radius: 36px;
+      width: 119px;
+      height: 29px;
+      position: absolute;
+      left: 559px;
+      top: 52px;
+    }
+
+    .rectangle-87 {
+      background: #1f2b6c;
+      border-radius: 79.45px;
+      border-style: solid;
+      border-color: #dbefff;
+      border-width: 0.53px;
+      width: 1299.18px;
+      height: 62.46px;
+      position: absolute;
+      left: 61.32px;
+      top: 1244.67px;
+    }
+
+    .group-1 {
+      position: absolute;
+      inset: 0;
+    }
+
+    .rectangle-2 {
+      background: #03337c;
+      width: 50.8px;
+      height: 6.03px;
+      position: absolute;
+      left: 27.01px;
+      top: 46.56px;
+    }
+
+    .rectangle-3 {
+      background: #03337c;
+      width: 50.8px;
+      height: 6.03px;
+      position: absolute;
+      left: 27.01px;
+      top: 56.89px;
+    }
+
+    .rectangle-4 {
+      background: #03337c;
+      width: 50.8px;
+      height: 6.03px;
+      position: absolute;
+      left: 27.01px;
+      top: 66.37px;
+    }
+
+    .poliklinik-x {
+      color: #03337c;
+      text-align: center;
+      font-family: "Inter-Bold", sans-serif;
+      font-size: 40.01380157470703px;
+      line-height: 24.01px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      position: absolute;
+      left: 247.09px;
+      top: 55.02px;
+    }
+
+    .group-3 {
+      position: absolute;
+      inset: 0;
+    }
+
+    .ellipse-1 {
+      background: #03337c;
+      border-radius: 50%;
+      width: 77.03px;
+      height: 77.03px;
+      position: absolute;
+      left: 125.04px;
+      top: 24.01px;
+      box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .group-2 {
+      width: 50.86px;
+      height: 50.86px;
+      position: static;
+    }
+
+    .rectangle-152 {
+      background: #ffffff;
+      width: 60.39px;
+      height: 11.54px;
+      position: absolute;
+      left: 137.98px;
+      top: 79.65px;
+      transform-origin: 0 0;
+      transform: rotate(-45deg) scale(1, 1);
+    }
+
+    .rectangle-16 {
+      background: #ffffff;
+      width: 60.39px;
+      height: 11.54px;
+      position: absolute;
+      left: 146.14px;
+      top: 36.95px;
+      transform-origin: 0 0;
+      transform: rotate(45deg) scale(1, 1);
+    }
+
+    .ellipse {
+      border-radius: 50%;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1px;
+      width: 70.02px;
+      height: 68.02px;
+      position: absolute;
+      left: 1340.46px;
+      top: 32.01px;
+      object-fit: cover;
+    }
+
+    .beranda {
+      color: #03337c;
+      text-align: center;
+      font-family: "Inter-Bold", sans-serif;
+      font-size: 20.006900787353516px;
+      line-height: 24.01px;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      position: absolute;
+      left: 559.19px;
+      top: 54.02px;
+      width: 115.04px;
+      height: 19.01px;
+    }
+
+    .nomor-rekam-medis {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 59px;
+      top: 494px;
+      width: 212px;
+      height: 36px;
+    }
+
+    .rectangle-89 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 36.34px;
+      position: absolute;
+      left: 59.05px;
+      top: 534.89px;
+    }
+
+    .masukkan-nomor-rekam-medis {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 77.22px;
+      top: 541.7px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .keluhan-yang-dirasakan-pasien {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 746px;
+      top: 905px;
+      width: 336px;
+      height: 36px;
+    }
+
+    .rectangle-95 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 613px;
+      height: 239px;
+      position: absolute;
+      left: 746px;
+      top: 946px;
+    }
+
+    .masukan-diagnosa-pasien {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 767.58px;
+      top: 949.18px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .gol-darah-pasien {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 748px;
+      top: 700px;
+      width: 264px;
+      height: 37px;
+    }
+
+    .berat-badan {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 52px;
+      top: 637px;
+      width: 182px;
+      height: 38px;
+    }
+
+    .rectangle-91 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 37.48px;
+      position: absolute;
+      left: 52.05px;
+      top: 678.31px;
+    }
+
+    .masukan-berat-badan-pasien-kg {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 73.63px;
+      top: 682.85px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .nama-dokter-yang-dikunjungi {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 746.12px;
+      top: 494.01px;
+      width: 438.36px;
+      height: 36.34px;
+    }
+
+    .rectangle-96 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 36.34px;
+      position: absolute;
+      left: 746.12px;
+      top: 534.89px;
+    }
+
+    .masukan-nama-dokter-yang-ingin-dikunjngi {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 767.7px;
+      top: 538.3px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .jadwal-dokter-yang-dikunjungi {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 746.12px;
+      top: 592.81px;
+      width: 521.26px;
+      height: 36.34px;
+    }
+
+    .rectangle-97 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 36.34px;
+      position: absolute;
+      left: 746.12px;
+      top: 633.69px;
+    }
+
+    .masukan-jadwal-yang-anda-pilih {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 767.7px;
+      top: 637.1px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .submit {
+      color: #ffffff;
+      text-align: left;
+      font-family: "Inter-Bold", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 700;
+      position: absolute;
+      left: 677.98px;
+      top: 1260.57px;
+      width: 85.17px;
+      height: 37.48px;
+      -webkit-text-stroke: 1.1356467008590698px #ffffff;
+    }
+
+    .suhu {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 59px;
+      top: 1046px;
+      width: 196px;
+      height: 38px;
+    }
+
+    .rectangle-104 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 37.48px;
+      position: absolute;
+      left: 59.05px;
+      top: 1087.06px;
+    }
+
+    .masukan-suhu-pasien-c {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 80.63px;
+      top: 1091.6px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .tekanan-darah {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 54px;
+      top: 912px;
+      width: 196px;
+      height: 38px;
+    }
+
+    .rectangle-103 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 37.48px;
+      position: absolute;
+      left: 54.05px;
+      top: 953.06px;
+    }
+
+    .masukan-tekanan-darah-pasien {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 75.63px;
+      top: 957.6px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .tinggi-badan {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 53.95px;
+      top: 771px;
+      width: 196px;
+      height: 38px;
+    }
+
+    .rectangle-102 {
+      background: #ffffff;
+      border-radius: 6.9px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 0.34px;
+      width: 614.38px;
+      height: 37.48px;
+      position: absolute;
+      left: 52px;
+      top: 812.06px;
+    }
+
+    .masukan-tinggi-pasien-cm {
+      color: #bbbbbb;
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 15.021242141723633px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 73.58px;
+      top: 816.6px;
+      width: 508.77px;
+      height: 40.88px;
+    }
+
+    .search-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 10.59px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 307.2px;
+      height: 36.02px;
+      position: absolute;
+      left: 1007.32px;
+      top: 47.67px;
+    }
+
+    .content {
+      background: var(--system-materials-sm-l-thick, rgba(250, 250, 250, 0.93));
+      border-radius: 10.59px;
+      opacity: 0.8;
+      padding: 8.47px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+      flex-shrink: 0;
+      height: 38.14px;
+      position: relative;
+    }
+
+    .magnifyingglass {
+      flex-shrink: 0;
+      width: 29.66px;
+      height: 29.66px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .magnifyingglass2 {
+      color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
+      text-align: center;
+      font-family: "SfProDisplay-Medium", sans-serif;
+      font-size: 19.067590713500977px;
+      line-height: 52.97px;
+      font-weight: 500;
+      position: absolute;
+      right: 11.94%;
+      left: 0%;
+      width: 88.06%;
+      bottom: 11.94%;
+      top: 0%;
+      height: 88.06%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .placeholder-label {
+      color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
+      text-align: left;
+      font-family: var(--default-size-body-font-family,
+          "SfProText-Regular",
+          sans-serif);
+      font-size: var(--default-size-body-font-size, 17px);
+      line-height: var(--default-size-body-line-height, 22px);
+      letter-spacing: var(--default-size-body-letter-spacing, -0.41px);
+      font-weight: var(--default-size-body-font-weight, 400);
+      position: relative;
+      flex: 1;
+    }
+
+    .a {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 798px;
+      top: 742px;
+      width: 45px;
+      height: 34px;
+    }
+
+    .rectangle-105 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 748px;
+      top: 742px;
+    }
+
+    .o {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 1303px;
+      top: 742px;
+      width: 45px;
+      height: 34px;
+    }
+
+    .rectangle-108 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 1253px;
+      top: 742px;
+    }
+
+    .ab {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 1132px;
+      top: 742px;
+      width: 126px;
+      height: 34px;
+    }
+
+    .rectangle-107 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 1082px;
+      top: 742px;
+    }
+
+    .b {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 969px;
+      top: 742px;
+      width: 44px;
+      height: 34px;
+    }
+
+    .rectangle-106 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 919px;
+      top: 742px;
+    }
+
+    .a2 {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 798px;
+      top: 801px;
+      width: 45px;
+      height: 34px;
+    }
+
+    .rectangle-1092 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 748px;
+      top: 801px;
+    }
+
+    .o2 {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 1303px;
+      top: 801px;
+      width: 45px;
+      height: 34px;
+    }
+
+    .rectangle-110 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 1253px;
+      top: 801px;
+    }
+
+    .ab2 {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 1132px;
+      top: 801px;
+      width: 126px;
+      height: 34px;
+    }
+
+    .rectangle-111 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 1082px;
+      top: 801px;
+    }
+
+    .b2 {
+      color: var(--gray-700, #344054);
+      text-align: left;
+      font-family: "Mulish-Regular", sans-serif;
+      font-size: 19.56916618347168px;
+      line-height: 150%;
+      font-weight: 400;
+      position: absolute;
+      left: 969px;
+      top: 801px;
+      width: 44px;
+      height: 34px;
+    }
+
+    .rectangle-112 {
+      background: #ffffff;
+      border-radius: 5.68px;
+      border-style: solid;
+      border-color: #000000;
+      border-width: 1.14px;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 919px;
+      top: 801px;
+    }
+
+    .rectangle-14 {
+      width: 1440.5px;
+      height: 62.02px;
+      position: absolute;
+      left: 0px;
+      top: 1412.74px;
+      overflow: visible;
+    }
+
+    .follow-us {
+      color: #000000;
+      text-align: center;
+      font-family: "Inter-Regular", sans-serif;
+      font-size: 21.18621063232422px;
+      line-height: 25.42px;
+      letter-spacing: 0.53px;
+      font-weight: 400;
+      position: absolute;
+      left: 1164.04px;
+      top: 1430.91px;
+      width: 111.23px;
+      height: 24.36px;
+    }
+
+    .vector {
+      width: 1.47%;
+      height: 1.36%;
+      position: absolute;
+      right: 6.32%;
+      left: 92.21%;
+      bottom: 1.49%;
+      top: 97.14%;
+      overflow: visible;
+    }
+
+    .vector2 {
+      width: 1.47%;
+      height: 1.36%;
+      position: absolute;
+      right: 8.9%;
+      left: 89.63%;
+      bottom: 1.49%;
+      top: 97.14%;
+      overflow: visible;
+    }
+
+    .prime-twitter {
+      width: 21.19px;
+      height: 20.13px;
+      position: absolute;
+      left: 1365.31px;
+      top: 1433.03px;
+      overflow: hidden;
+    }
+
+    .group {
+      height: auto;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      overflow: visible;
+    }
+
+    .mdi-linkedin {
+      width: 21.19px;
+      height: 20.13px;
+      position: absolute;
+      left: 1396.03px;
+      top: 1433.03px;
+      overflow: visible;
+    }
+
+    .sub-head {
+      width: 1440.66px;
+      height: 314.14px;
+      position: absolute;
+      left: 0.42px;
+      top: 118.64px;
+    }
+
+    .rectangle-32 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0%;
+      left: 0%;
+      bottom: 0%;
+      top: 0%;
+      object-fit: cover;
+    }
+
+    .rectangle-42 {
+      background: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0%;
+      left: 0%;
+      bottom: 0%;
+      top: 0%;
+    }
+
+    .group-203 {
+      position: absolute;
+      inset: 0;
+    }
+
+    .frame-2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0%;
+      left: 0%;
+      bottom: 0%;
+      top: 0%;
+      overflow: hidden;
+    }
+
+    .ellipse-12 {
+      background: var(--accent, #bfd2f8);
+      border-radius: 50%;
+      opacity: 0.5;
+      width: 256.12px;
+      height: 256.12px;
+      position: absolute;
+      right: -128.06px;
+      top: 122.06px;
+    }
+
+    .ellipse-2 {
+      background: var(--secondary, #159eec);
+      border-radius: 50%;
+      opacity: 0.3;
+      width: 239.11px;
+      height: 239.11px;
+      position: absolute;
+      left: -119.05px;
+      top: -119.05px;
+    }
+
+    .group-184 {
+      width: 1440.66px;
+      height: 10.05px;
+      position: static;
+    }
+
+    .rectangle-76 {
+      background: var(--primary, #1f2b6c);
+      width: 61.29%;
+      height: 3.2%;
+      position: absolute;
+      right: 16.33%;
+      left: 22.38%;
+      bottom: 0%;
+      top: 96.8%;
+    }
+
+    .rectangle-78 {
+      background: var(--secondary, #159eec);
+      width: 16.33%;
+      height: 3.2%;
+      position: absolute;
+      right: 0%;
+      left: 83.67%;
+      bottom: 0%;
+      top: 96.8%;
+    }
+
+    .rectangle-77 {
+      background: var(--accent, #bfd2f8);
+      width: 22.38%;
+      height: 3.2%;
+      position: absolute;
+      right: 77.62%;
+      left: 0%;
+      bottom: 0%;
+      top: 96.8%;
+    }
+
+    .group-108 {
+      position: absolute;
+      inset: 0;
+    }
+
+    .about-us {
+      color: var(--primary, #1f2b6c);
+      text-align: left;
+      font-family: "Inter-Regular", sans-serif;
+      font-size: 48.02207565307617px;
+      font-weight: 400;
+      position: absolute;
+      right: 50.91%;
+      left: 13.69%;
+      width: 35.4%;
+      bottom: 42.74%;
+      top: 38.8%;
+      height: 18.46%;
+    }
+
+    .home-about {
+      color: var(--primary, #1f2b6c);
+      text-align: left;
+      font-family: "Inter-Regular", sans-serif;
+      font-size: 18.008277893066406px;
+      line-height: 140%;
+      font-weight: 400;
+      position: absolute;
+      right: 66.87%;
+      left: 13.69%;
+      width: 19.44%;
+      bottom: 61.64%;
+      top: 30.4%;
+      height: 7.96%;
+    }
+
+    
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="mencatat-informasi-pasien">
+    <div class="rectangle-15"></div>
+    <div class="rectangle-109"></div>
+    <div class="rectangle-87"></div>
+    <div class="rectangle-2"></div>
+    <div class="rectangle-3"></div>
+    <div class="rectangle-4"></div>
+    <div class="poliklinik-x">POLIKLINIK X</div>
+    <div class="ellipse-1"></div>
+    <div class="group-2">
+      <div class="rectangle-152"></div>
+      <div class="rectangle-16"></div>
     </div>
-  </body>
+    <img class="ellipse" src="/Perawat/images/ellipse0.png" />
+    <div class="beranda">Beranda</div>
+
+    <!-- Nomor Rekam Medis -->
+    <div class="nomor-rekam-medis">Nomor rekam medis</div>
+    <div class="rectangle-89">
+      <input type="text" class="input-nomor-rekam-medis" th:name="nomorRekamMedis"
+        placeholder="Masukkan nomor rekam medis" />
+    </div>
+
+    <!-- Keluhan Pasien -->
+    <div class="keluhan-yang-dirasakan-pasien">Keluhan yang dirasakan pasien</div>
+    <div class="rectangle-95">
+      <textarea class="input-keluhan-pasien" th:name="keluhanPasien" placeholder="Masukkan keluhan pasien"></textarea>
+    </div>
+
+    <!-- Diagnosa Pasien -->
+    <div class="masukan-diagnosa-pasien"></div>
+    <div class="rectangle-96">
+      <textarea class="input-diagnosa-pasien" th:name="diagnosaPasien"
+        placeholder="Masukkan diagnosa pasien"></textarea>
+    </div>
+
+    <!-- Berat Badan -->
+    <div class="berat-badan">Berat badan</div>
+    <div class="rectangle-91">
+      <input type="number" class="input-berat-badan" th:name="beratBadan" placeholder="Masukkan berat badan (kg)" />
+    </div>
+
+    <!-- Tinggi Badan -->
+    <div class="tinggi-badan">Tinggi badan</div>
+    <div class="rectangle-102">
+      <input type="number" class="input-tinggi-badan" th:name="tinggiBadan" placeholder="Masukkan tinggi badan (cm)" />
+    </div>
+
+    <!-- Suhu Pasien -->
+    <div class="suhu">Suhu</div>
+    <div class="rectangle-104">
+      <input type="number" class="input-suhu-pasien" th:name="suhuPasien" placeholder="Masukkan suhu pasien (°C)" />
+    </div>
+
+    <!-- Tekanan Darah -->
+    <div class="tekanan-darah">Tekanan Darah</div>
+    <div class="rectangle-103">
+      <input type="text" class="input-tekanan-darah" th:name="tekananDarah" placeholder="Masukkan tekanan darah" />
+    </div>
+
+    <!-- Nama Dokter -->
+    <div class="nama-dokter-yang-dikunjungi">Nama dokter yang dikunjungi</div>
+    <div class="rectangle-96">
+      <input type="text" class="input-nama-dokter" th:name="namaDokter" placeholder="Masukkan nama dokter" />
+    </div>
+
+    <!-- Jadwal Dokter -->
+    <div class="jadwal-dokter-yang-dikunjungi">Jadwal dokter yang dikunjungi</div>
+    <div class="rectangle-97">
+      <input type="datetime-local" class="input-jadwal-dokter" th:name="jadwalDokter" />
+    </div>
+
+    <!-- Golongan Darah -->
+    <div class="gol-darah-pasien">Gol. Darah pasien</div>
+    <div class="rectangle-105">
+      <select class="input-gol-darah" th:name="golDarah">
+        <option value="A+">A+</option>
+        <option value="O+">O+</option>
+        <option value="B+">B+</option>
+        <option value="AB+">AB+</option>
+        <option value="A-">A-</option>
+        <option value="O-">O-</option>
+        <option value="B-">B-</option>
+        <option value="AB-">AB-</option>
+      </select>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="submit" type="submit">SUBMIT</button>
+  </div>
+
+</body>
+
 </html>
