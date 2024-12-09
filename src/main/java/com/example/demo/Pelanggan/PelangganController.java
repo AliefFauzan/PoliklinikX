@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class PelangganController {
 
+    // Map to SebelumLoginUser page
+    @GetMapping("/sebelum-login-user")
+    public String showSebelumLoginUser() {
+        return "Pelanggan/SebelumLoginUser"; // Pastikan path ini sesuai dengan struktur template Anda
+    }
+
     // Map to the Login page
     @GetMapping("/login")
     public String loginPage() {
@@ -16,7 +22,7 @@ public class PelangganController {
     }
 
     // Handle login submission
-    @PostMapping("/login")
+    @PostMapping("/loginUser")
     public String handleLogin(@RequestParam String username, @RequestParam String password, Model model) {
         // Simulate login validation
         if ("user".equals(username) && "password".equals(password)) {
