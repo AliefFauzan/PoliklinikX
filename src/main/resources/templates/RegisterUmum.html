@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e6f1fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+    .hidden {
+      display: none;
+    }
+    button, select {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #0d47a1;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003c8f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Part 1: Register Type Selection -->
+    <div id="part1">
+      <h2>Pilih</h2>
+      <button onclick="navigateTo('pasien')">Pasien Register</button>
+      <button onclick="navigateTo('staff')">Staff Register</button>
+    </div>
+
+    <!-- Part 2: Staff Role Selection -->
+    <div id="part2" class="hidden">
+      <h2>Select Your Role</h2>
+      <form id="roleForm">
+        <select name="role" id="role">
+          <option value="doctor">Doctor</option>
+          <option value="nurse">Nurse</option>
+          <option value="admin">Administrator</option>
+        </select>
+        <button type="submit">Proceed</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function navigateTo(type) {
+      if (type === 'pasien') {
+        // Redirect directly for Pasien
+        window.location.href = "/Pelanggan/Pelanggan-Register";
+      } else if (type === 'staff') {
+        // Show the second part for Staff
+        document.getElementById('part1').classList.add('hidden');
+        document.getElementById('part2').classList.remove('hidden');
+      }
+    }
+
+    document.getElementById('roleForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const role = document.getElementById('role').value;
+      window.location.href = `/${role}-Register`; // Redirect based on the selected role
+    });
+  </script>
+</body>
+</html>

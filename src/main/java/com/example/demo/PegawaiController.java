@@ -1,4 +1,4 @@
-package com.example.demo.Others;
+package com.example.demo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,23 +19,10 @@ import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-public class MainController {
-    
-    @GetMapping("/")
-    public String index (Model model) {
-        return "SebelumLoginUSer";
-    }
+public class PegawaiController {
 
-    @GetMapping("/register")
-    public String Register (Model model) {
-        return "Register";
-    }
-
-    @GetMapping("/Login")
-    public String Login (Model model) {
-        return "Login";
-    }
+   
 
     
-
+    
 }
