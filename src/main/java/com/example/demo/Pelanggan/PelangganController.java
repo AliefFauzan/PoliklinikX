@@ -18,20 +18,7 @@ public class PelangganController {
     // Map to the Login page
     @GetMapping("/login")
     public String loginPage() {
-        return "Pelanggan/Login";
-    }
-
-    // Handle login submission
-    @PostMapping("/loginUser")
-    public String handleLogin(@RequestParam String username, @RequestParam String password, Model model) {
-        // Simulate login validation
-        if ("user".equals(username) && "password".equals(password)) {
-            model.addAttribute("username", username);
-            return "Pelanggan/SetelahLoginUser"; // After login success
-        } else {
-            model.addAttribute("error", "Invalid username or password");
-            return "Pelanggan/Login"; // Back to login if failed
-        }
+        return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
     }
 
     @GetMapping("/setelahLoginUser")

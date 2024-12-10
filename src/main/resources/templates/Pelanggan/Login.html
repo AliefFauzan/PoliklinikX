@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../../static/Pelanggan/Login.css" />
+  <link rel="stylesheet" href="Pelanggan/Login.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Login</title>
 </head>
 <body>
   <div class="login">
@@ -23,7 +53,7 @@
     </div>
     <div class="group-32">
       <div class="phone-call-1">
-        <img class="group" th:src="@{${groupIconUrl}}" alt="Phone Icon" />
+        <img class="group" src="/Pelanggan/img/group0.svg" />
       </div>
       <div class="_022-82558000">022-82558000</div>
     </div>
@@ -37,56 +67,76 @@
           <div class="you-can-register-here">
             <span>
               <span class="you-can-register-here-span">You can</span>
-              <span class="you-can-register-here-span2">Register here !</span>
+              <span class="you-can-register-here-span2" style="cursor: pointer; color: inherit" onclick="navigateToRegister()" >
+                Register here !</span>
             </span>
+            <script>
+              function navigateToRegister() {
+                window.location.href = "http://localhost:8080/Register";
+              }
+            </script>
+
           </div>
         </div>
       </div>
       <div class="group-40">
         <div class="group-38">
-          <form th:action="@{/login}" method="post">
-            <div class="group-37">
-              <div class="email">Email</div>
-              <input type="email" class="rectangle-8" th:field="*{email}" placeholder="Enter your email address" required />
-              <div class="message-1">
-                <img class="group2" th:src="@{${emailIconUrl}}" alt="Email Icon" />
-              </div>
+          <div class="group-37">
+            <div class="email">Email</div>
+            <div class="input-wrapper">
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Enter your email address" 
+                    th:value="${email}" 
+                    class="email-input" />
             </div>
-            <div class="group-36">
-              <div class="password">Password</div>
-              <input type="password" class="rectangle-9" th:field="*{password}" placeholder="Enter your Password" required />
-              <div class="group-35">
-                <div class="padlock-1">
-                  <img class="group3" th:src="@{${padlockIconUrl}}" alt="Padlock Icon" />
-                  <img class="group4" th:src="@{${eyeIconUrl}}" alt="Eye Icon" />
-                </div>
-              </div>
+            <div class="rectangle-8"></div>
+            <div class="message-1">
+                <img class="group2" src="/Pelanggan/img/group1.svg" />
             </div>
-            <div class="invisible-1">
-              <img class="group5" th:src="@{${invisibleIconUrl}}" alt="Invisible Icon" />
-            </div>
-            <div class="group-24">
-              <div class="rectangle-5"></div>
-              <div class="rememebr-me">
-                <input type="checkbox" th:field="*{rememberMe}" /> Remember me
-              </div>
-              <div class="forgot-password">
-                <a href="/forgot-password">Forgot Password ?</a>
-              </div>
-            </div>
-            <div class="group-39">
-              <div class="group-45">
-                <div class="rectangle-10"></div>
-                <button type="submit" class="login2">Login</button>
-              </div>
-            </div>
-          </form>
+        </div>
+        
+        <div class="group-36">
+          <div class="password">Password</div>
+          <div class="input-wrapper-password">
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Enter your password" 
+                th:value="${password}" 
+                class="password-input" />
+          </div>
+          <div class="padlock-1">
+            <img class="group3" src="/Pelanggan/img/group2.svg" />
+            <img class="group4" src="/Pelanggan/img/group3.svg" />
+        </div>
+          <div class="rectangle-9"></div>
+          <div class="invisible-1">
+              <img class="group5" src="/Pelanggan/img/group4.svg" />
+          </div>
+      </div>      
+          
+        </div>
+        <div class="group-24">
+          <div class="rectangle-5"></div>
+          <div class="rememebr-me">Rememebr me</div>
+          <div class="forgot-password">Forgot Password ?</div>
+        </div>
+        <div class="group-39">
+          <div class="group-45">
+            <form action="/Pelanggan/SesudahLoginUser" method="post" class="login-form">
+              <div class="rectangle-10"></div>
+              <button type="submit" class="login2">Login</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
     <img
       class="a-1-b-4-dbfbcd-8-dadbb-4-dcc-87-f-8-f-26-aa-038-removebg-preview-1"
-      th:src="@{${loginImageUrl}}" alt="Login Image" />
+      src="/Pelanggan/img/a-1-b-4-dbfbcd-8-dadbb-4-dcc-87-f-8-f-26-aa-038-removebg-preview-10.png"
+    />
   </div>
   
 </body>
