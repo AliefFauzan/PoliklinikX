@@ -1,44 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/Pelanggan/SebelumLoginUser.css}">
+  
+  <style>
+   a, button, input, select, h1, h2, h3, h4, h5, * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+  </style>
+  <title>Poliklinik</title>
 </head>
 <body>
   <div class="home-sebelum-login-sign-up">
+    <!-- Gambar Rumah Sakit -->
     <img
-      class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-1"
-      th:src="@{${imageUrl}}"
-      alt="Image Description"
+      class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2"
+      th:src="@{/Pelanggan/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png}"
+      alt="Gambar Rumah Sakit"
     />
+
     <div class="rectangle-20"></div>
-    <div class="rectangle-2"></div>
-    <div class="rectangle-3"></div>
-    <div class="rectangle-4"></div>
     <div class="poliklinik-x">POLIKLINIK X</div>
+
+    <!-- Call Center -->
     <div class="rectangle-14"></div>
-    <img class="ic-sharp-call" th:src="@{${callIconUrl}}" alt="Call Icon" />
-    <div class="call-center-081234567890">Call Center : 081234567890</div>
-    <img class="ic-sharp-call2" th:src="@{${callIconUrl2}}" alt="Call Icon" />
-    <div class="customer-call-center-022-82558000">
-      Customer Call Center : 022-82558000
-    </div>
-    <div class="follow-us">Follow us :</div>
-    <img class="vector" th:src="@{${vectorIconUrl}}" alt="Vector Icon" />
-    <img class="vector2" th:src="@{${vectorIconUrl2}}" alt="Vector Icon" />
-    <div class="prime-twitter">
-      <img class="group" th:src="@{${twitterIconUrl}}" alt="Twitter Icon" />
-    </div>
-    <img class="mdi-linkedin" th:src="@{${linkedinIconUrl}}" alt="LinkedIn Icon" />
+    <img class="ic-sharp-call" th:src="@{/Pelanggan/img/ic-sharp-call0.svg}" alt="Icon Call" />
+    <div class="call-center-081234567890" th:text="'Call Center : 081234567890'"></div>
+    <img class="ic-sharp-call2" th:src="@{/Pelanggan/img/ic-sharp-call1.svg}" alt="Icon Call" />
+    <div class="customer-call-center-022-82558000" th:text="'Customer Call Center : 022-82558000'"></div>
+    
     <div class="ellipse-1"></div>
     <div class="group-2">
       <div class="rectangle-15"></div>
       <div class="rectangle-16"></div>
     </div>
+
     <div class="rectangle-17"></div>
     <div class="rectangle-18"></div>
     <div class="rectangle-19"></div>
+
     <div class="search-bar">
       <div class="content">
         <div class="magnifyingglass">
@@ -48,23 +63,77 @@
       </div>
     </div>
     <div class="ellipse-3"></div>
-    <img class="group-46" th:src="@{${groupIconUrl}}" alt="Group Icon" />
-    <img class="mask-group" th:src="@{${maskGroupIconUrl}}" alt="Mask Group Icon" />
+    <img class="group-46" src="/Pelanggan/img/group-460.svg" />
+    <img class="mask-group" src="/Pelanggan/img/mask-group0.svg" />
     <div class="ellipse-7"></div>
-    <img class="vector3" th:src="@{${vectorIconUrl3}}" alt="Vector Icon" />
-    <div class="beranda" th:text="#{home}">Beranda</div>
-    <div class="jadwal-dokter" th:text="#{doctorSchedule}">Jadwal Dokter</div>
-    <div class="layanan" th:text="#{services}">Layanan</div>
-    <div class="informasi" th:text="#{information}">Informasi</div>
-    <div class="login" th:text="#{login}">LOGIN</div>
-    <div class="register" th:text="#{register}">Register</div>
-    <div class="janji-temu" th:text="#{appointment}">Janji Temu</div>
-    <div class="faq" th:text="#{faq}">FAQ</div>
+    <img class="vector3" src="/Pelanggan/img/vector2.svg" />
+
+
+    <!-- Navigasi -->
+    <div class="beranda" th:text="'Beranda'"></div>
+    <div class="jadwal-dokter" th:text="'Jadwal Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToJadwalDokter()">
+      Jadwal Dokter
+    </div>
+    <script>
+      function navigateToJadwalDokter() {
+        window.location.href = "http://localhost:8080/jadwal-dokter";
+      }
+    </script>
+
+    <div class="layanan" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
+      Layanan
+    </div>
+    <script>
+      function navigateToLayanan() {
+        window.location.href = "http://localhost:8080/layanan";
+      }
+    </script>
+    <div class="informasi" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+      Informasi
+    </div>
+    <script>
+      function navigateToInformasi() {
+        window.location.href = "http://localhost:8080/informasi";
+      }
+    </script>
+
+    <div class="login">
+      <a th:href="@{Pelanggan/login}">LOGIN</a>
+    </div>
+
+    <div class="register">
+      <a th:href="@{Pelanggan/register}">Register</a>
+    </div>
+
+    <div class="janji-temu" th:text="'Janji Temu'" style="cursor: pointer; color: inherit;" onclick="navigateToJanjiTemu()">
+      Janji Temu
+    </div>
+    <script>
+      function navigateToJanjiTemu() {
+        window.location.href = "http://localhost:8080/janji-temu";
+      }
+    </script>
+    <div class="faq" th:text="'faq'" style="cursor: pointer; color: inherit;" onclick="navigateToFaq()">
+      FAQ
+    </div>
+    <script>
+      function navigateToFaq() {
+        window.location.href = "http://localhost:8080/faq";
+      }
+    </script>
     <div class="line-1"></div>
-    <div class="ellipse-8"></div>
-    <div class="pilih-dokter" th:text="#{chooseDoctor}">Pilih Dokter</div>
-    <img class="vector4" th:src="@{${vectorIconUrl4}}" alt="Vector Icon" />
+    <!-- Pilih dokter -->
+    <div class="ellipse-8"></div>  
+    <div class="pilih-dokter" th:text="'Pilih Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToPilihDokter()">
+      Pilih Dokter
+    </div>
+    <script>
+      function navigateToPilihDokter() {
+        window.location.href = "http://localhost:8080/janji-temu";
+      }
+    </script>
+    <img class="vector4" src="/Pelanggan/img/vector3.svg" />
   </div>
-  
 </body>
 </html>
+
