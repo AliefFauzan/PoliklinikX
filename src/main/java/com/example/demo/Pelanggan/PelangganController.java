@@ -23,7 +23,7 @@ public class PelangganController {
 
     }
 
-    @GetMapping("/setelahLoginUser")
+    @GetMapping("/home")
     public String setelahLoginUser() {
         return "Pelanggan/SetelahLoginUser"; // Path template
     }

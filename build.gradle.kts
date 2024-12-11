@@ -39,9 +39,15 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	
-}
 
+    testImplementation ("org.mockito:mockito-core")
+	implementation ("com.h2database:h2:2.2.222")
+	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation ("jakarta.persistence:jakarta.persistence-api:3.1.0")
+    runtimeOnly ("org.postgresql:postgresql")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+}
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
