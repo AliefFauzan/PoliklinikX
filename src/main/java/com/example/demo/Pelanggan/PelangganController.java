@@ -21,7 +21,7 @@ public class PelangganController {
         return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
     }
 
-    @GetMapping("/setelahLoginUser")
+    @GetMapping("/home")
     public String setelahLoginUser() {
         return "Pelanggan/SetelahLoginUser"; // Path template
     }

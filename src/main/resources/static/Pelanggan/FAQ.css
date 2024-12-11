@@ -295,7 +295,7 @@
     height: 314px;
     top: 147px;
     left: 5px;
-    background-image: url(./img/FIGMA-payment-hospital.png);
+    background-image: url('Pelanggan/img/figma-payment-hospital0.png');
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -321,6 +321,7 @@
     left: 0;
     overflow: hidden;
   }
+
   
   .FA-qs .ellipse-2 {
     position: absolute;

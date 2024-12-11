@@ -2,9 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" th:href="@{/globals.css}" />
-    <link rel="stylesheet" th:href="@{/styleguide.css}" />
-    <link rel="stylesheet" th:href="@{/static/Pelanggan/FAQ.css}" />
+    <link rel="stylesheet" th:href="@{/Pelanggan/FAQ.css}" />
   </head>
   <body>
     <div class="FA-qs">
@@ -36,10 +34,34 @@
               <div class="placeholder-label">Search</div>
             </div>
           </div>
-          <div class="text-wrapper-2">Beranda</div>
-          <div class="text-wrapper-3">Layanan</div>
-          <div class="text-wrapper-4">Informasi</div>
-          <img class="ellipse" th:src="@{/img/ellipse.png}" />
+          <!-- Beranda -->
+          <div class="text-wrapper-2" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+            Beranda
+          </div>
+          <script>
+            function navigateToBeranda() {
+              window.location.href = "http://localhost:8080/home";
+            }
+          </script>
+          <!-- Layanan -->
+          <div class="text-wrapper-3" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
+            Layanan
+          </div>
+          <script>
+            function navigateToLayanan() {
+              window.location.href = "http://localhost:8080/layanan";
+            }
+          </script>
+          <!-- Informasi -->
+          <div class="text-wrapper-4" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+            Informasi
+          </div>
+          <script>
+            function navigateToInformasi() {
+              window.location.href = "http://localhost:8080/informasi";
+            }
+          </script>
+          <img class="ellipse" th:src="@{Pelanggan/img/Ellipse.png}" />
           <div class="sub-head">
             <div class="overlap-group-2">
               <div class="div-wrapper">
@@ -86,13 +108,6 @@
           Dalam Poliklinik X kami telah menyediakan metode pembayaran digital menggunakan Gopay, OVO, da Kartu Kredit.
           Anda juga dapat menggunakan uang tunai yang nanti dibayar langsung di counter.
         </p>
-        <div class="overlap-4">
-          <div class="text-wrapper-10">Follow us :</div>
-          <img class="vector" th:src="@{/img/vector.svg}" />
-          <img class="img" th:src="@{/img/image.svg}" />
-          <img class="prime-twitter" th:src="@{/img/prime-twitter.svg}" />
-          <img class="mdi-linkedin" th:src="@{/img/mdi-linkedin.svg}" />
-        </div>
       </div>
     </div>
   </body>
