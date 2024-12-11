@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class PelangganController {
 
+
     // Map to SebelumLoginUser page
     @GetMapping("/sebelum-login-user")
     public String showSebelumLoginUser() {
@@ -19,6 +20,7 @@ public class PelangganController {
     @GetMapping("/login")
     public String loginPage() {
         return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
+
     }
 
     @GetMapping("/setelahLoginUser")
