@@ -1,2 +1,0 @@
-User: ada di login username, way to distinct: by username
-Pegawai: ada di login pegawai, way to distinct: by ID
