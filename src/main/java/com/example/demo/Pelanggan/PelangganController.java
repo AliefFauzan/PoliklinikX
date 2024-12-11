@@ -9,23 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class PelangganController {
 
+
+    // Map to SebelumLoginUser page
+    @GetMapping("/sebelum-login-user")
+    public String showSebelumLoginUser() {
+        return "Pelanggan/SebelumLoginUser"; // Pastikan path ini sesuai dengan struktur template Anda
+    }
+
     // Map to the Login page
     @GetMapping("/login")
     public String loginPage() {
-        return "Pelanggan/Login";
-    }
+        return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
 
-    // Handle login submission
-    @PostMapping("/login")
-    public String handleLogin(@RequestParam String username, @RequestParam String password, Model model) {
-        // Simulate login validation
-        if ("user".equals(username) && "password".equals(password)) {
-            model.addAttribute("username", username);
-            return "Pelanggan/SetelahLoginUser"; // After login success
-        } else {
-            model.addAttribute("error", "Invalid username or password");
-            return "Pelanggan/Login"; // Back to login if failed
-        }
     }
 
     @GetMapping("/setelahLoginUser")
