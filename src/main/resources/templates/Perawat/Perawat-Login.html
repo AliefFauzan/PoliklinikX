@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up Form</title>
+  <title>Sign In Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -68,6 +68,14 @@
       border-radius: 5px;
     }
 
+    .input-group span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
     .btn {
       width: 100%;
       padding: 10px;
@@ -112,37 +120,32 @@
       <div class="logo">
         <h1>POLIKLINIK X</h1>
       </div>
-      <h2>Sign up</h2>
-      <p>If you already have an account, <a href="#">Login here!</a></p>
-      <form>
+      <h2>Sign in</h2>
+      <p>If you don’t have an account, <a href="/register">Register here!</a></p>
+      <form th:action="@{/login-data}" method="POST">
         <div class="input-group">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Enter your email address" required>
         </div>
         <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter your User name" required>
-        </div>
-        <div class="input-group">
           <label for="password">Password</label>
           <input type="password" id="password" placeholder="Enter your Password" required>
+          <span>
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </span>
         </div>
-        <div class="input-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" placeholder="Confirm your Password" required>
-        </div>
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn">Login</button>
       </form>
     </div>
     <div class="image-section">
       <div class="doctor-image">
-        <!-- Replace with an <img> tag for the actual image -->
+        <!-- Replace with an <img> tag for actual image -->
         <p>[Doctor Image Placeholder]</p>
       </div>
-      <h2>Sign Up to name</h2>
+      <h2>Sign in to name</h2>
       <p class="contact-info">📞 022-82558000</p>
     </div>
   </div>
 </body>
 </html>
- 
