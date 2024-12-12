@@ -1,97 +1,116 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"></html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Perawat/CatatRekamMedis.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/Perawat/CatatRekamMedis.css}" />
   </head>
   <body>
     <div class="catat-rekam-medis">
-      <div class="div">
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="group">
-            <div class="rectangle-2"></div>
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-          </div>
-          <div class="text-wrapper">POLIKLINIK X</div>
-          <div class="group-wrapper">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle-5"></div>
-                <div class="rectangle-6"></div>
-              </div>
+      <div class="rectangle-105"></div>
+      <div class="poliklinik-x">POLIKLINIK X</div>
+      <div class="ellipse-1"></div>
+      <div class="group-2">
+        <div class="rectangle-15"></div>
+        <div class="rectangle-16"></div>
+      </div>
+      <div class="rectangle-109"></div>
+      <!-- Beranda Button -->
+      <div class="beranda" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
+        Beranda
+      </div>
+      <script>
+        function navigateToSesudahLoginPerawat() {
+          window.location.href = "http://localhost:8080/perawat/sesudahLoginPerawat";
+        }
+      </script>
+      <img class="ellipse" th:src="@{/Perawat/img/account.png}" alt="Ikon Akun" 
+        style="cursor: pointer;" onclick="confirmLogout()" />
+
+        <script>
+          function confirmLogout() {
+            const userConfirmed = confirm("Apakah anda ingin log out?");
+            if (userConfirmed) {
+              // Arahkan ke halaman logout
+              window.location.href = "http://localhost:8080/perawat/sebelumLoginPerawat";
+            }
+          }
+        </script>
+      <div class="sub-head">
+        <img class="rectangle-31" th:src="@{/Perawat/img/rectangle-31.png}" alt="Rectangle 31" />
+        <div class="rectangle-42"></div>
+        <div class="frame-2">
+          <div class="ellipse-12"></div>
+          <div class="ellipse-2"></div>
+        </div>
+        <div class="group-184">
+          <div class="rectangle-76"></div>
+          <div class="rectangle-78"></div>
+          <div class="rectangle-77"></div>
+        </div>
+        <div class="about-us">Catat Rekam Medis</div>
+        <div class="home-about">Beranda / Data Pasien</div>
+      </div>
+      <img class="rectangle-1052" th:src="@{/Perawat/img/rectangle-1051.svg}" alt="Rectangle 1051" />
+      
+      <div class="social-container">    
+        <div class="follow-us" th:text="'Follow us :'"></div>
+        <img class="vector" th:src="@{/Perawat/img/vector0.svg}" alt="Facebook" />
+        <img class="vector2" th:src="@{/Perawat/img/vector1.svg}" alt="Instagram" />
+        <img class="group" th:src="@{/Perawat/img/group0.svg}" alt="Twitter" />
+        <img class="mdi-linkedin" th:src="@{/Perawat/img/mdi-linkedin0.svg}" alt="LinkedIn" />
+      </div>
+
+      <div class="rectangle-102"></div>
+      
+      <!-- Submit Button -->
+      <div class="submit" style="cursor: pointer; color: white;" onclick="navigateToInformasiPasien()">
+        Submit
+      </div>
+      <script>
+        function navigateToInformasiPasien() {
+          window.location.href = "http://localhost:8080/perawat/catatRekamMedis";
+        }
+      </script>
+
+      <div class="form-container">
+        <label class="nomor-rekam-medis" for="nomorRekamMedis">Nomor Rekam Medis</label>
+        <input class="rectangle-89" id="nomorRekamMedis" type="text" placeholder="Masukkan nomor rekam medis" />
+      
+        <label class="riwayat-penyakit" for="riwayatPenyakit">Riwayat Penyakit</label>
+        <textarea class="rectangle-115" id="riwayatPenyakit" placeholder="Masukkan riwayat penyakit"></textarea>
+      
+        <label class="informasi-alergi" for="informasiAlergi">Informasi Alergi</label>
+        <input class="rectangle-113" id="informasiAlergi" type="text" placeholder="Masukkan informasi alergi" />
+      
+        <label class="hasil-lab" for="hasilLab">Hasil Lab</label>
+      </div>
+      
+      
+      <div class="many-upload">
+    
+        <div class="frame-22">
+          <img class="upload" th:src="@{/Perawat/img/upload0.svg}" alt="Upload" />
+          <div class="text">
+            <div class="drag-your-file-s-to-start-uploading">
+              Drag your file(s) to start uploading
             </div>
           </div>
-          <div class="search-bar">
-            <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
-              <div class="placeholder-label">Search</div>
-            </div>
+          <div class="divider">
+            <div class="line-1"></div>
+            <div class="text2">OR</div>
+            <div class="line-2"></div>
           </div>
-          <div class="text-wrapper-2">Beranda</div>
-          <img class="ellipse" src="img/ellipse.png" />
-          <div class="sub-head">
-            <div class="overlap-2">
-              <div class="div-wrapper">
-                <div class="overlap-group-2">
-                  <div class="frame">
-                    <div class="ellipse-2"></div>
-                    <div class="ellipse-3"></div>
-                  </div>
-                  <div class="group-2">
-                    <div class="rectangle-7"></div>
-                    <div class="rectangle-8"></div>
-                    <div class="rectangle-9"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="group-3">
-                <div class="about-us">Catatat Rekam Medis</div>
-                <div class="home-about">Beranda / Data Pasien</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-3">
-          <div class="text-wrapper-3">Follow us :</div>
-          <img class="vector" src="img/image.svg" />
-          <img class="img" src="img/vector.svg" />
-          <img class="prime-twitter" src="img/prime-twitter.svg" />
-          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
-        </div>
-        <div class="overlap-4"><div class="text-wrapper-4">SUBMIT</div></div>
-        <div class="text-wrapper-5">Nomor rekam medis</div>
-        <div class="overlap-5">
-          <div class="rectangle-10"></div>
-          <div class="text-wrapper-6">Masukkan nomor rekam medis</div>
-        </div>
-        <div class="text-wrapper-7">Riwayat penyakit</div>
-        <div class="overlap-6"><div class="text-wrapper-8">Masukkan riwayat penyakit</div></div>
-        <div class="text-wrapper-9">hasil lab</div>
-        <div class="text-wrapper-10">Informasi alergi</div>
-        <div class="overlap-7">
-          <div class="rectangle-11"></div>
-          <div class="text-wrapper-11">Masukkan informasi alergi</div>
-        </div>
-        <p class="desc">Only support .jpg, .png and .svg and zip files</p>
-        <div class="many-upload">
-          <img class="upload" src="img/upload.svg" />
-          <div class="frame-2">
-            <div class="text"><p class="p">Drag your file(s) to start uploading</p></div>
-            <div class="divider">
-              <div class="line"></div>
-              <div class="text-2">OR</div>
-              <div class="line"></div>
-            </div>
-            <div class="outline">
-              <div class="master-outline"><button class="button">Browse files</button></div>
+          <div class="outline">
+            <div class="master-outline-button">
+              <div class="button">Browse files</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="desc">Only support .jpg, .png, .svg, and zip files</div>
+    </div>    
   </body>
 </html>
