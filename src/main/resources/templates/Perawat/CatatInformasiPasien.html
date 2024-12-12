@@ -64,7 +64,19 @@
             </div>
           </div>
         </div>
-        <img class="ellipse" src="/Perawat//img/Ellipse.png" />
+        <!-- Profile -->
+        <img class="ellipse" th:src="@{/Perawat/img/account.png}" alt="Ikon Akun" style="cursor: pointer;"
+          onclick="confirmLogout()" />
+
+        <script>
+          function confirmLogout() {
+            const userConfirmed = confirm("Apakah anda ingin log out?");
+            if (userConfirmed) {
+              // Arahkan ke halaman logout
+              window.location.href = "http://localhost:8080/perawat/sebelumLoginPerawat";
+            }
+          }
+        </script>
         <!-- Beranda Button -->
         <div class="text-wrapper-2" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
           Beranda
