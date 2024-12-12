@@ -1,130 +1,192 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Perawat/CatatInformasiPasien.css" />
-  </head>
-  <body>
-    <div class="mencatat-informasi">
-      <div class="div">
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <div class="group">
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-            <div class="rectangle-5"></div>
-          </div>
-          <div class="text-wrapper">POLIKLINIK X</div>
-          <div class="group-wrapper">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle-6"></div>
-                <div class="rectangle-7"></div>
-              </div>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/Perawat/CatatInformasiPasien.css" />
+  <style>
+    /* CSS untuk input field yang besar dan panjang */
+    .input-field {
+      width: 100%;
+      /* Lebar penuh sesuai kontainer */
+      height: 50px;
+      /* Tinggi input yang lebih besar */
+      font-size: 16px;
+      /* Ukuran font yang lebih besar */
+      padding: 10px;
+      /* Spasi dalam input */
+      border-radius: 10px;
+      /* Membuat sudut lebih membulat */
+      box-sizing: border-box;
+      /* Agar padding dan border dihitung dalam ukuran total */
+      resize: none;
+      /* Mencegah perubahan ukuran input */
+    }
+
+    /* Untuk textarea diagnosa yang lebih besar */
+    textarea.input-field {
+      height: 150px;
+      /* Tinggi textarea lebih besar */
+      font-size: 16px;
+      /* Ukuran font lebih besar */
+      resize: none;
+      /* Mencegah perubahan ukuran textarea */
+    }
+
+    /* CSS for dropdown */
+    select.input-field {
+      height: 50px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mencatat-informasi">
+    <div class="div">
+      <div class="overlap">
+        <div class="rectangle"></div>
+        <div class="rectangle-2"></div>
+        <div class="group">
+          <div class="rectangle-3"></div>
+          <div class="rectangle-4"></div>
+          <div class="rectangle-5"></div>
+        </div>
+        <div class="text-wrapper" th:text="${clinicName}">POLIKLINIK X</div>
+        <div class="group-wrapper">
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+              <div class="rectangle-6"></div>
+              <div class="rectangle-7"></div>
             </div>
           </div>
-          <img class="ellipse" src="img/ellipse.png" />
-          <div class="text-wrapper-2">Beranda</div>
-          <div class="search-bar">
-            <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
-              <div class="placeholder-label">Search</div>
+        </div>
+        <img class="ellipse" src="/Perawat//img/Ellipse.png" />
+        <!-- Beranda Button -->
+        <div class="text-wrapper-2" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
+          Beranda
+        </div>
+        <script>
+          function navigateToSesudahLoginPerawat() {
+            window.location.href = "http://localhost:8080/perawat/sesudahLoginPerawat";
+          }
+        </script>
+
+        <div class="search-bar">
+          <div class="content">
+            <div class="magnifyingglass">
+              <div class="magnifyingglass-2" src="/Perawat/img/magnifying.png"></div>
             </div>
+            <div class="placeholder-label">Search</div>
           </div>
-          <div class="sub-head">
-            <div class="overlap-group-2">
-              <img class="img" src="img/rectangle-3.png" />
-              <div class="rectangle-8"></div>
-              <div class="div-wrapper">
-                <div class="overlap-group-2">
-                  <div class="frame">
-                    <div class="ellipse-2"></div>
-                    <div class="ellipse-3"></div>
-                  </div>
-                  <div class="group-2">
-                    <div class="rectangle-9"></div>
-                    <div class="rectangle-10"></div>
-                    <div class="rectangle-11"></div>
-                  </div>
+        </div>
+        <div class="sub-head">
+          <div class="overlap-group-2">
+            <img class="img" src="/Perawat/img/vector0.png" />
+            <div class="rectangle-8"></div>
+            <div class="div-wrapper">
+              <div class="overlap-group-2">
+                <div class="frame">
+                  <div class="ellipse-2"></div>
+                  <div class="ellipse-3"></div>
+                </div>
+                <div class="group-2">
+                  <div class="rectangle-9"></div>
+                  <div class="rectangle-10"></div>
+                  <div class="rectangle-11"></div>
                 </div>
               </div>
-              <div class="group-3">
-                <div class="about-us">Catat Informasi Pasien</div>
-                <p class="home-about">Beranda / Catat Diagnosa Pasien</p>
-              </div>
+            </div>
+            <div class="group-3">
+              <div class="about-us">Catat Informasi Pasien</div>
+              <div class="home-about">Beranda / Catat Diagnosa Pasien</div>
             </div>
           </div>
         </div>
-        <div class="overlap-2"><div class="text-wrapper-3">SUBMIT</div></div>
-        <div class="text-wrapper-4">Nomor rekam medis</div>
-        <div class="overlap-3">
-          <div class="rectangle-12"></div>
-          <div class="text-wrapper-5">Masukkan nomor rekam medis</div>
-        </div>
-        <div class="text-wrapper-6">Keluhan yang dirasakan pasien</div>
-        <div class="overlap-4"><div class="text-wrapper-7">Masukan diagnosa pasien</div></div>
-        <div class="text-wrapper-8">Gol. Darah pasien</div>
-        <div class="text-wrapper-9">Berat badan</div>
-        <div class="overlap-5">
-          <div class="rectangle-13"></div>
-          <p class="text-wrapper-10">Masukan berat badan pasien (kg)</p>
-        </div>
-        <div class="text-wrapper-11">Nama dokter yang dikunjungi</div>
-        <div class="overlap-6">
-          <div class="rectangle-12"></div>
-          <p class="p">Masukan nama dokter yang ingin dikunjngi</p>
-        </div>
-        <div class="text-wrapper-12">Jadwal dokter yang dikunjungi</div>
-        <div class="overlap-7">
-          <div class="rectangle-12"></div>
-          <p class="p">Masukan jadwal yang anda pilih</p>
-        </div>
-        <div class="text-wrapper-13">Suhu</div>
-        <div class="overlap-8">
-          <div class="rectangle-13"></div>
-          <div class="text-wrapper-10">Masukan suhu pasien (°C)</div>
-        </div>
-        <div class="text-wrapper-14">Tekanan Darah</div>
-        <div class="overlap-9">
-          <div class="rectangle-13"></div>
-          <div class="text-wrapper-10">Masukan tekanan darah pasien</div>
-        </div>
-        <div class="text-wrapper-15">Tinggi badan</div>
-        <div class="overlap-10">
-          <div class="rectangle-13"></div>
-          <div class="text-wrapper-10">Masukan tinggi pasien (cm)</div>
-        </div>
-        <div class="text-wrapper-16">A+</div>
-        <div class="rectangle-14"></div>
-        <div class="text-wrapper-17">O+</div>
-        <div class="overlap-11">
-          <div class="rectangle-15"></div>
-          <div class="text-wrapper-18">AB+</div>
-        </div>
-        <div class="rectangle-16"></div>
-        <div class="text-wrapper-19">B+</div>
-        <div class="rectangle-17"></div>
-        <div class="text-wrapper-20">A-</div>
-        <div class="rectangle-18"></div>
-        <div class="text-wrapper-21">O-</div>
-        <div class="overlap-12">
-          <div class="rectangle-15"></div>
-          <div class="text-wrapper-18">AB-</div>
-        </div>
-        <div class="rectangle-19"></div>
-        <div class="text-wrapper-22">B-</div>
-        <div class="rectangle-20"></div>
-        <div class="overlap-13">
-          <div class="text-wrapper-23">Follow us :</div>
-          <img class="vector" src="img/vector.svg" />
-          <img class="vector-2" src="img/image.svg" />
-          <img class="prime-twitter" src="img/prime-twitter.svg" />
-          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
-        </div>
+      </div>
+      <!-- Submit Button -->
+      <div class="overlap-2" style="cursor: pointer; color: white;" onclick="navigateToInformasiPasien()">
+        Submit
+      </div>
+      <script>
+        function navigateToInformasiPasien() {
+          window.location.href = "http://localhost:8080/perawat/catatInformasiPasien";
+        }
+      </script>
+
+      <!-- Dropdown for Blood Type -->
+      <div class="text-wrapper-8">Gol. Darah pasien</div>
+      <div class="darah">
+        <select name="bloodType" class="input-field">
+          <option value="A" th:selected="${bloodType != null && bloodType == 'A'}">A</option>
+          <option value="B" th:selected="${bloodType != null && bloodType == 'B'}">B</option>
+          <option value="AB" th:selected="${bloodType != null && bloodType == 'AB'}">AB</option>
+          <option value="O" th:selected="${bloodType != null && bloodType == 'O'}">O</option>
+        </select>
+      </div>
+
+      <!-- Form input -->
+      <div class="text-wrapper-4">Nomor rekam medis</div>
+      <div class="overlap-3">
+        <input type="text" name="medicalRecordNumber" class="input-field" placeholder="Masukkan nomor rekam medis"
+          th:value="${medicalRecordNumber}" />
+      </div>
+
+      <div class="text-wrapper-6">Keluhan yang dirasakan pasien</div>
+      <div class="overlap-4">
+        <textarea name="diagnosis" class="input-field" placeholder="Masukkan diagnosa pasien"
+          th:text="${diagnosis}"></textarea>
+      </div>
+
+      <div class="text-wrapper-9">Berat badan</div>
+      <div class="overlap-5">
+        <input type="number" name="patientWeight" class="input-field" placeholder="Masukkan berat badan pasien (kg)"
+          th:value="${patientWeight}" />
+      </div>
+
+      <div class="text-wrapper-11">Nama dokter yang dikunjungi</div>
+      <div class="overlap-6">
+        <input type="text" name="doctorName" class="input-field"
+          placeholder="Masukkan nama dokter yang ingin dikunjungi" th:value="${doctorName}" />
+      </div>
+
+      <div class="text-wrapper-12">Jadwal dokter yang dikunjungi</div>
+      <div class="overlap-7">
+        <input type="text" name="doctorSchedule" class="input-field" placeholder="Masukkan jadwal yang anda pilih"
+          th:value="${doctorSchedule}" />
+      </div>
+
+      <div class="text-wrapper-13">Suhu</div>
+      <div class="overlap-8">
+        <input type="number" name="patientTemperature" class="input-field" placeholder="Masukkan suhu pasien (°C)"
+          th:value="${patientTemperature}" />
+      </div>
+
+      <div class="text-wrapper-14">Tekanan Darah</div>
+      <div class="overlap-9">
+        <input type="text" name="bloodPressure" class="input-field" placeholder="Masukkan tekanan darah pasien"
+          th:value="${bloodPressure}" />
+      </div>
+
+      <div class="text-wrapper-15">Tinggi badan</div>
+      <div class="overlap-10">
+        <input type="number" name="patientHeight" class="input-field" placeholder="Masukkan tinggi pasien (cm)"
+          th:value="${patientHeight}" />
+      </div>
+
+      <div class="overlap-13">
+        <div class="text-wrapper-23">Follow us :</div>
+        <img class="vector" src="/Perawat/img/vector0.svg" />
+        <img class="vector-2" src="/Perawat/img/vector1.svg" />
+        <img class="prime-twitter" src="/Perawat/img/group0.svg" />
+        <img class="mdi-linkedin" src="/Perawat/img/mdi-linkedin0.svg" />
       </div>
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>
