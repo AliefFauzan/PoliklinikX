@@ -137,31 +137,6 @@ body {
   height: 36px;
   position: relative;
 }
-.magnifyingglass {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  position: relative;
-  overflow: hidden;
-}
-.magnifyingglass2 {
-  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
-  text-align: center;
-  font-family: "SfProDisplay-Medium", sans-serif;
-  font-size: 18px;
-  line-height: 50px;
-  font-weight: 500;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  width: 100%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .placeholder-label {
   color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
   text-align: left;
@@ -184,9 +159,10 @@ body {
     rgba(228, 245, 255, 1) 100%
   );
   width: 100vw;
-  height: 120px;
-  position: relative;
-  bottom: -230px;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  bottom: 75px;
 }
 .group-48 {
   position: absolute;
@@ -287,7 +263,6 @@ body {
   bottom: 20px;
   display: flex;
   gap: 10px;    /* Jarak antar ikon */
-  z-index: 100; /* Agar berada di atas elemen lain jika perlu */
 }
 
 .social-container img {
@@ -300,12 +275,12 @@ body {
   color: #03337c;
   text-align: center;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  right: 100px;
+  right: 80px;
   top: 40px;
   width: 65px;
   height: 29px;
