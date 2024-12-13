@@ -79,11 +79,11 @@ public class PasienController {
 
   
 
-            return "Pasien/SetelahLoginUser";
+            return "Pelanggan/SetelahLoginUser";
         }
 
 
-        return "Pasien/login";
+        return "Pelanggan/Login";
     }
 
     @GetMapping("/signout")
