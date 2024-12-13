@@ -1,4 +1,4 @@
-package com.example.demo.Dokter;
+package com.example.demo.Transaksi;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -13,14 +13,16 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 @AllArgsConstructor
 @Data
-public class DokterModel {
-    Long idPegawai;
-   
-    String username;
-    String password;
-    String nama;
-    String spesialisasi;
-    int kuotaPasien;
+public class TransaksiModel {
+    Long idTransaksi;
+    Long noRekamMedis;
+    String hari;
+    String keluhan;
+    String metodePembayaran;
+    String hasilDiagnosa;
+    String hasilPreskripsi;
+    String namDokter;
+    int jam;
     int tarif;
 
 

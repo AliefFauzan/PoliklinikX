@@ -29,7 +29,6 @@ CREATE TABLE Dokter (
     nama VARCHAR(100) NOT NULL,
     spesialisasi VARCHAR(100),
     koutaPasien INT,
-    jadwalPraktek DATE,
     tarif INT
 );
 
@@ -37,13 +36,14 @@ CREATE TABLE Dokter (
 CREATE TABLE Transaksi (
     idTransaksi SERIAL PRIMARY KEY,
     noRekamMedis INT REFERENCES Pasien(noRekamMedis) ON DELETE CASCADE,
-    tanggal DATE NOT NULL,
+    hari VARCHAR(20) NOT NULL,
     keluhan TEXT,
     metodePembayaran VARCHAR(50),
     hasilDiagnosa TEXT,
     hasilPreskripsi TEXT,
     namaDokter TEXT,
-    jam, TIME NOT NULL,
+    jam INT,
+    tarif INT
 
 
 );
@@ -52,9 +52,11 @@ CREATE TABLE Transaksi (
 CREATE TABLE JadwalDokter (
     idJadwal SERIAL PRIMARY KEY,
     idDokter INT REFERENCES Dokter(idPegawai) ON DELETE CASCADE,
+    nama VARCHAR(100) NOT NULL, --dokter
+    spesialisasi VARCHAR(100),
     hari VARCHAR(20) NOT NULL, -- Misalnya: Senin, Selasa
-    jamMulai TIME NOT NULL,
-    jamSelesai TIME NOT NULL
+    jamMulai INT,
+    jamSelesai INT
 );
 
 
