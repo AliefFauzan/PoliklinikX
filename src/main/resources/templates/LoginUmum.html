@@ -72,7 +72,7 @@
      function navigateTo(type) {
         if (type === 'pasien') {
            // Redirect to Pelanggan login page
-           window.location.href /*[[@{/register-pelanggan}]]*/;
+           window.location.href /*[[@{/Login-Pasien}]]*/;
 
         } else if (type === 'staff') {
            // Show the second part for Staff login selection
@@ -85,7 +85,7 @@
       e.preventDefault();
       const role = document.getElementById('role').value;
       // Redirect to the registration URL for the selected role (e.g., /register-doctor, /register-nurse, /register-admin)
-      window.location.href = /*[[@{'Register-' + ${role}}]]*/;
+      window.location.href = /*[[@{'Login-' + ${role}}]]*/;
   });
   
   </script>

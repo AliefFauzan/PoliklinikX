@@ -24,17 +24,17 @@ public class PasienController {
     @Autowired
     private PasienRepo repo;
 
-    // @GetMapping("/register")
-    // public String Register (Model model) {
-    //     return "Pelanggan/Register";
-    // }
+    @GetMapping("/Register-Pasien")
+    public String Register (Model model) {
+        return "Pelanggan/Register";
+    }
 
-    // @GetMapping("/Login")
-    // public String Login (Model model) {
-    //     return "Pelanggan/Login";
-    // }
+    @GetMapping("/Login-Pasien")
+    public String Login (Model model) {
+        return "Pelanggan/Login";
+    }
 
-    @PostMapping("/Register-Data")
+    @PostMapping("/Register-Pasien-Data")
     public String reg(
     String noRekamMedis, 
     String dataRekamMedis, 
@@ -62,7 +62,7 @@ public class PasienController {
     }
 
 
-    @PostMapping("/Login-Data")
+    @PostMapping("/Login-Pasien-Data")
     public String log(String username, String password, HttpSession httpSession,Model model){
         boolean isSuccess = repo.login(username, password);
         

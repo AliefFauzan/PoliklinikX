@@ -34,7 +34,7 @@ public class AdminController {
         return "Admin/Admin-Login";
     }
     
-    @PostMapping("/login-Admin-Data")
+    @PostMapping("/:Login-Admin-Data")
     public String log (String username, String password, HttpSession httpSession,Model model) {
         boolean isSuccess = repo.login(username, password);
         
