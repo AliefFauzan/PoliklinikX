@@ -34,7 +34,7 @@ public class PasienController {
     //     return "Pelanggan/Login";
     // }
 
-    @PostMapping("/register-data")
+    @PostMapping("/Register-Data")
     public String reg(
     String noRekamMedis, 
     String dataRekamMedis, 
@@ -62,7 +62,7 @@ public class PasienController {
     }
 
 
-    @PostMapping("/login-data")
+    @PostMapping("/Login-Data")
     public String log(String username, String password, HttpSession httpSession,Model model){
         boolean isSuccess = repo.login(username, password);
         
@@ -86,7 +86,7 @@ public class PasienController {
         return "Pasien/login";
     }
 
-    @GetMapping("/signout")
+    @GetMapping("/Signout")
     public String signout(HttpSession session) {
     // Invalidate the session to clear user data
         session.invalidate();

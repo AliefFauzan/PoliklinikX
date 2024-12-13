@@ -47,44 +47,48 @@
 </head>
 <body>
   <div class="container">
-    <!-- Part 1: Login Type Selection -->
-    <div id="part1">
-      <h2>Pilih</h2>
-      <button onclick="navigateTo('pasien')">Pasien Login</button>
-      <button onclick="navigateTo('staff')">Staff Login</button>
-    </div>
+     <!-- Part 1: Login Type Selection -->
+     <div id="part1">
+        <h2>Pilih</h2>
+        <button onclick="navigateTo('pasien')">Pasien Login</button>
+        <button onclick="navigateTo('staff')">Staff Login</button>
+     </div>
 
-    <!-- Part 2: Staff Role Selection -->
-    <div id="part2" class="hidden">
-      <h2>Select Your Role</h2>
-      <form id="roleForm">
-        <select name="role" id="role">
-          <option value="doctor">Doctor</option>
-          <option value="nurse">Nurse</option>
-          <option value="admin">Administrator</option>
-        </select>
-        <button type="submit">Proceed</button>
-      </form>
-    </div>
+     <!-- Part 2: Staff Role Selection -->
+     <div id="part2" class="hidden">
+        <h2>Select Your Role</h2>
+        <form id="roleForm">
+           <select name="role" id="role">
+              <option value="Dokter">Doctor</option>
+              <option value="Perawat">Nurse</option>
+              <option value="Admin">Administrator</option>
+           </select>
+           <button type="submit">Proceed</button>
+        </form>
+     </div>
   </div>
 
   <script>
-    function navigateTo(type) {
-      if (type === 'pasien') {
-        // Redirect directly for Pasien
-        window.location.href = "/Pelanggan/Pelanggan-Register";
-      } else if (type === 'staff') {
-        // Show the second part for Staff
-        document.getElementById('part1').classList.add('hidden');
-        document.getElementById('part2').classList.remove('hidden');
-      }
-    }
+     function navigateTo(type) {
+        if (type === 'pasien') {
+           // Redirect to Pelanggan login page
+           window.location.href /*[[@{/register-pelanggan}]]*/;
 
-    document.getElementById('roleForm').addEventListener('submit', function (e) {
+        } else if (type === 'staff') {
+           // Show the second part for Staff login selection
+           document.getElementById('part1').classList.add('hidden');
+           document.getElementById('part2').classList.remove('hidden');
+        }
+     }
+
+     document.getElementById('roleForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const role = document.getElementById('role').value;
-      window.location.href = `/${role}-login`; // Redirect based on the selected role
-    });
+      // Redirect to the registration URL for the selected role (e.g., /register-doctor, /register-nurse, /register-admin)
+      window.location.href = /*[[@{'Register-' + ${role}}]]*/;
+  });
+  
   </script>
 </body>
+
 </html>

@@ -36,7 +36,7 @@ public class PerawatController {
         return "Perawat/Perawat-Login";
     }
     
-    @PostMapping("/login-Perawat-Data")
+    @PostMapping("/Login-Perawat-Data")
     public String log (String username, String password, HttpSession httpSession,Model model) {
         boolean isSuccess = repo.login(username, password);
         

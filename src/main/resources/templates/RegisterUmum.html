@@ -49,19 +49,19 @@
   <div class="container">
     <!-- Part 1: Register Type Selection -->
     <div id="part1">
-      <h2>Pilih</h2>
-      <button onclick="navigateTo('pasien')">Pasien Register</button>
+      <h2>Register</h2>
+      <button onclick="navigateTo('pelanggan')">Pelanggan Register</button>
       <button onclick="navigateTo('staff')">Staff Register</button>
     </div>
 
     <!-- Part 2: Staff Role Selection -->
     <div id="part2" class="hidden">
       <h2>Select Your Role</h2>
-      <form id="roleForm">
+      <form id="roleForm" th:action="@{/register-{role}(role=${role})}" method="get">
         <select name="role" id="role">
-          <option value="doctor">Doctor</option>
-          <option value="nurse">Nurse</option>
-          <option value="admin">Administrator</option>
+          <option value="doctor">Dokter</option>
+          <option value="nurse">Perawat</option>
+          <option value="admin">Admin</option>
         </select>
         <button type="submit">Proceed</button>
       </form>
@@ -69,22 +69,26 @@
   </div>
 
   <script>
+    // Function to navigate to the respective registration part
     function navigateTo(type) {
-      if (type === 'pasien') {
-        // Redirect directly for Pasien
-        window.location.href = "/Pelanggan/Pelanggan-Register";
+      if (type === 'pelanggan') {
+        // Redirect directly for Pelanggan Registration
+        window.location.href = /*[[@{/Register-Pelanggan}]]*/;
       } else if (type === 'staff') {
-        // Show the second part for Staff
+        // Show the second part for Staff Role selection
         document.getElementById('part1').classList.add('hidden');
         document.getElementById('part2').classList.remove('hidden');
       }
     }
 
+    // Handle the staff role selection form submission dynamically
     document.getElementById('roleForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const role = document.getElementById('role').value;
-      window.location.href = `/${role}-Register`; // Redirect based on the selected role
+      // Redirect based on the selected role
+      window.location.href = /*[[@{'/Register-' + ${role}}]]*/;
     });
   </script>
 </body>
 </html>
+

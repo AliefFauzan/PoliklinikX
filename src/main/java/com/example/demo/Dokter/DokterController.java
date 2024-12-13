@@ -37,7 +37,7 @@ public class DokterController {
         return "Dokter/Dokter-Login";
     }
     
-    @PostMapping("/login-Dokter-Data")
+    @PostMapping("/Login-Dokter-Data")
     public String log (String username, String password, HttpSession httpSession,Model model) {
         boolean isSuccess = repo.login(username, password);
         
