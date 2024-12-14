@@ -50,12 +50,7 @@
       <div class="overlap">
         <div class="rectangle"></div>
         <div class="rectangle-2"></div>
-        <div class="group">
-          <div class="rectangle-3"></div>
-          <div class="rectangle-4"></div>
-          <div class="rectangle-5"></div>
-        </div>
-        <div class="text-wrapper" th:text="${clinicName}">POLIKLINIK X</div>
+        <div class="text-wrapper">POLIKLINIK X</div>
         <div class="group-wrapper">
           <div class="overlap-group-wrapper">
             <div class="overlap-group">
@@ -64,19 +59,7 @@
             </div>
           </div>
         </div>
-        <!-- Profile -->
-        <img class="ellipse" th:src="@{/Perawat/img/account.png}" alt="Ikon Akun" style="cursor: pointer;"
-          onclick="confirmLogout()" />
-
-        <script>
-          function confirmLogout() {
-            const userConfirmed = confirm("Apakah anda ingin log out?");
-            if (userConfirmed) {
-              // Arahkan ke halaman logout
-              window.location.href = "http://localhost:8080/perawat/sebelumLoginPerawat";
-            }
-          }
-        </script>
+        <img class="ellipse" src="/Perawat/img/account.png" />
         <!-- Beranda Button -->
         <div class="text-wrapper-2" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
           Beranda
@@ -87,17 +70,9 @@
           }
         </script>
 
-        <div class="search-bar">
-          <div class="content">
-            <div class="magnifyingglass">
-              <div class="magnifyingglass-2" src="/Perawat/img/magnifying.png"></div>
-            </div>
-            <div class="placeholder-label">Search</div>
-          </div>
-        </div>
         <div class="sub-head">
           <div class="overlap-group-2">
-            <img class="img" src="/Perawat/img/vector0.png" />
+            <img class="img" src="/Perawat/img/rectangle-31.png" />
             <div class="rectangle-8"></div>
             <div class="div-wrapper">
               <div class="overlap-group-2">

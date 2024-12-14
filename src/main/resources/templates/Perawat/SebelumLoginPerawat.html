@@ -27,13 +27,6 @@
 </head>
 <body>
   <div class="beranda-perawat">
-    <!-- Gambar Rumah Sakit -->
-    <img
-      class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2"
-      th:src="@{/Perawat/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png}"
-      alt="Gambar Rumah Sakit"
-    />
-    
     <!-- Nama Poliklinik -->
     <div class="poliklinik-x" th:text="'POLIKLINIK X'"></div>
     
@@ -53,21 +46,13 @@
       <img class="mdi-linkedin" th:src="@{/Perawat/img/mdi-linkedin0.svg}" alt="LinkedIn" />
     </div>
     
-    <!-- Search Bar -->
     <div class="ellipse-1"></div>
     <div class="group-2">
       <div class="rectangle-15"></div>
       <div class="rectangle-16"></div>
     </div>
-    <div class="search-bar">
-      <img class="material-symbols-search" src="/Perawat/img/magnifying.png"/>
-      <!-- Search nama pasien -->
-      <form method="GET" th:action="@{/Perawat/SebelumLoginPerawat}">
-        <input type="text" name="filter" class="search" th:value="${filter}" placeholder="Cari Nama Pasien" input="this.form.submit()"/>
-      </form>
-    </div>
 
-    <div class="login" style="cursor: pointer; color: inherit;" onclick="navigateToLogin()">Login</div>
+    <div class="login" style="cursor: pointer;" onclick="navigateToLogin()">Login</div>
     <script>
       function navigateToLogin() {
         window.location.href = "http://localhost:8080/Login";

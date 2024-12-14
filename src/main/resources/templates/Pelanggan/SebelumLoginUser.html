@@ -28,13 +28,6 @@
 </head>
 <body>
   <div class="home-sebelum-login-sign-up">
-    <!-- Gambar Rumah Sakit -->
-    <img
-      class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2"
-      th:src="@{/Pelanggan/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png}"
-      alt="Gambar Rumah Sakit"
-    />
-
     <div class="rectangle-20"></div>
     <div class="poliklinik-x">POLIKLINIK X</div>
 
@@ -44,7 +37,6 @@
     <div class="call-center-081234567890" th:text="'Call Center : 081234567890'"></div>
     <img class="ic-sharp-call2" th:src="@{/Pelanggan/img/ic-sharp-call1.svg}" alt="Icon Call" />
     <div class="customer-call-center-022-82558000" th:text="'Customer Call Center : 022-82558000'"></div>
-    
 
     <div class="ellipse-1"></div>
     <div class="group-2">
@@ -56,14 +48,6 @@
     <div class="rectangle-17"></div>
     <div class="rectangle-18"></div>
     <div class="rectangle-19"></div>
-
-    <div class="search-bar">
-      <div class="content">
-        <div class="magnifyingglass">
-          <div class="magnifyingglass2">􀊫</div>
-        </div>
-        <div class="placeholder-label">Search</div>
-      </div>
 
     </div>
     <div class="ellipse-3"></div>
@@ -102,7 +86,7 @@
     </script>
 
     <div class="login">
-      <a th:href="@{Pelanggan/login}">LOGIN</a>
+      <a th:href="@{Pelanggan/login}">Login</a>
     </div>
 
     <div class="register">
@@ -117,7 +101,7 @@
         window.location.href = "http://localhost:8080/janji-temu";
       }
     </script>
-    <div class="faq" th:text="'faq'" style="cursor: pointer; color: inherit;" onclick="navigateToFaq()">
+    <div class="faq" th:text="'FAQ'" style="cursor: pointer; color: inherit;" onclick="navigateToFaq()">
       FAQ
     </div>
     <script>
@@ -126,7 +110,8 @@
       }
     </script>
     <div class="line-1"></div>
-    <!-- Pilih dokter -->
+
+    <!-- Pilih dokter
     <div class="ellipse-8"></div>  
     <div class="pilih-dokter" th:text="'Pilih Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToPilihDokter()">
       Pilih Dokter
@@ -136,7 +121,7 @@
         window.location.href = "http://localhost:8080/janji-temu";
       }
     </script>
-    <img class="vector4" src="/Pelanggan/img/vector3.svg" />
+    <img class="vector4" src="/Pelanggan/img/vector3.svg" /> -->
   </div>
 </body>
 </html>
