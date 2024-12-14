@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.example.demo.JadwalDokter.JadwalDokterModel;
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 //import com.lighthouse.project.Other.PenggunaRepo;
 
@@ -95,6 +97,34 @@ public class PasienController {
         return "redirect:/";
     }
 
+    @PostMapping("/Pilih-Dokter")
+    public String pilihDokter (
+        @RequestParam(required = false) String spesialisasi,
+        @RequestParam(required = false) String nama,
+        @SessionAttribute(value = "spesialisasi", required = false) String sessionSpesialisasi,
+        @SessionAttribute(value = "nama", required = false) String sessionNama,
+        Model model
+    ) {
+        spesialisasi = (spesialisasi != null) ? spesialisasi : sessionSpesialisasi;
+        nama = (nama != null) ? nama : sessionNama;
+
+        // Save to session attributes
+        model.addAttribute("spesialisasi", spesialisasi);
+        model.addAttribute("nama", nama);
+        List<JadwalDokterModel> jadwalDokters;
+        
+
+        if (spesialisasi != null && nama != null) {
+            jadwalDokters = jadwalDokterRepo.findJadwalDokterByNamaAndSpesialisasi(nama, spesialisasi);
+        } else if (spesialisasi != null) {
+            jadwalDokters = jadwalDokterRepo.findJadwalDokterBySpesialisasi(spesialisasi);
+        } else {
+            jadwalDokters = jadwalDokterRepo.findAllJadwalDokter();
+        }
+
+        model.addAttribute("jadwalDokters", jadwalDokters);
+        return "jadwalDokterView"; // Name of the HTML/JSP view to render
+    }
 
 
 

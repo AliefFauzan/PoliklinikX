@@ -34,7 +34,10 @@ public class DokterJDBC implements DokterRepo {
             rSet.getLong("idPegawai"),
             rSet.getString("username"),
             rSet.getString("password"),
-            rSet.getString("nama")
+            rSet.getString("nama"),
+            rSet.getString("spesialisasi"),
+            rSet.getInt("kuotaPasien"),
+            rSet.getInt("tarif")
   
         );
     }

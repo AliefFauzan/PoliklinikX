@@ -4,6 +4,7 @@ package com.example.demo.Dokter;
 // import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 // import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestBody;
 
 // import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
@@ -20,9 +22,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.Transaksi.TransaksiRepo;
+
+import java.util.Map;
+
 @Controller
 public class DokterController {
 
+    @Autowired
+    TransaksiRepo transaksiRepo;
 
     @Autowired
     DokterRepo repo;
@@ -84,6 +92,39 @@ public class DokterController {
 
         return "Dokter/Dokter-Register";
     }
+
+
+    @PostMapping("/add-diagnosa")
+    public ResponseEntity<Map<String, String>> addDiagnosa(@RequestBody Map<String, Object> data) {
+    int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
+    String hasilDiagnosa = data.get("hasilDiagnosa").toString();
+
+    // Call the service method to update hasilDiagnosa
+    boolean isSuccessful = transaksiRepo.addDiagnosa(idTransaksi, hasilDiagnosa);
+
+    // Return the appropriate response
+    return isSuccessful
+        ? ResponseEntity.ok(Map.of("message", "Hasil diagnosa updated successfully."))
+        : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil diagnosa."));
+}
+
+@PostMapping("/add-obat")
+public ResponseEntity<Map<String, String>> addObat(@RequestBody Map<String, Object> data) {
+    int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
+    String hasilPreskripsi = data.get("hasilPreskripsi").toString();
+
+    // Call the service method to update hasilPreskripsi
+    boolean isSuccessful = transaksiRepo.addObat(idTransaksi, hasilPreskripsi);
+
+    // Return the appropriate response
+    return isSuccessful
+        ? ResponseEntity.ok(Map.of("message", "Hasil preskripsi updated successfully."))
+        : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil preskripsi."));
+}
+
+
+
+
 
     
 }

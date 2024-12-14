@@ -8,8 +8,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import com.example.demo.PenggunaService;
+import com.example.demo.JadwalDokter.JadwalDokterModel;
 
 @Repository
 public class PasienJDBC implements PasienRepo {
@@ -87,6 +92,35 @@ public class PasienJDBC implements PasienRepo {
         }
 
         return  false ;
+    }
+
+    @PostMapping("/Pilih-Dokter")
+    public String pilihDokter (
+        @RequestParam(required = false) String spesialisasi,
+        @RequestParam(required = false) String nama,
+        @SessionAttribute(value = "spesialisasi", required = false) String sessionSpesialisasi,
+        @SessionAttribute(value = "nama", required = false) String sessionNama,
+        Model model
+    ) {
+        spesialisasi = (spesialisasi != null) ? spesialisasi : sessionSpesialisasi;
+        nama = (nama != null) ? nama : sessionNama;
+
+        // Save to session attributes
+        model.addAttribute("spesialisasi", spesialisasi);
+        model.addAttribute("nama", nama);
+        List<JadwalDokterModel> jadwalDokters;
+        
+
+        if (spesialisasi != null && nama != null) {
+            jadwalDokters = jadwalDokterRepo.findJadwalDokterByNamaAndSpesialisasi(nama, spesialisasi);
+        } else if (spesialisasi != null) {
+            jadwalDokters = jadwalDokterRepo.findJadwalDokterBySpesialisasi(spesialisasi);
+        } else {
+            jadwalDokters = jadwalDokterRepo.findAllJadwalDokter();
+        }
+
+        model.addAttribute("jadwalDokters", jadwalDokters);
+        return "jadwalDokterView"; // Name of the HTML/JSP view to render
     }
 
     

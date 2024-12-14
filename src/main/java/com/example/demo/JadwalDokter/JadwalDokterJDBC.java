@@ -71,9 +71,98 @@ public class JadwalDokterJDBC {
     }
 
     @Override
-    public boolean addJadwalDokter() {
-        
+    public boolean addJadwalDokterData(JadwalDokterModel jadwalDokter) {
+        String sql = """
+        INSERT INTO JadwalDokter (idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """;
+
+    int isSuccess = jdbcTemplate.update(sql,
+        jadwalDokter.getIdDokter(),
+        jadwalDokter.getNama(),
+        jadwalDokter.getSpesialisasi(),
+        jadwalDokter.getHari(),
+        jadwalDokter.getJamMulai(),
+        jadwalDokter.getJamSelesai()
+    );
+
+    return isSuccess>0 ? true : false;
     }
+
+    @Override
+    public List<JadwalDokterModel> findJadwalDokterBySpesialisasi(String spesialisasi) {
+        String sql = """
+            SELECT 
+                jd.idJadwal, 
+                jd.idDokter, 
+                d.nama AS nama, 
+                d.spesialisasi AS spesialisasi, 
+                jd.hari, 
+                jd.jamMulai, 
+                jd.jamSelesai
+            FROM 
+                JadwalDokter jd
+            JOIN 
+                Dokter d ON jd.idDokter = d.idPegawai
+            WHERE 
+                d.spesialisasi = ?
+        """;
+    
+        return jdbcTemplate.query(sql, this::mapRowToJadwalDokter, spesialisasi);
+    }
+
+    public List<JadwalDokterModel> findJadwalDokterByNamaAndSpesialisasi(String nama, String spesialisasi) {
+        String sql = """
+            SELECT 
+                jd.idJadwal, 
+                jd.idDokter, 
+                d.nama AS nama, 
+                d.spesialisasi AS spesialisasi, 
+                jd.hari, 
+                jd.jamMulai, 
+                jd.jamSelesai
+            FROM 
+                JadwalDokter jd
+            JOIN 
+                Dokter d ON jd.idDokter = d.idPegawai
+            WHERE 
+                d.nama LIKE ? AND d.spesialisasi = ?
+        """;
+    
+        return jdbcTemplate.query(sql, this::mapRowToJadwalDokter, "%" + nama + "%", spesialisasi);
+    }
+
+
+    @Override
+    public boolean changeJadwalDokterData(
+        long idJadwal,
+        String originalHari,
+        int originalJamMulai,
+        int originalJamSelesai,
+        String editHari,
+        int editJamMulai,
+        int editJamSelesai
+) {
+    String sql = """
+        UPDATE JadwalDokter
+        SET 
+            hari = ?, 
+            jamMulai = ?, 
+            jamSelesai = ?
+        WHERE 
+            idJadwal = ? AND 
+            hari = ? AND 
+            jamMulai = ? AND 
+            jamSelesai = ?
+    """;
+        int isSuccessful = jdbcTemplate.update(sql, idJadwal, originalHari, originalJamMulai, originalJamSelesai, editHari, editJamMulai, editJamSelesai);
+
+
+
+        return isSuccessful > 0 ? true : false;
+    }
+
+
 
     
 
