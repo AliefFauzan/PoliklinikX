@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran elemen */
+}
+
 :root {
   --gray-700: rgba(52, 64, 84, 1);
   --label-colorslc-l-secondary: rgba(60, 60, 67, 0.6);
@@ -174,70 +180,6 @@
   white-space: nowrap;
 }
 
-.mencatat-informasi .search-bar {
-  display: flex;
-  flex-direction: column;
-  width: 307.2px;
-  height: 36px;
-  align-items: flex-start;
-  gap: 10.59px;
-  position: absolute;
-  top: 48px;
-  left: 1007px;
-}
-
-.mencatat-informasi .content {
-  display: flex;
-  height: 38.14px;
-  align-items: center;
-  padding: 8.47px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  margin-bottom: -2.12px;
-  background-color: var(--system-materialssm-l-thick);
-  border-radius: 10.59px;
-  opacity: 0.8;
-}
-
-.mencatat-informasi .magnifyingglass {
-  position: relative;
-  width: 29.66px;
-  height: 29.66px;
-  margin-top: -4.24px;
-  margin-bottom: -4.24px;
-}
-
-.mencatat-informasi .magnifyingglass-2 {
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  top: -1px;
-  left: 0;
-  font-family: "SF Pro Display-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--label-colorslc-l-secondary);
-  font-size: 19.1px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 53.0px;
-  white-space: nowrap;
-}
-
-.mencatat-informasi .placeholder-label {
-  position: relative;
-  flex: 1;
-  margin-top: -1.47px;
-  margin-right: -0.18px;
-  font-family: var(--default-size-body-font-family);
-  font-weight: var(--default-size-body-font-weight);
-  color: var(--label-colorslc-l-secondary);
-  font-size: var(--default-size-body-font-size);
-  letter-spacing: var(--default-size-body-letter-spacing);
-  line-height: var(--default-size-body-line-height);
-  font-style: var(--default-size-body-font-style);
-}
-
 .mencatat-informasi .sub-head {
   position: absolute;
   width: 1441px;
@@ -379,7 +321,7 @@
   position: absolute;
   width: 1299px;
   height: 50px;
-  top: 1245px;
+  top: 1400px;
   left: 61px;
   background-color: #1f2b6c;
   border-radius: 79.45px;
@@ -405,7 +347,7 @@
   position: absolute;
   width: 212px;
   top: 493px;
-  left: 59px;
+  left: 52px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray-700);
@@ -419,7 +361,7 @@
   width: 614px;
   height: 47px;
   top: 535px;
-  left: 59px;
+  left: 52px;
 }
 
 
@@ -451,8 +393,8 @@
 .mencatat-informasi .text-wrapper-6 {
   position: absolute;
   width: 336px;
-  top: 904px;
-  left: 746px;
+  top: 1150px;
+  left: 580px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray-700);
@@ -463,10 +405,10 @@
 
 .mencatat-informasi .overlap-4 {
   position: absolute;
-  width: 613px;
+  width: 614px;
   height: 239px;
-  top: 946px;
-  left: 746px;
+  top: 1200px;
+  left: 420px;
 }
 
 .mencatat-informasi .text-wrapper-7 {
@@ -485,8 +427,8 @@
 .mencatat-informasi .text-wrapper-8 {
   position: absolute;
   width: 264px;
-  top: 699px;
-  left: 748px;
+  top: 1030px;
+  left: 59px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
   color: var(--gray-700);
@@ -498,15 +440,15 @@
 .mencatat-informasi .darah {
   position: absolute;
   width: 264px;
-  top: 741px;
-  left: 748px;
+  top: 1070px;
+  left: 59px;
   height: 43px;
 }
 
 .mencatat-informasi .text-wrapper-9 {
   position: absolute;
   width: 182px;
-  top: 636px;
+  top: 592px;
   left: 52px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
@@ -520,7 +462,7 @@
   position: absolute;
   width: 614px;
   height: 44px;
-  top: 678px;
+  top: 634px;
   left: 52px;
 }
 
@@ -607,7 +549,7 @@
 .mencatat-informasi .text-wrapper-13 {
   position: absolute;
   width: 196px;
-  top: 1045px;
+  top: 920px;
   left: 59px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
@@ -621,14 +563,14 @@
   position: absolute;
   width: 614px;
   height: 44px;
-  top: 1087px;
+  top: 960px;
   left: 59px;
 }
 
 .mencatat-informasi .text-wrapper-14 {
   position: absolute;
   width: 196px;
-  top: 911px;
+  top: 810px;
   left: 54px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
@@ -642,14 +584,14 @@
   position: absolute;
   width: 614px;
   height: 44px;
-  top: 953px;
+  top: 850px;
   left: 54px;
 }
 
 .mencatat-informasi .text-wrapper-15 {
   position: absolute;
   width: 196px;
-  top: 770px;
+  top: 699px;
   left: 54px;
   font-family: "Mulish-Regular", Helvetica;
   font-weight: 400;
@@ -663,22 +605,8 @@
   position: absolute;
   width: 614px;
   height: 44px;
-  top: 812px;
-  left: 52px;
-}
-
-.mencatat-informasi .text-wrapper-16 {
-  position: absolute;
-  width: 45px;
   top: 741px;
-  left: 798px;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
+  left: 52px;
 }
 
 .mencatat-informasi .rectangle-14 {
@@ -693,28 +621,6 @@
   border-color: #000000;
 }
 
-.mencatat-informasi .text-wrapper-17 {
-  position: absolute;
-  width: 45px;
-  top: 741px;
-  left: 1303px;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
-}
-
-.mencatat-informasi .overlap-11 {
-  position: absolute;
-  width: 154px;
-  height: 34px;
-  top: 741px;
-  left: 1132px;
-}
-
 .mencatat-informasi .rectangle-15 {
   position: absolute;
   width: 33px;
@@ -725,20 +631,6 @@
   border-radius: 5.68px;
   border: 1.14px solid;
   border-color: #000000;
-}
-
-.mencatat-informasi .text-wrapper-18 {
-  position: absolute;
-  width: 126px;
-  top: 0;
-  left: 0;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
 }
 
 .mencatat-informasi .rectangle-16 {
@@ -753,20 +645,6 @@
   border-color: #000000;
 }
 
-.mencatat-informasi .text-wrapper-19 {
-  position: absolute;
-  width: 44px;
-  top: 741px;
-  left: 969px;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
-}
-
 .mencatat-informasi .rectangle-17 {
   position: absolute;
   width: 33px;
@@ -777,20 +655,6 @@
   border-radius: 5.68px;
   border: 1.14px solid;
   border-color: #000000;
-}
-
-.mencatat-informasi .text-wrapper-20 {
-  position: absolute;
-  width: 45px;
-  top: 800px;
-  left: 798px;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
 }
 
 .mencatat-informasi .rectangle-18 {
@@ -805,28 +669,6 @@
   border-color: #000000;
 }
 
-.mencatat-informasi .text-wrapper-21 {
-  position: absolute;
-  width: 45px;
-  top: 800px;
-  left: 1303px;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
-}
-
-.mencatat-informasi .overlap-12 {
-  position: absolute;
-  width: 154px;
-  height: 34px;
-  top: 800px;
-  left: 1132px;
-}
-
 .mencatat-informasi .rectangle-19 {
   position: absolute;
   width: 33px;
@@ -837,20 +679,6 @@
   border-radius: 5.68px;
   border: 1.14px solid;
   border-color: #000000;
-}
-
-.mencatat-informasi .text-wrapper-22 {
-  position: absolute;
-  width: 44px;
-  top: 800px;
-  left: 969px;
-  font-family: "Mulish-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--gray-700);
-  font-size: 19.6px;
-  letter-spacing: 0;
-  line-height: 29.4px;
-  white-space: nowrap;
 }
 
 .mencatat-informasi .rectangle-20 {
@@ -875,20 +703,6 @@
   background-size: 100% 100%;
 }
 
-.mencatat-informasi .text-wrapper-23 {
-  position: absolute;
-  width: 111px;
-  top: 17px;
-  left: 1164px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 21.2px;
-  text-align: center;
-  letter-spacing: 0.53px;
-  line-height: 25.4px;
-  white-space: nowrap;
-}
 
 .mencatat-informasi .vector {
   position: absolute;
@@ -959,4 +773,191 @@
 textarea.input-field {
   resize: none;
   /* Mencegah perubahan ukuran textarea */
+}
+
+.mencatat-informasi .text-wrapper-16 {
+  position: absolute;
+  width: 438px;
+  top: 699px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-11 {
+  position: absolute;
+  width: 614px;
+  height: 43px;
+  top: 741px;
+  left: 746px;
+}
+
+.mencatat-informasi .text-wrapper-17 {
+  position: absolute;
+  width: 438px;
+  top: 810px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-12 {
+  position: absolute;
+  width: 614px;
+  height: 43px;
+  top: 850px;
+  left: 746px;
+}
+
+.mencatat-informasi .text-wrapper-18 {
+  position: absolute;
+  width: 438px;
+  top: 920px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.desc {
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #344054;
+  margin-bottom: 16px;
+  position: absolute;
+  top: 1100px;
+  left: 746px;
+}
+
+.many-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.frame-22 {
+  text-align: center;
+  border: 2px dashed #bbbbbb;
+  border-radius: 8px;
+  padding: 16px;
+  position: absolute;
+  top: 960px;
+  left: 746px;
+  width: 614px;
+  height: 130px;
+}
+
+.drag-your-file-s-to-start-uploading {
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-bottom: 16px;
+  margin-top: 0px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.line-1,
+.line-2 {
+  height: 1px;
+  width: 40%;
+  background: #bbbbbb;
+}
+
+.text2 {
+  margin: 0 8px;
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.master-outline-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: white;
+  background: #007bff;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-list {
+  margin-top: 16px;
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.file-list div {
+  padding: 8px;
+  margin: 4px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.frame-22 img.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Menjaga proporsi gambar */
+  border-radius: 8px; /* Sesuaikan dengan frame */
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button:hover {
+  background: #ff1a1a;
 }
