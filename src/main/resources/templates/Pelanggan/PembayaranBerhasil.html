@@ -5,15 +5,10 @@
     <link rel="stylesheet" th:href="@{Pelanggan/PembayaranBerhasil.css}" />
   </head>
   <body>
-    <div class="pembayaran-berhasil">
+    <div class="pembayaran">
       <div class="div">
         <div class="overlap">
           <div class="rectangle"></div>
-          <div class="group">
-            <div class="rectangle-2"></div>
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-          </div>
           <div class="text-wrapper">POLIKLINIK X</div>
           <div class="group-wrapper">
             <div class="overlap-group-wrapper">
@@ -26,13 +21,35 @@
           <div class="rectangle-7"></div>
           <div class="rectangle-8"></div>
           <div class="rectangle-9"></div>
-          <div class="text-wrapper-2">Beranda</div>
-          <div class="text-wrapper-3">Layanan</div>
-          <div class="text-wrapper-4">Informasi</div>
-          <img class="ellipse" th:src="@{Pelanggan/img/Ellipse.png}" />
+          <!-- Navigasi -->
+        <div class="text-wrapper-2" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+          Beranda
+        </div>
+        <script>
+          function navigateToBeranda() {
+            window.location.href = "http://localhost:8080/home";
+          }
+        </script>
+        <div class="text-wrapper-3" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
+          Layanan
+        </div>
+        <script>
+          function navigateToLayanan() {
+            window.location.href = "http://localhost:8080/layanan";
+          }
+        </script>
+        <div class="text-wrapper-4" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+          Informasi
+        </div>
+        <script>
+          function navigateToInformasi() {
+            window.location.href = "http://localhost:8080/informasi";
+          }
+        </script>
+          <img class="ellipse" th:src="@{Pelanggan/img/ellipse0.png}" />
           <div class="sub-head">
             <div class="overlap-group-2">
-              <img class="FIGMA-payment" th:src="@{Pelanggan/img/FIGMA-payment-hospital.png}" />
+              <img class="FIGMA-payment" th:src="@{Pelanggan/img/figma-payment-hospital0.png}" />
               <div class="div-wrapper">
                 <div class="overlap-group-2">
                   <div class="frame">
@@ -56,7 +73,14 @@
         <div class="text-wrapper-6">TERIMA KASIH</div>
         <div class="overlap-wrapper">
           <div class="overlap-3">
-            <div class="text-wrapper-7">Riwayat Transaksi</div>
+            <div class="text-wrapper-7" th:text="'Riwayat Transaksi'" style="cursor: pointer; color: white;" onclick="navigateToHistory()">
+              Riwayat Transaksi
+            </div>
+            <script>
+              function navigateToHistory() {
+                window.location.href = "http://localhost:8080/pembayaran-riwayat";
+              }
+            </script>
           </div>
         </div>
       </div>
