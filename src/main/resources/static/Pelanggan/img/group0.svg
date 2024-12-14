@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="mask0_42_861" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="19">
 <path d="M0 0H20V19H0V0Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_42_861)">
 <path d="M15.75 0.890381H18.8171L12.1171 8.18367L20 18.1098H13.8286L8.99143 12.0909L3.46286 18.1098H0.392857L7.55857 10.3062L0 0.891738H6.32857L10.6943 6.39224L15.75 0.890381ZM14.6714 16.3618H16.3714L5.4 2.54745H3.57714L14.6714 16.3618Z" fill="black"/>
+=======
+<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_66_489" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="19">
+<path d="M0.228516 0.865601H18.8842V18.5885H0.228516V0.865601Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_66_489)">
+<path d="M14.9198 1.69604H17.7808L11.5312 8.49909L18.8842 17.758H13.1276L8.61556 12.1437L3.45861 17.758H0.594966L7.27901 10.479L0.228516 1.69731H6.13169L10.204 6.82808L14.9198 1.69604ZM13.9138 16.1275H15.4995L5.26554 3.24173H3.56521L13.9138 16.1275Z" fill="black"/>
+>>>>>>> a899e767436d138f19c87283b88b5b1682e3d4d8
 </g>
 </svg>
