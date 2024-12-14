@@ -57,7 +57,11 @@
           </div>
         </div>
         <div class="text-wrapper-3">BAYAR</div>
-        <div class="overlap-2"><div class="text-wrapper-4">SUBMIT</div></div>
+        <div class="overlap-2">
+          <form action="/submit" method="post" style="margin: 0; padding: 0; width: 100%; height: 100%;">
+              <button type="submit" class="button-style">Submit</button>
+          </form>
+      </div>
         <div class="overlap-3">
           <div class="text-wrapper-5">Follow us :</div>
           <img class="vector" src="img/image.svg" />
@@ -68,12 +72,18 @@
         <div class="group-4">
           <div class="text-wrapper-6">Nomor Medis</div>
           <div class="overlap-4">
-            <div class="rectangle-11"></div>
-            <div class="text-wrapper-7">Masukan nomor medis pasien</div>
+            <input
+              type="text"
+              class="rectangle-11-input"
+              placeholder="Masukan nomor medis pasien"
+            />
           </div>
           <div class="text-wrapper-8">Diagnosa yang diberikan</div>
           <div class="overlap-5">
-            <p class="p">Masukan diagnosa yang diberikan serta catatan tambahan utnuk diagnosa tersebut</p>
+            <textarea
+              class="overlap-5-input"
+              placeholder="Masukan diagnosa yang diberikan serta catatan tambahan untuk diagnosa tersebut"
+            ></textarea>
           </div>
         </div>
       </div>
