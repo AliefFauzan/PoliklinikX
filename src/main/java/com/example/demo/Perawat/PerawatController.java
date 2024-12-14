@@ -28,15 +28,15 @@ public class PerawatController {
     @Autowired
     PerawatRepo repo;
 
-    @GetMapping("/Register")
-    public String Register (Model model) {
-        return "Perawat/Perawat-Register";
-    }
+    // @GetMapping("/Register")
+    // public String Register (Model model) {
+    //     return "Perawat/Perawat-Register";
+    // }
 
-    @GetMapping("/Login")
-    public String Login (Model model) {
-        return "Perawat/Perawat-Login";
-    }
+    // @GetMapping("/Login")
+    // public String Login (Model model) {
+    //     return "Perawat/Perawat-Login";
+    // }
   
 
     @GetMapping("/sebelumLoginPerawat")

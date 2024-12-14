@@ -14,12 +14,12 @@ public class MainControler {
 
     @GetMapping("/register")
     public String Register (Model model) {
-        return "RegisterUmum";
+        return "/Pelanggan/Register";
     }
 
-    @GetMapping("/Login")
+    @GetMapping("/login")
     public String Login (Model model) {
-        return "LoginUmum";
+        return "/Login/Login";
     }
     
     
