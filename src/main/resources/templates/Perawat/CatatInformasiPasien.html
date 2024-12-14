@@ -71,7 +71,7 @@
             }
           }
         </script>
-        <!-- Beranda Button -->
+        <!-- Button -->
         <div class="text-wrapper-2" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
           Beranda
         </div>
@@ -83,7 +83,7 @@
 
         <div class="sub-head">
           <div class="overlap-group-2">
-            <img class="img" src="/Perawat/img/vector0.png" />
+            <img class="img" src="/Perawat/img/rectangle-31.png" />
             <div class="rectangle-8"></div>
             <div class="div-wrapper">
               <div class="overlap-group-2">
@@ -165,7 +165,7 @@
 
       <div class="text-wrapper-14">Tekanan Darah</div>
       <div class="overlap-9">
-        <input type="text" name="bloodPressure" class="input-field" placeholder="Masukkan tekanan darah pasien"
+        <input type="number" name="bloodPressure" class="input-field" placeholder="Masukkan tekanan darah pasien"
           th:value="${bloodPressure}" />
       </div>
 
@@ -175,13 +175,86 @@
           th:value="${patientHeight}" />
       </div>
 
-      <div class="overlap-13">
-        <div class="text-wrapper-23">Follow us :</div>
-        <img class="vector" src="/Perawat/img/vector0.svg" />
-        <img class="vector-2" src="/Perawat/img/vector1.svg" />
-        <img class="prime-twitter" src="/Perawat/img/group0.svg" />
-        <img class="mdi-linkedin" src="/Perawat/img/mdi-linkedin0.svg" />
+      <div class="text-wrapper-16">Riwayat Penyakit</div>
+      <div class="overlap-11">
+        <input type="text" name="riwayatPenyakit" class="input-field" placeholder="Masukkan riwayat penyakit pasien"
+          th:value="${riwayatPenyakit}" />
       </div>
+
+      <div class="text-wrapper-17">Informasi Alergi</div>
+      <div class="overlap-12">
+        <input type="text" name="informasiAlergi" class="input-field" placeholder="Masukkan informasi alergi pasien"
+          th:value="${informasiAlergi}" />
+      </div>
+
+      <div class="text-wrapper-18">Hasil Lab</div>
+      <div class="many-upload">
+        <div class="frame-22">
+          <div class="default-content">
+            <div class="text">
+              <div class="drag-your-file-s-to-start-uploading">
+                Drag your file(s) to start uploading
+              </div>
+              <input type="file" id="fileInput" multiple class="file-input" />
+            </div>
+            <div class="divider">
+              <div class="line-1"></div>
+              <div class="text2">OR</div>
+              <div class="line-2"></div>
+            </div>
+            <div class="master-outline-button">
+              <label for="fileInput" class="button">Browse files</label>
+            </div>
+          </div>
+        </div>
+        <div class="desc">Only support .jpg, .png, .svg, and zip files</div>
+      </div>
+      
+      <script>
+        fileInput.addEventListener('change', (event) => {
+          const files = event.target.files;
+          const frame = document.querySelector('.frame-22');
+          const defaultContent = document.querySelector('.default-content');
+    
+          // Hide default content
+          defaultContent.style.display = 'none';
+    
+          const allowedTypes = ['image/jpeg', 'image/png', 'image/svg+xml', 'application/zip'];
+    
+          for (const file of files) {
+            if (!allowedTypes.includes(file.type)) {
+              alert(`Unsupported file type: ${file.name}`);
+              continue;
+            }
+    
+            // Clear the frame and add preview
+            frame.innerHTML = '';
+    
+            // Check if the file is an image type
+            if (file.type.startsWith('image/')) {
+              const imgPreview = document.createElement('img');
+              imgPreview.src = URL.createObjectURL(file); // Create a URL for the image
+              imgPreview.classList.add('preview'); // Add a class for styling
+              frame.appendChild(imgPreview);
+            } else {
+              // If it's not an image, show file name
+              const fileInfo = document.createElement('div');
+              fileInfo.textContent = `File: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+              frame.appendChild(fileInfo);
+            }
+    
+            // Add a close button
+            const closeButton = document.createElement('button');
+            closeButton.textContent = 'X';
+            closeButton.classList.add('close-button');
+            closeButton.addEventListener('click', () => {
+              frame.innerHTML = ''; // Clear the frame
+              defaultContent.style.display = 'flex'; // Show default content
+            });
+            frame.appendChild(closeButton);
+          }
+        });
+      </script>
     </div>
   </div>
 

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 // import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
 
+@RequestMapping("/dokter")
 @Controller
 public class DokterController {
 

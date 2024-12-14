@@ -1,619 +1,371 @@
-:root {
-    --label-colorslc-l-secondary: rgba(60, 60, 67, 0.6);
-    --primary: rgba(31, 43, 108, 1);
-    --accent: rgba(191, 210, 248, 1);
-    --secondary: rgba(21, 158, 236, 1);
-    --white: rgba(255, 255, 255, 1);
-    --stroke: rgba(0, 0, 0, 0.1);
-    --system-materialssm-l-thick: rgba(250, 250, 250, 0.93);
-    --default-size-body-font-family: "SF Pro Text", Helvetica;
-    --default-size-body-font-weight: 400;
-    --default-size-body-font-size: 17px;
-    --default-size-body-letter-spacing: -0.40799999237060547px;
-    --default-size-body-line-height: 22px;
-    --default-size-body-font-style: normal;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran elemen */
+}
 
+.jadwal-dokter,
+.jadwal-dokter * {
+  box-sizing: border-box;
+}
 .jadwal-dokter {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .jadwal-dokter .div {
-    background-color: #ffffff;
-    overflow: hidden;
-    width: 1440px;
-    height: 1024px;
-    position: relative;
-  }
-  
-  .jadwal-dokter .overlap {
-    position: absolute;
-    width: 1445px;
-    height: 461px;
-    top: 0;
-    left: -3px;
-  }
-  
-  .jadwal-dokter .rectangle {
-    position: absolute;
-    width: 1445px;
-    height: 236px;
-    top: 0;
-    left: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(228.02, 245.01, 255, 0) 0%,
-      rgb(228.02, 245.01, 255) 100%
-    );
-  }
-  
-  .jadwal-dokter .group {
-    position: absolute;
-    width: 51px;
-    height: 26px;
-    top: 41px;
-    left: 36px;
-  }
-  
-  .jadwal-dokter .rectangle-2 {
-    position: absolute;
-    width: 51px;
-    height: 6px;
-    top: 0;
-    left: 0;
-    background-color: #02337c;
-  }
-  
-  .jadwal-dokter .rectangle-3 {
-    position: absolute;
-    width: 51px;
-    height: 6px;
-    top: 10px;
-    left: 0;
-    background-color: #02337c;
-  }
-  
-  .jadwal-dokter .rectangle-4 {
-    position: absolute;
-    width: 51px;
-    height: 6px;
-    top: 20px;
-    left: 0;
-    background-color: #02337c;
-  }
-  
-  .jadwal-dokter .text-wrapper {
-    position: absolute;
-    top: 46px;
-    left: 254px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .group-wrapper {
-    position: absolute;
-    width: 77px;
-    height: 77px;
-    top: 16px;
-    left: 132px;
-    background-color: #02337c;
-    border-radius: 38.5px;
-    box-shadow: inset 0px 4px 4px #00000040;
-  }
-  
-  .jadwal-dokter .overlap-group-wrapper {
-    position: relative;
-    width: 51px;
-    height: 51px;
-    top: 13px;
-    left: 13px;
-  }
-  
-  .jadwal-dokter .overlap-group {
-    position: relative;
-    height: 51px;
-  }
-  
-  .jadwal-dokter .rectangle-5 {
-    position: absolute;
-    width: 60px;
-    height: 12px;
-    top: 20px;
-    left: -5px;
-    background-color: #ffffff;
-    transform: rotate(-45deg);
-  }
-  
-  .jadwal-dokter .rectangle-6 {
-    position: absolute;
-    width: 60px;
-    height: 12px;
-    top: 20px;
-    left: -5px;
-    background-color: #ffffff;
-    transform: rotate(45deg);
-  }
-  
-  .jadwal-dokter .rectangle-7 {
-    position: absolute;
-    width: 119px;
-    height: 29px;
-    top: 44px;
-    left: 565px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .jadwal-dokter .rectangle-8 {
-    position: absolute;
-    width: 119px;
-    height: 29px;
-    top: 44px;
-    left: 712px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .jadwal-dokter .rectangle-9 {
-    position: absolute;
-    width: 119px;
-    height: 29px;
-    top: 44px;
-    left: 869px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .jadwal-dokter .search-bar {
-    display: flex;
-    flex-direction: column;
-    width: 290px;
-    height: 34px;
-    align-items: flex-start;
-    gap: 10px;
-    position: absolute;
-    top: 41px;
-    left: 1024px;
-  }
-  
-  .jadwal-dokter .content {
-    display: flex;
-    height: 36px;
-    align-items: center;
-    padding: 8px;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
-    margin-bottom: -2.00px;
-    background-color: var(--system-materialssm-l-thick);
-    border-radius: 10px;
-    opacity: 0.8;
-  }
-  
-  .jadwal-dokter .magnifyingglass {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    margin-top: -4.00px;
-    margin-bottom: -4.00px;
-  }
-  
-  .jadwal-dokter .magnifyingglass-2 {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    top: -1px;
-    left: 0;
-    font-family: "SF Pro Display-Medium", Helvetica;
-    font-weight: 500;
-    color: var(--label-colorslc-l-secondary);
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 50px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .placeholder-label {
-    position: relative;
-    flex: 1;
-    margin-top: -2.00px;
-    font-family: var(--default-size-body-font-family);
-    font-weight: var(--default-size-body-font-weight);
-    color: var(--label-colorslc-l-secondary);
-    font-size: var(--default-size-body-font-size);
-    letter-spacing: var(--default-size-body-letter-spacing);
-    line-height: var(--default-size-body-line-height);
-    font-style: var(--default-size-body-font-style);
-  }
-  
-  .jadwal-dokter .text-wrapper-2 {
-    position: absolute;
-    width: 115px;
-    top: 45px;
-    left: 566px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .text-wrapper-3 {
-    position: absolute;
-    width: 103px;
-    top: 45px;
-    left: 722px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .text-wrapper-4 {
-    position: absolute;
-    width: 122px;
-    top: 45px;
-    left: 866px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #02337c;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .ellipse {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    top: 28px;
-    left: 1349px;
-    object-fit: cover;
-  }
-  
-  .jadwal-dokter .sub-head {
-    position: absolute;
-    width: 1440px;
-    height: 314px;
-    top: 147px;
-    left: 5px;
-  }
-  
-  .jadwal-dokter .overlap-group-2 {
-    position: relative;
-    height: 314px;
-  }
-  
-  .jadwal-dokter .img {
-    position: absolute;
-    width: 1438px;
-    height: 314px;
-    top: 0;
-    left: 0;
-  }
-  
-  .jadwal-dokter .rectangle-10 {
-    position: absolute;
-    width: 1440px;
-    height: 314px;
-    top: 0;
-    left: 0;
-    background-color: #ffffff80;
-  }
-  
-  .jadwal-dokter .div-wrapper {
-    position: absolute;
-    width: 1440px;
-    height: 314px;
-    top: 0;
-    left: 0;
-  }
-  
-  .jadwal-dokter .frame {
-    position: absolute;
-    width: 1440px;
-    height: 314px;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-  }
-  
-  .jadwal-dokter .ellipse-2 {
-    position: absolute;
-    width: 256px;
-    height: 256px;
-    top: 122px;
-    left: 1312px;
-    background-color: var(--accent);
-    border-radius: 128px;
-    opacity: 0.5;
-  }
-  
-  .jadwal-dokter .ellipse-3 {
-    position: absolute;
-    width: 239px;
-    height: 239px;
-    top: -119px;
-    left: -119px;
-    background-color: var(--secondary);
-    border-radius: 119.5px;
-    opacity: 0.3;
-  }
-  
-  .jadwal-dokter .group-2 {
-    position: absolute;
-    width: 1440px;
-    height: 10px;
-    top: 304px;
-    left: 0;
-  }
-  
-  .jadwal-dokter .rectangle-11 {
-    position: absolute;
-    width: 883px;
-    height: 10px;
-    top: 0;
-    left: 322px;
-    background-color: var(--primary);
-  }
-  
-  .jadwal-dokter .rectangle-12 {
-    position: absolute;
-    width: 235px;
-    height: 10px;
-    top: 0;
-    left: 1205px;
-    background-color: var(--secondary);
-  }
-  
-  .jadwal-dokter .rectangle-13 {
-    position: absolute;
-    width: 322px;
-    height: 10px;
-    top: 0;
-    left: 0;
-    background-color: var(--accent);
-  }
-  
-  .jadwal-dokter .group-3 {
-    position: absolute;
-    width: 701px;
-    height: 84px;
-    top: 95px;
-    left: 197px;
-  }
-  
-  .jadwal-dokter .about-us {
-    position: absolute;
-    top: 26px;
-    left: 0;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: var(--primary);
-    font-size: 48px;
-    letter-spacing: 0;
-    line-height: normal;
-  }
-  
-  .jadwal-dokter .home-about {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: var(--primary);
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 25.2px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .overlap-2 {
-    position: absolute;
-    width: 1440px;
-    height: 62px;
-    top: 962px;
-    left: 0;
-    background-color: #ddf1f0;
-  }
-  
-  .jadwal-dokter .ic-sharp-call {
-    position: absolute;
-    width: 24px;
-    height: 23px;
-    top: 20px;
-    left: 28px;
-  }
-  
-  .jadwal-dokter .text-wrapper-5 {
-    position: absolute;
-    width: 280px;
-    top: 19px;
-    left: 64px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .ic-sharp-call-2 {
-    position: absolute;
-    width: 24px;
-    height: 23px;
-    top: 20px;
-    left: 375px;
-  }
-  
-  .jadwal-dokter .p {
-    position: absolute;
-    width: 382px;
-    top: 19px;
-    left: 411px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .text-wrapper-6 {
-    position: absolute;
-    width: 105px;
-    top: 19px;
-    left: 1173px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .vector {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 22px;
-    left: 1328px;
-  }
-  
-  .jadwal-dokter .vector-2 {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 22px;
-    left: 1293px;
-  }
-  
-  .jadwal-dokter .prime-twitter {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 22px;
-    left: 1363px;
-  }
-  
-  .jadwal-dokter .mdi-linkedin {
-    position: absolute;
-    width: 20px;
-    height: 19px;
-    top: 22px;
-    left: 1392px;
-  }
-  
-  .jadwal-dokter .text-wrapper-7 {
-    position: absolute;
-    top: 511px;
-    left: 582px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #000000;
-    font-size: 35px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .dropdown {
-    position: absolute;
-    width: 163px;
-    height: 36px;
-    top: 635px;
-    left: 628px;
-    border-radius: 8px;
-  }
-  
-  .jadwal-dokter .button {
-    all: unset;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 8px 16px;
-    position: relative;
-    background-color: var(--white);
-    border-radius: 8px;
-    border: 1px solid;
-    border-color: var(--stroke);
-  }
-  
-  .jadwal-dokter .label {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Fira Sans-Medium", Helvetica;
-    font-weight: 500;
-    color: #5433ff;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 20px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .icon {
-    position: relative;
-    width: 18px;
-    height: 18px;
-  }
-  
-  .jadwal-dokter .overlap-3 {
-    position: absolute;
-    width: 348px;
-    height: 49px;
-    top: 739px;
-    left: 535px;
-  }
-  
-  .jadwal-dokter .rectangle-14 {
-    position: absolute;
-    width: 348px;
-    height: 49px;
-    top: 0;
-    left: 0;
-  }
-  
-  .jadwal-dokter .text-wrapper-8 {
-    position: absolute;
-    top: 12px;
-    left: 140px;
-    font-family: "Inter-Bold", Helvetica;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 25px;
-    text-align: center;
-    letter-spacing: 0.50px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
+  background: #ffffff;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* kotak header */
+.rectangle-20 {
+  background: linear-gradient(
+    0deg,
+    rgba(228, 245, 255, 0) 0%,
+    rgba(228, 245, 255, 1) 100%
+  );
+  width: 1445px;
+  height: 236px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/* nama RS */
+.poliklinik-x {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 40px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 200px;
+  top: 47px;
+}
+
+/* ikon akun */
+.ellipse,
+.ellipse * {
+  box-sizing: border-box;
+}
+.ellipse {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  object-fit: cover;
+  right: 50px;
+  top: 35px;
+}
+
+/* logo X */
+.ellipse-1 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  left: 60px;
+  top: 16px;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.group-2 {
+  width: 50.84px;
+  height: 50.84px;
+  position: static;
+}
+.rectangle-15 {
+  background: #ffffff;
+  width: 60.37px;
+  height: 11.53px;
+  position: absolute;
+  left: 72px;
+  top: 71.62px;
+  transform-origin: 0 0;
+  transform: rotate(-45deg) scale(1, 1);
+}
+.rectangle-16 {
+  background: #ffffff;
+  width: 60.37px;
+  height: 11.53px;
+  position: absolute;
+  left: 82px;
+  top: 28.94px;
+  transform-origin: 0 0;
+  transform: rotate(45deg) scale(1, 1);
+}
+
+/* beranda */
+.beranda {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 520px;
+  top: 46px;
+  width: 115px;
+  height: 19px;
+}
+.rectangle-17 {
+  background: rgba(217, 217, 217, 0.7);
+  border-radius: 36px;
+  width: 119px;
+  height: 29px;
+  position: absolute;
+  left: 520px;
+  top: 44px;
+}
+
+.jadwal-dokter2 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 35px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 582px;
+  top: 512px;
+}
+
+.about-us {
+  color: var(--primary, #1f2b6c);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 42.28610610961914px;
+  font-weight: 400;
+  position: absolute;
+  right: 56.59%;
+  left: 13.69%;
+  width: 29.72%;
+  bottom: 44.37%;
+  top: 38.8%;
+  height: 16.83%;
+}
+.home-about {
+  color: var(--primary, #1f2b6c);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 15.85728931427002px;
+  line-height: 140%;
+  font-weight: 400;
+  position: absolute;
+  right: 74.71%;
+  left: 13.69%;
+  width: 20%;
+  bottom: 62.34%;
+  top: 30.4%;
+  height: 7.26%;
+}
+
+.rectangle-78,
+.rectangle-78 * {
+  box-sizing: border-box;
+}
+.rectangle-78 {
+  border-radius: 0px;
+  width: 348px;
+  height: 49px;
+  position: absolute;
+  left: 525px;
+  top: 720px;
+  overflow: visible;
+}
+
+.lihat {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 25px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 665px;
+  top: 730px;
+}
+.sub-head {
+  width: 1440px;
+  height: 314px;
+  position: absolute;
+  left: 2px;
+  top: 147px;
+}
+.rectangle-32 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  object-fit: cover;
+}
+.rectangle-42 {
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+.frame-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  overflow: hidden;
+}
+.ellipse-12 {
+  background: var(--accent, #bfd2f8);
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 256px;
+  height: 256px;
+  position: absolute;
+  right: -128px;
+  top: 122px;
+}
+.ellipse-2 {
+  background: var(--secondary, #159eec);
+  border-radius: 50%;
+  opacity: 0.3;
+  width: 239px;
+  height: 239px;
+  position: absolute;
+  left: -119px;
+  top: -119px;
+}
+.group-184 {
+  width: 1440px;
+  height: 10.05px;
+  position: static;
+}
+.rectangle-76 {
+  background: var(--primary, #1f2b6c);
+  width: 61.29%;
+  height: 3.2%;
+  position: absolute;
+  right: 16.33%;
+  left: 22.38%;
+  bottom: 0%;
+  top: 96.8%;
+}
+.rectangle-782 {
+  background: var(--secondary, #159eec);
+  width: 16.33%;
+  height: 3.2%;
+  position: absolute;
+  right: 0%;
+  left: 83.67%;
+  bottom: 0%;
+  top: 96.8%;
+}
+.rectangle-77 {
+  background: var(--accent, #bfd2f8);
+  width: 22.38%;
+  height: 3.2%;
+  position: absolute;
+  right: 77.62%;
+  left: 0%;
+  bottom: 0%;
+  top: 96.8%;
+}
+
+/* dropdown */
+.dropdown {
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  width: 163px;
+  height: 36px;
+  position: absolute;
+  left: 622px;
+  top: 623px;
+}
+.button {
+  background: var(--white, #ffffff);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--stroke, rgba(0, 0, 0, 0.1));
+  border-width: 1px;
+  padding: 8px 16px 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+.label {
+  color: var(--primary, #000000);
+  text-align: left;
+  font-family: "FiraSans-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap; /* Mencegah teks melipat */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Tambahkan ellipsis jika teks terlalu panjang */
+}
+.icon {
+  opacity: 0.5;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 8px;
+}
+.group2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 5px;
+  top: 1px;
+  overflow: visible;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  top: 40px; /* Menyesuaikan posisi agar muncul di bawah tombol */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #e7f1ff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
