@@ -2,8 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="../../static/Pelanggan/Register.css" />
+    <link rel="stylesheet" href="/Pelanggan/Register.css" />
     <style>
       /* Seamless button styling for login and register */
       .seamless-button {
@@ -15,40 +14,17 @@
         cursor: pointer;
         padding: 0;
       }
-      .seamless-button:hover {
-        text-decoration: underline;
+
+      /* Input styling */
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
       }
     </style>
-    <script>
-      // JavaScript to inject seamless links for Login and Register
-      document.addEventListener("DOMContentLoaded", () => {
-        // Login button injection
-        const loginText = document.querySelector(".text-wrapper-5"); // Target the "Login here!" text
-        if (loginText) {
-          const loginButton = document.createElement("button");
-          loginButton.textContent = loginText.textContent; // Preserve the existing text
-          loginButton.className = "seamless-button"; // Apply seamless styling
-          loginButton.onclick = () => {
-            window.location.href = "/login"; // Redirect to login page
-          };
-          loginText.textContent = ""; // Clear the existing text
-          loginText.appendChild(loginButton); // Replace it with the button
-        }
-
-        // Register button injection
-        const registerButtonWrapper = document.querySelector(".text-wrapper-10"); // Target the "Register" text
-        if (registerButtonWrapper) {
-          const registerButton = document.createElement("button");
-          registerButton.textContent = registerButtonWrapper.textContent; // Preserve the existing text
-          registerButton.className = "seamless-button"; // Apply seamless styling
-          registerButton.onclick = () => {
-            window.location.href = "/SetelahLoginUser"; // Redirect to SetelahLoginUser.html
-          };
-          registerButtonWrapper.textContent = ""; // Clear the existing text
-          registerButtonWrapper.appendChild(registerButton); // Replace it with the button
-        }
-      });
-    </script>
   </head>
   <body>
     <div class="sign-up">
@@ -71,13 +47,13 @@
                 </div>
               </div>
               <div class="group-3">
-                <img class="phone-call" src="img/phone-call-1.svg" />
+                <img class="phone-call" src="/Pelanggan/img/telepon.svg" />
                 <div class="text-wrapper-3">022-82558000</div>
               </div>
             </div>
             <img
               class="img"
-              src="img/a1b4dbfbcd8dadbb4dcc87f8f26aa038-removebg-preview-1.png"
+              src="/Pelanggan/img/kartunDokter.png"
             />
           </div>
           <div class="group-4">
@@ -86,56 +62,50 @@
               <div class="group-6">
                 <p class="p">If you already have an account register</p>
                 <p class="you-can-login-here">
-                  <span class="span">You can&nbsp;&nbsp; </span>
-                  <span class="text-wrapper-5">
-                    <button th:text="${loginText}" class="seamless-button" th:onclick="|window.location.href='/login'|">Login here!</button>
-                  </span>
+                  <span class="span">You can </span>
+                  <button class="seamless-button" onclick="window.location.href='/login'" style="color: #02337c;">login here!</button>
                 </p>
               </div>
             </div>
+
+            <!-- Input for Email -->
             <div class="group-7">
               <div class="text-wrapper-6">Email</div>
-              <div class="text-wrapper-7">Enter your email address</div>
-              <div class="rectangle-2"></div>
-              <img class="message" src="img/message-1.svg" />
+              <input type="email" class="input-field" name="email" placeholder="example@example.com" required />
             </div>
+
+            <!-- Input for Confirm Password -->
             <div class="group-8">
               <div class="text-wrapper-8">Confirm Password</div>
-              <div class="rectangle-3"></div>
-              <div class="group-9">
-                <div class="text-wrapper-9">Confirm your Password</div>
-                <img class="padlock" src="img/padlock-1-2.svg" />
-              </div>
-              <img class="invisible" src="img/image.svg" />
+              <input type="password" class="input-field" name="confirmPassword" placeholder="Confirm your Password" required />
             </div>
+
+            <!-- Input for Password -->
             <div class="group-10">
               <div class="text-wrapper-8">Password</div>
-              <div class="rectangle-3"></div>
-              <div class="group-11">
-                <div class="text-wrapper-9">Enter your Password</div>
-                <img class="padlock-2" src="img/padlock-1.svg" />
-              </div>
-              <img class="invisible" src="img/invisible-1.svg" />
+              <input type="password" class="input-field" name="password" placeholder="Enter your Password" required />
             </div>
-            <div class="group-12">
-              <div class="group-13">
-                <div class="overlap-group-2">
-                  <div class="text-wrapper-10">
-                    <button th:text="${registerText}" class="seamless-button" th:onclick="|window.location.href='/register'|">Register</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <!-- Input for Username -->
             <div class="group-14">
               <div class="overlap-3">
                 <div class="group-15">
                   <div class="text-wrapper-6">Username</div>
-                  <div class="text-wrapper-7">Enter your User name</div>
-                  <div class="rectangle-4"></div>
+                  <input type="text" class="input-field" name="username" placeholder="Enter your username" required />
                 </div>
-                <img class="user" src="img/user-1.svg" />
               </div>
             </div>
+
+            <div class="group-12">
+              <div class="group-13">
+                <div class="overlap-group-2">
+                  <div class="text-wrapper-10">
+                    <button class="seamless-button" onclick="window.location.href='/login'" style="color: white;">Register</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

@@ -1,0 +1,963 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran elemen */
+}
+
+:root {
+  --gray-700: rgba(52, 64, 84, 1);
+  --label-colorslc-l-secondary: rgba(60, 60, 67, 0.6);
+  --primary: rgba(31, 43, 108, 1);
+  --accent: rgba(191, 210, 248, 1);
+  --secondary: rgba(21, 158, 236, 1);
+  --system-materialssm-l-thick: rgba(250, 250, 250, 0.93);
+  --default-size-body-font-family: "SF Pro Text", Helvetica;
+  --default-size-body-font-weight: 400;
+  --default-size-body-font-size: 17px;
+  --default-size-body-letter-spacing: -0.40799999237060547px;
+  --default-size-body-line-height: 22px;
+  --default-size-body-font-style: normal;
+}
+
+
+.mencatat-informasi {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.mencatat-informasi .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1440px;
+  height: 1475.21px;
+  position: relative;
+}
+
+.mencatat-informasi .overlap {
+  position: absolute;
+  width: 1441px;
+  height: 433px;
+  top: 0;
+  left: 0;
+}
+
+.mencatat-informasi .rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 122px;
+  top: 0;
+  left: 0;
+  background-color: #e4f5ff;
+}
+
+.mencatat-informasi .rectangle-2 {
+  position: absolute;
+  width: 119px;
+  height: 29px;
+  top: 52px;
+  left: 559px;
+  background-color: #d9d9d9b2;
+  border-radius: 36px;
+}
+
+.mencatat-informasi .group {
+  position: absolute;
+  width: 51px;
+  height: 26px;
+  top: 47px;
+  left: 27px;
+}
+
+.mencatat-informasi .rectangle-3 {
+  position: absolute;
+  width: 51px;
+  height: 6px;
+  top: 0;
+  left: 0;
+  background-color: #02337c;
+}
+
+.mencatat-informasi .rectangle-4 {
+  position: absolute;
+  width: 51px;
+  height: 6px;
+  top: 10px;
+  left: 0;
+  background-color: #02337c;
+}
+
+.mencatat-informasi .rectangle-5 {
+  position: absolute;
+  width: 51px;
+  height: 6px;
+  top: 20px;
+  left: 0;
+  background-color: #02337c;
+}
+
+.mencatat-informasi .text-wrapper {
+  position: absolute;
+  top: 54px;
+  left: 247px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #02337c;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0.50px;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.mencatat-informasi .group-wrapper {
+  position: absolute;
+  width: 77px;
+  height: 77px;
+  top: 24px;
+  left: 125px;
+  background-color: #02337c;
+  border-radius: 38.51px;
+  box-shadow: inset 0px 4px 4px #00000040;
+}
+
+.mencatat-informasi .overlap-group-wrapper {
+  position: relative;
+  width: 51px;
+  height: 51px;
+  top: 13px;
+  left: 13px;
+}
+
+.mencatat-informasi .overlap-group {
+  position: relative;
+  height: 51px;
+}
+
+.mencatat-informasi .rectangle-6 {
+  position: absolute;
+  width: 60px;
+  height: 12px;
+  top: 20px;
+  left: -5px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+}
+
+.mencatat-informasi .rectangle-7 {
+  position: absolute;
+  width: 60px;
+  height: 12px;
+  top: 20px;
+  left: -5px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.mencatat-informasi .ellipse {
+  position: absolute;
+  width: 70px;
+  height: 68px;
+  top: 32px;
+  left: 1340px;
+  object-fit: cover;
+}
+
+.mencatat-informasi .text-wrapper-2 {
+  position: absolute;
+  width: 115px;
+  top: 53px;
+  left: 559px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #02337c;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.50px;
+  line-height: 24.0px;
+  white-space: nowrap;
+}
+
+.mencatat-informasi .sub-head {
+  position: absolute;
+  width: 1441px;
+  height: 314px;
+  top: 119px;
+  left: 0;
+}
+
+.mencatat-informasi .overlap-group-2 {
+  position: relative;
+  height: 314px;
+}
+
+.mencatat-informasi .img {
+  position: absolute;
+  width: 1440px;
+  height: 314px;
+  top: 0;
+  left: 0;
+}
+
+.mencatat-informasi .rectangle-8 {
+  position: absolute;
+  width: 1441px;
+  height: 314px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff80;
+}
+
+.mencatat-informasi .div-wrapper {
+  position: absolute;
+  width: 1441px;
+  height: 314px;
+  top: 0;
+  left: 0;
+}
+
+.mencatat-informasi .frame {
+  position: absolute;
+  width: 1441px;
+  height: 314px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.mencatat-informasi .ellipse-2 {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  top: 122px;
+  left: 1313px;
+  background-color: var(--accent);
+  border-radius: 128.06px;
+  opacity: 0.5;
+}
+
+.mencatat-informasi .ellipse-3 {
+  position: absolute;
+  width: 239px;
+  height: 239px;
+  top: -119px;
+  left: -119px;
+  background-color: var(--secondary);
+  border-radius: 119.55px;
+  opacity: 0.3;
+}
+
+.mencatat-informasi .group-2 {
+  position: absolute;
+  width: 1441px;
+  height: 10px;
+  top: 304px;
+  left: 0;
+}
+
+.mencatat-informasi .rectangle-9 {
+  position: absolute;
+  width: 883px;
+  height: 10px;
+  top: 0;
+  left: 322px;
+  background-color: var(--primary);
+}
+
+.mencatat-informasi .rectangle-10 {
+  position: absolute;
+  width: 235px;
+  height: 10px;
+  top: 0;
+  left: 1205px;
+  background-color: var(--secondary);
+}
+
+.mencatat-informasi .rectangle-11 {
+  position: absolute;
+  width: 322px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background-color: var(--accent);
+}
+
+.mencatat-informasi .group-3 {
+  position: absolute;
+  width: 514px;
+  height: 84px;
+  top: 95px;
+  left: 197px;
+}
+
+.mencatat-informasi .about-us {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--primary);
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.mencatat-informasi .home-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--primary);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25.2px;
+  white-space: nowrap;
+}
+
+.mencatat-informasi .overlap-2 {
+  position: absolute;
+  width: 1299px;
+  height: 50px;
+  top: 1400px;
+  left: 61px;
+  background-color: #1f2b6c;
+  border-radius: 79.45px;
+  border: 0.53px solid;
+  border-color: #daeeff;
+}
+
+.mencatat-informasi .text-wrapper-3 {
+  position: absolute;
+  width: 85px;
+  top: 14px;
+  left: 616px;
+  -webkit-text-stroke: 1.14px #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .text-wrapper-4 {
+  position: absolute;
+  width: 212px;
+  top: 493px;
+  left: 52px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-3 {
+  position: absolute;
+  width: 614px;
+  height: 47px;
+  top: 535px;
+  left: 52px;
+}
+
+
+.mencatat-informasi .rectangle-12 {
+  position: absolute;
+  width: 614px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 6.9px;
+  border: 0.34px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .text-wrapper-5 {
+  position: absolute;
+  width: 509px;
+  top: 6px;
+  left: 18px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: #bbbbbb;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.5px;
+}
+
+.mencatat-informasi .text-wrapper-6 {
+  position: absolute;
+  width: 336px;
+  top: 1150px;
+  left: 580px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-4 {
+  position: absolute;
+  width: 614px;
+  height: 239px;
+  top: 1200px;
+  left: 420px;
+}
+
+.mencatat-informasi .text-wrapper-7 {
+  position: absolute;
+  width: 509px;
+  top: 2px;
+  left: 21px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: #bbbbbb;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.5px;
+}
+
+.mencatat-informasi .text-wrapper-8 {
+  position: absolute;
+  width: 264px;
+  top: 1030px;
+  left: 59px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .darah {
+  position: absolute;
+  width: 264px;
+  top: 1070px;
+  left: 59px;
+  height: 43px;
+}
+
+.mencatat-informasi .text-wrapper-9 {
+  position: absolute;
+  width: 182px;
+  top: 592px;
+  left: 52px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-5 {
+  position: absolute;
+  width: 614px;
+  height: 44px;
+  top: 634px;
+  left: 52px;
+}
+
+.mencatat-informasi .rectangle-13 {
+  position: absolute;
+  width: 614px;
+  height: 37px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 6.9px;
+  border: 0.34px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .text-wrapper-10 {
+  position: absolute;
+  width: 509px;
+  top: 4px;
+  left: 22px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: #bbbbbb;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.5px;
+}
+
+.mencatat-informasi .text-wrapper-11 {
+  position: absolute;
+  width: 438px;
+  top: 493px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-6 {
+  position: absolute;
+  width: 614px;
+  height: 43px;
+  top: 535px;
+  left: 746px;
+}
+
+.mencatat-informasi .p {
+  position: absolute;
+  width: 509px;
+  top: 2px;
+  left: 22px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: #bbbbbb;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.5px;
+}
+
+.mencatat-informasi .text-wrapper-12 {
+  position: absolute;
+  width: 521px;
+  top: 592px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-7 {
+  position: absolute;
+  width: 614px;
+  height: 43px;
+  top: 634px;
+  left: 746px;
+}
+
+.mencatat-informasi .text-wrapper-13 {
+  position: absolute;
+  width: 196px;
+  top: 920px;
+  left: 59px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-8 {
+  position: absolute;
+  width: 614px;
+  height: 44px;
+  top: 960px;
+  left: 59px;
+}
+
+.mencatat-informasi .text-wrapper-14 {
+  position: absolute;
+  width: 196px;
+  top: 810px;
+  left: 54px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-9 {
+  position: absolute;
+  width: 614px;
+  height: 44px;
+  top: 850px;
+  left: 54px;
+}
+
+.mencatat-informasi .text-wrapper-15 {
+  position: absolute;
+  width: 196px;
+  top: 699px;
+  left: 54px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-10 {
+  position: absolute;
+  width: 614px;
+  height: 44px;
+  top: 741px;
+  left: 52px;
+}
+
+.mencatat-informasi .rectangle-14 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 742px;
+  left: 748px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .rectangle-15 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 1px;
+  left: 121px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .rectangle-16 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 742px;
+  left: 1082px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .rectangle-17 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 742px;
+  left: 919px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .rectangle-18 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 801px;
+  left: 748px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .rectangle-19 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 801px;
+  left: 1082px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .rectangle-20 {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 801px;
+  left: 919px;
+  background-color: #ffffff;
+  border-radius: 5.68px;
+  border: 1.14px solid;
+  border-color: #000000;
+}
+
+.mencatat-informasi .overlap-13 {
+  position: absolute;
+  width: 1440px;
+  height: 62px;
+  top: 1413px;
+  left: 0;
+  background-image: url(./img/rectangle-14.svg);
+  background-size: 100% 100%;
+}
+
+
+.mencatat-informasi .vector {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 20px;
+  left: 1328px;
+}
+
+.mencatat-informasi .vector-2 {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 20px;
+  left: 1291px;
+}
+
+.mencatat-informasi .prime-twitter {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 20px;
+  left: 1365px;
+}
+
+.mencatat-informasi .mdi-linkedin {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 20px;
+  left: 1396px;
+}
+
+.overlap-2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 150%;
+  font-weight: 700;
+  position: absolute;
+  left: 685px;
+  top: 1374px;
+  width: 70px;
+  height: 50px;
+  /* -webkit-text-stroke: 1px #ffffff; */
+}
+
+/* Tambahkan CSS untuk input field yang besar dan panjang */
+.input-field {
+  width: 100%;
+  /* Lebar penuh sesuai kontainer */
+  height: 50px;
+  /* Tinggi input yang lebih besar */
+  font-size: 16px;
+  /* Ukuran font yang lebih besar */
+  padding: 10px;
+  /* Spasi dalam input */
+  border-radius: 10px;
+  /* Membuat sudut lebih membulat */
+  box-sizing: border-box;
+  /* Agar padding dan border dihitung dalam ukuran total */
+  resize: none;
+  /* Mencegah perubahan ukuran input */
+}
+
+/* Untuk textarea, jika ingin mencegah resize juga */
+textarea.input-field {
+  resize: none;
+  /* Mencegah perubahan ukuran textarea */
+}
+
+.mencatat-informasi .text-wrapper-16 {
+  position: absolute;
+  width: 438px;
+  top: 699px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-11 {
+  position: absolute;
+  width: 614px;
+  height: 43px;
+  top: 741px;
+  left: 746px;
+}
+
+.mencatat-informasi .text-wrapper-17 {
+  position: absolute;
+  width: 438px;
+  top: 810px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.mencatat-informasi .overlap-12 {
+  position: absolute;
+  width: 614px;
+  height: 43px;
+  top: 850px;
+  left: 746px;
+}
+
+.mencatat-informasi .text-wrapper-18 {
+  position: absolute;
+  width: 438px;
+  top: 920px;
+  left: 746px;
+  font-family: "Mulish-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--gray-700);
+  font-size: 19.6px;
+  letter-spacing: 0;
+  line-height: 29.4px;
+}
+
+.desc {
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #344054;
+  margin-bottom: 16px;
+  position: absolute;
+  top: 1100px;
+  left: 746px;
+}
+
+.many-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.frame-22 {
+  text-align: center;
+  border: 2px dashed #bbbbbb;
+  border-radius: 8px;
+  padding: 16px;
+  position: absolute;
+  top: 960px;
+  left: 746px;
+  width: 614px;
+  height: 130px;
+}
+
+.drag-your-file-s-to-start-uploading {
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-bottom: 16px;
+  margin-top: 0px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.line-1,
+.line-2 {
+  height: 1px;
+  width: 40%;
+  background: #bbbbbb;
+}
+
+.text2 {
+  margin: 0 8px;
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.master-outline-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: white;
+  background: #007bff;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-list {
+  margin-top: 16px;
+  font-family: "Mulish-Regular", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.file-list div {
+  padding: 8px;
+  margin: 4px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.frame-22 img.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Menjaga proporsi gambar */
+  border-radius: 8px; /* Sesuaikan dengan frame */
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button:hover {
+  background: #ff1a1a;
+}

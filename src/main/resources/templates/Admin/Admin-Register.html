@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e6f1fc;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+    }
+
+    .form-section {
+      padding: 40px;
+      background-color: #e6f1fc;
+    }
+
+    .logo h1 {
+      font-size: 1.5rem;
+      color: #0d47a1;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #666;
+    }
+
+    a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #003c8f;
+    }
+
+    .image-section {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .doctor-image {
+      width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <div class="logo">
+        <h1>POLIKLINIK X</h1>
+      </div>
+      <h2>Sign up</h2>
+      <p>If you already have an account, <a th:href="@{/login}">Login here!</a></p>
+      <form id="registrationForm" th:action="@{/register-Admin-Data}" method="POST">
+        <div class="input-group">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Enter your Name" required>
+        </div>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter your User name" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your Password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your Password" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+    <div class="image-section">
+      <div class="doctor-image">
+        <!-- Replace with an <img> tag for the actual image -->
+        <p>[Doctor Image Placeholder]</p>
+      </div>
+      <h2>Sign Up to name</h2>
+      <p class="contact-info">📞 022-82558000</p>
+    </div>
+  </div>
+</body>
+</html>
+ 
