@@ -58,6 +58,7 @@
 
 
     <!-- Navigasi -->
+    <div class="line-1"></div>
     <div class="beranda" th:text="'Beranda'"></div>
     <div class="jadwal-dokter" th:text="'Jadwal Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToJadwalDokter()">
       Jadwal Dokter
@@ -86,11 +87,11 @@
     </script>
 
     <div class="login">
-      <a th:href="@{Pelanggan/login}">Login</a>
+      <a th:href="@{/login}">Login</a>
     </div>
 
     <div class="register">
-      <a th:href="@{Pelanggan/register}">Register</a>
+      <a th:href="@{/register}">Register</a>
     </div>
 
     <div class="janji-temu" th:text="'Janji Temu'" style="cursor: pointer; color: inherit;" onclick="navigateToJanjiTemu()">
@@ -101,6 +102,7 @@
         window.location.href = "http://localhost:8080/janji-temu";
       }
     </script>
+
     <div class="faq" th:text="'FAQ'" style="cursor: pointer; color: inherit;" onclick="navigateToFaq()">
       FAQ
     </div>
@@ -109,7 +111,6 @@
         window.location.href = "http://localhost:8080/faq";
       }
     </script>
-    <div class="line-1"></div>
 
     <!-- Pilih dokter
     <div class="ellipse-8"></div>  

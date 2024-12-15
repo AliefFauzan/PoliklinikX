@@ -10,18 +10,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PelangganController {
 
 
-    // Map to SebelumLoginUser page
-    @GetMapping("/sebelum-login-user")
-    public String showSebelumLoginUser() {
-        return "Pelanggan/SebelumLoginUser"; // Pastikan path ini sesuai dengan struktur template Anda
-    }
+    // // Map to SebelumLoginUser page
+    // @GetMapping("/sebelum-login-user")
+    // public String showSebelumLoginUser() {
+    //     return "Pelanggan/SebelumLoginUser"; // Pastikan path ini sesuai dengan struktur template Anda
+    // }
 
-    // Map to the Login page
-    @GetMapping("/login")
-    public String loginPage() {
-        return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
-
-    }
+    // // Map to the Login page
+    // @GetMapping("/login")
+    // public String loginPage() {
+    //     return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
+    // }
 
     @GetMapping("/home")
     public String setelahLoginUser() {
@@ -33,11 +32,11 @@ public class PelangganController {
         return "Pelanggan/Layanan";
     }
 
-    // Map to the Register page
-    @GetMapping("/registerPelanggan")
-    public String registerPage() {
-        return "Pelanggan/Register";
-    }
+    // // Map to the Register page
+    // @GetMapping("/registerPelanggan")
+    // public String registerPage() {
+    //     return "Pelanggan/Register";
+    // }
 
     // Map to the FAQ page
     @GetMapping("/faq")
