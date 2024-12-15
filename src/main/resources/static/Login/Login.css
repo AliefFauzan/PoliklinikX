@@ -244,36 +244,36 @@
 }
 
 .input-wrapper {
-  color: #000842;
-  text-align: left;
-  font-family: "Poppins-Regular", sans-serif;
-  font-size: 18px;
-
-  font-weight: 400;
   position: absolute;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #999999;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
   right: 47.55%;
   left: 6.29%;
   width: 46.15%;
   bottom: 14.06%;
 
-  top: 49%;
+  top: 25%;
   height: 37.5%;
 }
 
 .input-wrapper-password{
-  color: #000842;
-  text-align: left;
-  font-family: "Poppins-Regular", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
   position: absolute;
-  right: 47.55%;
-  left: 7%;
-  width: 46.15%;
-  bottom: 14.06%;
-  top: 52%;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #999999;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  right: 47.55%; /* Nilai sama dengan input-wrapper */
+  left: 7.25%;  /* Nilai sama dengan input-wrapper */
+  width: 11%; /* Nilai sama dengan input-wrapper */
+  height: 37.5%; /* Nilai sama dengan input-wrapper */
 
-  height: 37.5%;
+  top:50%;
 }
 .rectangle-8 {
   background: #000842;
@@ -320,7 +320,7 @@
   top: 497px;
 }
 .rectangle-9 {
-  background: #999999;
+  background: #000842;
   width: 429px;
   height: 2px;
   position: absolute;

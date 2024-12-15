@@ -55,7 +55,7 @@
         const userConfirmed = confirm("Apakah anda ingin log out?");
         if (userConfirmed) {
           // Arahkan ke halaman logout
-          window.location.href = "http://localhost:8080/sebelum-login-user";
+          window.location.href = "http://localhost:8080/";
         }
       }
     </script>
@@ -68,7 +68,14 @@
 
 
     <!-- Navigasi -->
-    <div class="beranda" th:text="'Beranda'"></div>
+    <div class="beranda" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+      Beranda
+    </div>
+    <script>
+      function navigateToBeranda() {
+        window.location.href = "http://localhost:8080/home";
+      }
+    </script>
     <div class="jadwal-dokter" th:text="'Jadwal Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToJadwalDokter()">
       Jadwal Dokter
     </div>

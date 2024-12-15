@@ -45,10 +45,21 @@ public class PelangganController {
         return "Pelanggan/FAQ";
     }
 
+    // Map to the FAQ page
+    @GetMapping("/SebelumFAQ")
+    public String sebelumfaqPage() {
+        return "Pelanggan/SebelumFAQ";
+    }
+
+
     // Map to the Informasi page
     @GetMapping("/informasi")
     public String informasiPage() {
         return "Pelanggan/Informasi";
+    }
+    @GetMapping("/SebelumInformasi")
+    public String sebeluminformasiPage() {
+        return "Pelanggan/SebelumInformasi";
     }
 
     // Map to Jadwal Dokter page

@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" th:href="@{Pelanggan/Pembayaran.css}" />
-  </head>
-  <body>
-    <div class="pembayaran">
-      <div class="div">
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="text-wrapper">POLIKLINIK X</div>
-          <div class="group-wrapper">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle-5"></div>
-                <div class="rectangle-6"></div>
-              </div>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" th:href="@{Pelanggan/Pembayaran.css}" />
+</head>
+
+<body>
+  <div class="pembayaran">
+    <div class="div">
+      <div class="overlap">
+        <div class="rectangle"></div>
+        <div class="text-wrapper">POLIKLINIK X</div>
+        <div class="group-wrapper">
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+              <div class="rectangle-5"></div>
+              <div class="rectangle-6"></div>
             </div>
           </div>
-          <div class="rectangle-7"></div>
-          <div class="rectangle-8"></div>
-          <div class="rectangle-9"></div>
-          <!-- Navigasi -->
-        <div class="text-wrapper-2" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+        </div>
+        <div class="rectangle-7"></div>
+        <div class="rectangle-8"></div>
+        <div class="rectangle-9"></div>
+        <!-- Navigasi -->
+        <div class="text-wrapper-2" th:text="'Beranda'" style="cursor: pointer; color: inherit;"
+          onclick="navigateToBeranda()">
           Beranda
         </div>
         <script>
@@ -30,7 +33,8 @@
             window.location.href = "http://localhost:8080/home";
           }
         </script>
-        <div class="text-wrapper-3" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
+        <div class="text-wrapper-3" th:text="'Layanan'" style="cursor: pointer; color: inherit;"
+          onclick="navigateToLayanan()">
           Layanan
         </div>
         <script>
@@ -38,7 +42,8 @@
             window.location.href = "http://localhost:8080/layanan";
           }
         </script>
-        <div class="text-wrapper-4" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+        <div class="text-wrapper-4" th:text="'Informasi'" style="cursor: pointer; color: inherit;"
+          onclick="navigateToInformasi()">
           Informasi
         </div>
         <script>
@@ -46,79 +51,88 @@
             window.location.href = "http://localhost:8080/informasi";
           }
         </script>
-          <img class="ellipse" th:src="@{Pelanggan/img/ellipse0.png}" />
-          <div class="sub-head">
-            <div class="overlap-group-2">
-              <img class="FIGMA-payment" th:src="@{Pelanggan/img/figma-payment-hospital0.png}" />
-              <div class="div-wrapper">
-                <div class="overlap-group-2">
-                  <div class="frame">
-                    <div class="ellipse-2"></div>
-                    <div class="ellipse-3"></div>
-                  </div>
-                  <div class="group-2">
-                    <div class="rectangle-10"></div>
-                    <div class="rectangle-11"></div>
-                    <div class="rectangle-12"></div>
-                  </div>
+        <img class="ellipse" th:src="@{Pelanggan/img/ellipse0.png}" />
+        <div class="sub-head">
+          <div class="overlap-group-2">
+            <img class="FIGMA-payment" th:src="@{Pelanggan/img/figma-payment-hospital0.png}" />
+            <div class="div-wrapper">
+              <div class="overlap-group-2">
+                <div class="frame">
+                  <div class="ellipse-2"></div>
+                  <div class="ellipse-3"></div>
+                </div>
+                <div class="group-2">
+                  <div class="rectangle-10"></div>
+                  <div class="rectangle-11"></div>
+                  <div class="rectangle-12"></div>
                 </div>
               </div>
-              <div class="group-3">
-                <div class="about-us">Pembayaran</div>
-                <div class="home-about">Beranda / Pembayaran</div>
-              </div>
+            </div>
+            <div class="group-3">
+              <div class="about-us">Pembayaran</div>
+              <div class="home-about">Beranda / Pembayaran</div>
             </div>
           </div>
         </div>
-        <div class="overlap-3">
-          <div class="text-wrapper-6">Pilih metode pembayaran</div>
-          <div class="rectangle-13"></div>
-          <img class="gopay-logo" th:src="@{Pelanggan/img/gopay-logo-brandlogos-net-gph-3-u-10.png}" alt= "gambar1" onclick="selectImage(this)"/>
-          <script>
-            function selectImage(image){
-              const allImages = document.querySelectorAll('.gopay-logo');
-              allImages.forEach(img => img.classList.remove('selected'));
-              image.classList.add('selected');
-              alert('Anda memilih: GOPAY');
-  
-            }
-          </script>
-        </div>
-        <div class="overlap-4">
-          <div class="text-wrapper-6">Total Pembayaran:</div>
-          <div class="rectangle-14"></div>
-          <div class="text-wrapper-7" th:text="'Rp ' + ${totalPembayaran} + ',-'">Rp ,-</div>
-        </div>
-        <div class="FIGMA-OVO-wrapper">
-          <img class="FIGMA-OVO" th:src="@{Pelanggan/img/figma-ovo-10.png}" alt= "gambar2" onclick="selectImage(this)"/>
-          <script>
-            function selectImage(image){
-              const allImages = document.querySelectorAll('.FIGMA-OVO');
-              allImages.forEach(img => img.classList.remove('selected'));
-              image.classList.add('selected');
-              alert('Anda memilih: OVO');
-  
-            }
-          </script>
-        </div>
-        <div class="FIGMA-cc-wrapper">
-          <img class="FIGMA-cc" th:src="@{Pelanggan/img/figma-cc-10.png}"alt= "gambar3" onclick="selectImage(this)" />
-          <script>
-            function selectImage(image){
-              const allImages = document.querySelectorAll('.FIGMA-cc');
-              allImages.forEach(img => img.classList.remove('selected'));
-              image.classList.add('selected');
-              alert('Anda memilih: cc');
-            }
-          </script>
-        </div>
-        <div class="overlap-5">
-          <div class="rectangle-15"></div>
-          <div class="text-wrapper-8">
-            <button th:text="'BAYAR'" style="cursor: pointer; color: inherit" th:onclick="|window.location.href='@{/pembayaran-berhasil}'|">BAYAR</button>
+      </div>
+      <div class="overlap-3">
+        <div class="text-wrapper-6">Pilih metode pembayaran</div>
+        <div class="rectangle-13"></div>
+        <img class="gopay-logo" th:src="@{Pelanggan/img/gopay-logo-brandlogos-net-gph-3-u-10.png}" alt="gambar1"
+          onclick="selectImage(this)" />
+        <script>
+          function selectImage(image) {
+            const allImages = document.querySelectorAll('.gopay-logo');
+            allImages.forEach(img => img.classList.remove('selected'));
+            image.classList.add('selected');
+            alert('Anda memilih: GOPAY');
+
+          }
+        </script>
+      </div>
+      <div class="overlap-4">
+        <div class="text-wrapper-6">Total Pembayaran:</div>
+        <div class="rectangle-14"></div>
+        <div class="text-wrapper-7" th:text="'Rp ' + ${totalPembayaran} + ',-'">Rp ,-</div>
+      </div>
+      <div class="FIGMA-OVO-wrapper">
+        <img class="FIGMA-OVO" th:src="@{Pelanggan/img/figma-ovo-10.png}" alt="gambar2" onclick="selectImage(this)" />
+        <script>
+          function selectImage(image) {
+            const allImages = document.querySelectorAll('.FIGMA-OVO');
+            allImages.forEach(img => img.classList.remove('selected'));
+            image.classList.add('selected');
+            alert('Anda memilih: OVO');
+
+          }
+        </script>
+      </div>
+      <div class="FIGMA-cc-wrapper">
+        <img class="FIGMA-cc" th:src="@{Pelanggan/img/figma-cc-10.png}" alt="gambar3" onclick="selectImage(this)" />
+        <script>
+          function selectImage(image) {
+            const allImages = document.querySelectorAll('.FIGMA-cc');
+            allImages.forEach(img => img.classList.remove('selected'));
+            image.classList.add('selected');
+            alert('Anda memilih: cc');
+          }
+        </script>
+      </div>
+      <div class="overlap-5">
+        <div class="rectangle-15"></div>
+        <div class="text-wrapper-8">
+          <div class="layanan" style="cursor: pointer;" onclick="navigateToLayanan()">
+            BAYAR
           </div>
+          <script>
+            function navigateToLayanan() {
+              window.location.href = "http://localhost:8080/pembayaran-berhasil";
+            }
+          </script>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

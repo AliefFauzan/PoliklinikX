@@ -21,25 +21,15 @@
             </div>
           </div>
           <div class="rectangle-7"></div>
-          <div class="rectangle-8"></div>
           <div class="rectangle-9"></div>
-          
+          <div class="line-1"></div>
           <!-- Beranda -->
           <div class="text-wrapper-2" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
             Beranda
           </div>
           <script>
             function navigateToBeranda() {
-              window.location.href = "http://localhost:8080/home";
-            }
-          </script>
-          <!-- Layanan -->
-          <div class="text-wrapper-3" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
-            Layanan
-          </div>
-          <script>
-            function navigateToLayanan() {
-              window.location.href = "http://localhost:8080/layanan";
+              window.location.href = "http://localhost:8080/";
             }
           </script>
           <!-- Informasi -->
@@ -48,10 +38,16 @@
           </div>
           <script>
             function navigateToInformasi() {
-              window.location.href = "http://localhost:8080/informasi";
+              window.location.href = "http://localhost:8080/SebelumInformasi";
             }
           </script>
-          <img class="ellipse" th:src="@{Pelanggan/img/Ellipse.png}" />
+          <div class="login">
+            <a th:href="@{/login}">Login</a>
+          </div>
+      
+          <div class="register">
+            <a th:href="@{/register}">Register</a>
+          </div>
           <div class="sub-head">
             <div class="overlap-group-2">
               <div class="div-wrapper">

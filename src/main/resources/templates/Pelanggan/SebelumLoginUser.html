@@ -46,7 +46,6 @@
 
 
     <div class="rectangle-17"></div>
-    <div class="rectangle-18"></div>
     <div class="rectangle-19"></div>
 
     </div>
@@ -59,22 +58,21 @@
 
     <!-- Navigasi -->
     <div class="line-1"></div>
-    <div class="beranda" th:text="'Beranda'"></div>
+    <div class="beranda" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+      Jadwal Dokter
+    </div>
+    <script>
+      function navigateToBeranda() {
+        window.location.href = "http://localhost:8080/";
+      }
+    </script>
+
     <div class="jadwal-dokter" th:text="'Jadwal Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToJadwalDokter()">
       Jadwal Dokter
     </div>
     <script>
       function navigateToJadwalDokter() {
-        window.location.href = "http://localhost:8080/jadwal-dokter";
-      }
-    </script>
-
-    <div class="layanan" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
-      Layanan
-    </div>
-    <script>
-      function navigateToLayanan() {
-        window.location.href = "http://localhost:8080/layanan";
+        window.location.href = "http://localhost:8080/login";
       }
     </script>
     <div class="informasi" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
@@ -82,7 +80,7 @@
     </div>
     <script>
       function navigateToInformasi() {
-        window.location.href = "http://localhost:8080/informasi";
+        window.location.href = "http://localhost:8080/SebelumInformasi";
       }
     </script>
 
@@ -99,7 +97,7 @@
     </div>
     <script>
       function navigateToJanjiTemu() {
-        window.location.href = "http://localhost:8080/janji-temu";
+        window.location.href = "http://localhost:8080/login";
       }
     </script>
 
@@ -108,7 +106,7 @@
     </div>
     <script>
       function navigateToFaq() {
-        window.location.href = "http://localhost:8080/faq";
+        window.location.href = "http://localhost:8080/SebelumFAQ";
       }
     </script>
 
