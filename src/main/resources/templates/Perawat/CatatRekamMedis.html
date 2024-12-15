@@ -93,5 +93,18 @@
         </div>
       </div>
     </div>
+    <form th:action="@{/catatRekamMedisInput}" method="post">
+      <label for="noRekamMedis">Pilih Pasien:</label>
+      <select id="noRekamMedis" name="noRekamMedis">
+          <option th:each="pasien : ${pasiens}" th:value="${pasien.noRekamMedis}" 
+                  th:text="${pasien.nama} + ' - ' + ${pasien.tanggalLahir}"></option>
+      </select><br>
+  
+      <label for="dataRekamMedis">Data Rekam Medis:</label>
+      <textarea id="dataRekamMedis" name="dataRekamMedis" required></textarea><br>
+  
+      <button type="submit">Update Data Rekam Medis</button>
+  </form>
+  
   </body>
 </html>

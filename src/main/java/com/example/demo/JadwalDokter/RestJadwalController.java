@@ -28,23 +28,23 @@ public class RestJadwalController {
     @Autowired
     private JadwalDokterRepo jadwalDokterRepo;
     //kayaknya id dokter apus aja deh
-    @PostMapping("/Add-Jadwal-To-Form")
-    public ResponseEntity<Map<String,String>> addJadwal(@RequestBody Map<String,Object> data){
-        long idDokter = Long.parseLong((String) data.get("idDokter"));
-        String nama = (String) data.get("nama");
-        String spesialisasi = (String) data.get("spesialisasi");
-        String hari = (String) data.get("hari");
-        int jamMulai = Integer.parseInt((String) data.get("jamMulai"));
-        int jamSelesai = Integer.parseInt((String) data.get("jamSelesai"));
+    // @PostMapping("/Add-Jadwal-To-Form")
+    // public ResponseEntity<Map<String,String>> addJadwal(@RequestBody Map<String,Object> data){
+    //     long idDokter = Long.parseLong((String) data.get("idDokter"));
+    //     String nama = (String) data.get("nama");
+    //     String spesialisasi = (String) data.get("spesialisasi");
+    //     String hari = (String) data.get("hari");
+    //     int jamMulai = Integer.parseInt((String) data.get("jamMulai"));
+    //     int jamSelesai = Integer.parseInt((String) data.get("jamSelesai"));
         
-        boolean isSuccessful = jadwalDokterRepo.addJadwalDokterData(new JadwalDokterModel(0, idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai));
+    //     boolean isSuccessful = jadwalDokterRepo.addJadwalDokterData(new JadwalDokterModel(0, idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai));
        
         
     
 
     
-        return validate(isSuccessful);
-    }
+     //   return validate(isSuccessful);
+   // }
     
 
     private ResponseEntity<Map<String,String>> validate(boolean isSuccessful){
@@ -60,21 +60,21 @@ public class RestJadwalController {
         }
     }
 
-    @PostMapping("/edit-jadwal-dokter")
-    public ResponseEntity<Map<String, String>> editJadwalDokter(@RequestBody Map<String, Object> data) {
-    long idJadwal = Long.parseLong((String) data.get("idJadwal"));
-    String originalHari = (String) data.get("hari");
-    int originalJamMulai = Integer.parseInt((String) data.get("jamMulai"));
-    int originalJamSelesai = Integer.parseInt((String) data.get("jamSelesai"));
-    String editHari = (String) data.get("hari");
-    int editjamMulai = Integer.parseInt((String) data.get("jamMulai"));
-    int editjamSelesai = Integer.parseInt((String) data.get("jamSelesai"));
+    // @PostMapping("/edit-jadwal-dokter")
+    // public ResponseEntity<Map<String, String>> editJadwalDokter(@RequestBody Map<String, Object> data) {
+    // long idJadwal = Long.parseLong((String) data.get("idJadwal"));
+    // String originalHari = (String) data.get("hari");
+    // int originalJamMulai = Integer.parseInt((String) data.get("jamMulai"));
+    // int originalJamSelesai = Integer.parseInt((String) data.get("jamSelesai"));
+    // String editHari = (String) data.get("hari");
+    // int editjamMulai = Integer.parseInt((String) data.get("jamMulai"));
+    // int editjamSelesai = Integer.parseInt((String) data.get("jamSelesai"));
 
-    boolean isSuccessful = jadwalDokterRepo.changeJadwalDokterData (
-        idJadwal, originalHari, originalJamMulai, originalJamSelesai, editHari, editjamMulai, editjamSelesai);
-        return validate(isSuccessful);
+    // boolean isSuccessful = jadwalDokterRepo.changeJadwalDokterData (
+    //     idJadwal, originalHari, originalJamMulai, originalJamSelesai, editHari, editjamMulai, editjamSelesai);
+    //     return validate(isSuccessful);
 
     
-    }
+    // }
 
 }

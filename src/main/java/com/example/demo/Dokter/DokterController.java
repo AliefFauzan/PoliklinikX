@@ -30,7 +30,7 @@ import java.util.Map;
 public class DokterController {
 
     @Autowired
-    TransaksiRepo transaksiRepo;
+    TransaksiRepo TransaksiRepo;
 
     @Autowired
     DokterRepo repo;
@@ -92,34 +92,55 @@ public class DokterController {
 
         return "Dokter/Dokter-Register";
     }
+    @GetMapping("/Diagnosa")
+    public String diagnosa () {
+        return "Dokter/DiagnosaDokter";
+    }
 
+
+//     @PostMapping("/add-diagnosa")
+//     public ResponseEntity<Map<String, String>> addDiagnosa(@RequestBody Map<String, Object> data) {
+//     int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
+//     String hasilDiagnosa = data.get("hasilDiagnosa").toString();
+
+//     // Call the service method to update hasilDiagnosa
+//     boolean isSuccessful = transaksiRepo.addDiagnosa(idTransaksi, hasilDiagnosa);
+
+//     // Return the appropriate response
+//     return isSuccessful
+//         ? ResponseEntity.ok(Map.of("message", "Hasil diagnosa updated successfully."))
+//         : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil diagnosa."));
+// }
 
     @PostMapping("/add-diagnosa")
-    public ResponseEntity<Map<String, String>> addDiagnosa(@RequestBody Map<String, Object> data) {
-    int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
-    String hasilDiagnosa = data.get("hasilDiagnosa").toString();
+    public String addHasilDiagnosa(@RequestParam int idTransaksi, @RequestParam String hasilDiagnosa) {
+        TransaksiRepo.updateHasilDiagnosa(idTransaksi, hasilDiagnosa);
+        return "Dokter/DiagnosaDokter"; // Redirect to the updated list view
+    }
 
-    // Call the service method to update hasilDiagnosa
-    boolean isSuccessful = transaksiRepo.addDiagnosa(idTransaksi, hasilDiagnosa);
 
-    // Return the appropriate response
-    return isSuccessful
-        ? ResponseEntity.ok(Map.of("message", "Hasil diagnosa updated successfully."))
-        : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil diagnosa."));
-}
+    @GetMapping("/Obat")
+    public String obat () {
+        return "Dokter/ResepDokter";
+    }
 
+// @PostMapping("/add-obat")
+// public ResponseEntity<Map<String, String>> addObat(@RequestBody Map<String, Object> data) {
+//     int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
+//     String hasilPreskripsi = data.get("hasilPreskripsi").toString();
+
+//     // Call the service method to update hasilPreskripsi
+//     boolean isSuccessful = TransaksiRepo.addObat(idTransaksi, hasilPreskripsi);
+
+//     // Return the appropriate response
+//     return isSuccessful
+//         ? ResponseEntity.ok(Map.of("message", "Hasil preskripsi updated successfully."))
+//         : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil preskripsi."));
+// }
 @PostMapping("/add-obat")
-public ResponseEntity<Map<String, String>> addObat(@RequestBody Map<String, Object> data) {
-    int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
-    String hasilPreskripsi = data.get("hasilPreskripsi").toString();
-
-    // Call the service method to update hasilPreskripsi
-    boolean isSuccessful = transaksiRepo.addObat(idTransaksi, hasilPreskripsi);
-
-    // Return the appropriate response
-    return isSuccessful
-        ? ResponseEntity.ok(Map.of("message", "Hasil preskripsi updated successfully."))
-        : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil preskripsi."));
+public String addHasilPreskripsi(@RequestParam int idTransaksi, @RequestParam String hasilPreskripsi) {
+    TransaksiRepo.updateHasilPreskripsi(idTransaksi, hasilPreskripsi);
+    return "Dokter/ResepDokter"; // Redirect to the updated list view
 }
 
 

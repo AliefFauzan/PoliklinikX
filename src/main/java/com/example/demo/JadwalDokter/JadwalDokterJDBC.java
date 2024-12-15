@@ -5,16 +5,37 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.example.demo.Dokter.Dokter;
 import com.example.demo.Dokter.DokterModel;
 
+
 @Repository
-public class JadwalDokterJDBC {
+public class JadwalDokterJDBC implements JadwalDokterRepo {
     
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<Dokter> getAllDokters() {
+        String sql = "SELECT * FROM Dokter";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Dokter.class));
+    }
+
+    @Override
+    public void addJadwalDokter(int idDokter, String hari, int jamMulai, int jamSelesai) {
+        String sql = "INSERT INTO JadwalDokter(idDokter, hari, jamMulai, jamSelesai) VALUES (?, ?, ?, ?)";
+        jdbcTemplate.update(sql, idDokter, hari, jamMulai, jamSelesai);
+        
+    }
+
+    public void updateJadwalDokter(int idJadwal, String hari, int jamMulai, int jamSelesai) {
+        String sql = "UPDATE JadwalDokter SET hari = ?, jamMulai = ?, jamSelesai = ? WHERE idJadwal = ?";
+        jdbcTemplate.update(sql, hari, jamMulai, jamSelesai, idJadwal);
+    }
 
     @Override
     public List<DokterModel> findAllDokter() {
@@ -37,7 +58,7 @@ public class JadwalDokterJDBC {
 
     @Override
     public List<JadwalDokterModel> findAllJadwalDokter() {
-        String sql = String sql = """
+       String sql = """
             SELECT 
                 jd.idJadwal, 
                 jd.idDokter, 
@@ -70,24 +91,25 @@ public class JadwalDokterJDBC {
         );
     }
 
-    @Override
-    public boolean addJadwalDokterData(JadwalDokterModel jadwalDokter) {
-        String sql = """
-        INSERT INTO JadwalDokter (idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai)
-        VALUES (?, ?, ?, ?, ?, ?)
-    """;
+    // @Override
+    // public boolean addJadwalDokterData(DokterModel dokter, String spesialisasi, String hari, String jamMulai, String jamSelesai) {
+     
+    //     String sql = """
+    //     INSERT INTO JadwalDokter (idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai)
+    //     VALUES (?, ?, ?, ?, ?, ?)
+    // """;
 
-    int isSuccess = jdbcTemplate.update(sql,
-        jadwalDokter.getIdDokter(),
-        jadwalDokter.getNama(),
-        jadwalDokter.getSpesialisasi(),
-        jadwalDokter.getHari(),
-        jadwalDokter.getJamMulai(),
-        jadwalDokter.getJamSelesai()
-    );
+    // int isSuccess = jdbcTemplate.update(sql,
+    //     dokter.getIdPegawai(),
+    //     dokter.getNama(),
+    //     spesialisasi,
+    //     hari,
+    //     jamMulai,
+    //     jamSelesai
+    // );
 
-    return isSuccess>0 ? true : false;
-    }
+    // return isSuccess>0 ? true : false;
+    // }
 
     @Override
     public List<JadwalDokterModel> findJadwalDokterBySpesialisasi(String spesialisasi) {
@@ -133,34 +155,34 @@ public class JadwalDokterJDBC {
     }
 
 
-    @Override
-    public boolean changeJadwalDokterData(
-        long idJadwal,
-        String originalHari,
-        int originalJamMulai,
-        int originalJamSelesai,
-        String editHari,
-        int editJamMulai,
-        int editJamSelesai
-) {
-    String sql = """
-        UPDATE JadwalDokter
-        SET 
-            hari = ?, 
-            jamMulai = ?, 
-            jamSelesai = ?
-        WHERE 
-            idJadwal = ? AND 
-            hari = ? AND 
-            jamMulai = ? AND 
-            jamSelesai = ?
-    """;
-        int isSuccessful = jdbcTemplate.update(sql, idJadwal, originalHari, originalJamMulai, originalJamSelesai, editHari, editJamMulai, editJamSelesai);
+//     @Override
+//     public boolean changeJadwalDokterData(
+//         JadwalDokterModel jadwal,
+//         String originalHari,
+//         int originalJamMulai,
+//         int originalJamSelesai,
+//         String editHari,
+//         int editJamMulai,
+//         int editJamSelesai
+// )  {
+//     String sql = """
+//         UPDATE JadwalDokter
+//         SET 
+//             hari = ?, 
+//             jamMulai = ?, 
+//             jamSelesai = ?
+//         WHERE 
+//             idJadwal = ? AND 
+//             hari = ? AND 
+//             jamMulai = ? AND 
+//             jamSelesai = ?
+//     """;
+//         int isSuccessful = jdbcTemplate.update(sql, jadwal.getIdJadwal(), originalHari, originalJamMulai, originalJamSelesai, editHari, editJamMulai, editJamSelesai);
 
 
 
-        return isSuccessful > 0 ? true : false;
-    }
+//         return isSuccessful > 0 ? true : false;
+//     }
 
 
 

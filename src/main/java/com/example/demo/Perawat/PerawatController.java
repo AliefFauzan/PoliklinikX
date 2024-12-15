@@ -1,5 +1,7 @@
 package com.example.demo.Perawat;
 
+import java.util.List;
+
 // import java.util.ArrayList;
 // import java.util.List;
 
@@ -20,11 +22,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.Pasien.PasienRepo;
+import com.example.demo.Transaksi.TransaksiModel;
+import com.example.demo.Transaksi.TransaksiRepo;
+
 @Controller
 public class PerawatController {
 
     @Autowired
     PerawatRepo repo;
+
+    @Autowired
+    TransaksiRepo TransaksiRepo;
+
+    @Autowired
+    PasienRepo PasienRepo;
 
     @GetMapping("/Register-Perawat")
     public String Register (Model model) {
@@ -99,28 +111,37 @@ public class PerawatController {
     }
 
     @GetMapping("/catatInformasiPasien")
-    public String catatInformasiPasien() {
+    public String catatInformasiPasien(Model model) {
+        List<TransaksiModel> transaksis = TransaksiRepo.findAllTransaksi();
+        model.addAttribute("transaksis", transaksis);
         // Menampilkan halaman catat informasi pasien
         return "Perawat/CatatInformasiPasien";
     }
 
-    @PostMapping("/catatInformasiPasien")
-    public String simpanInformasiPasien(
-        @RequestParam("nomorRekamMedis") String nomorRekamMedis,
-        @RequestParam("keluhan") String keluhan,
-        @RequestParam("golonganDarah") String golonganDarah,
-        @RequestParam("beratBadan") Double beratBadan,
-        @RequestParam("namaDokter") String namaDokter,
-        @RequestParam("jadwalDokter") String jadwalDokter,
-        @RequestParam("suhu") Double suhu,
-        @RequestParam("tekananDarah") String tekananDarah,
-        @RequestParam("tinggiBadan") Double tinggiBadan,
-        Model model) {
-        // Simpan data pasien ke database (contoh: log data untuk saat ini)
-        System.out.println("Informasi pasien disimpan: " + nomorRekamMedis);
-        model.addAttribute("message", "Informasi pasien berhasil disimpan.");
-        return "Perawat/CatatInformasiPasien";
+    //nanti ditambah ngelisten ke repo
+    // @PostMapping("/catatInformasiPasienInput")
+    // public String simpanInformasiPasien(
+    //     @RequestParam("nomorRekamMedis") String nomorRekamMedis,
+    //     @RequestParam("keluhan") String keluhan,
+    //     @RequestParam("golonganDarah") String golonganDarah,
+    //     @RequestParam("beratBadan") Double beratBadan,
+    //     @RequestParam("namaDokter") String namaDokter,
+    //     @RequestParam("jadwalDokter") String jadwalDokter,
+    //     @RequestParam("suhu") Double suhu,
+    //     @RequestParam("tekananDarah") String tekananDarah,
+    //     @RequestParam("tinggiBadan") Double tinggiBadan,
+    //     Model model) {
+    //     // Simpan data pasien ke database (contoh: log data untuk saat ini)
+    //     System.out.println("Informasi pasien disimpan: " + nomorRekamMedis);
+    //     model.addAttribute("message", "Informasi pasien berhasil disimpan.");
+    //     return "Perawat/CatatInformasiPasien";
+    // }
+    @PostMapping("/catatInformasiPasienInput")
+    public String simpanInformasiPasien(@RequestParam int idTransaksi, @RequestParam String keluhan) {
+    TransaksiRepo.updateKeluhan(idTransaksi, keluhan);
+     return "Perawat/CatatInformasiPasien"; // Redirect to the updated list view
     }
+
 
     @GetMapping("/catatRekamMedis")
     public String catatRekamMedis() {
@@ -128,16 +149,22 @@ public class PerawatController {
         return "Perawat/CatatRekamMedis";
     }
 
-    @PostMapping("/catatRekamMedis")
-    public String simpanRekamMedis(
-        @RequestParam("nomorRekamMedis") String nomorRekamMedis,
-        @RequestParam("riwayatPenyakit") String riwayatPenyakit,
-        @RequestParam("hasilLab") String hasilLab,
-        @RequestParam("alergi") String alergi,
-        Model model) {
-        // Simpan data rekam medis ke database (contoh: log data untuk saat ini)
-        System.out.println("Rekam medis disimpan: " + nomorRekamMedis);
-        model.addAttribute("message", "Rekam medis berhasil disimpan.");
-        return "Perawat/CatatRekamMedis";
+    // @PostMapping("/catatRekamMedisInput")
+    // public String simpanRekamMedis(
+    //     @RequestParam("nomorRekamMedis") String nomorRekamMedis,
+    //     @RequestParam("riwayatPenyakit") String riwayatPenyakit,
+    //     @RequestParam("hasilLab") String hasilLab,
+    //     @RequestParam("alergi") String alergi,
+    //     Model model) {
+    //     // Simpan data rekam medis ke database (contoh: log data untuk saat ini)
+    //     System.out.println("Rekam medis disimpan: " + nomorRekamMedis);
+    //     model.addAttribute("message", "Rekam medis berhasil disimpan.");
+    //     return "Perawat/CatatRekamMedis";
+    // }
+
+    @PostMapping("/catatRekamMedisInput")
+    public String addDataRekamMedis(@RequestParam int noRekamMedis, @RequestParam String dataRekamMedis) {
+        PasienRepo.updateDataRekamMedis(noRekamMedis, dataRekamMedis);
+        return "redirect:/pasienList"; // Redirect to the updated list view of Pasien
     }
 }

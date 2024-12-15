@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.PenggunaService;
+import com.example.demo.Pasien.PasienModel;
 
 @Repository
 public class PerawatJDBC implements PerawatRepo {
@@ -91,6 +92,42 @@ public class PerawatJDBC implements PerawatRepo {
 
         return  false ;
     }
+
+    private PasienModel mapRowToPasien(ResultSet rSet, int rowNum)throws SQLException {
+        return new PasienModel(
+            rSet.getLong("noRekamMedis"),
+            rSet.getLong("dataRekamMedis"),
+            rSet.getString("username"),
+            rSet.getString("password"),
+            rSet.getString("nama"),
+            rSet.getString("tanggalLahir"),
+            rSet.getString("alamat")
+        );
+    }
+
+    private PasienModel getPasienByNoRekamMedis(long noRekamMedis) {
+        String sql = "SELECT * FROM pasien WHERE noRekamMedis = ?";
+        List<PasienModel> pasien = jdbcTemplate.query(sql, this::mapRowToPasien, noRekamMedis);
+        return pasien.isEmpty() ? null : pasien.get(0);
+    }
+
+    // @Override
+    // public boolean manipulateDataRekamMedis(long noRekamMedis, String newDataRekamMedis) {
+    //     // Retrieve the existing record.
+    //     PasienModel pasien = getPasienByNoRekamMedis(noRekamMedis);
+    //     if (pasien == null) {
+    //         // No record found for the given noRekamMedis.
+    //         return false;
+    //     }
+
+    //     // Manipulate dataRekamMedis as per the requirement.
+    //     // Example: Update the field with a new value.
+    //     String sql = "UPDATE pasien SET dataRekamMedis = ? WHERE noRekamMedis = ?";
+    //     int rowsUpdated = jdbcTemplate.update(sql, newDataRekamMedis, noRekamMedis);
+
+    //     return rowsUpdated > 0; // Return true if the update was successful.
+    // }
+
 
 
 }

@@ -280,5 +280,36 @@
         </div>
       </div>
     </div>
+    <h3>Transaction List</h3>
+<table>
+    <tr>
+        <th>Pasien</th>
+        <th>Dokter</th>
+        <th>Hari</th>
+        <th>Jam</th>
+        <th>Tarif</th>
+    </tr>
+    <tr th:each="transaksi : ${transaksis}">
+        <td th:text="${transaksi.pasien.nama}"></td>
+        <td th:text="${transaksi.namaDokter}"></td>
+        <td th:text="${transaksi.hari}"></td>
+        <td th:text="${transaksi.jam}"></td>
+        <td th:text="${transaksi.tarif}"></td>
+    </tr>
+</table>
+
+    <form th:action="@{/Add-Catat-Bayar}" method="post">
+      <label for="idTransaksi">Pilih Transaksi:</label>
+      <select id="idTransaksi" name="idTransaksi">
+          <option th:each="transaksi : ${transactions}" th:value="${transaksi.idTransaksi}" 
+                  th:text="${transaksi.pasien.nama} + ' - ' + ${transaksi.hari}"></option>
+      </select><br>
+  
+      <label for="tarif">Tarif:</label>
+      <input type="number" id="tarif" name="tarif" required/><br>
+  
+      <button type="submit">Update Tarif</button>
+  </form>
+  
   </body>
 </html>

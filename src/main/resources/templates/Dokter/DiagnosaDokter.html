@@ -116,6 +116,19 @@
         </div>
       </div>
     </div>
+    <form th:action="@{/add-diagnosa}" method="post">
+      <label for="idTransaksi">Pilih Transaksi:</label>
+      <select id="idTransaksi" name="idTransaksi">
+          <option th:each="transaksi : ${transactions}" th:value="${transaksi.idTransaksi}" 
+                  th:text="${transaksi.pasien.nama} + ' - ' + ${transaksi.hari}"></option>
+      </select><br>
+  
+      <label for="hasilDiagnosa">Hasil Diagnosa:</label>
+      <textarea id="hasilDiagnosa" name="hasilDiagnosa" required></textarea><br>
+  
+      <button type="submit">Add Hasil Diagnosa</button>
+  </form>
+  
   </body>
 </html>
 

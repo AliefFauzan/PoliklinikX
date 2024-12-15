@@ -10,6 +10,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.Dokter.Dokter;
+import com.example.demo.Dokter.DokterModel;
+import com.example.demo.JadwalDokter.JadwalDokterModel;
+import com.example.demo.JadwalDokter.JadwalDokterRepo;
+import com.example.demo.Transaksi.TransaksiModel;
+import com.example.demo.Transaksi.TransaksiRepo;
 
 // import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
@@ -17,12 +25,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 // import groovyjarjarantlr4.v4.parse.ANTLRParser.parserRule_return;
 import jakarta.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class AdminController {
 
     @Autowired
     AdminRepo repo;
+
+    @Autowired
+    TransaksiRepo TransaksiRepo;
+
+    @Autowired
+    private JadwalDokterRepo jadwalDokterRepo;
 
     @GetMapping("/Register-Admin")
     public String Register (Model model) {
@@ -34,7 +49,7 @@ public class AdminController {
         return "Admin/Admin-Login";
     }
     
-    @PostMapping("/:Login-Admin-Data")
+    @PostMapping("/Login-Admin-Data")
     public String log (String username, String password, HttpSession httpSession,Model model) {
         boolean isSuccess = repo.login(username, password);
         
@@ -81,6 +96,47 @@ public class AdminController {
 
         return "Admin/Admin-Register";
     }
-
     
+
+    @GetMapping("/JadwalDokter")
+    public String jadwalDokter (Model model) {
+        List<JadwalDokterModel> dokters = jadwalDokterRepo.findAllJadwalDokter();
+        model.addAttribute("dokters", dokters);
+        return "Admin/KelolaJadwalDokter";
+    }
+
+    @PostMapping("/Add-Jadwal-To-Form")
+    public String addJadwalDokter(@RequestParam int idDokter, @RequestParam String hari, 
+                                   @RequestParam int jamMulai, @RequestParam int jamSelesai) {
+        jadwalDokterRepo.addJadwalDokter(idDokter, hari, jamMulai, jamSelesai);
+        return "Admin/KelolaJadwalDokter"; // Redirect to the updated list view
+    }
+
+    @PostMapping("/edit-jadwal-dokter")
+    public String changeJadwalDokter(@RequestParam int idJadwal, @RequestParam String hari, 
+                                 @RequestParam int jamMulai, @RequestParam int jamSelesai) {
+    jadwalDokterRepo.updateJadwalDokter(idJadwal, hari, jamMulai, jamSelesai);
+    return "Admin/KelolaJadwalDokter"; // Redirect to the updated list view
+}
+    @GetMapping("/Catat-Bayar")
+    public String catatBayar (Model model) {
+        List<TransaksiModel> transaksis = TransaksiRepo.findAllTransaksi();
+        model.addAttribute("transaksis", transaksis);
+        return "Admin/CatatBayar";
+    }
+
+    @PostMapping("/Add-Catat-Bayar")
+    public String addHTarif(@RequestParam int idTransaksi, @RequestParam int tarif) {
+        TransaksiRepo.updateTarif(idTransaksi, tarif);
+        return "Admin/CatatBayar"; // Redirect to the updated list view
+    }
+
+
+//daftar ulang harusnya
+    @GetMapping("/dataRekamMedis")
+    public String dataRekamMedis() { 
+        return "Admin/DaftarPasien";
+    }
+    
+
 }

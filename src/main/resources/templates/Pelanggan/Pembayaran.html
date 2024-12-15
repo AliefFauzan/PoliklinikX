@@ -94,5 +94,18 @@
         </div>
       </div>
     </div>
+    <form th:action="@{/add-pembayaran}" method="post">
+      <label for="idTransaksi">Pilih Transaksi:</label>
+      <select id="idTransaksi" name="idTransaksi">
+          <option th:each="transaksi : ${transactions}" th:value="${transaksi.idTransaksi}" 
+                  th:text="${transaksi.pasien.nama} + ' - ' + ${transaksi.hari}"></option>
+      </select><br>
+  
+      <label for="metodePembayaran">Metode Pembayaran:</label>
+      <input type="text" id="metodePembayaran" name="metodePembayaran" required/><br>
+  
+      <button type="submit">Update Metode Pembayaran</button>
+  </form>
+  
   </body>
 </html>
