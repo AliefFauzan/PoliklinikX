@@ -23,7 +23,7 @@ public class PasienJDBC implements PasienRepo {
     @Override
     public Optional<PasienModel> validateUser (String username, String password) {
         password = service.getPasswordEncoder().encode(password);
-        String sql = "select * from pengguna WHERE username LIKE ? AND password LIKE ? ";
+        String sql = "select * from Pasien WHERE username LIKE ? AND password LIKE ? ";
         List<PasienModel> pasien = jdbcTemplate.query(sql, this::mapRowToPasien ,username,password); 
         return pasien.size() == 0 ? Optional.empty() : Optional.of(pasien.get(0));
     }
@@ -74,12 +74,12 @@ public class PasienJDBC implements PasienRepo {
 
     @Override
     public boolean login(String username, String password) {
-        String sql = "select * from pengguna WHERE username LIKE ?";
-        List<String> pasien = jdbcTemplate.queryForList(sql, String.class, username);
-        // List<PasienModel> pasien = jdbcTemplate.query(sql, this::mapRowToPasien, username);
+        String sql = "select * from Pasien WHERE username LIKE ?";
+        // List<String> pasien = jdbcTemplate.queryForList(sql, String.class, username);
+        List<PasienModel> pasien = jdbcTemplate.query(sql, this::mapRowToPasien, username);
      
         if(!pasien.isEmpty()){
-            String passwordFromQ = pasien.get(0);
+            String passwordFromQ = pasien.get(0).getPassword().trim();
         
             if(service.getPasswordEncoder().matches(password, passwordFromQ)){
                 return true;

@@ -26,14 +26,16 @@
     .hidden {
       display: none;
     }
-    button, select {
+    button, select, a {
       display: block;
       width: 100%;
       padding: 15px;
       margin: 10px 0;
       font-size: 1rem;
+      text-align: center;
       border: 1px solid #ccc;
       border-radius: 5px;
+      text-decoration: none;
     }
     button {
       background-color: #0d47a1;
@@ -43,6 +45,13 @@
     button:hover {
       background-color: #003c8f;
     }
+    a {
+      background-color: #0d47a1;
+      color: white;
+    }
+    a:hover {
+      background-color: #003c8f;
+    }
   </style>
 </head>
 <body>
@@ -50,45 +59,32 @@
      <!-- Part 1: Login Type Selection -->
      <div id="part1">
         <h2>Pilih</h2>
-        <button onclick="navigateTo('pasien')">Pasien Login</button>
-        <button onclick="navigateTo('staff')">Staff Login</button>
+        <a th:href="@{/Login-Pasien}" class="login">Pasien Login</a>
+        <a href="#" class="staff" onclick="showStaffSelection(event)">Staff Login</a>
      </div>
 
      <!-- Part 2: Staff Role Selection -->
      <div id="part2" class="hidden">
         <h2>Select Your Role</h2>
-        <form id="roleForm">
-           <select name="role" id="role">
-              <option value="Dokter">Doctor</option>
-              <option value="Perawat">Nurse</option>
-              <option value="Admin">Administrator</option>
-           </select>
-           <button type="submit">Proceed</button>
-        </form>
+        <a th:href="@{/Login-Dokter}" class="role">Doctor</a>
+        <a th:href="@{/Login-Perawat}" class="role">Nurse</a>
+        <a th:href="@{/Login-Admin}" class="role">Administrator</a>
+        <a href="#" class="back" onclick="goBack(event)">Back</a>
      </div>
   </div>
 
   <script>
-     function navigateTo(type) {
-        if (type === 'pasien') {
-           // Redirect to Pelanggan login page
-           window.location.href /*[[@{/Login-Pasien}]]*/;
+    function showStaffSelection(event) {
+      event.preventDefault();
+      document.getElementById('part1').classList.add('hidden');
+      document.getElementById('part2').classList.remove('hidden');
+    }
 
-        } else if (type === 'staff') {
-           // Show the second part for Staff login selection
-           document.getElementById('part1').classList.add('hidden');
-           document.getElementById('part2').classList.remove('hidden');
-        }
-     }
-
-     document.getElementById('roleForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const role = document.getElementById('role').value;
-      // Redirect to the registration URL for the selected role (e.g., /register-doctor, /register-nurse, /register-admin)
-      window.location.href = /*[[@{'Login-' + ${role}}]]*/;
-  });
-  
+    function goBack(event) {
+      event.preventDefault();
+      document.getElementById('part2').classList.add('hidden');
+      document.getElementById('part1').classList.remove('hidden');
+    }
   </script>
 </body>
-
 </html>

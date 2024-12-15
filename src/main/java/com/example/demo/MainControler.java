@@ -9,7 +9,7 @@ public class MainControler {
  
     @GetMapping("/")
     public String index (Model model) {
-        return "Pelanggan/SebelumLoginUSer";
+        return "Pelanggan/SebelumLoginUser";
     }
 
     @GetMapping("/register")

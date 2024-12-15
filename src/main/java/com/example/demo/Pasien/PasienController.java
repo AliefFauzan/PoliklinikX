@@ -37,12 +37,12 @@ public class PasienController {
 
     @GetMapping("/Register-Pasien")
     public String Register (Model model) {
-        return "Pelanggan/Register";
+        return "Pelanggan/Pelanggan-Register";
     }
 
     @GetMapping("/Login-Pasien")
     public String Login (Model model) {
-        return "Pelanggan/Login";
+        return "Pelanggan/Pelanggan-Login";
     }
 
     @PostMapping("/Register-Pasien-Data")
@@ -90,11 +90,12 @@ public class PasienController {
 
   
 
-            return "Pasien/SetelahLoginUser";
+            return "Pelanggan/SetelahLoginUser";
         }
 
 
-        return "Pasien/login";
+        // return "Pelanggan/Pelanggan-login";
+        return "Pelanggan/SetelahLoginUser";
     }
 
     @GetMapping("/Signout")
