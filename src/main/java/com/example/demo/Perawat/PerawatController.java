@@ -28,22 +28,22 @@ public class PerawatController {
     @Autowired
     PerawatRepo repo;
 
-    @GetMapping("/Register")
-    public String Register (Model model) {
-        return "Perawat/Perawat-Register";
-    }
+    // @GetMapping("/register")
+    // public String Register (Model model) {
+    //     return "Perawat/Perawat-Register";
+    // }
 
-    @GetMapping("/Login")
-    public String Login (Model model) {
-        return "Perawat/Perawat-Login";
-    }
+    // @GetMapping("/Login")
+    // public String Login (Model model) {
+    //     return "Perawat/Perawat-Login";
+    // }
   
 
-    @GetMapping("/sebelumLoginPerawat")
-    public String sebelumLoginPerawat() {
-        // Menampilkan halaman sebelum login
-        return "Perawat/SebelumLoginPerawat";
-    }
+    // @GetMapping("/sebelumLoginPerawat")
+    // public String sebelumLoginPerawat() {
+    //     // Menampilkan halaman sebelum login
+    //     return "Perawat/SebelumLoginPerawat";
+    // }
 
     @GetMapping("/sesudahLoginPerawat")
     public String sesudahLoginPerawat() {

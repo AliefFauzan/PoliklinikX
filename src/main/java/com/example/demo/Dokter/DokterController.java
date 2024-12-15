@@ -27,66 +27,66 @@ public class DokterController {
     @Autowired
     DokterRepo repo;
 
-    @GetMapping("/Register-Dokter")
-    public String Register (Model model) {
-        return "Dokter/Dokter-Register";
-    }
+//     @GetMapping("/Register-Dokter")
+//     public String Register (Model model) {
+//         return "Dokter/Dokter-Register";
+//     }
 
-    @GetMapping("/Login-Dokter")
-    public String Login (Model model) {
-        return "Dokter/Dokter-Login";
-    }
+//     @GetMapping("/Login-Dokter")
+//     public String Login (Model model) {
+//         return "Dokter/Dokter-Login";
+//     }
     
-    @PostMapping("/login-Dokter-Data")
-    public String log (String username, String password, HttpSession httpSession,Model model) {
-        boolean isSuccess = repo.login(username, password);
+//     @PostMapping("/login-Dokter-Data")
+//     public String log (String username, String password, HttpSession httpSession,Model model) {
+//         boolean isSuccess = repo.login(username, password);
         
         
-        if(isSuccess){
-            // String userType = repo.getUserType(username);
-            // String nik = repo.getUserNik(username); // Fetch nik
+//         if(isSuccess){
+//             // String userType = repo.getUserType(username);
+//             // String nik = repo.getUserNik(username); // Fetch nik
             
-            // userType = userType.equals("Agen") ? "atyp" : "ptyp" ;
+//             // userType = userType.equals("Agen") ? "atyp" : "ptyp" ;
 
-            // httpSession.setAttribute("tipeuser", userType);
-            httpSession.setAttribute("username", username);
-            //httpSession.setAttribute("nik", nik);
+//             // httpSession.setAttribute("tipeuser", userType);
+//             httpSession.setAttribute("username", username);
+//             //httpSession.setAttribute("nik", nik);
 
   
 
-            return "Dokter/SesudahLoginDokter";
-        }
+//             return "Dokter/SesudahLoginDokter";
+//         }
 
-        return "Dokter/Dokter-Login";
-    }
+//         return "Dokter/Dokter-Login";
+//     }
 
 
-    @PostMapping("/Register-Dokter-Data")
-    public String reg(
-    String idPegawai, 
-    String username, 
-    String password,
-    String nama, 
-    String confirmPassword,
-    HttpSession httpSession, Model model){
+//     @PostMapping("/Register-Dokter-Data")
+//     public String reg(
+//     String idPegawai, 
+//     String username, 
+//     String password,
+//     String nama, 
+//     String confirmPassword,
+//     HttpSession httpSession, Model model){
         
         
-        boolean isSuccess = repo.register(username, nama, password,  confirmPassword);
+//         boolean isSuccess = repo.register(username, nama, password,  confirmPassword);
         
-        if(isSuccess){
+//         if(isSuccess){
         
-            httpSession.setAttribute("username", username);
-            // httpSession.setAttribute("tipeuser", userType);
-            // httpSession.setAttribute("username", username);
+//             httpSession.setAttribute("username", username);
+//             // httpSession.setAttribute("tipeuser", userType);
+//             // httpSession.setAttribute("username", username);
             
-            return "Dokter/SesudahLoginDokter";
-        }
+//             return "Dokter/SesudahLoginDokter";
+//         }
 
-        return "Dokter/Dokter-Register";
-    }
+//         return "Dokter/Dokter-Register";
+//     }
 
     
-}
+// }
 
 //     @GetMapping("/login")
 //     public String dokterLoginForm() {
@@ -106,19 +106,19 @@ public class DokterController {
 //         }
 //     }
 
-//     @GetMapping("/setelahLoginDokter")
-//     public String setelahLoginDokter() {
-//         return "setelahLoginDokter"; // View for dokter dashboard
-//     }
+    @GetMapping("/setelahLoginDokter")
+    public String setelahLoginDokter() {
+        return "setelahLoginDokter"; // View for dokter dashboard
+    }
 
-//     @GetMapping("/DiagnosisDokter")
-//     public String diagnosisDokter() {
-//         return "DiagnosisDokter"; // View for dokter's diagnosis page
-//     }
+    @GetMapping("/DiagnosisDokter")
+    public String diagnosisDokter() {
+        return "DiagnosisDokter"; // View for dokter's diagnosis page
+    }
 
-//     @GetMapping("/ResepDokter")
-//     public String resepDokter() {
-//         return "ResepDokter"; // View for dokter's prescription page
-//     }
-// }
+    @GetMapping("/ResepDokter")
+    public String resepDokter() {
+        return "ResepDokter"; // View for dokter's prescription page
+    }
+}
 

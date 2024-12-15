@@ -1,3 +1,5 @@
+
+﻿
 .sign-up {
     background-color: #ffffff;
     display: flex;
@@ -241,7 +243,7 @@
   
   .sign-up .text-wrapper-6 {
     position: absolute;
-    top: -1px;
+    top: -10px;
     left: 0;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -290,7 +292,7 @@
   
   .sign-up .text-wrapper-8 {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 1px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
@@ -440,4 +442,3 @@
     top: 33px;
     left: 0;
   }
-  
