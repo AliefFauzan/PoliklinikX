@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.Pelanggan.JanjiTemu.JanjiTemu;
+
 @Controller
 public class PelangganController {
 
@@ -57,7 +59,7 @@ public class PelangganController {
     public String informasiPage() {
         return "Pelanggan/Informasi";
     }
-    @GetMapping("/SebelumInformasi")
+@GetMapping("/SebelumInformasi")
     public String sebeluminformasiPage() {
         return "Pelanggan/SebelumInformasi";
     }

@@ -1,18 +1,20 @@
-package com.example.demo.Pelanggan;
+package com.example.demo.Pelanggan.JanjiTemu;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import lombok.AllArgsConstructor;
+
+import java.sql.Date;
+import java.sql.Time;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class JanjiTemu {
+    private int id;
     private String noRekamMedis;
     private int idDokter;
-    private LocalDate tanggal;
-    private LocalTime waktu;
+    private Date tanggal;
+    private Time waktu;
     private String department;
 }
