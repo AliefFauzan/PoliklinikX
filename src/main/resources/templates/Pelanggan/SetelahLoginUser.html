@@ -114,6 +114,30 @@
         window.location.href = "http://localhost:8080/SebelumFAQ";
       }
     </script>
+
+    <!-- Pembayaran -->
+    <div class="pembayaran" th:text="'Pembayaran'" style="cursor: pointer; color: inherit;" onclick="navigateToPembayaran()">
+      FAQs
+    </div>
+    <div class="ellipse-10" onclick="navigateToPembayaran()"></div>
+    <img class="vector10" src="/Pelanggan/img/wallet.svg" onclick="navigateToPembayaran()"/>
+    <script>
+      function navigateToPembayaran() {
+        window.location.href = "http://localhost:8080/pembayaran-riwayat";
+      }
+    </script>
+
+    <!-- Obat -->
+    <div class="obat" th:text="'Lihat Obat'" style="cursor: pointer; color: inherit;" onclick="navigateToObat()">
+      FAQs
+    </div>
+    <div class="ellipse-11" onclick="navigateToObat()"></div>
+    <img class="vector11" src="/Pelanggan/img/pill.png" onclick="navigateToObat()"/>
+    <script>
+      function navigateToObat() {
+        window.location.href = "http://localhost:8080/";
+      }
+    </script>
   </div>
 </body>
 </html>
