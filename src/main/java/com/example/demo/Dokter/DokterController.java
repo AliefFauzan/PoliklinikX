@@ -1,7 +1,8 @@
 package com.example.demo.Dokter;
 
-// import java.util.ArrayList;
-// import java.util.List;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.stereotype.Component;
@@ -12,11 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.bind.annotation.ResponseBody;
 
-// import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
-// import com.lighthouse.project.Other.PenggunaRepo;
+import org.springframework.jdbc.core.JdbcTemplate;
+import jakarta.activation.DataSource;
 
-// import groovyjarjarantlr4.v4.parse.ANTLRParser.parserRule_return;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,7 +25,11 @@ public class DokterController {
 
 
     @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @AutoWired
     DokterRepo repo;
+
 
 //     @GetMapping("/Register-Dokter")
 //     public String Register (Model model) {
@@ -119,5 +123,48 @@ public class DokterController {
     @GetMapping("/ResepDokter")
     public String resepDokter() {
         return "ResepDokter"; // View for dokter's prescription page
+    }
+
+    @PostMapping("/simpanResep")
+    public String simpanResep(
+            @RequestParam("namaObat") String namaObat,
+            @RequestParam("dosisObat") String dosisObat,
+            @RequestParam("noRekamMedis") String noRekamMedis,
+            Model model) {
+        try {
+            String query = "UPDATE Transaksi SET hasilPreskripsi = ? WHERE noRekamMedis = ?";
+            int updatedRows = jdbcTemplate.update(query, namaObat + " - " + dosisObat, noRekamMedis);
+
+            if (updatedRows > 0) {
+                model.addAttribute("message", "Resep berhasil disimpan untuk pasien dengan No. Rekam Medis " + noRekamMedis);
+            } else {
+                model.addAttribute("error", "Pasien dengan No. Rekam Medis tersebut tidak ditemukan.");
+            }
+            return "ResepDokter";
+        } catch (Exception e) {
+            model.addAttribute("error", "Terjadi kesalahan saat menyimpan resep: " + e.getMessage());
+            return "ResepDokter";
+        }
+    }
+
+    @PostMapping("/simpanDiagnosa")
+    public String simpanDiagnosa(
+            @RequestParam("noRekamMedis") String noRekamMedis,
+            @RequestParam("hasilDiagnosa") String hasilDiagnosa,
+            Model model) {
+        try {
+            // SQL query to update the diagnosis
+            String query = "UPDATE Transaksi SET hasilDiagnosa = ? WHERE noRekamMedis = ?";
+            int updatedRows = jdbcTemplate.update(query, hasilDiagnosa, noRekamMedis);
+
+            if (updatedRows > 0) {
+                model.addAttribute("message", "Diagnosa berhasil disimpan untuk pasien dengan No. Rekam Medis " + noRekamMedis);
+            } else {
+                model.addAttribute("error", "Pasien dengan No. Rekam Medis tersebut tidak ditemukan.");
+            }
+        } catch (Exception e) {
+            model.addAttribute("error", "Terjadi kesalahan saat menyimpan diagnosa: " + e.getMessage());
+        }
+        return "DiagnosisDokter"; // Return to the diagnosis page
     }
 }
