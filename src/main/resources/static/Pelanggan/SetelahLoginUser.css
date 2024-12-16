@@ -23,10 +23,6 @@ body {
   left: 0;
   bottom: 75px;
 }
-.group-1 {
-  position: absolute;
-  inset: 0;
-}
 
 .poliklinik-x {
   color: #03337c;

@@ -1,102 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Dokter/DiagnosaDokter.css" />
-  </head>
-  <body>
-    <div class="diagnosa-dokter">
-      <div class="div">
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="group">
-            <div class="rectangle-2"></div>
-            <div class="rectangle-3"></div>
-            <div class="rectangle-4"></div>
-          </div>
-          <div class="text-wrapper">POLIKLINIK X</div>
-          <div class="group-wrapper">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="rectangle-5"></div>
-                <div class="rectangle-6"></div>
-              </div>
-            </div>
-          </div>
-          <div class="rectangle-7"></div>
-          <div class="search-bar">
-            <div class="content">
-              <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
-              <div class="placeholder-label">Search</div>
-            </div>
-          </div>
-          <div class="text-wrapper-2">Beranda</div>
-          <img class="ellipse" src="img/ellipse.png" />
-          <div class="sub-head">
-            <div class="overlap-group-2">
-              <div class="div-wrapper">
-                <div class="overlap-group-2">
-                  <div class="frame">
-                    <div class="ellipse-2"></div>
-                    <div class="ellipse-3"></div>
-                  </div>
-                  <div class="group-2">
-                    <div class="rectangle-8"></div>
-                    <div class="rectangle-9"></div>
-                    <div class="rectangle-10"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="group-3">
-                <div class="about-us">Catat Diagnosa</div>
-                <div class="home-about">Beranda / Resep Dokter</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-wrapper-3">BAYAR</div>
-        <div class="overlap-2">
-          <form action="/submit" method="post" style="margin: 0; padding: 0; width: 100%; height: 100%;">
-              <button type="submit" class="button-style">Submit</button>
-          </form>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="/Dokter/DiagnosaDokter.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="diagnosa-dokter">
+    <div class="sub-head">
+      <img class="figma-payment-hospital" src="/Pelanggan/img/figma-payment-hospital0.png" />
+      <div class="frame-2">
+        <div class="ellipse-1"></div>
+        <div class="ellipse-2"></div>
       </div>
-        <div class="overlap-3">
-          <div class="text-wrapper-5">Follow us :</div>
-          <img class="vector" src="img/image.svg" />
-          <img class="img" src="img/vector.svg" />
-          <img class="prime-twitter" src="img/prime-twitter.svg" />
-          <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
-        </div>
-        <div class="group-4">
-          <form action="/simpanDiagnosa" method="post" class="diagnosa-form">
-            <div class="text-wrapper-6">Nomor Rekam Medis</div>
-            <div class="overlap-4">
-              <input
-                type="text"
-                id="noRekamMedis"
-                name="noRekamMedis"
-                class="rectangle-11-input"
-                placeholder="Masukan nomor medis pasien"
-                required
-              />
-            </div>
-            <div class="text-wrapper-8">Diagnosa</div>
-            <div class="overlap-5">
-              <textarea
-                id="hasilDiagnosa"
-                name="hasilDiagnosa"
-                class="overlap-5-input"
-                placeholder="Masukan diagnosa yang diberikan"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="button-style">Simpan Diagnosa</button>
-          </form>
-          </div>
-        </div>
+      <div class="group-184">
+        <div class="rectangle-76"></div>
+        <div class="rectangle-78"></div>
+        <div class="rectangle-77"></div>
       </div>
+      <div class="about-us">Catat Diagnosa</div>
+      <div class="home-about">Beranda / Resep Dokter</div>
     </div>
-  </body>
+    <div class="bayar">BAYAR</div>
+    <div class="rectangle-105"></div>
+    <div class="submit">SUBMIT</div>
+    <div class="nomor-medis">Nomor Medis</div>
+    <div class="rectangle-93"></div>
+    <div class="masukan-nomor-medis-pasien">Masukan nomor medis pasien</div>
+    <div class="diagnosa-yang-diberikan">Diagnosa yang diberikan</div>
+    <div class="rectangle-91"></div>
+    <div
+      class="masukan-diagnosa-yang-diberikan-serta-catatan-tambahan-utnuk-diagnosa-tersebut"
+    >
+      Masukan diagnosa yang diberikan serta catatan tambahan utnuk diagnosa
+      tersebut
+    </div>
+    <div class="rectangle-79"></div>
+    <div class="poliklinik-x">POLIKLINIK X</div>
+    <div class="ellipse-12"></div>
+    <div class="group-2">
+      <div class="rectangle-15"></div>
+      <div class="rectangle-16"></div>
+    </div>
+    <div class="rectangle-80"></div>
+    <div class="beranda">Beranda</div>
+    <img class="ellipse" src="ellipse0.png" />
+  </div>
+  
+</body>
 </html>
