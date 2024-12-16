@@ -26,11 +26,11 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
     // }
 
     @Override
-    public void addJadwalDokter(int idDokter, String hari, int jamMulai, int jamSelesai) {
-        String sql = "INSERT INTO JadwalDokter(idDokter, hari, jamMulai, jamSelesai) VALUES (?, ?, ?, ?)";
-        jdbcTemplate.update(sql, idDokter, hari, jamMulai, jamSelesai);
-        
+    public void addJadwalDokter(int idDokter, String nama, String spesialisasi, String hari, int jamMulai, int jamSelesai) {
+        String sql = "INSERT INTO JadwalDokter(idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai) VALUES (?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai);
     }
+    
 
     public void updateJadwalDokter(int idJadwal, String hari, int jamMulai, int jamSelesai) {
         String sql = "UPDATE JadwalDokter SET hari = ?, jamMulai = ?, jamSelesai = ? WHERE idJadwal = ?";
