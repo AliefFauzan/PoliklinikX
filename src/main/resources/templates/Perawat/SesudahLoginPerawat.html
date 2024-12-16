@@ -68,20 +68,30 @@
       <div class="rectangle-15"></div>
       <div class="rectangle-16"></div>
     </div>
-    
-    <div class="search-bar">
-      <div class="content">
-        <div class="magnifyingglass">
-          <div class="magnifyingglass2">􀊫</div>
-        </div>
-        <div class="placeholder-label">Search</div>
-      </div>
-    </div>
+
     
     <div class="rectangle-20"></div>
-    <img class="ellipse" th:src="@{/resources/ellipse0.png}" />
+    <img class="ellipse" th:src="@{/resources/ellipse0.png}" alt="Ikon Akun" style="cursor: pointer;"
+      onclick="confirmLogout()" />
+
+    <script>
+      function confirmLogout() {
+        const userConfirmed = confirm("Apakah anda ingin log out?");
+        if (userConfirmed) {
+          // Arahkan ke halaman logout
+          window.location.href = "http://localhost:8080/Login-Perawat";
+        }
+      }
+    </script>
     <div class="rectangle-17"></div>
-    <div class="beranda">Beranda</div>
+    <div class="beranda" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
+      Beranda
+    </div>
+    <script>
+      function navigateToSesudahLoginPerawat() {
+        window.location.href = "http://localhost:8080/sesudahLoginPerawat";
+      }
+    </script>
     <div class="ellipse-2"></div>
     
     <div class="catat-informasi-pasien">

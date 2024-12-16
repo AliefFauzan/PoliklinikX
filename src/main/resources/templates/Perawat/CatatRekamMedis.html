@@ -1,97 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Reference to external CSS files in resources/static/resources -->
   <link rel="stylesheet" th:href="@{/resources/vars.css}">
   <link rel="stylesheet" th:href="@{/resources/JanjiTemu.css}">
 
   <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-       -webkit-font-smoothing: antialiased;
-   }
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   /* General Form Styling */
-   form {
-       width: 100%;
-       max-width: 500px;
-       margin: 20px auto;
-       padding: 20px;
-       border: 1px solid #ddd;
-       border-radius: 8px;
-       background-color: #f9f9f9;
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   }
-   
-   form label {
-       display: block;
-       font-weight: bold;
-       margin-bottom: 8px;
-       color: #333;
-   }
-   
-   form input[type="number"],
-   form select {
-       width: 100%;
-       padding: 10px;
-       margin-bottom: 15px;
-       border: 1px solid #ccc;
-       border-radius: 4px;
-       font-size: 14px;
-       box-sizing: border-box;
-   }
-   
-   form input[type="number"]:focus,
-   form select:focus {
-       border-color: #4CAF50;
-       outline: none;
-       box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-   }
-   
-   form button {
-       width: 100%;
-       padding: 10px;
-       background-color: #4CAF50;
-       color: white;
-       border: none;
-       border-radius: 4px;
-       font-size: 16px;
-       cursor: pointer;
-   }
-   
-   form button:hover {
-       background-color: #45a049;
-   }
-   
-   /* Aligning Form Elements */
-   form br {
-       margin-bottom: 15px;
-   }
+    a,
+    button,
+    input,
+    select,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      background: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* General Form Styling */
+    form {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    form input[type="number"],
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    form input[type="number"]:focus,
+    form select:focus {
+      border-color: #4CAF50;
+      outline: none;
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+
+    form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Aligning Form Elements */
+    form br {
+      margin-bottom: 15px;
+    }
   </style>
   <title>Pembayaran</title>
 </head>
+
 <body>
   <div class="janji-temu">
     <div class="sub-head">
@@ -110,7 +116,7 @@
       <div class="about-us">Catat Rekam Medis</div>
       <div class="home-about">Beranda / Catat Rekam Medis</div>
     </div>
-    
+
     <div class="rectangle-14"></div>
     <div class="follow-us">Follow us :</div>
     <img class="vector" th:src="@{/resources/vector0.svg}" />
@@ -119,7 +125,7 @@
       <img class="group" th:src="@{/resources/group0.svg}" />
     </div>
     <img class="mdi-linkedin" th:src="@{/resources/mdi-linkedin0.svg}" />
-    
+
     <div class="rectangle-19"></div>
     <div class="informasi">Informasi</div>
     <div class="rectangle-20"></div>
@@ -132,22 +138,32 @@
       <div class="rectangle-15"></div>
       <div class="rectangle-16"></div>
     </div>
-    
-    <!-- Search bar -->
-    <div class="search-bar">
-      <div class="content">
-        <div class="magnifyingglass">
-          <div class="magnifyingglass2">􀊫</div>
-        </div>
-        <div class="placeholder-label">Search</div>
-      </div>
-    </div>
 
     <div class="rectangle-17"></div>
-    <div class="beranda">Beranda</div>
+    <div class="beranda" style="cursor: pointer; color: inherit;" onclick="navigateToSesudahLoginPerawat()">
+          Beranda
+        </div>
+        <script>
+          function navigateToSesudahLoginPerawat() {
+            window.location.href = "http://localhost:8080/sesudahLoginPerawat";
+          }
+        </script>
+
     <div class="rectangle-18"></div>
     <div class="layanan">Layanan</div>
-    <img class="ellipse" th:src="@{/resources/ellipse0.png}" />
+    <img class="ellipse" th:src="@{/resources/ellipse0.png}" alt="Ikon Akun" style="cursor: pointer;"
+      onclick="confirmLogout()" />
+
+    <script>
+      function confirmLogout() {
+        const userConfirmed = confirm("Apakah anda ingin log out?");
+        if (userConfirmed) {
+          // Arahkan ke halaman logout
+          window.location.href = "http://localhost:8080/Login-Perawat";
+        }
+      }
+    </script>
+
     <img class="group2" th:src="@{/resources/group1.svg}" />
 
     <!-- Doctor Schedule Table -->
@@ -156,16 +172,17 @@
       <form th:action="@{/CatatRekamMedisInput}" method="post">
         <label for="noRekamMedis">Pilih Pasien:</label>
         <select id="noRekamMedis" name="noRekamMedis">
-            <option th:each="pasien : ${pasiens}" th:value="${pasien.noRekamMedis}" 
-                    th:text="${pasien.nama} + ' - ' + ${pasien.tanggalLahir}"></option>
+          <option th:each="pasien : ${pasiens}" th:value="${pasien.noRekamMedis}"
+            th:text="${pasien.nama} + ' - ' + ${pasien.tanggalLahir}"></option>
         </select><br>
-    
+
         <label for="dataRekamMedis">Data Rekam Medis:</label>
         <textarea id="dataRekamMedis" name="dataRekamMedis" required></textarea><br>
-    
+
         <button type="submit">Update Data Rekam Medis</button>
       </form>
     </div>
   </div>
 </body>
+
 </html>
