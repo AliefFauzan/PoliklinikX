@@ -70,20 +70,30 @@
           <img class="mdi-linkedin" src="img/mdi-linkedin.svg" />
         </div>
         <div class="group-4">
-          <div class="text-wrapper-6">Nomor Medis</div>
-          <div class="overlap-4">
-            <input
-              type="text"
-              class="rectangle-11-input"
-              placeholder="Masukan nomor medis pasien"
-            />
-          </div>
-          <div class="text-wrapper-8">Diagnosa yang diberikan</div>
-          <div class="overlap-5">
-            <textarea
-              class="overlap-5-input"
-              placeholder="Masukan diagnosa yang diberikan serta catatan tambahan untuk diagnosa tersebut"
-            ></textarea>
+          <form action="/simpanDiagnosa" method="post" class="diagnosa-form">
+            <div class="text-wrapper-6">Nomor Rekam Medis</div>
+            <div class="overlap-4">
+              <input
+                type="text"
+                id="noRekamMedis"
+                name="noRekamMedis"
+                class="rectangle-11-input"
+                placeholder="Masukan nomor medis pasien"
+                required
+              />
+            </div>
+            <div class="text-wrapper-8">Diagnosa</div>
+            <div class="overlap-5">
+              <textarea
+                id="hasilDiagnosa"
+                name="hasilDiagnosa"
+                class="overlap-5-input"
+                placeholder="Masukan diagnosa yang diberikan"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="button-style">Simpan Diagnosa</button>
+          </form>
           </div>
         </div>
       </div>
