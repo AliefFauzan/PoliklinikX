@@ -206,41 +206,53 @@
     white-space: nowrap;
   }
 
+  .logo-container {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    z-index: 10; /* Ensures logo is visible above other elements */
+}
+
   .ellipse-1 {
     background: #03337c;
+    position: absolute;
     border-radius: 50%;
+    top: 0px;
+    left: 3px;
     width: 77px;
     height: 77px;
-    position: absolute;
-    left: 60px;
-    top: 16px;
     box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .group-2 {
-    width: 50.84px;
-    height: 50.84px;
-    position: static;
-  }
-  .rectangle-15 {
+}
+
+.group-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.rectangle-15,
+.rectangle-16 {
     background: #ffffff;
-    width: 60.37px;
+    width: 60px;
     height: 11.53px;
     position: absolute;
-    left: 72px;
-    top: 71.62px;
-    transform-origin: 0 0;
-    transform: rotate(-45deg) scale(1, 1);
-  }
-  .rectangle-16 {
-    background: #ffffff;
-    width: 60.37px;
-    height: 11.53px;
-    position: absolute;
-    left: 82px;
-    top: 28.94px;
-    transform-origin: 0 0;
-    transform: rotate(45deg) scale(1, 1);
-  }
+    left: 0;
+    top: 0;
+}
+
+.rectangle-15 {
+  left: 12px;
+  top: 31.62px;
+  transform: rotate(-45deg);
+}
+
+.rectangle-16 {
+  left: 12px;
+  top: 31.62px;
+  transform: rotate(45deg);
+}
   
   .jadwal-dokter .text-wrapper-4 {
     position: absolute;
@@ -317,41 +329,6 @@
     height: 314px;
   }
 
-  .ellipse-1 {
-    background: #03337c;
-    border-radius: 50%;
-    width: 77px;
-    height: 77px;
-    position: absolute;
-    left: 60px;
-    top: 16px;
-    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .group-2 {
-    width: 50.84px;
-    height: 50.84px;
-    position: static;
-  }
-  .rectangle-15 {
-    background: #ffffff;
-    width: 60.37px;
-    height: 11.53px;
-    position: absolute;
-    left: 72px;
-    top: 71.62px;
-    transform-origin: 0 0;
-    transform: rotate(-45deg) scale(1, 1);
-  }
-  .rectangle-16 {
-    background: #ffffff;
-    width: 60.37px;
-    height: 11.53px;
-    position: absolute;
-    left: 82px;
-    top: 28.94px;
-    transform-origin: 0 0;
-    transform: rotate(45deg) scale(1, 1);
-  }
   
   .jadwal-dokter .img {
     position: absolute;
@@ -486,13 +463,7 @@
     background-color: #ddf1f0;
   }
   
-  .jadwal-dokter .ic-sharp-call {
-    position: absolute;
-    width: 24px;
-    height: 23px;
-    top: 20px;
-    left: 28px;
-  }
+
   
   .jadwal-dokter .text-wrapper-5 {
     position: absolute;
@@ -643,7 +614,7 @@
     left: 535px;
   }
   
-  .jadwal-dokter .rectangle-14 {
+  .jadwal-dokter .rectangle-78 {
     position: absolute;
     width: 348px;
     height: 49px;
@@ -665,3 +636,55 @@
     white-space: nowrap;
   }
   
+  .rectangle-14 {
+    background: #ddf1f0;
+    width: 100vw;
+    height: 62px;
+    left: 0;
+    position: absolute; /* Tetap di posisi bawah layar */
+    bottom: 0;       /* Posisi dari bawah */
+  }
+  .ic-sharp-call {
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    left: 28px;
+    overflow: visible;
+    bottom: 20px;
+  }
+  .call-center-081234567890 {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    position: absolute;
+    left: 64px;
+    bottom: 20px;
+    width: 280px;
+    height: 23px;
+  }
+  .ic-sharp-call2 {
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    left: 375px;
+    bottom: 20px;
+    overflow: visible;
+  }
+  .customer-call-center-022-82558000 {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    position: absolute;
+    left: 411px;
+    bottom: 20px;
+    width: 382px;
+    height: 23px;
+  }
