@@ -27,31 +27,10 @@
 </head>
 <body>
   <div class="beranda-perawat">
-    <!-- Gambar Rumah Sakit -->
-    <img
-      class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2"
-      th:src="@{/Perawat/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png}"
-      alt="Gambar Rumah Sakit"
-    />
-    
     <!-- Nama Poliklinik -->
     <div class="poliklinik-x" th:text="'POLIKLINIK X'"></div>
     
-    <!-- Call Center -->
-    <div class="rectangle-14"></div>
-    <img class="ic-sharp-call" th:src="@{/Perawat/img/ic-sharp-call0.svg}" alt="Icon Call" />
-    <div class="call-center-081234567890" th:text="'Call Center : 081234567890'"></div>
-    <img class="ic-sharp-call2" th:src="@{/Perawat/img/ic-sharp-call1.svg}" alt="Icon Call" />
-    <div class="customer-call-center-022-82558000" th:text="'Customer Call Center : 022-82558000'"></div>
-    
-    <!-- Social Media -->
-    <div class="social-container">    
-      <div class="follow-us" th:text="'Follow us :'"></div>
-      <img class="vector" th:src="@{/Perawat/img/vector0.svg}" alt="Facebook" />
-      <img class="vector2" th:src="@{/Perawat/img/vector1.svg}" alt="Instagram" />
-      <img class="group" th:src="@{/Perawat/img/group0.svg}" alt="Twitter" />
-      <img class="mdi-linkedin" th:src="@{/Perawat/img/mdi-linkedin0.svg}" alt="LinkedIn" />
-    </div>
+  
     
     <div class="ellipse-1"></div>
     <div class="group-2">
@@ -74,9 +53,6 @@
     
     <!-- Navigasi -->
     <div class="rectangle-20"></div>
-    <div class="rectangle-17"></div>
-    <div class="beranda" th:text="'Beranda'"></div>
-    
     
     <div class="ellipse-2" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()"></div>
     <div class="catat-informasi-pasien" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()">
@@ -85,25 +61,9 @@
     <img class="hand-with-pen" th:src="@{/Perawat/img/hand-with-pen0.png}" alt="Ikon Pena" style="cursor: pointer;" onclick="navigateToInformasiPasien()" />
     <script>
       function navigateToInformasiPasien() {
-        window.location.href = "http://localhost:8080/catatInformasiPasien";
+        window.location.href = "http://localhost:8080/perawat/catatInformasiPasien";
       }
     </script>
-
-    <div class="catat-rekam-medis" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()">
-      Catat Rekam Medis
-    </div>
-    <div class="ellipse-8" style="cursor: pointer;" onclick="navigateToRekamMedis()">
-    </div>
-    <img class="open-book" th:src="@{/Perawat/img/open-book0.png}" alt="Ikon Buku" style="cursor: pointer;" onclick="navigateToRekamMedis()" />
-    <script>
-      function navigateToRekamMedis() {
-        window.location.href = "http://localhost:8080/catatRekamMedis";
-      }
-    </script>
-    
-    
-    
-    <!-- Ikon -->
   </div>
 </body>
 </html>

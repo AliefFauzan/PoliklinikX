@@ -1,7 +1,9 @@
 package com.example.demo.Dokter;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -11,8 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.bind.annotation.ResponseBody;
 
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import jakarta.activation.DataSource;
+
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,6 +26,10 @@ public class DokterController {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @AutoWired
+    DokterRepo repo;
+
 
 //     @GetMapping("/Register-Dokter")
 //     public String Register (Model model) {

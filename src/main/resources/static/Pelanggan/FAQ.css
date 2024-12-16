@@ -23,14 +23,14 @@
   .FA-qs .div {
     background-color: #ffffff;
     overflow-x: hidden;
-    width: 1440px;
+    width: 1920px;
     height: 1267px;
     position: relative;
   }
   
   .FA-qs .overlap {
     position: absolute;
-    width: 1445px;
+    width: 1920px;
     height: 461px;
     top: 0;
     left: -3px;
@@ -38,7 +38,7 @@
   
   .FA-qs .rectangle {
     position: absolute;
-    width: 1445px;
+    width: 1920px;
     height: 236px;
     top: 0;
     left: 0;
@@ -175,13 +175,13 @@
   .FA-qs .search-bar {
     display: flex;
     flex-direction: column;
-    width: 290px;
-    height: 34px;
+    width: 500px;
+    height: 65px;
     align-items: flex-start;
-    gap: 10px;
+    gap: 20px;
     position: absolute;
-    top: 41px;
-    left: 1024px;
+    top: 51px;
+    left: 1324px;
   }
   
   .FA-qs .content {
@@ -285,17 +285,17 @@
     width: 64px;
     height: 64px;
     top: 28px;
-    left: 1349px;
+    left: 1800px;
     object-fit: cover;
   }
   
   .FA-qs .sub-head {
     position: absolute;
-    width: 1440px;
+    width: 1920px;
     height: 314px;
     top: 147px;
     left: 5px;
-    background-image: url(./img/FIGMA-payment-hospital.png);
+    background-image: url('Pelanggan/img/figma-payment-hospital0.png');
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -307,7 +307,7 @@
   
   .FA-qs .div-wrapper {
     position: absolute;
-    width: 1440px;
+    width: 1920px;
     height: 314px;
     top: 0;
     left: 0;
@@ -315,19 +315,20 @@
   
   .FA-qs .frame {
     position: absolute;
-    width: 1440px;
+    width: 1920px;
     height: 314px;
     top: 0;
     left: 0;
     overflow: hidden;
   }
+
   
   .FA-qs .ellipse-2 {
     position: absolute;
     width: 256px;
     height: 256px;
     top: 122px;
-    left: 1312px;
+    left: 1750px;
     background-color: var(--accent);
     border-radius: 128px;
     opacity: 0.5;
@@ -346,7 +347,7 @@
   
   .FA-qs .group-2 {
     position: absolute;
-    width: 1440px;
+    width: 1920px;
     height: 10px;
     top: 304px;
     left: 0;
@@ -354,25 +355,25 @@
   
   .FA-qs .rectangle-10 {
     position: absolute;
-    width: 883px;
+    width: 983px;
     height: 10px;
     top: 0;
-    left: 322px;
+    left: 622px;
     background-color: var(--primary);
   }
   
   .FA-qs .rectangle-11 {
     position: absolute;
-    width: 235px;
+    width: 435px;
     height: 10px;
     top: 0;
-    left: 1205px;
+    left: 1505px;
     background-color: var(--secondary);
   }
   
   .FA-qs .rectangle-12 {
     position: absolute;
-    width: 322px;
+    width: 722px;
     height: 10px;
     top: 0;
     left: 0;
@@ -563,3 +564,44 @@
     left: 1403px;
   }
   
+  .login {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    position: absolute;
+    right: 60px;
+    top: 33px;
+    width: 87px;
+    height: 29px;
+  }
+  .register {
+    color: #03337c;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    position: absolute;
+    right: 60px;
+    top: 67px;
+    width: 87px;
+    height: 29px;
+  }
+  
+  
+  .line-1 {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: #03337c;
+    border-width: 1px 0 0 0;
+    position: absolute;
+    right: 60px;
+    top: 63px;
+    width: 87px;
+    height: 29px;
+  }

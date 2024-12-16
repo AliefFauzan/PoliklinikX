@@ -1,60 +1,31 @@
-.home-sebelum-login-sign-up,
-.home-sebelum-login-sign-up * {
-  box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+  background: url('/Perawat/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png') center/cover no-repeat;
 }
-.home-sebelum-login-sign-up {
-  background: #ffffff;
-  height: 1640px;
-  position: relative;
-  overflow: hidden;
-}
-.mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: -5;
-  top: 0px;
-  object-fit: cover;
-}
+
 .rectangle-20 {
   background: linear-gradient(
     0deg,
     rgba(228, 245, 255, 0) 0%,
     rgba(228, 245, 255, 1) 100%
   );
-  width: 100%;
-  height: 236px;
-  position: relative;
-  left: -5px;
-  top: 1250px;
+  width: 100vw;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  bottom: 75px;
 }
 .group-1 {
   position: absolute;
   inset: 0;
-}
-.rectangle-2 {
-  background: #03337c;
-  width: 50.78px;
-  height: 6.03px;
-  position: absolute;
-  left: 33px;
-  top: 41px;
-}
-.rectangle-3 {
-  background: #03337c;
-  width: 50.78px;
-  height: 6.03px;
-  position: absolute;
-  left: 33px;
-  top: 51.33px;
-}
-.rectangle-4 {
-  background: #03337c;
-  width: 50.78px;
-  height: 6.03px;
-  position: absolute;
-  left: 33px;
-  top: 60.8px;
 }
 
 .poliklinik-x {
@@ -66,24 +37,24 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 251px;
+  left: 200px;
   top: 47px;
 }
 .rectangle-14 {
   background: #ddf1f0;
-  width: 100%;
+  width: 100vw;
   height: 62px;
-  position: absolute;
-  left: 0px;
-  top: 1575px;
+  left: 0;
+  position: absolute; /* Tetap di posisi bawah layar */
+  bottom: 0;       /* Posisi dari bawah */
 }
 .ic-sharp-call {
   width: 24px;
   height: 23px;
   position: absolute;
   left: 28px;
-  top: 1590px;
   overflow: visible;
+  bottom: 20px;
 }
 .call-center-081234567890 {
   color: #000000;
@@ -95,7 +66,7 @@
   font-weight: 400;
   position: absolute;
   left: 64px;
-  top: 1590px;
+  bottom: 20px;
   width: 280px;
   height: 23px;
 }
@@ -104,7 +75,7 @@
   height: 23px;
   position: absolute;
   left: 375px;
-  top: 1590px;
+  bottom: 20px;
   overflow: visible;
 }
 .customer-call-center-022-82558000 {
@@ -117,54 +88,11 @@
   font-weight: 400;
   position: absolute;
   left: 411px;
-  top: 1590px;
+  bottom: 20px;
   width: 382px;
   height: 23px;
 }
 
-.vector {
-  width: 1.39%;
-  height: 1.86%;
-  position: absolute;
-  right: 6.39%;
-  left: 92.22%;
-  bottom: 2.05%;
-  top: 96.09%;
-  overflow: visible;
-}
-.vector2 {
-  width: 1.39%;
-  height: 1.86%;
-  position: absolute;
-  right: 8.82%;
-  left: 89.79%;
-  bottom: 2.05%;
-  top: 96.09%;
-  overflow: visible;
-}
-.prime-twitter {
-  width: 20px;
-  height: 19px;
-  position: absolute;
-  left: 1363px;
-  top: 984px;
-  overflow: hidden;
-}
-.group {
-  height: auto;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  overflow: visible;
-}
-.mdi-linkedin {
-  width: 20px;
-  height: 19px;
-  position: absolute;
-  left: 1392px;
-  top: 984px;
-  overflow: visible;
-}
 .group-3 {
   position: absolute;
   inset: 0;
@@ -175,7 +103,7 @@
   width: 77px;
   height: 77px;
   position: absolute;
-  left: 129px;
+  left: 60px;
   top: 16px;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -189,7 +117,7 @@
   width: 60.37px;
   height: 11.53px;
   position: absolute;
-  left: 141.94px;
+  left: 72px;
   top: 71.62px;
   transform-origin: 0 0;
   transform: rotate(-45deg) scale(1, 1);
@@ -199,64 +127,10 @@
   width: 60.37px;
   height: 11.53px;
   position: absolute;
-  left: 150.09px;
+  left: 82px;
   top: 28.94px;
   transform-origin: 0 0;
   transform: rotate(45deg) scale(1, 1);
-}
-.rectangle-17 {
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 36px;
-  width: 119px;
-  height: 29px;
-  position: absolute;
-  left: 562px;
-  top: 44px;
-}
-.rectangle-18 {
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 36px;
-  width: 119px;
-  height: 29px;
-  position: absolute;
-  left: 709px;
-  top: 44px;
-}
-.rectangle-19 {
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 36px;
-  width: 119px;
-  height: 29px;
-  position: absolute;
-  left: 866px;
-  top: 44px;
-}
-.search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  outline: none;
-}
-
-.search-bar button {
-  background-color: #03337c;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #0252a4;
 }
 
 .content {
@@ -274,89 +148,28 @@
   height: 36px;
   position: relative;
 }
-.magnifyingglass {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  position: relative;
-  overflow: hidden;
-}
-.magnifyingglass2 {
-  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
-  text-align: center;
-  font-family: "SfProDisplay-Medium", sans-serif;
-  font-size: 18px;
-  line-height: 50px;
-  font-weight: 500;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  width: 100%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.placeholder-label {
-  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
-  text-align: left;
-  font-family: var(
-    --default-size-body-font-family,
-    "SfProText-Regular",
-    sans-serif
-  );
-  font-size: var(--default-size-body-font-size, 17px);
-  line-height: var(--default-size-body-line-height, 22px);
-  letter-spacing: var(--default-size-body-letter-spacing, -0.41px);
-  font-weight: var(--default-size-body-font-weight, 400);
-  position: relative;
-  flex: 1;
-}
+
+/*janji temu */
 .ellipse-3 {
   background: #03337c;
   border-radius: 50%;
   width: 96px;
   height: 96px;
   position: absolute;
-  left: 973px;
-  top: 1325px ;
+  right: 670px;
+  bottom: 100px ;
   overflow: visible;
 }
-.group-46 {
-  height: auto;
-  position: absolute;
-  left: 634px;
-  top: 1325px;
-  overflow: visible;
-}
+
 .mask-group {
   height: auto;
   position: absolute;
-  left: 995px;
-  top: 1335px ;
+  right: 695px;
+  bottom: 130px ;
   overflow: visible;
 }
-.ellipse-7 {
-  background: #03337c;
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
-  position: absolute;
-  left: 1370px; /* Posisi lebih kanan */
-  top: 1335px;  /* Posisi lebih bawah */
-  overflow: visible;
-}
-.vector3 {
-  width: 45 px;
-  height: 45 px;
-  position: absolute;
-  left: 1400px; /* Posisi lebih kanan */
-  top: 1365px;  /* Posisi lebih bawah */
-  overflow: visible;
-}
-.beranda {
+
+.janji-temu {
   color: #03337c;
   text-align: center;
   font-family: "Inter-Bold", sans-serif;
@@ -365,10 +178,17 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 563px;
-  top: 46px;
-  width: 115px;
-  height: 19px;
+  right: 660px;
+  bottom: 70px;
+}
+
+/* jadwal dokter */
+.group-46 {
+  height: auto;
+  position: absolute;
+  left: 350px;
+  bottom: 100px;
+  overflow: visible;
 }
 .jadwal-dokter {
   color: #03337c;
@@ -379,9 +199,68 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 610px;
-  top: 1450px;
+  left: 330px;
+  bottom: 70px;
 }
+
+/* faq */
+.ellipse-7 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  right: 350px; /* Posisi lebih kanan */
+  bottom: 100px;  /* Posisi lebih bawah */
+  overflow: visible;
+}
+.vector3 {
+  width: 45 px;
+  height: 45 px;
+  position: absolute;
+  right: 375px; /* Posisi lebih kanan */
+  bottom: 125px;  /* Posisi lebih bawah */
+  overflow: visible;
+}
+.faq {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  right: 375px;
+  bottom: 70px;
+}
+
+/* beranda */
+.beranda {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 520px;
+  top: 46px;
+  width: 115px;
+  height: 19px;
+}
+.rectangle-17 {
+  background: rgba(217, 217, 217, 0.7);
+  border-radius: 36px;
+  width: 119px;
+  height: 29px;
+  position: absolute;
+  left: 520px;
+  top: 44px;
+}
+
+/* layanan */
 .layanan {
   color: #03337c;
   text-align: center;
@@ -391,11 +270,22 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 719px;
+  left: 670px;
   top: 46px;
   width: 103px;
   height: 21px;
 }
+.rectangle-18 {
+  background: rgba(217, 217, 217, 0.7);
+  border-radius: 36px;
+  width: 119px;
+  height: 29px;
+  position: absolute;
+  left: 660px;
+  top: 44px;
+}
+
+/* informasi */
 .informasi {
   color: #03337c;
   text-align: center;
@@ -405,13 +295,23 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 863px;
+  left: 800px;
   top: 46px;
   width: 122px;
   height: 24px;
 }
+.rectangle-19 {
+  background: rgba(217, 217, 217, 0.7);
+  border-radius: 36px;
+  width: 119px;
+  height: 29px;
+  position: absolute;
+  left: 800px;
+  top: 44px;
+}
+
 .login {
-  color: #03337c;
+  color: #000000;
   text-align: center;
   font-family: "Inter-Bold", sans-serif;
   font-size: 20px;
@@ -419,7 +319,7 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 1745px;
+  right: 60px;
   top: 33px;
   width: 87px;
   height: 29px;
@@ -433,55 +333,34 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 1745px;
+  right: 60px;
   top: 67px;
   width: 87px;
   height: 29px;
 }
-.janji-temu {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 970px;
-  top: 1450px;
-}
-.faq {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 1400px;
-  top: 1450px;
-}
+
+
 .line-1 {
   margin-top: -1px;
   border-style: solid;
   border-color: #03337c;
   border-width: 1px 0 0 0;
   position: absolute;
-  left: 1745px;
+  right: 60px;
   top: 63px;
   width: 87px;
   height: 29px;
 }
-/* janji temu */
+
+/* pilih dokter
 .ellipse-8 {
   background: #03337c;
   border-radius: 50%;
   width: 96px;
   height: 96px;
   position: absolute;
-  left: 305px;
-  top: 1325px ;
+  left: 180px;
+  bottom: 100px;
   overflow: visible;
 }
 .pilih-dokter {
@@ -493,8 +372,8 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 305 px ;
-  top: 1450px;
+  left: 180px ;
+  bottom: 55px;
 }
 
 element.style {
@@ -506,9 +385,7 @@ element.style {
   width: 3.26%;
   height: 4.59%;
   position: absolute;
-  right: 79.72%;
-  left: 17.01%;
-  bottom: 14.36%;
-  top: 81.05%;
+  left: 205px;
+  bottom: 120px;
   overflow: visible;
-}
+} */

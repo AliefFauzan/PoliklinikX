@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" th:href="@{/Pelanggan/FAQ.css}" />
+  </head>
+  <body>
+    <div class="FA-qs">
+      <div class="div">
+        <div class="overlap">
+          <div class="rectangle"></div>
+          <div class="group">
+          </div>
+          <div class="text-wrapper">POLIKLINIK X</div>
+          <div class="group-wrapper">
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group">
+                <div class="rectangle-5"></div>
+                <div class="rectangle-6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rectangle-7"></div>
+          <div class="rectangle-9"></div>
+          <div class="line-1"></div>
+          <!-- Beranda -->
+          <div class="text-wrapper-2" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+            Beranda
+          </div>
+          <script>
+            function navigateToBeranda() {
+              window.location.href = "http://localhost:8080/";
+            }
+          </script>
+          <!-- Informasi -->
+          <div class="text-wrapper-4" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+            Informasi
+          </div>
+          <script>
+            function navigateToInformasi() {
+              window.location.href = "http://localhost:8080/SebelumInformasi";
+            }
+          </script>
+          <div class="login">
+            <a th:href="@{/login}">Login</a>
+          </div>
+      
+          <div class="register">
+            <a th:href="@{/register}">Register</a>
+          </div>
+          <div class="sub-head">
+            <div class="overlap-group-2">
+              <div class="div-wrapper">
+                <div class="overlap-group-2">
+                  <div class="frame">
+                    <div class="ellipse-2"></div>
+                    <div class="ellipse-3"></div>
+                  </div>
+                  <div class="group-2">
+                    <div class="rectangle-10"></div>
+                    <div class="rectangle-11"></div>
+                    <div class="rectangle-12"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="group-3">
+                <div class="about-us">FAQs</div>
+                <div class="home-about">Beranda / FAQs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlap-2">
+          <p class="p">Bagaimana Saya Membuat Janji Temu?</p>
+          <p class="text-wrapper-5">
+            Anda bisa menekan tombol “Pilih Dokter” atau “Pilih Jadwal”. Kemudian anda bisa membuat janji temu sesuai
+            dengan dokter dan jadwal yang tesedia
+          </p>
+        </div>
+        <div class="overlap-3">
+          <p class="p">Spesialis Apa Saja Yang Tersedia di Poliklinik X?</p>
+          <p class="text-wrapper-5">
+            Dalam Poliklinik X kami memiliki beberapa spesialis yang meliputi Spesialis Paru, Spesialis Jantung dan
+            Pembuluh Darah, Spesialis Ginjal dna Hipertensi, dan Spesialis Alergi dan Imunologi
+          </p>
+        </div>
+        <div class="text-wrapper-6">Bagaimana Cara Melihat Jadwal?</div>
+        <p class="text-wrapper-7">
+          Anda dapat mencari data pasien anda di menu “Data Pasien”. Setelah itu akan ditampilkan jadwla yang telah anda
+          buat sebelumnya
+        </p>
+        <p class="text-wrapper-8">Apa Saja Metoda Pembayaran Yang Tersedia?</p>
+        <p class="text-wrapper-9">
+          Dalam Poliklinik X kami telah menyediakan metode pembayaran digital menggunakan Gopay, OVO, da Kartu Kredit.
+          Anda juga dapat menggunakan uang tunai yang nanti dibayar langsung di counter.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

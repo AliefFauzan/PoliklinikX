@@ -3,12 +3,12 @@ package com.example.demo.Pelanggan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class PelangganController {
-
 
     // Map to SebelumLoginUser page
     @GetMapping("/sebelum-login-user")
@@ -17,13 +17,13 @@ public class PelangganController {
     }
 
     // Map to the Login page
-    @GetMapping("/login")
-    public String loginPage() {
-        return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
+    // @GetMapping("/login")
+    // public String loginPage() {
+    //     return "Pelanggan/Login"; // Nama template Thymeleaf tanpa ".html"
 
-    }
+    // }
 
-    @GetMapping("/setelahLoginUser")
+    @GetMapping("/home")
     public String setelahLoginUser() {
         return "Pelanggan/SetelahLoginUser"; // Path template
     }
@@ -33,11 +33,11 @@ public class PelangganController {
         return "Pelanggan/Layanan";
     }
 
-    // Map to the Register page
-    @GetMapping("/registerPelanggan")
-    public String registerPage() {
-        return "Pelanggan/Register";
-    }
+    // // Map to the Register page
+    // @GetMapping("/register")
+    // public String registerPage() {
+    //     return "PetugasFiturUmum/Register";
+    // }
 
     // Map to the FAQ page
     @GetMapping("/faq")
@@ -45,10 +45,21 @@ public class PelangganController {
         return "Pelanggan/FAQ";
     }
 
+    // Map to the FAQ page
+    @GetMapping("/SebelumFAQ")
+    public String sebelumfaqPage() {
+        return "Pelanggan/SebelumFAQ";
+    }
+
+
     // Map to the Informasi page
     @GetMapping("/informasi")
     public String informasiPage() {
         return "Pelanggan/Informasi";
+    }
+    @GetMapping("/SebelumInformasi")
+    public String sebeluminformasiPage() {
+        return "Pelanggan/SebelumInformasi";
     }
 
     // Map to Jadwal Dokter page
@@ -59,8 +70,10 @@ public class PelangganController {
 
     // Map to Janji Temu page
     @GetMapping("/janji-temu")
-    public String janjiTemuPage() {
-        return "Pelanggan/JanjiTemu";
+    public String showJanjiTemuForm(Model model) {
+        JanjiTemu janjiTemu = new JanjiTemu(); // Buat objek baru
+        model.addAttribute("janjiTemu", janjiTemu);
+        return "Pelanggan/JanjiTemu";  // Pastikan nama file template sesuai
     }
 
     // Map to Pembayaran page

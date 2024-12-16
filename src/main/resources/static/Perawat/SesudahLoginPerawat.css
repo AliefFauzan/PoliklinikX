@@ -1,24 +1,14 @@
-.beranda-perawat,
-.beranda-perawat * {
-  box-sizing: border-box;
-}
-.beranda-perawat {
-  background: #ffffff;
-  height: 1640px;
-  position: relative;
-  overflow: hidden;
-}
-.mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: -5px;
-  top: 0px;
-  object-fit: cover;
-}
-.group-1 {
-  position: absolute;
-  inset: 0;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+  background: url('/Perawat/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png') center/cover no-repeat;
 }
 
 .poliklinik-x {
@@ -30,60 +20,16 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 251px;
+  left: 200px;
   top: 47px;
 }
 .rectangle-14 {
   background: #ddf1f0;
-  width: 100%;
+  width: 100vw;
   height: 62px;
-  position: absolute;
-  left: 0px;
-  top: 1575px;
-}
-.ic-sharp-call {
-  width: 24px;
-  height: 23px;
-  position: absolute;
-  left: 28px;
-  top: 1590px;
-  overflow: visible;
-}
-.call-center-081234567890 {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-  position: absolute;
-  left: 64px;
-  top: 1590px;
-  width: 280px;
-  height: 23px;
-}
-.ic-sharp-call2 {
-  width: 24px;
-  height: 23px;
-  position: absolute;
-  left: 375px;
-  top: 1590px;
-  overflow: visible;
-}
-.customer-call-center-022-82558000 {
-  color: #000000;
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-  position: absolute;
-  left: 411px;
-  top: 1590px;
-  width: 382px;
-  height: 23px;
+  left: 0;
+  position: absolute; /* Tetap di posisi bawah layar */
+  bottom: 0;       /* Posisi dari bawah */
 }
 
 .group-3 {
@@ -96,7 +42,7 @@
   width: 77px;
   height: 77px;
   position: absolute;
-  left: 129px;
+  left: 60px;
   top: 16px;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -110,7 +56,7 @@
   width: 60.37px;
   height: 11.53px;
   position: absolute;
-  left: 141.94px;
+  left: 72px;
   top: 71.62px;
   transform-origin: 0 0;
   transform: rotate(-45deg) scale(1, 1);
@@ -120,7 +66,7 @@
   width: 60.37px;
   height: 11.53px;
   position: absolute;
-  left: 150.09px;
+  left: 82px;
   top: 28.94px;
   transform-origin: 0 0;
   transform: rotate(45deg) scale(1, 1);
@@ -187,39 +133,17 @@
     rgba(228, 245, 255, 0) 0%,
     rgba(228, 245, 255, 1) 100%
   );
-  width: 100%;
-  height: 236px;
-  position: relative;
-  left: -5px;
-  top: 1250px;
+  width: 100vw;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  bottom: 75px;
 }
 .group-48 {
   position: absolute;
   inset: 0;
 }
-.rectangle-17 {
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 36px;
-  width: 119px;
-  height: 29px;
-  position: absolute;
-  left: 562px;
-  top: 44px;
-}
-.beranda {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 563px;
-  top: 46px;
-  width: 115px;
-  height: 19px;
-}
+
 .group-46 {
   position: absolute;
   inset: 0;
@@ -230,8 +154,8 @@
   width: 96px;
   height: 96px;
   position: absolute;
-  left: 2000px;
-  top: 1400px;
+  right: 650px;
+  bottom: 80px;
 }
 .catat-informasi-pasien {
   color: #03337c;
@@ -242,63 +166,17 @@
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 1950px;
-  top: 1525px;
+  right: 580px;
+  bottom: 40px;
 }
-.catat-rekam-medis {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 750px;
-  top: 1525px;
-}
-.group-222 {
-  position: absolute;
-  inset: 0;
-}
-.ellipse-8 {
-  background: #03337c;
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
-  position: absolute;
-  left: 800px;
-  top: 1400px;
-}
-.open-book {
-  width: 68px;
-  height: 75px;
-  position: absolute;
-  left: 815px;
-  top: 1410px;
-  object-fit: cover;
-}
+
 .hand-with-pen {
   width: 71px;
   height: 75px;
   position: absolute;
-  left: 2010px;
-  top: 1410px;
+  right: 663px;
+  bottom: 90px;
   object-fit: cover;
-}
-.social-container {
-  position: fixed;
-  left: 2500px;
-  top: 1590px;
-  display: flex;
-  gap: 10px;    /* Jarak antar ikon */
-  z-index: 100; /* Agar berada di atas elemen lain jika perlu */
-}
-
-.social-container img {
-  width: 32px;  /* Ukuran ikon */
-  height: 32px; /* Tinggi ikon */
-  cursor: pointer;
 }
 
 .ellipse,
@@ -310,10 +188,10 @@
   border-style: solid;
   border-color: #000000;
   border-width: 1px;
-  width: 70px;
-  height: 68px;
-  position: relative;
+  width: 50px;
+  height: 50px;
+  position: absolute;
   object-fit: cover;
-  left: 2500px;
-  top: -10px;
+  right: 50px;
+  top: 35px;
 }
