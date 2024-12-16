@@ -12,15 +12,10 @@ public class MainControler {
         return "/Pelanggan/SebelumLoginUSer";
     }
 
-    @GetMapping("/register")
-    public String Register (Model model) {
-        return "/Pelanggan/Register";
-    }
-
-    @GetMapping("/login")
-    public String Login (Model model) {
-        return "/Login/Login";
-    }
+    // @GetMapping("/login")
+    // public String Login (Model model) {
+    //     return "/Login/Login";
+    // }
     
     
     

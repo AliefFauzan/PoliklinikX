@@ -99,46 +99,48 @@
           </div>
         </div>
       </div>
-      <div class="group-40">
-        <div class="group-38">
 
-          <div class="group-37">
-            <div class="email">Email</div>
-            <div class="input-wrapper">
-              <input type="email" name="email" placeholder="Enter your email address" th:value="${email}"
-                class="input-field" />
+      <form action="/login" method="POST" class="login-form">
+        <div class="group-40">
+          <div class="group-38">
+
+            <div class="group-37">
+              <div class="email">Username</div>
+              <div class="input-wrapper">
+                <input type="text" name="username" placeholder="Enter your username" class="input-field" required />
+              </div>
+              <div class="rectangle-8"></div>
+              <div class="message-1">
+                <img class="group2" src="/Login/img/group1.svg" />
+              </div>
             </div>
-            <div class="rectangle-8"></div>
-            <div class="message-1">
-              <img class="group2" src="/Login/img/group1.svg" />
+
+            <div class="group-36">
+              <div class="password">Password</div>
+              <div class="input-wrapper-password">
+                <input type="password" name="password" placeholder="Enter your password" th:value="${password}"
+                  class="input-field" />
+              </div>
+              <div class="rectangle-9"></div>
+              <div class="padlock-1">
+                <img class="group3" src="/Login/img/group2.svg" />
+                <img class="group4" src="/Login/img/group3.svg" />
+              </div>
+
             </div>
+
           </div>
-
-          <div class="group-36">
-            <div class="password">Password</div>
-            <div class="input-wrapper-password">
-              <input type="password" name="password" placeholder="Enter your password" th:value="${password}"
-                class="input-field" />
-            </div>
-            <div class="rectangle-9"></div>
-            <div class="padlock-1">
-              <img class="group3" src="/Login/img/group2.svg" />
-              <img class="group4" src="/Login/img/group3.svg" />
+          <div class="group-39">
+            <div class="group-45">
+              <form action="/home" method="post" class="login-form">
+                <div class="rectangle-10"></div>
+                <button type="submit" class="login2">Login</button>
+              </form>
             </div>
 
           </div>
-
         </div>
-        <div class="group-39">
-          <div class="group-45">
-            <form action="/home" method="post" class="login-form">
-              <div class="rectangle-10"></div>
-              <button type="submit" class="login2">Login</button>
-            </form>
-          </div>
-
-        </div>
-      </div>
+      </form>
     </div>
     <img class="a-1-b-4-dbfbcd-8-dadbb-4-dcc-87-f-8-f-26-aa-038-removebg-preview-1"
       src="/Login/img/a-1-b-4-dbfbcd-8-dadbb-4-dcc-87-f-8-f-26-aa-038-removebg-preview-10.png" />
