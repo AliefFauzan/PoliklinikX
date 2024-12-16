@@ -35,6 +35,18 @@
       margin: 0;
       padding: 0;
     }
+
+    .submit-btn {
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    
   </style>
   <title>Document</title>
 </head>
@@ -52,39 +64,32 @@
       </div>
     </div>
     <div class="rectangle-80"></div>
-    <div class="group-49">
 
-      <div class="group-48">
-        <div class="rectangle-34"></div>
-        <!-- Submit Button -->
-        <div class="submit" style="cursor: pointer;" onclick="navigateToJanjiTemu()">
-          Submit
-        </div>
-        <script>
-          function navigateToJanjiTemu() {
-            window.location.href = "http://localhost:8080/janji-temu";
-          }
-        </script>
-
-
+    <form method="post" action="/janjiTemu">
+      <div class="group-43">
+        <div class="rectangle-36"></div>
+        <input type="date" class="date" name="date" required />
       </div>
-    </div>
-    <div class="group-43">
-      <div class="rectangle-36"></div>
-      <div class="date">Date</div>
-    </div>
-    <div class="group-44">
-      <div class="rectangle-37"></div>
-      <div class="time">Time</div>
-    </div>
-    <div class="group-46">
-      <div class="rectangle-38"></div>
-      <div class="doctor">Doctor</div>
-    </div>
-    <div class="group-45">
-      <div class="rectangle-39"></div>
-      <div class="department">Department</div>
-    </div>
+      <div class="group-44">
+        <div class="rectangle-37"></div>
+        <input type="time" class="time" name="time" required />
+      </div>
+      <div class="group-46">
+        <div class="rectangle-38"></div>
+        <div class="doctor">Doctor</div>
+      </div>
+      <div class="group-45">
+        <div class="rectangle-39"></div>
+        <div class="department">Department</div>
+      </div>
+      <div class="group-49">
+        <div class="group-48">
+          <div class="rectangle-34"></div>
+          <!-- Submit Button -->
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
 
   <div class="group-148">

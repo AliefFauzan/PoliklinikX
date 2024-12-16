@@ -1,17 +1,18 @@
 package com.example.demo.Pelanggan;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class JanjiTemu {
-
-    private String date;
-    private String time;
-    private Long doctor;
-
-    // Lombok akan otomatis menghasilkan getter dan setter untuk properti di atas
+    private String noRekamMedis;
+    private int idDokter;
+    private LocalDate tanggal;
+    private LocalTime waktu;
+    private String department;
 }
