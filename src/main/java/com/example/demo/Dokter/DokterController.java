@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import jakarta.activation.DataSource;
+// import jakarta.activation.DataSource;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +27,7 @@ public class DokterController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @AutoWired
+    @Autowired
     DokterRepo repo;
 
 
@@ -112,12 +112,12 @@ public class DokterController {
 
     @GetMapping("/setelahLoginDokter")
     public String setelahLoginDokter() {
-        return "setelahLoginDokter"; // View for dokter dashboard
+        return "/Dokter/SesudahLoginDokter"; // View for dokter dashboard
     }
 
     @GetMapping("/DiagnosisDokter")
     public String diagnosisDokter() {
-        return "DiagnosisDokter"; // View for dokter's diagnosis page
+        return "/Dokter/DiagnosaDokter"; // View for dokter's diagnosis page
     }
 
     @GetMapping("/ResepDokter")
