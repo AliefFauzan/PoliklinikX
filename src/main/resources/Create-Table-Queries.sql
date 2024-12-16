@@ -1,4 +1,6 @@
-drop table if exists Pasien, Perawat, Administrasi, Dokter, Transaksi,JadwalDokter
+
+
+drop table if exists Pasien, Perawat, Administrasi, Dokter, Transaksi, JadwalDokter;
 
 CREATE TABLE Pasien (
     noRekamMedis SERIAL PRIMARY KEY,
@@ -14,7 +16,7 @@ CREATE TABLE Perawat (
     idPegawai SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
-    nama VARCHAR(100) NOT NULL,
+    nama VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Administrasi (
@@ -30,7 +32,7 @@ CREATE TABLE Dokter (
     password VARCHAR(50) NOT NULL,
     nama VARCHAR(100) NOT NULL,
     spesialisasi VARCHAR(100),
-    koutaPasien INT,
+    kuotaPasien INT,
     tarif INT
 );
 
@@ -60,5 +62,4 @@ CREATE TABLE JadwalDokter (
     jamMulai INT,
     jamSelesai INT
 );
-
 

@@ -37,6 +37,62 @@
        margin: 0;
        padding: 0;
    }
+   /* General Form Styling */
+   form {
+       width: 100%;
+       max-width: 500px;
+       margin: 20px auto;
+       padding: 20px;
+       border: 1px solid #ddd;
+       border-radius: 8px;
+       background-color: #f9f9f9;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+   
+   form label {
+       display: block;
+       font-weight: bold;
+       margin-bottom: 8px;
+       color: #333;
+   }
+   
+   form input[type="number"],
+   form select {
+       width: 100%;
+       padding: 10px;
+       margin-bottom: 15px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       font-size: 14px;
+       box-sizing: border-box;
+   }
+   
+   form input[type="number"]:focus,
+   form select:focus {
+       border-color: #4CAF50;
+       outline: none;
+       box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+   }
+   
+   form button {
+       width: 100%;
+       padding: 10px;
+       background-color: #4CAF50;
+       color: white;
+       border: none;
+       border-radius: 4px;
+       font-size: 16px;
+       cursor: pointer;
+   }
+   
+   form button:hover {
+       background-color: #45a049;
+   }
+   
+   /* Aligning Form Elements */
+   form br {
+       margin-bottom: 15px;
+   }
   </style>
   <title>Janji Temu</title>
 </head>
