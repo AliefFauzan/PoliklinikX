@@ -140,7 +140,7 @@ body {
   width: 96px;
   height: 96px;
   position: absolute;
-  right: 670px;
+  left: 400px;
   bottom: 100px ;
   overflow: visible;
 }
@@ -148,7 +148,7 @@ body {
 .mask-group {
   height: auto;
   position: absolute;
-  right: 695px;
+  left: 425px;
   bottom: 130px ;
   overflow: visible;
 }
@@ -162,7 +162,7 @@ body {
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  right: 660px;
+  left: 400px;
   bottom: 70px;
 }
 
@@ -170,7 +170,7 @@ body {
 .group-46 {
   height: auto;
   position: absolute;
-  left: 350px;
+  left: 150px;
   bottom: 100px;
   overflow: visible;
 }
@@ -183,7 +183,39 @@ body {
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 330px;
+  left: 130px;
+  bottom: 70px;
+}
+
+/* obat */
+.ellipse-11 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  right: 680px; /* Posisi lebih kanan */
+  bottom: 100px;  /* Posisi lebih bawah */
+  overflow: visible;
+}
+.vector11 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 700px; /* Posisi lebih kanan */
+  bottom: 125px;  /* Posisi lebih bawah */
+  overflow: visible;
+}
+.obat {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  right: 680px;
   bottom: 70px;
 }
 
@@ -194,15 +226,15 @@ body {
   width: 96px;
   height: 96px;
   position: absolute;
-  right: 350px; /* Posisi lebih kanan */
+  right: 450px; /* Posisi lebih kanan */
   bottom: 100px;  /* Posisi lebih bawah */
   overflow: visible;
 }
 .vector3 {
-  width: 45 px;
-  height: 45 px;
+  width: 45px;
+  height: 45px;
   position: absolute;
-  right: 375px; /* Posisi lebih kanan */
+  right: 475px; /* Posisi lebih kanan */
   bottom: 125px;  /* Posisi lebih bawah */
   overflow: visible;
 }
@@ -215,7 +247,39 @@ body {
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  right: 375px;
+  right: 475px;
+  bottom: 70px;
+}
+
+/* pembayaran */
+.ellipse-10 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  right: 250px; /* Posisi lebih kanan */
+  bottom: 100px;  /* Posisi lebih bawah */
+  overflow: visible;
+}
+.vector10 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  right: 260px; /* Posisi lebih kanan */
+  bottom: 110px;  /* Posisi lebih bawah */
+  overflow: visible;
+}
+.pembayaran {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  right: 230px;
   bottom: 70px;
 }
 
