@@ -76,12 +76,31 @@
       </div>
       <div class="group-46">
         <div class="rectangle-38"></div>
-        <div class="doctor">Doctor</div>
+        <div class="doctor">
+          <label for="doctor">Doctor</label>
+          <select name="doctor" id="doctor" required>
+            <option value="">Select a Doctor</option>
+            <!-- Doctors will be populated here -->
+            <th:block th:each="doctor : ${doctors}">
+              <option th:value="${doctor.idPegawai}" th:text="${doctor.nama}"></option>
+            </th:block>
+          </select>
+        </div>
       </div>
       <div class="group-45">
         <div class="rectangle-39"></div>
-        <div class="department">Department</div>
+        <div class="department">
+          <label for="spesialisasi">Department</label>
+          <select name="spesialisasi" id="spesialisasi" required>
+            <option value="">Select a Department</option>
+            <!-- Specializations will be populated here -->
+            <th:block th:each="specialization : ${specializations}">
+              <option th:value="${specialization}" th:text="${specialization}"></option>
+            </th:block>
+          </select>
+        </div>
       </div>
+      
       <div class="group-49">
         <div class="group-48">
           <div class="rectangle-34"></div>
