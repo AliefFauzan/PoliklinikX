@@ -14,8 +14,8 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Data
 public class PasienModel {
-    Long noRekamMedis;
-    Long dataRekamMedis;
+    int noRekamMedis;
+    String dataRekamMedis;
     String username;
     String password;
     String nama;

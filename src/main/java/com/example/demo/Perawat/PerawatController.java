@@ -67,8 +67,8 @@ public class PerawatController {
 
             return "Perawat/SesudahLoginPerawat";
         }
-
-        return "Perawat/Perawat-Login";
+        return "Perawat/SesudahLoginPerawat";
+        // return "Perawat/Perawat-Login";
     }
 
 
@@ -110,7 +110,7 @@ public class PerawatController {
         return "Perawat/SesudahLoginPerawat";
     }
 
-    @GetMapping("/catatInformasiPasien")
+    @GetMapping("/CatatInformasiPasien")
     public String catatInformasiPasien(Model model) {
         List<TransaksiModel> transaksis = TransaksiRepo.findAllTransaksi();
         model.addAttribute("transaksis", transaksis);
@@ -136,14 +136,14 @@ public class PerawatController {
     //     model.addAttribute("message", "Informasi pasien berhasil disimpan.");
     //     return "Perawat/CatatInformasiPasien";
     // }
-    @PostMapping("/catatInformasiPasienInput")
+    @PostMapping("/CatatInformasiPasienInput")
     public String simpanInformasiPasien(@RequestParam int idTransaksi, @RequestParam String keluhan) {
     TransaksiRepo.updateKeluhan(idTransaksi, keluhan);
      return "Perawat/CatatInformasiPasien"; // Redirect to the updated list view
     }
 
 
-    @GetMapping("/catatRekamMedis")
+    @GetMapping("/CatatRekamMedis")
     public String catatRekamMedis() {
         // Menampilkan halaman catat rekam medis
         return "Perawat/CatatRekamMedis";
@@ -162,7 +162,7 @@ public class PerawatController {
     //     return "Perawat/CatatRekamMedis";
     // }
 
-    @PostMapping("/catatRekamMedisInput")
+    @PostMapping("/CatatRekamMedisInput")
     public String addDataRekamMedis(@RequestParam int noRekamMedis, @RequestParam String dataRekamMedis) {
         PasienRepo.updateDataRekamMedis(noRekamMedis, dataRekamMedis);
         return "redirect:/pasienList"; // Redirect to the updated list view of Pasien

@@ -14,7 +14,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Data
 public class DokterModel {
-    Long idPegawai;
+    int idPegawai;
    
     String username;
     String password;

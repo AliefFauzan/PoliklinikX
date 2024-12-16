@@ -13,7 +13,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Data
 public class PerawatModel {
-    Long idPegawai;
+    int idPegawai;
    
     String username;
     String password;

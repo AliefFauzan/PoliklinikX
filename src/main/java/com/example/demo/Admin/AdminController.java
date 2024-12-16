@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 // import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.Dokter.Dokter;
+// import com.example.demo.Dokter.Dokter;
 import com.example.demo.Dokter.DokterModel;
+import com.example.demo.Dokter.DokterRepo;
 import com.example.demo.JadwalDokter.JadwalDokterModel;
 import com.example.demo.JadwalDokter.JadwalDokterRepo;
 import com.example.demo.Transaksi.TransaksiModel;
@@ -38,6 +39,9 @@ public class AdminController {
 
     @Autowired
     private JadwalDokterRepo jadwalDokterRepo;
+
+    @Autowired
+    private DokterRepo DokterRepo;
 
     @GetMapping("/Register-Admin")
     public String Register (Model model) {
@@ -68,8 +72,8 @@ public class AdminController {
 
             return "Admin/SesudahLoginAdmin";
         }
-
-        return "Admin/Admin-Login";
+        return "Admin/SesudahLoginAdmin";
+        // return "Admin/Admin-Login";
     }
 
 
@@ -100,7 +104,9 @@ public class AdminController {
 
     @GetMapping("/JadwalDokter")
     public String jadwalDokter (Model model) {
-        List<JadwalDokterModel> dokters = jadwalDokterRepo.findAllJadwalDokter();
+        List<JadwalDokterModel> jadwalDokters = jadwalDokterRepo.findAllJadwalDokter();
+        List<DokterModel> dokters = DokterRepo.findAllDokter();
+        model.addAttribute("jadwalDokters", jadwalDokters);
         model.addAttribute("dokters", dokters);
         return "Admin/KelolaJadwalDokter";
     }

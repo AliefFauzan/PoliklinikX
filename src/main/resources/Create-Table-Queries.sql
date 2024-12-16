@@ -1,3 +1,5 @@
+drop table if exists Pasien, Perawat, Administrasi, Dokter, Transaksi,JadwalDokter
+
 CREATE TABLE Pasien (
     noRekamMedis SERIAL PRIMARY KEY,
     dataRekamMedis TEXT NULL,

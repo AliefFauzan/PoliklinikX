@@ -4,106 +4,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" th:href="@{/Perawat/SesudahLoginPerawat.css}">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" th:href="@{/resources/vars.css}">
+  <link rel="stylesheet" th:href="@{/resources/style.css}">
   
   <style>
-   a, button, input, select, h1, h2, h3, h4, h5, * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
+    a,
+    button,
+    input,
+    select,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+        -webkit-font-smoothing: antialiased;
+    }
+    menu, ol, ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
   </style>
-  <title>Poliklinik</title>
+  
+  <title>Beranda Perawat</title>
 </head>
 <body>
   <div class="beranda-perawat">
-    <!-- Gambar Rumah Sakit -->
-    <img
-      class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2"
-      th:src="@{/Perawat/img/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2.png}"
-      alt="Gambar Rumah Sakit"
-    />
+    <img class="mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2"
+         th:src="@{/resources/mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-20.png}" />
+         
+    <div class="rectangle-2"></div>
+    <div class="rectangle-3"></div>
+    <div class="rectangle-4"></div>
+    <div class="poliklinik-x">POLIKLINIK X</div>
     
-    <!-- Nama Poliklinik -->
-    <div class="poliklinik-x" th:text="'POLIKLINIK X'"></div>
-    
-    <!-- Call Center -->
     <div class="rectangle-14"></div>
-    <img class="ic-sharp-call" th:src="@{/Perawat/img/ic-sharp-call0.svg}" alt="Icon Call" />
-    <div class="call-center-081234567890" th:text="'Call Center : 081234567890'"></div>
-    <img class="ic-sharp-call2" th:src="@{/Perawat/img/ic-sharp-call1.svg}" alt="Icon Call" />
-    <div class="customer-call-center-022-82558000" th:text="'Customer Call Center : 022-82558000'"></div>
-    
-    <!-- Social Media -->
-    <div class="social-container">    
-      <div class="follow-us" th:text="'Follow us :'"></div>
-      <img class="vector" th:src="@{/Perawat/img/vector0.svg}" alt="Facebook" />
-      <img class="vector2" th:src="@{/Perawat/img/vector1.svg}" alt="Instagram" />
-      <img class="group" th:src="@{/Perawat/img/group0.svg}" alt="Twitter" />
-      <img class="mdi-linkedin" th:src="@{/Perawat/img/mdi-linkedin0.svg}" alt="LinkedIn" />
+    <img class="ic-sharp-call" th:src="@{/resources/ic-sharp-call0.svg}" />
+    <div class="call-center-081234567890">Call Center : 081234567890</div>
+    <img class="ic-sharp-call2" th:src="@{/resources/ic-sharp-call1.svg}" />
+    <div class="customer-call-center-022-82558000">
+      Customer Call Center : 022-82558000
     </div>
     
+    <div class="follow-us">Follow us :</div>
+    <img class="vector" th:src="@{/resources/vector0.svg}" />
+    <img class="vector2" th:src="@{/resources/vector1.svg}" />
+    <div class="prime-twitter">
+      <img class="group" th:src="@{/resources/group0.svg}" />
+    </div>
+    <img class="mdi-linkedin" th:src="@{/resources/mdi-linkedin0.svg}" />
     <div class="ellipse-1"></div>
+    
     <div class="group-2">
       <div class="rectangle-15"></div>
       <div class="rectangle-16"></div>
     </div>
-
-    <img class="ellipse" th:src="@{/Perawat/img/account.png}" alt="Ikon Akun" 
-     style="cursor: pointer;" onclick="confirmLogout()" />
-
-    <script>
-      function confirmLogout() {
-        const userConfirmed = confirm("Apakah anda ingin log out?");
-        if (userConfirmed) {
-          // Arahkan ke halaman logout
-          window.location.href = "http://localhost:8080/sebelumLoginPerawat";
-        }
-      }
-    </script>
     
-    <!-- Navigasi -->
+    <div class="search-bar">
+      <div class="content">
+        <div class="magnifyingglass">
+          <div class="magnifyingglass2">􀊫</div>
+        </div>
+        <div class="placeholder-label">Search</div>
+      </div>
+    </div>
+    
     <div class="rectangle-20"></div>
+    <img class="ellipse" th:src="@{/resources/ellipse0.png}" />
     <div class="rectangle-17"></div>
-    <div class="beranda" th:text="'Beranda'"></div>
+    <div class="beranda">Beranda</div>
+    <div class="ellipse-2"></div>
     
-    
-    <div class="ellipse-2" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()"></div>
-    <div class="catat-informasi-pasien" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()">
-      Catat Informasi Pasien
+    <div class="catat-informasi-pasien">
+      <a th:href="@{/CatatInformasiPasien}">Catat Informasi Pasien</a>
     </div>
-    <img class="hand-with-pen" th:src="@{/Perawat/img/hand-with-pen0.png}" alt="Ikon Pena" style="cursor: pointer;" onclick="navigateToInformasiPasien()" />
-    <script>
-      function navigateToInformasiPasien() {
-        window.location.href = "http://localhost:8080/catatInformasiPasien";
-      }
-    </script>
-
-    <div class="catat-rekam-medis" style="cursor: pointer; color: inherit;" onclick="navigateToInformasiPasien()">
-      Catat Rekam Medis
+    <div class="data-pasien">
+      <a th:href="@{/CatatRekamMedis}">Data Rekam Medis Pasien</a>
     </div>
-    <div class="ellipse-8" style="cursor: pointer;" onclick="navigateToRekamMedis()">
-    </div>
-    <img class="open-book" th:src="@{/Perawat/img/open-book0.png}" alt="Ikon Buku" style="cursor: pointer;" onclick="navigateToRekamMedis()" />
-    <script>
-      function navigateToRekamMedis() {
-        window.location.href = "http://localhost:8080/catatRekamMedis";
-      }
-    </script>
     
-    
-    
-    <!-- Ikon -->
+    <div class="ellipse-8"></div>
+    <img class="open-book" th:src="@{/resources/open-book0.png}" />
+    <img class="hand-with-pen" th:src="@{/resources/hand-with-pen0.png}" />
   </div>
 </body>
 </html>

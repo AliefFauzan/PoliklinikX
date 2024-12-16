@@ -12,22 +12,22 @@ import org.springframework.stereotype.Component;
 
 import com.example.demo.Transaksi.TransaksiModel;
 
-// @Data
+@Data
 // @Getter
 // @Setter
 // @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 @NoArgsConstructor  // Add this
 @AllArgsConstructor
-@Component
+//@Component
 public class TransaksiModel {
-    Long idTransaksi;
-    Long noRekamMedis;
+    int idTransaksi;
+    int noRekamMedis;
     String hari;
     String keluhan;
     String metodePembayaran;
     String hasilDiagnosa;
     String hasilPreskripsi;
-    String namDokter;
+    String namaDokter;
     int jam;
     int tarif;
 

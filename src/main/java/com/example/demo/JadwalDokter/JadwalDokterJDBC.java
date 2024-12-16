@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.Dokter.Dokter;
+//import com.example.demo.Dokter.Dokter;
 import com.example.demo.Dokter.DokterModel;
 
 
@@ -19,11 +19,11 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Override
-    public List<Dokter> getAllDokters() {
-        String sql = "SELECT * FROM Dokter";
-        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Dokter.class));
-    }
+    // @Override
+    // public List<DokterModel> getAllDokters() {
+    //     String sql = "SELECT * FROM Dokter";
+    //     return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Dokter.class));
+    // }
 
     @Override
     public void addJadwalDokter(int idDokter, String hari, int jamMulai, int jamSelesai) {
@@ -45,7 +45,7 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
 
     private DokterModel mapRowToDokter(ResultSet rSet, int rowNum)throws SQLException{
         return new DokterModel(
-            rSet.getLong("idPegawai"),
+            rSet.getInt("idPegawai"),
             rSet.getString("username"),
             rSet.getString("password"),
             rSet.getString("nama"),
@@ -79,8 +79,8 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
 
     private JadwalDokterModel mapRowToJadwalDokter(ResultSet rSet, int rowNum)throws SQLException{
         return new JadwalDokterModel(
-            rSet.getLong("idJadwal"),
-            rSet.getLong("idDokter"),
+            rSet.getInt("idJadwal"),
+            rSet.getInt("idDokter"),
             rSet.getString("nama"),
             rSet.getString("spesialisasi"),
             rSet.getString("hari"),

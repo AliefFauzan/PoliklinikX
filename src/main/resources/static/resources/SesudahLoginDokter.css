@@ -1,0 +1,390 @@
+.beranda-dokter,
+.beranda-dokter * {
+  box-sizing: border-box;
+}
+.beranda-dokter {
+  background: #ffffff;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.mount-elizabeth-novena-rekomendasi-rumah-sakit-singapura-kavacare-2 {
+  width: 1445px;
+  height: 962px;
+  position: absolute;
+  left: -5px;
+  top: 0px;
+  object-fit: cover;
+}
+.group-1 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-2 {
+  background: #03337c;
+  width: 50.78px;
+  height: 6.03px;
+  position: absolute;
+  left: 33px;
+  top: 41px;
+}
+.rectangle-3 {
+  background: #03337c;
+  width: 50.78px;
+  height: 6.03px;
+  position: absolute;
+  left: 33px;
+  top: 51.33px;
+}
+.rectangle-4 {
+  background: #03337c;
+  width: 50.78px;
+  height: 6.03px;
+  position: absolute;
+  left: 33px;
+  top: 60.8px;
+}
+.poliklinik-x {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 40px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 251px;
+  top: 47px;
+}
+.rectangle-14 {
+  background: #ddf1f0;
+  width: 1440px;
+  height: 62px;
+  position: absolute;
+  left: 0px;
+  top: 962px;
+}
+.ic-sharp-call {
+  width: 24px;
+  height: 23px;
+  position: absolute;
+  left: 28px;
+  top: 982px;
+  overflow: visible;
+}
+.call-center-081234567890 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: absolute;
+  left: 64px;
+  top: 982px;
+  width: 280px;
+  height: 23px;
+}
+.ic-sharp-call2 {
+  width: 24px;
+  height: 23px;
+  position: absolute;
+  left: 375px;
+  top: 982px;
+  overflow: visible;
+}
+.customer-call-center-022-82558000 {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: absolute;
+  left: 411px;
+  top: 982px;
+  width: 382px;
+  height: 23px;
+}
+.follow-us {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: absolute;
+  left: 1173px;
+  top: 982px;
+  width: 105px;
+  height: 23px;
+}
+.vector {
+  width: 1.39%;
+  height: 1.86%;
+  position: absolute;
+  right: 6.39%;
+  left: 92.22%;
+  bottom: 2.05%;
+  top: 96.09%;
+  overflow: visible;
+}
+.vector2 {
+  width: 1.39%;
+  height: 1.86%;
+  position: absolute;
+  right: 8.82%;
+  left: 89.79%;
+  bottom: 2.05%;
+  top: 96.09%;
+  overflow: visible;
+}
+.prime-twitter {
+  width: 20px;
+  height: 19px;
+  position: absolute;
+  left: 1363px;
+  top: 984px;
+  overflow: hidden;
+}
+.group {
+  height: auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.mdi-linkedin {
+  width: 20px;
+  height: 19px;
+  position: absolute;
+  left: 1392px;
+  top: 984px;
+  overflow: visible;
+}
+.group-3 {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-1 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  left: 129px;
+  top: 16px;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.group-2 {
+  width: 50.84px;
+  height: 50.84px;
+  position: static;
+}
+.rectangle-15 {
+  background: #ffffff;
+  width: 60.37px;
+  height: 11.53px;
+  position: absolute;
+  left: 141.94px;
+  top: 71.62px;
+  transform-origin: 0 0;
+  transform: rotate(-45deg) scale(1, 1);
+}
+.rectangle-16 {
+  background: #ffffff;
+  width: 60.37px;
+  height: 11.53px;
+  position: absolute;
+  left: 150.09px;
+  top: 28.94px;
+  transform-origin: 0 0;
+  transform: rotate(45deg) scale(1, 1);
+}
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 290px;
+  height: 34px;
+  position: absolute;
+  left: 1021px;
+  top: 41px;
+}
+.content {
+  background: var(--system-materials-sm-l-thick, rgba(250, 250, 250, 0.93));
+  border-radius: 10px;
+  opacity: 0.8;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 36px;
+  position: relative;
+}
+.magnifyingglass {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.magnifyingglass2 {
+  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
+  text-align: center;
+  font-family: "SfProDisplay-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 500;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder-label {
+  color: var(--label-colors-lc-l-secondary, rgba(60, 60, 67, 0.6));
+  text-align: left;
+  font-family: var(
+    --default-size-body-font-family,
+    "SfProText-Regular",
+    sans-serif
+  );
+  font-size: var(--default-size-body-font-size, 17px);
+  line-height: var(--default-size-body-line-height, 22px);
+  letter-spacing: var(--default-size-body-letter-spacing, -0.41px);
+  font-weight: var(--default-size-body-font-weight, 400);
+  position: relative;
+  flex: 1;
+}
+.rectangle-20 {
+  background: linear-gradient(
+    0deg,
+    rgba(228, 245, 255, 0) 0%,
+    rgba(228, 245, 255, 1) 100%
+  );
+  width: 1445px;
+  height: 236px;
+  position: absolute;
+  left: -5px;
+  top: 779px;
+}
+.ellipse {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 70px;
+  height: 68px;
+  position: absolute;
+  left: 1344px;
+  top: 24px;
+  object-fit: cover;
+}
+.group-48 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-17 {
+  background: rgba(217, 217, 217, 0.7);
+  border-radius: 36px;
+  width: 119px;
+  height: 29px;
+  position: absolute;
+  left: 562px;
+  top: 44px;
+}
+.beranda {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 563px;
+  top: 46px;
+  width: 115px;
+  height: 19px;
+}
+.group-46 {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-2 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  left: 968px;
+  top: 804px;
+}
+.catat-obat {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 962px;
+  top: 915px;
+}
+.catat-diagnosa-pasien {
+  color: #03337c;
+  text-align: center;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  position: absolute;
+  left: 285px;
+  top: 915px;
+}
+.group-222 {
+  position: absolute;
+  inset: 0;
+}
+.ellipse-8 {
+  background: #03337c;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  left: 354px;
+  top: 804px;
+}
+.hand-with-pen {
+  width: 70px;
+  height: 77px;
+  position: absolute;
+  left: 367px;
+  top: 812px;
+  object-fit: cover;
+}
+.pill {
+  width: 73px;
+  height: 78px;
+  position: absolute;
+  left: 980px;
+  top: 813px;
+  object-fit: cover;
+}

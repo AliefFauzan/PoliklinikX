@@ -33,7 +33,7 @@ public class PerawatJDBC implements PerawatRepo {
     private PerawatModel mapRowToPerawat(ResultSet rSet, int rowNum)throws SQLException {
         return new PerawatModel(
      
-            rSet.getLong("idPegawai"),
+            rSet.getInt("idPegawai"),
             rSet.getString("username"),
             rSet.getString("password"),
             rSet.getString("nama")
@@ -70,7 +70,7 @@ public class PerawatJDBC implements PerawatRepo {
         }
     
         // Extract the numeric part of the ID, increment it, and ensure the result starts with "1"
-        long newNoRekamMedis = Long.parseLong(lastNoRekamMedis) + 1;
+        int newNoRekamMedis = Integer.parseInt(lastNoRekamMedis) + 1;
     
         return String.valueOf(newNoRekamMedis);
     }
@@ -79,11 +79,11 @@ public class PerawatJDBC implements PerawatRepo {
     @Override
     public boolean login(String username, String password) {
         String sql = "select * from Perawat WHERE username LIKE ?";
-        List<String> Perawat = jdbcTemplate.queryForList(sql, String.class, username);
+        List<PerawatModel> Perawat = jdbcTemplate.query(sql, this::mapRowToPerawat, username);
         // List<PerawatModel> Perawat = jdbcTemplate.query(sql, this::mapRowToPerawat, username);
      
         if(!Perawat.isEmpty()){
-            String passwordFromQ = Perawat.get(0);
+            String passwordFromQ = Perawat.get(0).getPassword().trim();
         
             if(service.getPasswordEncoder().matches(password, passwordFromQ)){
                 return true;
@@ -95,8 +95,8 @@ public class PerawatJDBC implements PerawatRepo {
 
     private PasienModel mapRowToPasien(ResultSet rSet, int rowNum)throws SQLException {
         return new PasienModel(
-            rSet.getLong("noRekamMedis"),
-            rSet.getLong("dataRekamMedis"),
+            rSet.getInt("noRekamMedis"),
+            rSet.getString("dataRekamMedis"),
             rSet.getString("username"),
             rSet.getString("password"),
             rSet.getString("nama"),
@@ -105,7 +105,7 @@ public class PerawatJDBC implements PerawatRepo {
         );
     }
 
-    private PasienModel getPasienByNoRekamMedis(long noRekamMedis) {
+    private PasienModel getPasienByNoRekamMedis(int noRekamMedis) {
         String sql = "SELECT * FROM pasien WHERE noRekamMedis = ?";
         List<PasienModel> pasien = jdbcTemplate.query(sql, this::mapRowToPasien, noRekamMedis);
         return pasien.isEmpty() ? null : pasien.get(0);

@@ -208,8 +208,8 @@ public List<TransaksiModel> findAllTransaksi() {
 
 private TransaksiModel mapRowToTransaksi(ResultSet rSet, int rowNum) throws SQLException {
     return new TransaksiModel(
-        rSet.getLong("idTransaksi"),
-        rSet.getLong("noRekamMedis"),
+        rSet.getInt("idTransaksi"),
+        rSet.getInt("noRekamMedis"),
         // rSet.getString("pasienNama"),
         rSet.getString("hari"),
         rSet.getString("keluhan"),

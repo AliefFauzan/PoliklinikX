@@ -30,8 +30,8 @@ public class PasienJDBC implements PasienRepo {
 
     private PasienModel mapRowToPasien(ResultSet rSet, int rowNum)throws SQLException {
         return new PasienModel(
-            rSet.getLong("noRekamMedis"),
-            rSet.getLong("dataRekamMedis"),
+            rSet.getInt("noRekamMedis"),
+            rSet.getString("dataRekamMedis"),
             rSet.getString("username"),
             rSet.getString("password"),
             rSet.getString("nama"),

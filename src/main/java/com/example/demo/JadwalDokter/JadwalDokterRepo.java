@@ -1,11 +1,11 @@
 package com.example.demo.JadwalDokter;
 
-import com.example.demo.Dokter.Dokter;
+// import com.example.demo.Dokter.Dokter;
 import com.example.demo.Dokter.DokterModel;
 import java.util.List;
 
 public interface JadwalDokterRepo {
-    List<Dokter> getAllDokters();
+    // List<Dokter> getAllDokters();
     public void addJadwalDokter(int idDokter, String hari, int jamMulai, int jamSelesai);
 
     public void updateJadwalDokter(int idJadwal, String hari, int jamMulai, int jamSelesai);

@@ -13,8 +13,8 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(makeFinal = false)
 @AllArgsConstructor
 public class JadwalDokterModel {
-    Long idJadwal;
-    Long idDokter;
+    int idJadwal;
+    int idDokter;
     String nama; //dokter
     String spesialisasi;
     String hari;

@@ -31,7 +31,7 @@ public class DokterJDBC implements DokterRepo {
     private DokterModel mapRowToDokter(ResultSet rSet, int rowNum)throws SQLException {
         return new DokterModel(
      
-            rSet.getLong("idPegawai"),
+            rSet.getInt("idPegawai"),
             rSet.getString("username"),
             rSet.getString("password"),
             rSet.getString("nama"),
@@ -40,6 +40,11 @@ public class DokterJDBC implements DokterRepo {
             rSet.getInt("tarif")
   
         );
+    }
+
+    public List<DokterModel> findAllDokter() {
+        String sql = "SELECT idPegawai, username, password, nama, spesialisasi, kuotaPasien, tarif FROM Dokter"; // SQL query to select all data from the Dokter table
+        return jdbcTemplate.query(sql, this::mapRowToDokter); // Use the DokterRowMapper to map the rows
     }
 
     @Override
@@ -71,7 +76,7 @@ public class DokterJDBC implements DokterRepo {
         }
     
         // Extract the numeric part of the ID, increment it, and ensure the result starts with "1"
-        long newNoRekamMedis = Long.parseLong(lastNoRekamMedis) + 1;
+        int newNoRekamMedis = Integer.parseInt(lastNoRekamMedis) + 1;
     
         return String.valueOf(newNoRekamMedis);
     }
@@ -80,11 +85,11 @@ public class DokterJDBC implements DokterRepo {
     @Override
     public boolean login(String username, String password) {
         String sql = "select * from Dokter WHERE username LIKE ?";
-        List<String> Dokter = jdbcTemplate.queryForList(sql, String.class, username);
+        List<DokterModel> Dokter = jdbcTemplate.query(sql, this::mapRowToDokter, username);
         // List<DokterModel> Dokter = jdbcTemplate.query(sql, this::mapRowToDokter, username);
      
         if(!Dokter.isEmpty()){
-            String passwordFromQ = Dokter.get(0);
+            String passwordFromQ = Dokter.get(0).getPassword().trim();
         
             if(service.getPasswordEncoder().matches(password, passwordFromQ)){
                 return true;

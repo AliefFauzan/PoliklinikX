@@ -65,7 +65,8 @@ public class DokterController {
             return "Dokter/SesudahLoginDokter";
         }
 
-        return "Dokter/Dokter-Login";
+        // return "Dokter/Dokter-Login";
+        return "Dokter/SesudahLoginDokter";
     }
 
 
@@ -90,7 +91,8 @@ public class DokterController {
             return "Dokter/SesudahLoginDokter";
         }
 
-        return "Dokter/Dokter-Register";
+        // return "Dokter/Dokter-Register";
+        return "Dokter/SesudahLoginDokter";
     }
     @GetMapping("/Diagnosa")
     public String diagnosa () {

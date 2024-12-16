@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.PenggunaService;
+import com.example.demo.Dokter.DokterModel;
 
 @Repository
 public class AdminJDBC implements AdminRepo {
@@ -23,7 +24,7 @@ public class AdminJDBC implements AdminRepo {
     @Override
     public Optional<AdminModel> validateUser (String username, String password) {
         password = service.getPasswordEncoder().encode(password);
-        String sql = "select * from Admin WHERE username LIKE ? AND password LIKE ? ";
+        String sql = "select * from Administrasi WHERE username LIKE ? AND password LIKE ? ";
         List<AdminModel> Admin = jdbcTemplate.query(sql, this::mapRowToAdmin ,username,password); 
         return Admin.size() == 0 ? Optional.empty() : Optional.of(Admin.get(0));
     }
@@ -31,7 +32,7 @@ public class AdminJDBC implements AdminRepo {
     private AdminModel mapRowToAdmin(ResultSet rSet, int rowNum)throws SQLException {
         return new AdminModel(
      
-            rSet.getLong("idPegawai"),
+            rSet.getInt("idPegawai"),
             rSet.getString("username"),
             rSet.getString("password"),
             rSet.getString("nama")
@@ -39,9 +40,10 @@ public class AdminJDBC implements AdminRepo {
         );
     }
 
+
     @Override
     public boolean register(String username, String nama, String password, String confPassword) {
-        String sql = "select * from Admin where username LIKE ?";
+        String sql = "select * from Administrasi where username LIKE ?";
         List <AdminModel> Admin = jdbcTemplate.query(sql,this::mapRowToAdmin, username);
         boolean isAvailable = Admin.size() > 0 ? false : true;
 
@@ -51,7 +53,7 @@ public class AdminJDBC implements AdminRepo {
             if (samePass) {
                 String idPegawai = generateIDAdmin();
                 password = service.getPasswordEncoder().encode(password);
-                sql = "insert into Admin (idPegawai, username, password, nama) VALUES (?,?,?,?) ";
+                sql = "insert into Admininistrasi (idPegawai, username, password, nama) VALUES (?,?,?,?) ";
                 jdbcTemplate.update(idPegawai, username, password, nama);
                 isSuccess=true;
             }    
@@ -60,7 +62,7 @@ public class AdminJDBC implements AdminRepo {
     }
 
     public String generateIDAdmin() {
-        String sql = "SELECT MAX(idPegawai) FROM Admin";
+        String sql = "SELECT MAX(idPegawai) FROM Administrasi";
         String lastNoRekamMedis = jdbcTemplate.queryForObject(sql, String.class);
     
         if (lastNoRekamMedis == null || lastNoRekamMedis.isEmpty()) {
@@ -68,7 +70,7 @@ public class AdminJDBC implements AdminRepo {
         }
     
         // Extract the numeric part of the ID, increment it, and ensure the result starts with "1"
-        long newNoRekamMedis = Long.parseLong(lastNoRekamMedis) + 1;
+        int newNoRekamMedis = Integer.parseInt(lastNoRekamMedis) + 1;
     
         return String.valueOf(newNoRekamMedis);
     }
@@ -76,12 +78,12 @@ public class AdminJDBC implements AdminRepo {
 
     @Override
     public boolean login(String username, String password) {
-        String sql = "select * from Admin WHERE username LIKE ?";
-        List<String> Admin = jdbcTemplate.queryForList(sql, String.class, username);
+        String sql = "select * from Administrasi WHERE username LIKE ?";
+        List<AdminModel> Admin = jdbcTemplate.query(sql, this::mapRowToAdmin, username);
         // List<AdminModel> Admin = jdbcTemplate.query(sql, this::mapRowToAdmin, username);
      
         if(!Admin.isEmpty()){
-            String passwordFromQ = Admin.get(0);
+            String passwordFromQ = Admin.get(0).getPassword().trim();
         
             if(service.getPasswordEncoder().matches(password, passwordFromQ)){
                 return true;
