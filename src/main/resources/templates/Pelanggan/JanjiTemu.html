@@ -191,7 +191,7 @@ form br {
               <th>Jam Selesai</th>
           </tr>
           <tr th:each="jadwal : ${jadwalDokters}">
-              <td th:text="${jadwal.dokter.nama}"></td>
+              <td th:text="${jadwal.nama}"></td>
               <td th:text="${jadwal.hari}"></td>
               <td th:text="${jadwal.jamMulai}"></td>
               <td th:text="${jadwal.jamSelesai}"></td>

@@ -110,8 +110,8 @@ public class PasienController {
      // Map to Janji Temu page
      @GetMapping("/janji-temu")
      public String janjiTemuPage(Model model) {
-        List<JadwalDokterModel> dokters = JadwalDokterRepo.findAllJadwalDokter();
-        model.addAttribute("dokters", dokters);
+        List<JadwalDokterModel> jadwalDokters = JadwalDokterRepo.findAllJadwalDokter();
+        model.addAttribute("jadwalDokters", jadwalDokters);
          return "Pelanggan/JanjiTemu";
      }
 
