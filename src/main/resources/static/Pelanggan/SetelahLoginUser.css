@@ -133,22 +133,6 @@ body {
   transform: rotate(45deg) scale(1, 1);
 }
 
-.content {
-  background: var(--system-materials-sm-l-thick, rgba(250, 250, 250, 0.93));
-  border-radius: 10px;
-  opacity: 0.8;
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: center;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 36px;
-  position: relative;
-}
-
 /*janji temu */
 .ellipse-3 {
   background: #03337c;
@@ -260,31 +244,6 @@ body {
   top: 44px;
 }
 
-/* layanan */
-.layanan {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 670px;
-  top: 46px;
-  width: 103px;
-  height: 21px;
-}
-.rectangle-18 {
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 36px;
-  width: 119px;
-  height: 29px;
-  position: absolute;
-  left: 660px;
-  top: 44px;
-}
-
 /* informasi */
 .informasi {
   color: #03337c;
@@ -295,7 +254,7 @@ body {
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 800px;
+  left: 670px;
   top: 46px;
   width: 122px;
   height: 24px;
@@ -306,7 +265,7 @@ body {
   width: 119px;
   height: 29px;
   position: absolute;
-  left: 800px;
+  left: 670px;
   top: 44px;
 }
 
@@ -326,41 +285,3 @@ body {
   right: 50px;
   top: 35px;
 }
-
-/* pilih dokter
-.ellipse-8 {
-  background: #03337c;
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
-  position: absolute;
-  left: 180px;
-  bottom: 100px;
-  overflow: visible;
-}
-.pilih-dokter {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 180px ;
-  bottom: 55px;
-}
-
-element.style {
-  cursor: pointer;
-  color: inherit;
-}
-
-.vector4 {
-  width: 3.26%;
-  height: 4.59%;
-  position: absolute;
-  left: 205px;
-  bottom: 120px;
-  overflow: visible;
-} */

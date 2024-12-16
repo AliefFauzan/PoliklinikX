@@ -37,16 +37,14 @@
     <img class="ic-sharp-call2" th:src="@{/Pelanggan/img/ic-sharp-call1.svg}" alt="Icon Call" />
     <div class="customer-call-center-022-82558000" th:text="'Customer Call Center : 022-82558000'"></div>
     
+    <!-- logo X -->
     <div class="ellipse-1"></div>
     <div class="group-2">
       <div class="rectangle-15"></div>
       <div class="rectangle-16"></div>
     </div>
 
-    <div class="rectangle-17"></div>
-    <div class="rectangle-18"></div>
-    <div class="rectangle-19"></div>
-
+    <!-- ikon account -->
     <img class="ellipse" th:src="@{/Perawat/img/account.png}" alt="Ikon Akun" 
      style="cursor: pointer;" onclick="confirmLogout()" />
 
@@ -60,14 +58,8 @@
       }
     </script>
 
-    <div class="ellipse-3"></div>
-    <img class="group-46" src="/Pelanggan/img/group-460.svg" />
-    <img class="mask-group" src="/Pelanggan/img/mask-group0.svg" />
-    <div class="ellipse-7"></div>
-    <img class="vector3" src="/Pelanggan/img/vector2.svg" />
-
-
-    <!-- Navigasi -->
+    <!-- beranda -->
+    <div class="rectangle-17" onclick="navigateToBeranda()"></div>
     <div class="beranda" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
       Beranda
     </div>
@@ -76,23 +68,9 @@
         window.location.href = "http://localhost:8080/home";
       }
     </script>
-    <div class="jadwal-dokter" th:text="'Jadwal Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToJadwalDokter()">
-      Jadwal Dokter
-    </div>
-    <script>
-      function navigateToJadwalDokter() {
-        window.location.href = "http://localhost:8080/jadwal-dokter";
-      }
-    </script>
 
-    <div class="layanan" th:text="'Layanan'" style="cursor: pointer; color: inherit;" onclick="navigateToLayanan()">
-      Layanan
-    </div>
-    <script>
-      function navigateToLayanan() {
-        window.location.href = "http://localhost:8080/layanan";
-      }
-    </script>
+    <!-- informasi -->
+    <div class="rectangle-19" onclick="navigateToInformasi()"></div>
     <div class="informasi" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
       Informasi
     </div>
@@ -102,34 +80,40 @@
       }
     </script>
 
+    <!-- jadwal dokter -->
+    <div class="jadwal-dokter" th:text="'Jadwal Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToJadwalDokter()">
+      Jadwal Dokter
+    </div>
+    <img class="group-46" src="/Pelanggan/img/group-460.svg" onclick="navigateToJadwalDokter()"/>
+    <script>
+      function navigateToJadwalDokter() {
+        window.location.href = "http://localhost:8080/jadwal-dokter";
+      }
+    </script>
+
+    <!-- janji temu -->
+    <div class="ellipse-3" onclick="navigateToJanjiTemu()"></div>
     <div class="janji-temu" th:text="'Janji Temu'" style="cursor: pointer; color: inherit;" onclick="navigateToJanjiTemu()">
       Janji Temu
     </div>
+    <img class="mask-group" src="/Pelanggan/img/mask-group0.svg" onclick="navigateToJanjiTemu()"/>
     <script>
       function navigateToJanjiTemu() {
         window.location.href = "http://localhost:8080/janji-temu";
       }
     </script>
-    <div class="faq" th:text="'FAQ'" style="cursor: pointer; color: inherit;" onclick="navigateToFaq()">
-      FAQ
+
+    <!-- FAQs -->
+    <div class="faq" th:text="'FAQs'" style="cursor: pointer; color: inherit;" onclick="navigateToFaq()">
+      FAQs
     </div>
+    <div class="ellipse-7" onclick="navigateToFaq()"></div>
+    <img class="vector3" src="/Pelanggan/img/vector2.svg" onclick="navigateToFaq()"/>
     <script>
       function navigateToFaq() {
-        window.location.href = "http://localhost:8080/faq";
+        window.location.href = "http://localhost:8080/SebelumFAQ";
       }
     </script>
-    <div class="line-1"></div>
-    <!-- Pilih dokter
-    <div class="ellipse-8"></div>  
-    <div class="pilih-dokter" th:text="'Pilih Dokter'" style="cursor: pointer; color: inherit;" onclick="navigateToPilihDokter()">
-      Pilih Dokter
-    </div>
-    <script>
-      function navigateToPilihDokter() {
-        window.location.href = "http://localhost:8080/janji-temu";
-      }
-    </script>
-    <img class="vector4" src="/Pelanggan/img/vector3.svg" /> -->
   </div>
 </body>
 </html>
