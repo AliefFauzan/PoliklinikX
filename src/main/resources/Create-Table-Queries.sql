@@ -1,11 +1,17 @@
+DROP TABLE Perawat;
+DROP TABLE Dokter;
+DROP TABLE Transaksi;
+DROP TABLE Administrasi;
+DROP TABLE JadwalDokter;
+DROP TABLE Pasien;
+
 CREATE TABLE Pasien (
-    noRekamMedis SERIAL PRIMARY KEY,
-    dataRekamMedis TEXT NULL,
+    noRekamMedis VARCHAR(255) PRIMARY KEY,
+    dataRekamMedis VARCHAR(255) NULL,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     nama VARCHAR(100) NOT NULL,
-    tanggalLahir DATE NOT NULL,
-    alamat TEXT
+    roles VARCHAR(50)
 );
 
 CREATE TABLE Perawat (
@@ -13,13 +19,15 @@ CREATE TABLE Perawat (
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
     nama VARCHAR(100) NOT NULL,
+    roles VARCHAR(50)
 );
 
 CREATE TABLE Administrasi (
     idPegawai SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
-    nama VARCHAR(100) NOT NULL
+    nama VARCHAR(100) NOT NULL,
+    roles VARCHAR(50)
 );
 
 CREATE TABLE Dokter (
@@ -30,22 +38,21 @@ CREATE TABLE Dokter (
     spesialisasi VARCHAR(100),
     koutaPasien INT,
     jadwalPraktek DATE,
-    tarif INT
+    tarif INT,
+    roles VARCHAR(50)
 );
 
 
 CREATE TABLE Transaksi (
     idTransaksi SERIAL PRIMARY KEY,
-    noRekamMedis INT REFERENCES Pasien(noRekamMedis) ON DELETE CASCADE,
+    noRekamMedis VARCHAR(255) REFERENCES Pasien(noRekamMedis) ON DELETE CASCADE,
     tanggal DATE NOT NULL,
     keluhan TEXT,
     metodePembayaran VARCHAR(50),
     hasilDiagnosa TEXT,
     hasilPreskripsi TEXT,
     namaDokter TEXT,
-    jam, TIME NOT NULL,
-
-
+    jam TIME NOT NULL
 );
 
 
@@ -56,5 +63,4 @@ CREATE TABLE JadwalDokter (
     jamMulai TIME NOT NULL,
     jamSelesai TIME NOT NULL
 );
-
 
