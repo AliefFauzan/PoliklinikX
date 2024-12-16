@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" th:href="@{/Pelanggan/Informasi.css}">
+  <link rel="stylesheet" th:href="@{/Pelanggan/SebelumInformasi.css}">
 
   <style>
    a,
@@ -40,16 +40,27 @@
       <div class="rectangle-76"></div>
       <img class="rectangle-77" th:src="@{Pelanggan/img/rectangle-770.png}" />
       <div class="page-title">
-        <div class="rectangle-79"></div>
+        <div class="rectangle-20"></div>
         <div class="poliklinik-x">POLIKLINIK X</div>
+
+        <!-- login & register -->
+        <div class="line-1"></div>
+        <div class="login">
+          <a th:href="@{/login}">Login</a>
+        </div>
+
+        <div class="register">
+          <a th:href="@{/register}">Register</a>
+        </div>
+
         <div class="ellipse-1"></div>
         <div class="group-2">
           <div class="rectangle-15"></div>
           <div class="rectangle-16"></div>
         </div>
-        <div class="rectangle-80"></div>
-        <div class="rectangle-82"></div>
-        <!-- Navigasi -->
+
+        <!-- beranda -->
+        <div class="rectangle-17" onclick="navigateToBeranda()"></div>
         <div class="beranda" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
           Beranda
         </div>
@@ -59,8 +70,9 @@
           }
         </script>
 
-        </script>
-        <div class="informasi2" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+        <!-- informasi -->
+        <div class="rectangle-19" onclick="navigateToInformasi()"></div>
+        <div class="informasi" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
           Informasi
         </div>
         <script>
@@ -70,35 +82,30 @@
         </script>
 
         
-        <img class="ellipse" th:src="@{Pelanggan/img/Ellipse.png}" />
 
       <div class="rectangle-53"></div>
-      <div class="beranda-informasi">Beranda &gt; Informasi</div>
+      <div class="beranda-informasi">Beranda/Informasi</div>
     </div>
     <div
       class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-pellentesque-leo-nec-aenean-maecenas-odio-tempus-id-mauris-elementum-est-egestas-tincidunt-pellentesque-tempus-massa-rhoncus-velit-nec-lorem-purus-est-facilisis-quam-lorem-amet-nunc-lectus-lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-pellentesque-leo-nec-aenean-maecenas-odio-tempus-id-mauris-elementum-est-es-tincidunt-pellentesque-tempus-massa-rhoncus-velit-nec-lorem-purus-est-facilisis-quam-lorem-amet-nunc-lectus"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque
-      leo nec aenean maecenas odio tempus id. Mauris, elementum est egestas
-      tincidunt pellentesque. Tempus massa rhoncus velit nec. Lorem purus est
-      facilisis quam lorem amet, nunc lectus. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Sed pellentesque leo nec aenean maecenas odio
-      tempus id. Mauris, elementum est es tincidunt pellentesque. Tempus massa
-      rhoncus velit nec. Lorem purus est facilisis quam lorem amet, nunc lectus.
+    Poliklinik X adalah sebuah pusat layanan kesehatan yang berdedikasi untuk menyediakan pelayanan medis berkualitas bagi masyarakat. 
+    Poliklinik ini menawarkan berbagai layanan, mulai dari pendaftaran pasien, konsultasi dengan dokter spesialis, pemeriksaan kesehatan rutin, hingga pencatatan pembayaran secara terintegrasi. 
+    Poliklinik X bertujuan untuk memberikan pengalaman pelayanan kesehatan yang cepat, efisien, dan nyaman. 
+    Poliklinik ini juga berkomitmen untuk menjadi mitra kesehatan yang terpercaya bagi pasien, sekaligus memastikan layanan yang terjangkau bagi seluruh lapisan masyarakat.
       <br />
       <br />
     </div>
     <div class="group-70">
       <div class="item">
-        <img class="mask-group" th:src="@{Pelanggan/img/mask-group0.svg}" />
+        <img class="mask-group" th:src="@{Pelanggan/img/mask-group3.svg}" />
         <div class="the-medical-experts-carefully">
-          The Medical Experts Carefully...
+          Tenaga Medis Profesional
         </div>
         <div
           class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-enim-fames-quam-pellentesque-interdum-purus-senectus-feugiat-elit-c"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim
-          fames quam pellentesque interdum purus senectus feugiat elit.c.
+        Didukung oleh dokter umum dan spesialis yang berpengalaman serta tenaga medis yang ramah, Poliklinik X memastikan kualitas pelayanan kesehatan yang terpercaya.
         </div>
         <div class="rectangle-39"></div>
         <div class="read-more">READ MORE</div>
@@ -106,13 +113,12 @@
       <div class="item">
         <img class="mask-group2" th:src="@{Pelanggan/img/mask-group1.svg}" />
         <div class="the-medical-experts-carefully2">
-          The Medical Experts Carefully...
+          Fasilitas Modern
         </div>
         <div
           class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-enim-fames-quam-pellentesque-interdum-purus-senectus-feugiat-elit-c2"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim
-          fames quam pellentesque interdum purus senectus feugiat elit.c.
+        Menggunakan peralatan medis terkini untuk mendukung diagnosis dan pengobatan yang akurat, memberikan rasa aman dan nyaman bagi pasien.
         </div>
         <div class="rectangle-392"></div>
         <div class="read-more2">READ MORE</div>
@@ -120,13 +126,12 @@
       <div class="item">
         <img class="mask-group3" th:src="@{Pelanggan/img/mask-group2.svg}" />
         <div class="the-medical-experts-carefully3">
-          The Medical Experts Carefully...
+          Proses Cepat dan Efisien
         </div>
         <div
           class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-enim-fames-quam-pellentesque-interdum-purus-senectus-feugiat-elit-c3"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim
-          fames quam pellentesque interdum purus senectus feugiat elit.c.
+        Dengan sistem antrean digital dan pendaftaran online, Poliklinik X meminimalkan waktu tunggu pasien, memberikan pengalaman yang lebih praktis.
         </div>
         <div class="rectangle-393"></div>
         <div class="read-more3">READ MORE</div>
@@ -134,43 +139,40 @@
     </div>
     <div class="group-71">
       <div class="item">
-        <img class="mask-group4" th:src="@{Pelanggan/img/mask-group3.svg}" />
+        <img class="mask-group4" th:src="@{Pelanggan/img/male-doctor-listening-heartbeat-breathing-600nw-1135474871.webp}" />
         <div class="the-medical-experts-carefully4">
-          The Medical Experts Carefully...
+          Layanan Terjangkau
         </div>
         <div
           class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-enim-fames-quam-pellentesque-interdum-purus-senectus-feugiat-elit-c4"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim
-          fames quam pellentesque interdum purus senectus feugiat elit.c.
+        Menawarkan berbagai layanan medis dengan biaya yang bersahabat, sehingga dapat diakses oleh berbagai lapisan masyarakat tanpa mengurangi kualitas pelayanan.
         </div>
         <div class="rectangle-394"></div>
         <div class="read-more4">READ MORE</div>
       </div>
       <div class="item">
-        <img class="mask-group5" th:src="@{Pelanggan/img/mask-group4.svg}" />
+        <img class="mask-group5" th:src="@{Pelanggan/img/c831403f43c14868b02513c806142661.webp}" />
         <div class="the-medical-experts-carefully5">
-          The Medical Experts Carefully...
+          Layanan Terintegrasi
         </div>
         <div
           class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-enim-fames-quam-pellentesque-interdum-purus-senectus-feugiat-elit-c5"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim
-          fames quam pellentesque interdum purus senectus feugiat elit.c.
+        Poliklinik X menyediakan sistem layanan terintegrasi mulai dari pendaftaran online, konsultasi, hingga pembayaran, sehingga mempermudah pasien dalam mengakses layanan kesehatan.
         </div>
         <div class="rectangle-395"></div>
         <div class="read-more5">READ MORE</div>
       </div>
       <div class="item">
-        <img class="mask-group6" th:src="@{Pelanggan/img/mask-group5.svg}" />
+        <img class="mask-group6" th:src="@{Pelanggan/img/images.jpeg}" />
         <div class="the-medical-experts-carefully6">
-          The Medical Experts Carefully...
+          Pilihan Layanan Spesialisasi yang Lengkap
         </div>
         <div
           class="lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-fusce-enim-fames-quam-pellentesque-interdum-purus-senectus-feugiat-elit-c6"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim
-          fames quam pellentesque interdum purus senectus feugiat elit.c.
+        Menyediakan berbagai layanan spesialis seperti penyakit dalam, bedah, ortopedi, saraf, untuk memastikan kebutuhan kesehatan pasien terpenuhi di satu tempat.
         </div>
         <div class="rectangle-396"></div>
         <div class="read-more6">READ MORE</div>
@@ -183,9 +185,7 @@
         <div class="rectangle-42"></div>
         <img class="dun-011-1" th:src="@{Pelanggan/img/dun-011-10.png}" />
         <div class="mencari-profesional-terpercaya-kesehatan-medis">
-          Mencari profesional &amp; terpercaya
-          <br />
-          kesehatan medis?
+          Mencari profesional &amp; terpercaya untuk kesehatan medis anda?
         </div>
         <div class="jangan-ragu-untuk-menghubungi-kami">
           Jangan Ragu Untuk Menghubungi Kami.
@@ -196,7 +196,7 @@
         </div>
         <script>
           function navigateToJanjiTemu() {
-            window.location.href = "http://localhost:8080/janji-temu";
+            window.location.href = "http://localhost:8080/login";
           }
         </script>
       </div>
@@ -206,7 +206,7 @@
           <div class="_081234567890">081234567890</div>
           <div class="call-us-now">Call us Now</div>
           <div class="rectangle-50"></div>
-          <img class="group" th:src="@{Pelanggan/img/group0.svg}" alt="Group 0" />
+          <img class="group" th:src="@{/Pelanggan/img/ic-sharp-call1.svg}" alt="Group 0" />
         </div>
         <div class="group-18">
           <div class="rectangle-492"></div>
@@ -215,7 +215,7 @@
           </div>
           <div class="drop-us-an-email">Drop us an email</div>
           <div class="rectangle-502"></div>
-          <img class="group2" th:src="@{Pelanggan/img/group1.svg}" alt="Group 1" />
+          <img class="group2" th:src="@{Pelanggan/img/mail.svg}" alt="Group 1" />
         </div>
         <div class="group-19">
           <div class="rectangle-493"></div>
@@ -225,9 +225,6 @@
           <img class="group3" th:src="@{Pelanggan/img/group2.svg}" alt="Group 2" />
         </div>
       </div>
-    </div>
-    <div class="copyright">
-      <div class="rectangle-52"></div>
     </div>
   </div>
 </body>

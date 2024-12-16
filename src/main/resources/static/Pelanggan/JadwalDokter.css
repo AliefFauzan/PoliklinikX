@@ -14,34 +14,34 @@
     --default-size-body-font-style: normal;
   }
   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 
 .jadwal-dokter {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    min-width: 100vw;
   }
   
   .jadwal-dokter .div {
     background-color: #ffffff;
     overflow: hidden;
-    width: 1440px;
+    min-width: 100vw;
     height: 1024px;
     position: relative;
   }
   
-  .jadwal-dokter .overlap {
-    position: absolute;
-    width: 1445px;
-    height: 461px;
-    top: 0;
-    left: -3px;
-  }
+
   
   .jadwal-dokter .rectangle {
     position: absolute;
-    width: 1445px;
+    min-width: 100vw;
     height: 236px;
     top: 0;
     left: 0;
@@ -69,6 +69,55 @@
     background-color: #02337c;
   }
   
+  .beranda {
+    color: #03337c;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    position: absolute;
+    left: 520px;
+    top: 46px;
+    width: 115px;
+    height: 19px;
+  }
+
+  .rectangle-7 {
+    background: rgba(217, 217, 217, 0.7);
+    border-radius: 36px;
+    width: 119px;
+    height: 29px;
+    position: absolute;
+    left: 520px;
+    top: 44px;
+  }
+
+  .informasi {
+    color: #03337c;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    position: absolute;
+    left: 670px;
+    top: 46px;
+    width: 122px;
+    height: 24px;
+  }
+  .rectangle-9 {
+    background: rgba(217, 217, 217, 0.7);
+    border-radius: 36px;
+    width: 119px;
+    height: 29px;
+    position: absolute;
+    left: 670px;
+    top: 44px;
+  }
+
   .jadwal-dokter .rectangle-3 {
     position: absolute;
     width: 51px;
@@ -125,118 +174,7 @@
     height: 51px;
   }
   
-  .jadwal-dokter .rectangle-5 {
-    position: absolute;
-    width: 60px;
-    height: 12px;
-    top: 20px;
-    left: -5px;
-    background-color: #ffffff;
-    transform: rotate(-45deg);
-  }
-  
-  .jadwal-dokter .rectangle-6 {
-    position: absolute;
-    width: 60px;
-    height: 12px;
-    top: 20px;
-    left: -5px;
-    background-color: #ffffff;
-    transform: rotate(45deg);
-  }
-  
-  .jadwal-dokter .rectangle-7 {
-    position: absolute;
-    width: 119px;
-    height: 29px;
-    top: 44px;
-    left: 565px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .jadwal-dokter .rectangle-8 {
-    position: absolute;
-    width: 119px;
-    height: 29px;
-    top: 44px;
-    left: 712px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .jadwal-dokter .rectangle-9 {
-    position: absolute;
-    width: 119px;
-    height: 29px;
-    top: 44px;
-    left: 869px;
-    background-color: #d9d9d9b2;
-    border-radius: 36px;
-  }
-  
-  .jadwal-dokter .search-bar {
-    display: flex;
-    flex-direction: column;
-    width: 290px;
-    height: 34px;
-    align-items: flex-start;
-    gap: 10px;
-    position: absolute;
-    top: 41px;
-    left: 1024px;
-  }
-  
-  .jadwal-dokter .content {
-    display: flex;
-    height: 36px;
-    align-items: center;
-    padding: 8px;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
-    margin-bottom: -2.00px;
-    background-color: var(--system-materialssm-l-thick);
-    border-radius: 10px;
-    opacity: 0.8;
-  }
-  
-  .jadwal-dokter .magnifyingglass {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    margin-top: -4.00px;
-    margin-bottom: -4.00px;
-  }
-  
-  .jadwal-dokter .magnifyingglass-2 {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    top: -1px;
-    left: 0;
-    font-family: "SF Pro Display-Medium", Helvetica;
-    font-weight: 500;
-    color: var(--label-colorslc-l-secondary);
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: 50px;
-    white-space: nowrap;
-  }
-  
-  .jadwal-dokter .placeholder-label {
-    position: relative;
-    flex: 1;
-    margin-top: -2.00px;
-    font-family: var(--default-size-body-font-family);
-    font-weight: var(--default-size-body-font-weight);
-    color: var(--label-colorslc-l-secondary);
-    font-size: var(--default-size-body-font-size);
-    letter-spacing: var(--default-size-body-letter-spacing);
-    line-height: var(--default-size-body-line-height);
-    font-style: var(--default-size-body-font-style);
-  }
+
   
   .jadwal-dokter .text-wrapper-2 {
     position: absolute;
@@ -267,6 +205,42 @@
     line-height: 24px;
     white-space: nowrap;
   }
+
+  .ellipse-1 {
+    background: #03337c;
+    border-radius: 50%;
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    left: 60px;
+    top: 16px;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .group-2 {
+    width: 50.84px;
+    height: 50.84px;
+    position: static;
+  }
+  .rectangle-15 {
+    background: #ffffff;
+    width: 60.37px;
+    height: 11.53px;
+    position: absolute;
+    left: 72px;
+    top: 71.62px;
+    transform-origin: 0 0;
+    transform: rotate(-45deg) scale(1, 1);
+  }
+  .rectangle-16 {
+    background: #ffffff;
+    width: 60.37px;
+    height: 11.53px;
+    position: absolute;
+    left: 82px;
+    top: 28.94px;
+    transform-origin: 0 0;
+    transform: rotate(45deg) scale(1, 1);
+  }
   
   .jadwal-dokter .text-wrapper-4 {
     position: absolute;
@@ -282,19 +256,57 @@
     line-height: 24px;
     white-space: nowrap;
   }
-  
-  .jadwal-dokter .ellipse {
+
+  .rectangle-20 {
+    background: linear-gradient(
+      0deg,
+      rgba(228, 245, 255, 0) 0%,
+      rgba(228, 245, 255, 1) 100%
+    );
+    width: 100vw;
+    height: 130px;
     position: absolute;
-    width: 64px;
-    height: 64px;
-    top: 28px;
-    left: 1349px;
+    left: 0;
+    bottom: 75px;
+  }
+  .group-1 {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .poliklinik-x {
+    color: #03337c;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    position: absolute;
+    left: 200px;
+    top: 47px;
+  }
+  
+  .ellipse,
+  .ellipse * {
+    box-sizing: border-box;
+  }
+  .ellipse {
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
     object-fit: cover;
+    right: 50px;
+    top: 35px;
   }
   
   .jadwal-dokter .sub-head {
     position: absolute;
-    width: 1440px;
+    min-width: 100vw;
     height: 314px;
     top: 147px;
     left: 5px;
@@ -304,10 +316,46 @@
     position: relative;
     height: 314px;
   }
+
+  .ellipse-1 {
+    background: #03337c;
+    border-radius: 50%;
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    left: 60px;
+    top: 16px;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .group-2 {
+    width: 50.84px;
+    height: 50.84px;
+    position: static;
+  }
+  .rectangle-15 {
+    background: #ffffff;
+    width: 60.37px;
+    height: 11.53px;
+    position: absolute;
+    left: 72px;
+    top: 71.62px;
+    transform-origin: 0 0;
+    transform: rotate(-45deg) scale(1, 1);
+  }
+  .rectangle-16 {
+    background: #ffffff;
+    width: 60.37px;
+    height: 11.53px;
+    position: absolute;
+    left: 82px;
+    top: 28.94px;
+    transform-origin: 0 0;
+    transform: rotate(45deg) scale(1, 1);
+  }
   
   .jadwal-dokter .img {
     position: absolute;
-    width: 1438px;
+    min-width: 100vw;
     height: 314px;
     top: 0;
     left: 0;
@@ -315,7 +363,7 @@
   
   .jadwal-dokter .rectangle-10 {
     position: absolute;
-    width: 1440px;
+    min-width: 100vw;
     height: 314px;
     top: 0;
     left: 0;
@@ -324,7 +372,7 @@
   
   .jadwal-dokter .div-wrapper {
     position: absolute;
-    width: 1440px;
+    min-width: 100vw;
     height: 314px;
     top: 0;
     left: 0;
@@ -332,7 +380,7 @@
   
   .jadwal-dokter .frame {
     position: absolute;
-    width: 1440px;
+    min-width: 100vw;
     height: 314px;
     top: 0;
     left: 0;

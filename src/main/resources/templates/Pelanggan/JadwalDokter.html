@@ -4,40 +4,56 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="../../static/Pelanggan/JadwalDokter.css" />
+    <link rel="stylesheet" href="Pelanggan/JadwalDokter.css" />
 </head>
 <body>
     <div class="jadwal-dokter">
         <div class="div">
             <div class="overlap">
                 <div class="rectangle"></div>
-                <div class="group">
-                    <div class="rectangle-2"></div>
-                    <div class="rectangle-3"></div>
-                    <div class="rectangle-4"></div>
+                <div class="poliklinik-x">POLIKLINIK X</div>
+                
+                <!-- logo X -->
+                <div class="ellipse-1"></div>
+                <div class="group-2">
+                <div class="rectangle-15"></div>
+                <div class="rectangle-16"></div>
                 </div>
-                <div class="text-wrapper">POLIKLINIK X</div>
-                <div class="group-wrapper">
-                    <div class="overlap-group-wrapper">
-                        <div class="overlap-group">
-                            <div class="rectangle-5"></div>
-                            <div class="rectangle-6"></div>
-                        </div>
-                    </div>
+
+                <div class="rectangle-7" onclick="navigateToBeranda()"></div>
+                <div class="beranda" th:text="'Beranda'" style="cursor: pointer; color: inherit;" onclick="navigateToBeranda()">
+                    Beranda
+                  </div>
+                  <script>
+                    function navigateToBeranda() {
+                      window.location.href = "http://localhost:8080/home";
+                    }
+                  </script>
+                
+                <div class="rectangle-9" onclick="navigateToInformasi()"></div>
+                <div class="informasi" th:text="'Informasi'" style="cursor: pointer; color: inherit;" onclick="navigateToInformasi()">
+                Informasi
                 </div>
-                <div class="rectangle-7"></div>
-                <div class="rectangle-8"></div>
-                <div class="rectangle-9"></div>
-                <div class="search-bar">
-                    <div class="content">
-                        <div class="magnifyingglass"><div class="magnifyingglass-2">􀊫</div></div>
-                        <div class="placeholder-label">Search</div>
-                    </div>
-                </div>
-                <div class="text-wrapper-2">Beranda</div>
-                <div class="text-wrapper-3">Layanan</div>
-                <div class="text-wrapper-4">Informasi</div>
-                <img class="ellipse" th:src="@{/img/ellipse.png}" />
+                <script>
+                function navigateToInformasi() {
+                    window.location.href = "http://localhost:8080/informasi";
+                }
+                </script>
+        
+                <!-- ikon account -->
+                <img class="ellipse" th:src="@{/Perawat/img/account.png}" alt="Ikon Akun" 
+                style="cursor: pointer;" onclick="confirmLogout()" />
+
+                <script>
+                    function confirmLogout() {
+                    const userConfirmed = confirm("Apakah anda ingin log out?");
+                    if (userConfirmed) {
+                        // Arahkan ke halaman logout
+                        window.location.href = "http://localhost:8080/";
+                    }
+                    }
+                </script>
+
                 <div class="sub-head">
                     <div class="overlap-group-2">
                         <img class="img" th:src="@{/img/rectangle-3.png}" />

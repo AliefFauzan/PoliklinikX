@@ -260,31 +260,6 @@ body {
   top: 44px;
 }
 
-/* layanan */
-.layanan {
-  color: #03337c;
-  text-align: center;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  position: absolute;
-  left: 670px;
-  top: 46px;
-  width: 103px;
-  height: 21px;
-}
-.rectangle-18 {
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 36px;
-  width: 119px;
-  height: 29px;
-  position: absolute;
-  left: 660px;
-  top: 44px;
-}
-
 /* informasi */
 .informasi {
   color: #03337c;
@@ -295,7 +270,7 @@ body {
   letter-spacing: 0.5px;
   font-weight: 700;
   position: absolute;
-  left: 800px;
+  left: 670px;
   top: 46px;
   width: 122px;
   height: 24px;
@@ -306,7 +281,7 @@ body {
   width: 119px;
   height: 29px;
   position: absolute;
-  left: 800px;
+  left: 670px;
   top: 44px;
 }
 
