@@ -157,8 +157,8 @@
       <form th:action="@{/add-pembayaran}" method="post">
         <label for="idTransaksi">Pilih Transaksi:</label>
         <select id="idTransaksi" name="idTransaksi">
-            <option th:each="transaksi : ${transactions}" th:value="${transaksi.idTransaksi}" 
-                    th:text="${transaksi.noRekamMedis} + ' - ' + ${transaksi.hari}"></option>
+            <option th:each="transaksi : ${transaksi}" th:value="${transaksi.idTransaksi}" 
+                    th:text="${transaksi.namaDokter} + ' - ' + ${transaksi.hari} + ' tarif: '+ ${transaksi.tarif}"></option>
         </select><br>
     
         <label for="metodePembayaran">Metode Pembayaran:</label>

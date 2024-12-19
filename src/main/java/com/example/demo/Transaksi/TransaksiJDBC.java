@@ -96,9 +96,9 @@ public class TransaksiJDBC implements TransaksiRepo {
     //     return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Pasien.class));
     // 
     @Override
-    public void addTransaction(int noRekamMedis, String namaDokter, String hari, int jam, int tarif) {
-        String sql = "INSERT INTO Transaksi(noRekamMedis, namaDokter, hari, jam, tarif) VALUES (?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, noRekamMedis, namaDokter, hari, jam, tarif);
+    public void addTransaction(int noRekamMedis, String namaDokter, String hari, int jam) {
+        String sql = "INSERT INTO Transaksi(noRekamMedis, namaDokter, hari, jam) VALUES (?, ?, ?, ?)";
+        jdbcTemplate.update(sql, noRekamMedis, namaDokter, hari, jam);
     }
 
 
@@ -223,7 +223,56 @@ private TransaksiModel mapRowToTransaksi(ResultSet rSet, int rowNum) throws SQLE
 }
 
 
+@Override
+public List<TransaksiModel> findTransaksiByUsername(String username) {
+    String sql = """
+        SELECT 
+            t.idTransaksi, 
+            t.noRekamMedis, 
+            t.hari, 
+            t.keluhan, 
+            t.metodePembayaran, 
+            t.hasilDiagnosa, 
+            t.hasilPreskripsi, 
+            t.namaDokter, 
+            t.jam, 
+            t.tarif
+        FROM 
+            Transaksi t
+        JOIN 
+            Pasien p ON t.noRekamMedis = p.noRekamMedis
+        WHERE 
+            p.username = ?
+    """;
 
+    return jdbcTemplate.query(sql, this::mapRowToTransaksi, username);
+}
+
+
+@Override
+public List<TransaksiModel> findTransaksiByDokterUsername(String username) {
+    String sql = """
+        SELECT 
+            t.idTransaksi, 
+            t.noRekamMedis, 
+            t.hari, 
+            t.keluhan, 
+            t.metodePembayaran, 
+            t.hasilDiagnosa, 
+            t.hasilPreskripsi, 
+            t.namaDokter, 
+            t.jam, 
+            t.tarif
+        FROM 
+            Transaksi t
+        JOIN 
+            Dokter d ON t.namaDokter = d.nama
+        WHERE 
+            d.username = ?
+    """;
+
+    return jdbcTemplate.query(sql, this::mapRowToTransaksi, username);
+}
 
 
 

@@ -13,12 +13,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.example.demo.Dokter.DokterModel;
+import com.example.demo.Dokter.DokterRepo;
 import com.example.demo.JadwalDokter.JadwalDokterModel;
 import com.example.demo.JadwalDokter.JadwalDokterRepo;
 import com.example.demo.Transaksi.TransaksiModel;
 import com.example.demo.Transaksi.TransaksiRepo;
+
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 //import com.lighthouse.project.Other.PenggunaRepo;
+
 
 // import groovyjarjarantlr4.v4.parse.ANTLRParser.parserRule_return;
 import jakarta.servlet.http.HttpSession;
@@ -34,6 +38,13 @@ public class PasienController {
 
     @Autowired
     private JadwalDokterRepo JadwalDokterRepo;
+
+    @Autowired
+    private PasienRepo PasienRepo;
+    @Autowired
+    private DokterRepo DokterRepo;
+
+   
 
     @GetMapping("/Register-Pasien")
     public String Register (Model model) {
@@ -92,7 +103,7 @@ public class PasienController {
 
             return "Pelanggan/SetelahLoginUser";
         }
-
+        httpSession.setAttribute("username", username);
 
         // return "Pelanggan/Pelanggan-login";
         return "Pelanggan/SetelahLoginUser";
@@ -109,17 +120,43 @@ public class PasienController {
 
      // Map to Janji Temu page
      @GetMapping("/janji-temu")
-     public String janjiTemuPage(Model model) {
+     public String janjiTemuPage(HttpSession session, Model model) {
         List<JadwalDokterModel> jadwalDokters = JadwalDokterRepo.findAllJadwalDokter();
+        List<PasienModel> pasienList = PasienRepo.findAllPasien();
+        String pasien = (String) session.getAttribute("username");
+        if (pasien == null) {
+            return "redirect:/login"; // Redirect to login page if no username in session
+        }
+        List<PasienModel> pasienByUsername = PasienRepo.findPasienByUsername(pasien);
+        model.addAttribute("pasienByUsername", pasienByUsername);
         model.addAttribute("jadwalDokters", jadwalDokters);
          return "Pelanggan/JanjiTemu";
      }
 
      @PostMapping("/Pilih-Dokter")
-     public String addTransaction(@RequestParam int noRekamMedis, @RequestParam String namaDokter, 
-                                 @RequestParam String hari, @RequestParam int jam, 
-                                 @RequestParam int tarif) {
-        TransaksiRepo.addTransaction(noRekamMedis, namaDokter, hari, jam, tarif);
+     public String addTransaction(@RequestParam("nama") String nama, 
+     @RequestParam("namaDokter") String namaDokter, 
+     @RequestParam("jam") int jam, @RequestParam("hari") String hari,
+     HttpSession session, 
+     Model model) {
+        List<PasienModel> pasienList = PasienRepo.findPasienByNama(nama);
+        // List<JadwalDokterModel> jadwalDokterList = JadwalDokterRepo.findJadwalDokterByNama(namaDokter);
+
+    // Check if the patient exists
+    if (pasienList == null || pasienList.isEmpty()) {
+        model.addAttribute("error", "Patient not found.");
+        return "Pelanggan/ErrorPage"; // Redirect to an error page or handle appropriately
+    }
+
+    // Assuming you expect only one result, retrieve the first patient
+    PasienModel pasien = pasienList.get(0);
+    // DokterModel dokter = dokterList.get(0);
+
+    // Get the medical record number
+    int rekamMedis = pasien.getNoRekamMedis();
+    
+
+        TransaksiRepo.addTransaction (rekamMedis, namaDokter, hari, jam);
         return "Pelanggan/JanjiTemu";
     }
         
@@ -158,8 +195,12 @@ public class PasienController {
 
      // Map to Pembayaran page
     @GetMapping("/pembayaran")
-    public String pembayaranPage(Model model) {
+    public String pembayaranPage(Model model, HttpSession session) {
+        String pasien = (String) session.getAttribute("username");
+        List<TransaksiModel> transaksi = TransaksiRepo.findTransaksiByUsername(pasien);
         
+        model.addAttribute("transaksi", transaksi);
+
         return "Pelanggan/Pembayaran";
     }
 

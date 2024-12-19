@@ -156,7 +156,7 @@
       <form th:action="@{/CatatRekamMedisInput}" method="post">
         <label for="noRekamMedis">Pilih Pasien:</label>
         <select id="noRekamMedis" name="noRekamMedis">
-            <option th:each="pasien : ${pasiens}" th:value="${pasien.noRekamMedis}" 
+            <option th:each="pasien : ${pasien}" th:value="${pasien.noRekamMedis}" 
                     th:text="${pasien.nama} + ' - ' + ${pasien.tanggalLahir}"></option>
         </select><br>
     

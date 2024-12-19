@@ -22,8 +22,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.Transaksi.TransaksiModel;
 import com.example.demo.Transaksi.TransaksiRepo;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -64,9 +66,10 @@ public class DokterController {
 
             return "Dokter/SesudahLoginDokter";
         }
-
+         httpSession.setAttribute("username", username);
         // return "Dokter/Dokter-Login";
         return "Dokter/SesudahLoginDokter";
+        
     }
 
 
@@ -95,34 +98,35 @@ public class DokterController {
         return "Dokter/SesudahLoginDokter";
     }
     @GetMapping("/Diagnosa")
-    public String diagnosa () {
+    public String diagnosa (Model model, HttpSession session) {
+        String dokter = (String) session.getAttribute("username");
+        if (dokter == null) {
+            return "redirect:/login"; // Redirect to login page if no username in session
+        }
+        List<TransaksiModel> transaksi = TransaksiRepo.findTransaksiByDokterUsername(dokter);
+        model.addAttribute("transaksi", transaksi);
         return "Dokter/DiagnosaDokter";
     }
 
 
-//     @PostMapping("/add-diagnosa")
-//     public ResponseEntity<Map<String, String>> addDiagnosa(@RequestBody Map<String, Object> data) {
-//     int idTransaksi = Integer.parseInt(data.get("idTransaksi").toString());
-//     String hasilDiagnosa = data.get("hasilDiagnosa").toString();
 
-//     // Call the service method to update hasilDiagnosa
-//     boolean isSuccessful = transaksiRepo.addDiagnosa(idTransaksi, hasilDiagnosa);
 
-//     // Return the appropriate response
-//     return isSuccessful
-//         ? ResponseEntity.ok(Map.of("message", "Hasil diagnosa updated successfully."))
-//         : ResponseEntity.status(500).body(Map.of("error", "Failed to update hasil diagnosa."));
-// }
-
-    @PostMapping("/add-diagnosa")
-    public String addHasilDiagnosa(@RequestParam int idTransaksi, @RequestParam String hasilDiagnosa) {
+    @PostMapping("/add-diagnosa") 
+    public String addHasilDiagnosa(@RequestParam("idTransaksi") int idTransaksi, @RequestParam("hasilDiagnosa") String hasilDiagnosa) {
         TransaksiRepo.updateHasilDiagnosa(idTransaksi, hasilDiagnosa);
         return "Dokter/DiagnosaDokter"; // Redirect to the updated list view
     }
 
 
     @GetMapping("/Obat")
-    public String obat () {
+    public String obat (HttpSession session, Model model) {
+        String dokter = (String) session.getAttribute("username");
+        if (dokter == null) {
+            return "redirect:/login"; // Redirect to login page if no username in session
+        }
+        List<TransaksiModel> transaksi = TransaksiRepo.findTransaksiByDokterUsername(dokter);
+        model.addAttribute("transaksi", transaksi);
+        
         return "Dokter/ResepDokter";
     }
 

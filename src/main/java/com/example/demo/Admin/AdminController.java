@@ -112,9 +112,9 @@ public class AdminController {
     }
 
     @PostMapping("/Add-Jadwal-To-Form")
-    public String addJadwalDokter(@RequestParam int idDokter, @RequestParam String hari, @RequestParam String nama, @RequestParam String spesialisasi,
+    public String addJadwalDokter(@RequestParam int idDokter, @RequestParam String hari, @RequestParam String spesialisasi,
                                    @RequestParam int jamMulai, @RequestParam int jamSelesai) {
-        jadwalDokterRepo.addJadwalDokter(idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai);
+        jadwalDokterRepo.addJadwalDokter(idDokter, spesialisasi, hari, jamMulai, jamSelesai);
         return "Admin/KelolaJadwalDokter"; // Redirect to the updated list view
     }
 

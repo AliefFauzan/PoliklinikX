@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 // import groovyjarjarantlr4.v4.parse.ANTLRParser.parserRule_return;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.example.demo.Pasien.PasienModel;
 
 import com.example.demo.Pasien.PasienRepo;
 import com.example.demo.Transaksi.TransaksiModel;
@@ -112,6 +113,7 @@ public class PerawatController {
 
     @GetMapping("/CatatInformasiPasien")
     public String catatInformasiPasien(Model model) {
+        
         List<TransaksiModel> transaksis = TransaksiRepo.findAllTransaksi();
         model.addAttribute("transaksis", transaksis);
         // Menampilkan halaman catat informasi pasien
@@ -144,7 +146,9 @@ public class PerawatController {
 
 
     @GetMapping("/CatatRekamMedis")
-    public String catatRekamMedis() {
+    public String catatRekamMedis(Model model) {
+        List<PasienModel> pasien = PasienRepo.findAllPasien();
+        model.addAttribute("pasien", pasien);
         // Menampilkan halaman catat rekam medis
         return "Perawat/CatatRekamMedis";
     }
@@ -165,6 +169,6 @@ public class PerawatController {
     @PostMapping("/CatatRekamMedisInput")
     public String addDataRekamMedis(@RequestParam int noRekamMedis, @RequestParam String dataRekamMedis) {
         PasienRepo.updateDataRekamMedis(noRekamMedis, dataRekamMedis);
-        return "redirect:/pasienList"; // Redirect to the updated list view of Pasien
+        return "Perawat/CatatRekamMedis"; // Redirect to the updated list view of Pasien
     }
 }

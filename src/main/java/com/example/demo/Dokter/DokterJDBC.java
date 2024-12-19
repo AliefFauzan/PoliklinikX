@@ -41,11 +41,20 @@ public class DokterJDBC implements DokterRepo {
   
         );
     }
-
+    
+    @Override
     public List<DokterModel> findAllDokter() {
         String sql = "SELECT idPegawai, username, password, nama, spesialisasi, kuotaPasien, tarif FROM Dokter"; // SQL query to select all data from the Dokter table
         return jdbcTemplate.query(sql, this::mapRowToDokter); // Use the DokterRowMapper to map the rows
     }
+
+    // Method to find a DokterModel by nama
+    @Override
+    public List<DokterModel> findDokterByNama(String nama) {
+    String sql = "SELECT idPegawai, username, password, nama, spesialisasi, kuotaPasien, tarif FROM Dokter WHERE nama = ?"; // SQL query to find a doctor by nama
+    return jdbcTemplate.query(sql, this::mapRowToDokter, nama); // Use queryForObject to retrieve a single result
+}
+
 
     @Override
     public boolean register(String username, String nama, String password, String confPassword) {
@@ -98,6 +107,12 @@ public class DokterJDBC implements DokterRepo {
 
         return  false ;
     }
+
+    @Override
+    public List<DokterModel> findDokterById(int idPegawai) {
+    String sql = "SELECT idPegawai, username, password, spesialisasi, kuotaPasien, tarif FROM Dokter WHERE idPegawai = ?"; // SQL query to find a doctor by nama
+    return jdbcTemplate.query(sql, this::mapRowToDokter, idPegawai); // Use queryForObject to retrieve a single result
+}
 
 
 }

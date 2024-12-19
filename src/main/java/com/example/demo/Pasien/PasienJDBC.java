@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.PenggunaService;
+import com.example.demo.Dokter.DokterModel;
 
 @Repository
 public class PasienJDBC implements PasienRepo {
@@ -39,6 +40,26 @@ public class PasienJDBC implements PasienRepo {
             rSet.getString("alamat")
         );
     }
+
+    @Override
+    public List<PasienModel> findAllPasien() {
+        String sql = "SELECT * FROM Pasien";
+        return jdbcTemplate.query(sql, this::mapRowToPasien);
+    }
+
+    @Override
+public List<PasienModel> findPasienByUsername(String username) {
+    String sql = "SELECT * FROM Pasien WHERE username = ?";
+    return jdbcTemplate.query(sql, this::mapRowToPasien, username);
+}
+
+@Override
+public List<PasienModel> findPasienByNama(String nama) {
+    String sql = "SELECT * FROM Pasien WHERE nama = ?";
+    return jdbcTemplate.query(sql, this::mapRowToPasien, nama);
+}
+
+
 
     @Override
     public boolean register(String username, String nama, String password, String confPassword, String tanggalLahir, String alamat) {

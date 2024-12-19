@@ -159,16 +159,31 @@
       <h3>Transaction List</h3>
       <form th:action="@{/add-diagnosa}" method="post">
         <label for="idTransaksi">Pilih Transaksi:</label>
-        <select id="idTransaksi" name="idTransaksi">
-            <option th:each="transaksi : ${transactions}" th:value="${transaksi.idTransaksi}" 
-                    th:text="${transaksi.noRekamMedis} + ' - ' + ${transaksi.hari}"></option>
+        <select id="idTransaksi" name="idTransaksi" required onchange="updateKeluhan()">
+            <option th:each="transaksi : ${transaksi}" 
+                    th:value="${transaksi.idTransaksi}" 
+                    th:data-keluhan="${transaksi.keluhan}" 
+                    th:text="${transaksi.noRekamMedis + ' - ' + transaksi.hari}">
+                    
+            </option>
         </select><br>
-    
+        
         <label for="hasilDiagnosa">Hasil Diagnosa:</label>
         <textarea id="hasilDiagnosa" name="hasilDiagnosa" required></textarea><br>
-    
+        
         <button type="submit">Add Hasil Diagnosa</button>
     </form>
+    <script>
+      function updateKeluhan() {
+          const select = document.getElementById('idTransaksi');
+          const selectedOption = select.options[select.selectedIndex];
+          const keluhan = selectedOption.getAttribute('data-keluhan');
+          document.getElementById('keluhan').value = keluhan || '';
+      }
+  
+      // Trigger update on page load for the initial selection
+      document.addEventListener('DOMContentLoaded', updateKeluhan);
+  </script>
     </div>
   </div>
 </body>

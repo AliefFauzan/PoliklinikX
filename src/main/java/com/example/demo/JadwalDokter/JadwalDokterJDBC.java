@@ -5,12 +5,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 //import com.example.demo.Dokter.Dokter;
 import com.example.demo.Dokter.DokterModel;
+import com.example.demo.Dokter.DokterRepo;
 
 
 @Repository
@@ -19,6 +21,9 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private DokterRepo DokterRepo;
+
     // @Override
     // public List<DokterModel> getAllDokters() {
     //     String sql = "SELECT * FROM Dokter";
@@ -26,12 +31,14 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
     // }
 
     @Override
-    public void addJadwalDokter(int idDokter, String nama, String spesialisasi, String hari, int jamMulai, int jamSelesai) {
+    public void addJadwalDokter(int idDokter, String spesialisasi, String hari, int jamMulai, int jamSelesai) {
+        List<DokterModel> findNamaList = DokterRepo.findDokterById(idDokter);
+        DokterModel findNama=findNamaList.get(0);
         String sql = "INSERT INTO JadwalDokter(idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai) VALUES (?, ?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, idDokter, nama, spesialisasi, hari, jamMulai, jamSelesai);
+        jdbcTemplate.update(sql, idDokter, findNama, spesialisasi, hari, jamMulai, jamSelesai);
     }
     
-
+    @Override
     public void updateJadwalDokter(int idJadwal, String hari, int jamMulai, int jamSelesai) {
         String sql = "UPDATE JadwalDokter SET hari = ?, jamMulai = ?, jamSelesai = ? WHERE idJadwal = ?";
         jdbcTemplate.update(sql, hari, jamMulai, jamSelesai, idJadwal);
@@ -90,6 +97,54 @@ public class JadwalDokterJDBC implements JadwalDokterRepo {
 
         );
     }
+    
+    @Override
+public List<JadwalDokterModel> findAllJadwalDokterByNama(String nama) {
+    String sql = """
+        SELECT 
+            jd.idJadwal, 
+            jd.idDokter, 
+            d.nama AS nama, 
+            d.spesialisasi AS spesialisasi, 
+            jd.hari, 
+            jd.jamMulai, 
+            jd.jamSelesai
+        FROM 
+            JadwalDokter jd
+        JOIN 
+            Dokter d ON jd.idDokter = d.idPegawai
+        WHERE 
+            d.nama = ?
+    """;
+
+    return jdbcTemplate.query(sql, this::mapRowToJadwalDokter, nama);
+}
+
+
+@Override
+public List<JadwalDokterModel> findJadwalDokterByDokterId(int idDokter) {
+    String sql = """
+        SELECT 
+            jd.idJadwal, 
+            jd.idDokter, 
+            d.nama AS nama, 
+            d.spesialisasi AS spesialisasi, 
+            jd.hari, 
+            jd.jamMulai, 
+            jd.jamSelesai
+        FROM 
+            JadwalDokter jd
+        JOIN 
+            Dokter d ON jd.idDokter = d.idPegawai
+        WHERE 
+            jd.idDokter = ?
+    """;
+
+    return jdbcTemplate.query(sql, this::mapRowToJadwalDokter, idDokter);
+}
+
+
+
 
     // @Override
     // public boolean addJadwalDokterData(DokterModel dokter, String spesialisasi, String hari, String jamMulai, String jamSelesai) {

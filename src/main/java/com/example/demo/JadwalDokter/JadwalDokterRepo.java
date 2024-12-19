@@ -7,12 +7,14 @@ import java.util.List;
 public interface JadwalDokterRepo {
     // List<Dokter> getAllDokters();
     
-    void addJadwalDokter(int idDokter, String nama, String spesialisasi, String hari, int jamMulai, int jamSelesai);
+    void addJadwalDokter(int idDokter, String spesialisasi, String hari, int jamMulai, int jamSelesai);
 
      void updateJadwalDokter(int idJadwal, String hari, int jamMulai, int jamSelesai);
         List<DokterModel> findAllDokter();
 
     List<JadwalDokterModel> findAllJadwalDokter();
+    List<JadwalDokterModel> findAllJadwalDokterByNama(String nama);
+    List<JadwalDokterModel> findJadwalDokterByDokterId(int idDokter);
 
     // boolean addJadwalDokterData(JadwalDokterModel jadwalDokter);
 

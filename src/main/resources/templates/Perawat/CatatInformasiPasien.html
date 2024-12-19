@@ -204,7 +204,7 @@ form br {
     <form th:action="@{/CatatInformasiPasienInput}" method="post">
       <label for="idTransaksi">Pilih Transaksi:</label>
       <select id="idTransaksi" name="idTransaksi">
-          <option th:each="transaksi : ${traksis}" th:value="${transaksi.idTransaksi}" 
+          <option th:each="transaksi : ${transaksis}" th:value="${transaksi.idTransaksi}" 
                   th:text="${transaksi.noRekamMedis} + ' - ' + ${transaksi.hari}"></option>
       </select><br>
   
